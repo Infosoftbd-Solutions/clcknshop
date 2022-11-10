@@ -1,19 +1,19 @@
 <p align="center">
     <a href="https://clckn.shop/"><img src="https://clckn.shop/contents/admin/uploads/logos/clcknshoplogopng-19-10-2022-1666175726631.png" alt="Clcknshop - Multitenancy Based Ecommerce Platform (SAAS)"></a>
 </p>
-<img src="https://infosoftbd.com/img/clcknshop/support.jpeg" align="support image">
 
-<h3> - Clcknshop - Multitenancy Based Ecommerce Platform (SAAS) </h3>
+<h3> Clcknshop - Multitenancy Based Ecommerce Platform (SAAS) </h3>
 <p>
 	Clcknshop is a multitenancy SAAS based E-Commerce platform similar to Shopify , BigCommerce. Customers can create a Ecommerce site within 5 minutes by just registration. It has a powerful admin panel for managing products, collections, coupons, orders, themes, and much more. This Software has been developed for the people who wants to create an online store which can sell everything. Clcknshop is extremely optimized for giving customers the best purchasing experience.
 </p>
 <h3>Demo Url and login</h3>
-
+<pre>
 		Main Site Url: <a target="_blank" href='https://clckn.shop/'>https://clckn.shop/</a>
 		Admin url    : <a target="_blank" href='https://clckn.shop/admin'>https://clckn.shop/admin</a>
 		email        : admin@clckn.shop
 		password     : 123456
-
+</pre>
+<pre>
 		Demo Shop 1 : <a target="_blank" href="https://kidszone.clckn.shop">https://kidszone.clckn.shop</a>
 		Admin url   : <a target="_blank" href="https://kidszone.clckn.shop/admin">https://kidszone.clckn.shop/admin</a>
 		email       : demo@clckn.shop
@@ -22,11 +22,12 @@
 		email       : customer@clckn.shop
 		password    : 123456
 
-
+</pre>
+<pre>
 		Registration link For new Store creation: <a target="_blank" href='https://clckn.shop/registration'>https://clckn.shop/registration</a>
 	
 
-
+</pre>
 
 <br>
 The system is highly secured and protected against <b>SQL injection</b>, <b>XSS</b>, <b>CSRF</b>, and other attacks.
@@ -86,10 +87,6 @@ The system is highly secured and protected against <b>SQL injection</b>, <b>XSS<
 <img src="https://www.vectorlogo.zone/logos/stripe/stripe-ar21.svg">
 <img width="120" height="60" src="https://sslcommerz.com/wp-content/uploads/2019/11/footer_logo.png">
 <br><br>
-
-
-<img src="https://infosoftbd.com/img/clcknshop/backend.jpg" align="support image">
-<img src="https://infosoftbd.com/img/clcknshop/frontend.jpg" align="support image">
 
 <h3>Support</h3>
 <p>
