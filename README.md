@@ -88,10 +88,6 @@ The system is highly secured and protected against <b>SQL injection</b>, <b>XSS<
 <img width="120" height="60" src="https://sslcommerz.com/wp-content/uploads/2019/11/footer_logo.png">
 <br><br>
 
-
-<img src="https://infosoftbd.com/img/clcknshop/backend.jpg" align="support image">
-<img src="https://infosoftbd.com/img/clcknshop/frontend.jpg" align="support image">
-
 <h3>Support</h3>
 <p>
 	We are always happy to hear from you. Please feel free to contact us for any kind of customization, support, query and suggestion. We will respond as soon as possible.
