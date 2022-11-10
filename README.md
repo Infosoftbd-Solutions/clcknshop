@@ -7,7 +7,7 @@
 <p>
 	Clcknshop is a multitenancy SAAS based E-Commerce platform similar to Shopify , BigCommerce. Customers can create a Ecommerce site within 5 minutes by just registration. It has a powerful admin panel for managing products, collections, coupons, orders, themes, and much more. This Software has been developed for the people who wants to create an online store which can sell everything. Clcknshop is extremely optimized for giving customers the best purchasing experience.
 </p>
-<h3> - Demo Url and login</h3>
+<h3>Demo Url and login</h3>
 
 		Main Site Url: <a target="_blank" href='https://clckn.shop/'>https://clckn.shop/</a>
 		Admin url    : <a target="_blank" href='https://clckn.shop/admin'>https://clckn.shop/admin</a>
