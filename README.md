@@ -1,9 +1,8 @@
 <p align="center">
     <a href="https://clckn.shop/"><img src="https://clckn.shop/contents/admin/uploads/logos/clcknshoplogopng-19-10-2022-1666175726631.png" alt="Clcknshop - Multitenancy Based Ecommerce Platform (SAAS)"></a>
 </p>
-<img src="https://infosoftbd.com/img/clcknshop/support.jpeg" align="support image">
 
-<h3> - Clcknshop - Multitenancy Based Ecommerce Platform (SAAS) </h3>
+<h3> Clcknshop - Multitenancy Based Ecommerce Platform (SAAS) </h3>
 <p>
 	Clcknshop is a multitenancy SAAS based E-Commerce platform similar to Shopify , BigCommerce. Customers can create a Ecommerce site within 5 minutes by just registration. It has a powerful admin panel for managing products, collections, coupons, orders, themes, and much more. This Software has been developed for the people who wants to create an online store which can sell everything. Clcknshop is extremely optimized for giving customers the best purchasing experience.
 </p>
