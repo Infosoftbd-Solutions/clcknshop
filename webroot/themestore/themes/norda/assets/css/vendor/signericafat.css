@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Signerica Fat';
+    src: url('../../fonts/SignericaFat.eot');
+    src: url('../../fonts/SignericaFat.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/SignericaFat.woff2') format('woff2'),
+        url('../../fonts/SignericaFat.woff') format('woff'),
+        url('../../fonts/SignericaFat.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

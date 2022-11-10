@@ -1,0 +1,271 @@
+// Login Popup
+.login-popup {
+	.mfp-content {
+		width: 80%;
+		max-width: 872px;
+		background-color: #fff;
+	}
+
+	.container {
+		padding: 2.5rem 3rem;
+	}
+
+	.title {
+		font-size: 1.5rem;
+		font-weight: 600;
+		line-height: 2;
+		text-transform: uppercase;
+	}
+
+	form {
+		display: block;
+	}
+
+	label {
+		color: #777;
+		font-family: $font-family;
+		font-size: 1.2rem;
+		font-weight: 400;
+		line-height: 1;
+		text-transform: capitalize;
+	}
+
+	.form-footer {
+		margin: 0 0 2rem;
+
+		.custom-control {
+			margin: 0 0 0 auto;
+			font-size: 1.3rem;
+		}
+	}
+
+	.forget-password {
+		color: $primary-color;
+		font-size: 1.3rem;
+	}
+
+	.social-login-wrapper {
+		padding: 2rem 2rem 2.5rem;
+		background-color: #f4f4f2;
+		text-align: center;
+
+		p {
+			margin-bottom: 2rem;
+			color: #121214;
+			font-size: 12px;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+	}
+
+	.btn-group {
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-ms-flex-pack: distribute;
+		justify-content: space-around;
+	}
+}
+
+// Newsletter popup
+.newsletter-popup {
+	position: relative;
+	max-width: 700px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 30px 30px 10px;
+	border-radius: 0;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, .5);
+}
+
+.mfp-close {
+	text-indent: -9999px;
+	-webkit-transform: rotateZ(45deg);
+	transform: rotateZ(45deg);
+	width: 41px;
+	height: 41px;
+	color: #838383;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	.mfp-image-holder & {
+		width: 41px;
+		color: #fff;
+		text-align: left;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		height: 17px;
+		top: 12px;
+		left: 20px;
+		border-left: 1px solid;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		width: 17px;
+		top: 20px;
+		left: 12px;
+		border-top: 1px solid;
+	}
+}
+
+.newsletter-popup-content {
+	max-width: 332px;
+	text-align: center;
+
+	.form-control {
+		height: auto;
+		padding: 7px 12px;
+		border-radius: 5px 0 0 5px;
+		font-size: 13px;
+		border-color: #ccc;
+	}
+
+	.btn {
+		margin-left: -1px;
+		padding: 0 12px;
+		border: 1px solid #ccc;
+		border-radius: 0 5px 5px 0;
+		background-color: transparent;
+		color: #555;
+		font-size: 1.28rem;
+		font-weight: 400;
+		font-family: $second-font-family;
+		text-align: center;
+		text-transform: uppercase;
+
+		&:hover {
+			background-color: #e6e6e6;
+			border-color: rgba(0,0,0,0.06);
+		}
+	}
+}
+
+.logo-newsletter {
+	display: inline-block;
+	max-width: 100%;
+	height: auto;
+}
+
+.newsletter-popup h2 {
+	margin: 24px 0 16px;
+	color: #313131;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 2;
+}
+
+.newsletter-popup p {
+	font-size: 1.4rem;
+	line-height: 1.43;
+	letter-spacing: .025em;
+}
+
+.newsletter-popup form {
+	margin: 0 0 2.1rem;
+}
+
+.newsletter-subscribe {
+	font-size: 1.1rem;
+	text-align: left;
+
+	.checkbox {
+		margin: 1.5rem 0;
+	}
+
+	input {
+		margin-right: .5rem;
+		vertical-align: middle;
+	}
+
+	label {
+		color: inherit;
+		font-size: 1.1rem;
+		font-weight: 400;
+		font-family: $font-family;
+		text-transform: none;
+	}
+}
+
+.mfp-newsletter.mfp-removing {
+	transition: opacity .35s ease-out;
+	opacity: 0;
+}
+
+// Popup Configuration
+.mfp-ready .mfp-preloader {
+	display: none;
+}
+
+.mfp-zoom-out-cur {
+	.mfp-bg {
+		opacity: .8;
+		background-color: #0b0b0b;
+	}
+
+	.mfp-counter {
+		color: #fff;
+	}
+
+	.mfp-arrow-right:before {
+		border-left: 0;
+	}
+
+	.mfp-arrow-left:before {
+		border-right: 0;
+	}
+}
+
+.mfp-ajax-product.mfp-bg,
+.login-popup.mfp-bg {
+	opacity: 0;
+}
+
+.mfp-ajax-product .product-single-container {
+	box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+// content at start
+.mfp-wrap .mfp-content {
+	transition: all .35s ease-out;
+	opacity: 0;
+}
+
+.mfp-ajax-product.mfp-wrap,
+.login-popup.mfp-wrap {
+	.mfp-content {
+		max-width: 872px;
+	}
+}
+
+// content animate it
+.mfp-wrap.mfp-ready .mfp-content {
+	opacity: 1;
+}
+
+// content animate out
+.mfp-wrap.mfp-removing .mfp-content {
+	opacity: 0;
+}
+
+
+@include mq(lg, max) {
+	.mfp-container {
+		padding: 2rem;
+	}
+}
+
+@include mq(md) {
+	.login-popup .col-md-6 {
+		padding: 0 2rem;
+
+		&:first-child {
+			border-right: 1px solid #f5f6f6;
+		}
+	}
+}

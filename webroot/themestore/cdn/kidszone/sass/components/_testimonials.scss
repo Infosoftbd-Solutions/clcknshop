@@ -1,0 +1,53 @@
+// Testimonials
+
+.testimonial-owner {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-content: center;
+
+	figure {
+		max-width: 60px;
+		margin-right: 25px;
+	}
+
+	h4 {
+		display: block;
+		margin-bottom: .5rem;
+		padding-top: .7rem;
+		color: #111;
+		font-size: 1.4rem;
+		text-transform: uppercase;
+	}
+
+	span {
+		display: block;
+		color: #666;
+		font-size: 1.2rem;
+		text-transform: uppercase;
+	}
+}
+
+.testimonial {
+	blockquote {
+		position: relative;
+		margin: 0 0 0 15px;
+		padding: 1rem 2rem;
+
+		&:before {
+			position: absolute;
+			top: 0;
+			left: -.2em;
+			color: $primary-color;
+			font-family: 'Playfair Display';
+			font-size: 5rem;
+			font-weight: 900;
+			line-height: 1;
+			content: '\201C';
+		}
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+}

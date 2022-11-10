@@ -1,0 +1,9 @@
+@mixin reverseHover($bgColor, $color) {
+    background-color: $bgColor;
+    color: $color;
+
+    &:hover {
+        color: $bgColor;
+        background-color: $color;
+    }
+}

@@ -1,0 +1,164 @@
+// Popup Menu
+
+// # Contents
+// 1. Popup Menu
+// 2. Popup Menu UL
+// 2.1) General Items' Property
+// 2.2) Top Items' Property
+// 2.3) Top Ul's Property
+// 2.4) General Ul's Property
+// 2.5) Tips
+// 3. Popup Menu Toggler
+// 3.1) Toggler
+// 3.2) Close
+// 4. Responsive
+
+// # Settings
+
+// 1. Popup Menu
+
+.popup-menu {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2000;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    transition: background-color .25s;
+
+    &:not(.open) {
+        visibility: hidden;
+    }
+
+    &.open {
+        background-color: rgba(51,51,51,0.99);
+    }
+
+    nav {
+        width: 100%;
+        max-width: 600px;
+        height: 80%;
+        overflow: hidden;
+    }
+}
+
+// 2. Popup Menu UL
+
+
+.popup-menu-ul {
+    // 2.1) General Items' Property
+    position: relative;
+    margin-bottom: 0;
+    line-height: 22px;
+    text-align: center;
+    height: 100%;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+
+    a {
+        display: inline-block;
+        padding: .4rem 1.6rem;
+        color: #a8a8a8;
+        transition: color .25s, margin-left .25s;
+
+        &:hover {
+            margin-left: 1rem;
+            color: #fff;
+        }
+    }
+
+    // 2.2) Top Items' Property
+    > li > a {
+        padding: .9rem 1.2rem;
+        color: #fff;
+        font-size: 2.4rem;
+        font-weight: 600;
+        line-height: 1.25;
+        text-transform: uppercase;
+    }
+
+    // 2.3) Top Ul's Property
+    ul {
+        padding: 1rem 0;
+        font-size: 1.8rem;
+
+    // 2.4) General Ul's Property
+        &:not(.open) {
+            display: none;
+        }
+
+        ul {
+            font-size: .8em;
+            opacity: .7;
+        }
+    }
+
+    // 2.5) Tips
+    .tip {
+        position: absolute;
+        margin-top: 2px;
+        opacity: 1;
+    }
+}
+
+// 3. Popup Menu Toggler
+
+// 3.1) Toggler
+.popup-menu-toggler {
+	margin-right: 2.1rem;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 1.3;
+	text-transform: uppercase;
+
+	.toggler-icon {
+		display: block;
+		float: left;
+		width: 28px;
+		height: 8px;
+		border-top: 2px solid #eef2f6;
+		border-bottom: 2px solid #eef2f6;
+		margin-top: 1px;
+		margin-right: 1rem;
+		
+		&:after {
+			content: '';
+			display: block;
+			margin-top: 10px;
+			height: 2px;
+			background: #eef2f6;
+		}
+	}
+}
+
+// 3.2) Close
+.popup-menu-close {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    color: #fff;
+
+    // Use This: only when use mfp-close button
+    &:active {
+        top: 3rem;
+    }
+}
+
+// 4. Responsive
+@include mq(lg) {
+    .popup-menu nav {
+        width: 50%;
+        height: 50%;
+    }
+}

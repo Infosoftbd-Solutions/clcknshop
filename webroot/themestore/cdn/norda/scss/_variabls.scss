@@ -1,0 +1,33 @@
+// Font Family
+$poppins: 'Poppins', sans-serif;
+$heebo: 'Heebo', sans-serif;
+$jost: 'Jost', sans-serif;
+$crimson: 'Crimson Text', serif;
+$cerebrisans: 'Cerebri Sans';
+$signericafat: 'Signerica Fat';
+
+
+    
+// text Colors ---------------
+$white: #ffffff;
+$black: #000000;
+$bg-black: #000000;
+$bg-white: #ffffff;
+$grey: #FAFAFA;
+$blue: #0064e0;
+$orange: #e44311;
+
+// Theme Color
+$theme-color-red: #ff2f2f;
+$theme-color-green: #4dbdaf; 
+$theme-color-green-2: #6aae27; 
+$theme-color-purple: #6f50a7; 
+$theme-color-blue: #0064e0; 
+
+// Responsive Variables 
+$xx-layout : 'only screen and (min-width: 1366px) and (max-width: 1600px)';
+$xl-layout : 'only screen and (min-width: 1200px) and (max-width: 1365px)';
+$lg-layout : 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$md-layout:'only screen and (min-width: 768px) and (max-width: 991px)';
+$xs-layout:'only screen and (max-width: 767px)';
+$sm-layout: 'only screen and (min-width: 576px) and (max-width: 767px)';

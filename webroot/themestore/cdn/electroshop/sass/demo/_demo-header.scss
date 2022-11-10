@@ -1,0 +1,101 @@
+// 1. Header Base
+.header-top {
+	color: #bde1f5;
+	font-size: 1.1rem;
+	font-weight: 600;
+	letter-spacing: .025em;
+	line-height: 24px;
+
+	a {
+		color: inherit;
+	}
+}
+
+.header-middle {
+	padding: 2.7rem 0;
+}
+
+.header-bottom {
+	.container:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 10px;
+		right: 10px;
+		border-top: 1px solid #f4f4f4;
+		flex: 0 0 100%;
+		-ms-flex: 0 0 100%;
+	}
+}
+
+// 2. Header Elements
+
+// 2.1) Header Dropdown
+.header-dropdown {
+	.dropdown-toggle:after {
+		font-size: 17px;
+	}
+
+	&:not(.dropdown-expanded) {
+		ul {
+			border: 1px solid #ccc;
+		}
+
+		.header-menu:before {
+			border-bottom-color: #ccc;
+		}
+
+		.header-menu:after {
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: 100%;
+			left: 50%;
+			width: 0;
+			height: 0;
+			margin-left: -9px;
+			border-width: 0 9px 10px;
+			border-style: solid;
+			border-color: transparent transparent #fff;
+			margin-top: 2px;
+			z-index: 1151;
+			opacity: 0;
+			visibility: hidden;
+			transform: translateY(-1rem);
+		}
+
+		&:hover .header-menu:after {
+			top: 100%;
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	.badge-circle {
+		left: 21px;
+	}
+}
+
+// 2.4) Header Search
+.header-search select {
+	letter-spacing: .005em;
+	padding-right: 1rem;
+}
+
+// 2.5) Main Nav
+.main-nav .menu {
+	.tip-top {
+		padding: 2px;
+		border-radius: 0;
+		left: 85%;
+		margin-top: 3px;
+	}
+}
+
+// 3. Responsive
+@media (min-width: 992px) and (max-width: 1199px) {
+	.dropdown-expanded li:not(:first-child) {
+		margin-left: 1.3rem;
+	}
+}

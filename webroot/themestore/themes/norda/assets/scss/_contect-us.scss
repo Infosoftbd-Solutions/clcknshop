@@ -1,0 +1,139 @@
+/*------- 25. Contect us style  -------*/
+
+.contact-info-wrap-3 , .get-in-touch-wrap {
+    h3 {
+        text-transform: capitalize;
+        font-size: 25px;
+        font-weight: 600;
+        margin: 0 0 30px;
+        @media #{$xs-layout} {
+            margin: 0 0 24px;
+        }
+    }
+    @media #{$md-layout} {
+        &.pb-85 {
+            padding-bottom: 45px;
+        }
+    }
+    @media #{$xs-layout} {
+        &.pb-85 {
+            padding-bottom: 25px;
+        }
+    }
+}
+.single-contact-info-3 {
+    background-color: #f7f7f7;
+    padding: 48px 10px 49px;
+    @media #{$md-layout} {
+        padding: 28px 20px 29px;
+    }
+    > i {
+        font-size: 24px;
+        color: $theme-color-red;
+        transition: all .3s ease 0s;
+        display: block;
+    }
+    h4 {
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 0.4px;
+        text-transform: capitalize;
+        margin: 19px 0 10px;
+        @media #{$md-layout} {
+            font-size: 18px;
+            margin: 12px 0 10px;
+        }
+    }
+    p {
+        letter-spacing: .4px;
+        font-size: 15px;
+        color: $black;
+    }
+    ul {
+        li {
+            border-bottom: 2px solid #fff;
+            letter-spacing: 0.4px;
+            margin-bottom: 23px;
+            padding-bottom: 26px;
+            font-size: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            @media #{$md-layout} {
+                display: block;
+                margin-bottom: 11px;
+                padding-bottom: 11px;
+            }
+            &:last-child {
+                padding-bottom: 0px;
+                margin-bottom: 0px;
+                border-bottom: none;
+            }
+            i {
+                font-size: 24px;
+                margin-right: 7px;
+                color: $theme-color-red;
+                transition: all .3s ease 0s;
+                display: inline-block;
+                @media #{$md-layout} {
+                    display: block;
+                    margin-right: 0px;
+                    margin-bottom: 3px;
+                }
+            }
+            a {
+                color: $black;
+                &:hover {
+                    color: $theme-color-red;
+                }
+            }
+            &:hover i {
+                animation: 500ms ease-in-out 0s normal none 1 running tada;
+            }
+        }
+    }
+    &:hover > i {
+        animation: 500ms ease-in-out 0s normal none 1 running tada;
+    }
+}
+
+.contact-from {
+    input , textarea {
+        background: #f7f7f7 none repeat scroll 0 0;
+        border: none;
+        color: #000;
+        height: 60px;
+        padding: 2px 20px;
+        margin-bottom: 30px;
+        position: relative;
+        @media #{$xs-layout} {
+            margin-bottom: 20px;
+        }
+    }
+    textarea {
+        height: 200px;
+        padding: 20px 20px;
+    }
+    button {
+        border: none;
+        background-color: transparent;
+        text-transform: capitalize;
+        background-color: $theme-color-red;
+        color: #fff;
+        padding: 12px 30px;
+        font-size: 15px;
+        font-weight: 600;
+        &:hover {
+            background-color: $black;
+        }
+    }
+}
+
+#map {
+    height: 400px;
+    @media #{$xs-layout} {
+        height: 300px;
+    }
+}
+
+

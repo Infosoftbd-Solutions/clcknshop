@@ -1,0 +1,67 @@
+// Sticky Header
+
+@include set-default(
+	(
+		header: (
+			logo: (
+				sticky: (
+					transform: false,
+					transform-origin: false,
+				)
+			)
+		)
+	)
+);
+
+.sticky-header {
+	background: #fff;
+
+	&.fixed {
+		position: fixed;
+		right: 0;
+		left: 0;
+		padding: 0;
+		box-shadow: 0 1px 5px rgba(0, 0, 0, .08);
+		z-index: 1040;
+
+		.logo {
+			img {
+				@include css( transform, header, logo, sticky, transform );
+				@include css( transform-origin, header, logo, sticky, transform-origin );
+			}
+		}
+	}
+
+	&.deprecated-sticky {
+		&:not(.fixed) {
+			.logo,
+			.cart-dropdown {
+				display: none;
+			}
+		}
+
+		&.fixed .main-nav {
+			width: auto;
+		}
+	}
+
+	.main &:not(.fixed) {
+		> .container {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	.main &.fixed {
+		min-height: 38px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+		overflow: hidden;
+		z-index: 1039;
+
+		.container {
+			margin: 0 auto;
+		}
+	}
+}

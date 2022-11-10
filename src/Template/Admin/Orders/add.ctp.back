@@ -1,0 +1,894 @@
+<?php
+/**
+ * @var \App\View\AppView $this
+ * @var \App\Model\Entity\Order $order
+ */
+?>
+
+<script>
+  require.config({
+    shim: {
+        'autocomplete': ['jquery', 'bootstrap']
+    },
+    paths: {
+        'autocomplete': 'assets/js/vendors/bootstrap-autocomplete.min'
+    }
+});
+
+</script>
+
+<?=$this->Html->css('/js/x-editable/bootstrap-editable')?>
+<script>
+  require.config({
+    shim: {
+        'xeditable': ['jquery', 'core']
+    },
+    paths: {
+        'xeditable': 'js/x-editable/bootstrap-editable.min'
+    }
+});
+</script>
+
+<div >
+                    <h3><?=($order->isEmpty('id'))?"Create new Order":"Edit order # " . $order->order_id?></h3>
+</div>
+<div class="row">
+
+<div class="col-lg-3 order-lg-1 mb-4">
+<div class="card" id="customersearcharea">
+<div class="card-body">
+    <h3 class="card-title">Search or create customer</h3>
+     <?php  echo $this->TablerForm->control('customersearch',['placeholder'=>'Search customer','input-group'=>'<span class="input-group-append">
+                               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#customerAddressModal">Add</button>
+                               </span>','label'=>false]) ?>
+</div>
+</div>
+
+
+
+<div class="card" id="customerdetailarea" style="display:none">
+<ul class="list-group card-list-group">
+<li class="list-group-item py-5">
+  <div class="media-heading">
+    <small class="float-right text-muted"><a href="javascript:;;" class="icon" id="delcustomer"><i class="fe fe-trash"></i></a></small>
+  <h3 class="card-title">Customer</h3>
+
+  </div>
+  <div id="cust_basic_info">
+    Ifte Khairul Alam <br />
+    Email: masum0009@gmail.com <br />
+    Tel: 34324324
+  </div>
+</li>
+<li class="list-group-item py-5">
+  <div class="media-heading">
+    <small class="float-right text-muted"><a href="javascript:;;" class="icon editshipping"><i class="fe fe-edit"></i></a></small>
+  <h3 class="card-title">Shipping Address</h3>
+</div>
+<div id="cust_shipping_info">
+    Ifte Khairul Alam <br />
+    House # 63,Road # 19, Sector # 14, <br  />
+    Uttara, Dhaka-120 <br  />
+    01717137361
+
+
+</div>
+</li>
+
+<li class="list-group-item py-5">
+  <div class="media-heading">
+    <small class="float-right text-muted"><a href="javascript:;;" class="icon editbilling"><i class="fe fe-edit"></i></a></small>
+  <h3 class="card-title">Billing Address</h3>
+</div>
+<div id="cust_billing_info">
+    Ifte Khairul Alam <br />
+    House # 63,Road # 19, Sector # 14, <br  />
+    Uttara, Dhaka-120 <br  />
+    01717137361
+
+
+</div>
+</li>
+</ul>
+
+
+
+</div>
+
+
+</div>
+<div class="col-lg-9">
+  <div class="card">
+  <div class="card-header">
+<h3 class="card-title">Order details</h3>
+<div class="card-options"><?=$this->Html->link('Add Custom Product',['action'=>'add_manually'],['data-toggle'=>"modal",'data-target'=>"#ManualProductModal"])?></div>
+
+  </div>
+  <?=$this->Form->create(null,['id'=>'orderfmr','url'=>['action'=>'add']])?>
+  <div class="card-body">
+
+    <?php  echo $this->TablerForm->control('product',['label'=>false,'placeholder'=>'Search Products','input-group'=>'<span class="input-group-append">
+                                <button class="btn btn-primary" type="button">Browse Products</button>
+                              </span>']);?>
+
+
+<?=$this->Form->hidden('customers_id',['id'=>'customer_id'])?>
+<?=$this->Form->hidden('billing_address',['id'=>'billing_address'])?>
+<?=$this->Form->hidden('shipping_address',['id'=>'shipping_address'])?>
+<?=$this->Form->hidden('shipping_methods_id',['id'=>'shipping_methods_id'])?>
+<?=$this->Form->hidden('shipping_rate',['id'=>'shipping_rate'])?>
+<?=$this->Form->hidden('shipping_rate_flat',['id'=>'shipping_rate_flat'])?>
+
+
+<table class="table card-table table-striped table-vcenter">
+<tbody id="productstable">
+
+
+</tbody>
+
+</table>
+<br />
+<div class="row">
+<div class="col-lg-6">
+<?=$this->TablerForm->control('notes',['type'=>'textarea'])?>
+</div>
+<div class="col-lg-2">
+</div>
+<div class="col-lg-4">
+<div class="row">
+  <div class="col-lg-8"><a href="javascript:;;" id="discountpopuover"  data-value="0"  data-container="body" data-placement="top"  title="Add discount"><h3 class="card-title">Add Discount</h3></a></div>
+  <div class="col-lg-4"><?=$this->Formats->moneySymbol()?><span id="discount_span">0</span></div>
+
+</div>
+<br />
+<div class="row">
+  <div class="col-lg-8"><h3 class="card-title">Subtotal</h3></div>
+  <div class="col-lg-4"><?=$this->Formats->moneySymbol()?> <span id="subtotal_span">0</span></div>
+</div>
+<br />
+<div class="row">
+  <div class="col-lg-8"><a href="javascript:;;" id="shippingpopuover" data-toggle="modal" data-target="#ShippingMethodsModal"   title="Add shipping"><h3 class="card-title">Add Shipping</h3></a></div>
+  <div class="col-lg-4"> <?=$this->Formats->moneySymbol()?> <span id="shipping_span">0</span></div>
+</div>
+
+<br />
+<div class="row">
+  <div class="col-lg-8"><a href="javascript:;;" id="taxpopuover" data-value="<?=$order->taxes?>" data-container="body" data-placement="top"   title="Add tax"><h3 class="card-title">Taxes</h3></a></div>
+  <div class="col-lg-4"> <?=$this->Formats->moneySymbol()?> <span id="taxes_span"><?=$order->taxes?></span></div>
+</div>
+<br />
+<div class="row">
+  <div class="col-lg-8"><h3 class="card-title">Total</h3></div>
+  <div class="col-lg-4"> <?=$this->Formats->moneySymbol()?> <span id="total_span">0</span> </div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+<div class="card-body border-top">
+<div class="row ">
+  <div class="col-lg-12 ">
+
+
+  <?=$this->TablerForm->control('order_status',['selectgroup'=>'radio','options'=>['Pending','Processing','Shipped','Delivered','Canceled']])?>
+
+    </div>
+
+</div>
+
+
+<?=$this->Form->hidden('product_total')?>
+<?=$this->Form->hidden('discount')?>
+<?=$this->Form->hidden('sub_total')?>
+<?=$this->Form->hidden('shipping_fee')?>
+<?=$this->Form->hidden('taxes')?>
+<?=$this->Form->hidden('order_total')?>
+
+
+
+
+<?=$this->Form->end()?>
+
+
+
+
+  </div>
+
+
+  </div>
+
+
+</div>
+</div>
+
+
+<div class="text-right form-fieldset"><div class="d-flex">
+                    <a href="javascript:void(0)" class="btn btn-link">Cancel</a>
+                    <button type="submit" class="btn btn-primary ml-auto" id="btnordersubmit">Save Changes</button>
+                  </div></div>
+
+<div class="modal fade " id="customerAddressModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document" >
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">Add new Customer</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <!-- SVG icon code -->
+      </button>
+    </div>
+    <div class="modal-body">
+    <?php echo $this->Form->create(null, [
+    'url' => [
+        'controller' => 'Customers',
+        'action' => 'add'
+    ],
+    'id'=>'customer-form'
+]);?>
+
+
+<fieldset class="form-fieldset">
+<h3 class="card-title">Basic information</h3>
+     <div class="row">
+       <?php
+            echo $this->TablerForm->control('first_name',['row'=>6]);
+            echo $this->TablerForm->control('last_name',['row'=>6]);
+            echo $this->TablerForm->control('email',['row'=>6]);
+            echo $this->TablerForm->control('phone',['row'=>6]);
+        ?>
+     </div>
+ </fieldset>
+  <fieldset class="form-fieldset">
+<h3 class="card-title">Shipping Address </h3>
+           <div class="row">
+          <?php
+               echo $this->TablerForm->control('customer_address.first_name',['row'=>6]);
+               echo $this->TablerForm->control('customer_address.last_name',['row'=>6]);
+               echo $this->TablerForm->control('customer_address.address',['row'=>6]);
+               echo $this->TablerForm->control('customer_address.apartment',['row'=>6]);
+               echo $this->TablerForm->control('customer_address.city',['row'=>6]);
+               echo $this->TablerForm->control('customer_address.post_code',['row'=>6]);
+               echo $this->TablerForm->control('customer_address.country',['country'=>true,'row'=>6]);
+               echo $this->TablerForm->control('customer_address.phone',['row'=>6]);
+           ?>
+         </div>
+
+       </fieldset>
+
+       <?php echo $this->Form->end()?>
+
+      </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-white mr-auto" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary" id="customer_form_submit">Save changes</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="modal fade " id="ManualProductModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal-dialog " role="document" >
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">Add Custom Product</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <!-- SVG icon code -->
+      </button>
+    </div>
+    <div class="modal-body">
+
+      <fieldset class="form-fieldset">
+
+           <div class="row">
+             <?php
+                  echo $this->TablerForm->control('custom_product.prduct_title',['row'=>12]);
+                  echo $this->TablerForm->control('custom_product.sku',['row'=>6]);
+                  echo $this->TablerForm->control('custom_product.price',['row'=>6]);
+              ?>
+           </div>
+       </fieldset>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-white mr-auto" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="add_manual_btn" data-dismiss="modal">Add</button>
+    </div>
+</div>
+</div>
+</div>
+
+
+<div class="modal fade " id="ShippingAddressModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal-dialog " role="document" >
+  <div class="modal-content">
+    <form id="shipping_frm">
+
+
+    <div class="modal-header">
+      <h5 class="modal-title">Change shipping address</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <!-- SVG icon code -->
+      </button>
+    </div>
+    <div class="modal-body">
+
+      <fieldset class="form-fieldset">
+
+               <div class="row">
+              <?php
+                   echo $this->TablerForm->control('first_name',['row'=>6]);
+                   echo $this->TablerForm->control('last_name',['row'=>6]);
+                   echo $this->TablerForm->control('address',['row'=>6]);
+                   echo $this->TablerForm->control('apartment',['row'=>6]);
+                   echo $this->TablerForm->control('city',['row'=>6]);
+                   echo $this->TablerForm->control('post_code',['row'=>6]);
+                   echo $this->TablerForm->control('country',['country'=>true,'row'=>6]);
+                   echo $this->TablerForm->control('phone',['row'=>6]);
+               ?>
+             </div>
+
+      </fieldset>
+
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-white mr-auto" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="shiiping_save_btn" data-dismiss="modal">Save</button>
+    </div>
+    </form>
+</div>
+</div>
+</div>
+
+
+<div class="modal fade " id="ShippingMethodsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal-dialog " role="document" >
+  <div class="modal-content">
+
+    <div class="modal-header">
+      <h5 class="modal-title">Add shipping method</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <!-- SVG icon code -->
+      </button>
+    </div>
+    <div class="modal-body">
+<div class="form-group">
+                        <div class="form-label">Shipping methods</div>
+                        <div class="custom-controls-stacked">
+                          <?php $shipping_methods = $shippingMethods->toArray();  foreach($shipping_methods as $shipping): ?>
+                          <label class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" name="shipping_method" value="<?=$shipping->id?>" checked="" data-rate="<?=$shipping->price?>"  data-rate-flat="<?=$shipping->flat_rate?>">
+                            <div class="custom-control-label"><?=$shipping->name?> (<?=($shipping->flat_rate)?"Flat rate":"Per unit"?> <?=$this->Formats->moneyFormat($shipping->price) ?>)</div>
+                          </label>
+                        <?php  endforeach; ?>
+                        <label class="custom-control custom-radio">
+                          <input type="radio" class="custom-control-input" name="shipping_method" value="0" checked="">
+                          <div class="custom-control-label">Custom Shipping (Enter price)</div>
+                        </label>
+
+                        </div>
+                        <?=$this->TablerForm->input('customs_shipping_price',['label'=>'Enter price'])?>
+</div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-white mr-auto" data-dismiss="modal">Close</button>
+    <button type="button" class="btn btn-primary" id="shiipingmethod_save_btn" data-dismiss="modal">Save</button>
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+<div id="pricepopovercontainer"></div>
+<script>
+
+require(['jquery', 'autocomplete','xeditable'], function ($, autocomplete) {
+$(document).ready(function() {
+
+  (function ($) {
+      $.fn.serializeFormJSON = function () {
+
+          var o = {};
+          var a = this.serializeArray();
+          $.each(a, function () {
+              if (o[this.name]) {
+                  if (!o[this.name].push) {
+                      o[this.name] = [o[this.name]];
+                  }
+                  o[this.name].push(this.value || '');
+              } else {
+                  o[this.name] = this.value || '';
+              }
+          });
+          return o;
+      };
+  })(jQuery);
+
+  function populate(frm, data) {
+      $.each(data, function(key, value) {
+          var ctrl = $('[name='+key+']', frm);
+          switch(ctrl.prop("type")) {
+              case "radio": case "checkbox":
+                  ctrl.each(function() {
+                      if($(this).attr('value') == value) $(this).attr("checked",value);
+                  });
+                  break;
+              default:
+                  ctrl.val(value);
+          }
+      });
+  }
+
+  function getFieldVal(selector){
+     val = $(selector).val();
+     //console.log(selector,val);
+     if(!val){
+      $(selector).val(0);
+      return 0;
+     }else {
+        return parseFloat(val);
+    }
+
+  }
+
+  var calc_shipping = function(){
+
+     total_weight = 0.00;
+     $('.product_weight').each(function() {
+         total_weight += parseFloat($(this).val());
+     });
+     s_rate = getFieldVal('input[name ="shipping_rate"]');
+     flat_rate = getFieldVal('input[name ="shipping_rate_flat"]');
+     shipping_fee = s_rate;
+     if(flat_rate != 1)
+          shipping_fee = s_rate * total_weight;
+
+
+      $('input[name ="shipping_fee"]').val(shipping_fee);
+
+      $('#shipping_span').text(shipping_fee);
+  };
+
+  var calc_total = function(){
+    sum = 0.00;
+    $('.product_total').each(function() {
+        sum += Number($(this).val());
+    });
+    calc_shipping();
+    //console.log("ptotal",sum);
+    $('input[name ="product_total"]').val(sum);
+    sub_total = sum - getFieldVal('input[name ="discount"]');
+    //console.log("subtotal",sub_total);
+    order_total = getFieldVal('input[name ="shipping_fee"]') + getFieldVal('input[name ="taxes"]') + sub_total;
+    //console.log("order_total",order_total);
+    $('input[name ="sub_total"]').val(sub_total);
+    $('input[name ="order_total"]').val(order_total);
+    $('#subtotal_span').text(sub_total);
+    $('#total_span').text(order_total);
+
+
+
+  };
+
+
+  $('.editshipping').click(function(){
+     $('#ShippingAddressModal').modal();
+
+  });
+
+  $('#ShippingAddressModal').on('show.bs.modal', function (event) {
+
+    customer_address = JSON.parse($('#shipping_address').val());
+    //console.log("First Name:",customer_address.first_name);
+    populate("#shipping_frm",customer_address);
+  });
+
+  $('#shiiping_save_btn').click(function(){
+
+      var customer_address = $("#shipping_frm").serializeFormJSON();
+    //  //console.log(data);
+    $('#shipping_address').val(JSON.stringify(customer_address));
+    $('#cust_shipping_info').html(customer_address.first_name + " " + customer_address.last_name + "<br  />" + customer_address.address + "<br  />" + customer_address.apartment + "<br  />" + customer_address.city + ",Post Code:" + customer_address.post_code + "," + customer_address.country + "<br  />Tel:" + customer_address.phone);
+
+
+  });
+
+
+
+
+  $('#customer_form_submit').click(function(){
+    $("#customer-form").submit();
+  });
+
+
+  // this is the id of the form
+  $("#customer-form").submit(function(e) {
+
+      e.preventDefault(); // avoid to execute the actual submit of the form.
+
+      var form = $(this);
+      var url = form.attr('action');
+
+      $.ajax({
+             type: "POST",
+             url: url,
+             data: form.serialize(), // serializes the form's elements.
+             success: function(data)
+             {
+                 //console.log('customer', data);
+                // alert(data); // show response from the php script.
+             }
+           });
+
+
+  });
+
+
+
+
+  $('#customersearch').autoComplete({
+   resolverSettings: {
+       url:'<?=$this->Url->build(['controller'=>'customers','action'=>'list.json']);?>'
+      // url: 'https://raw.githack.com/xcash/bootstrap-autocomplete/master/dist/latest/testdata/test-list.json'
+   }
+  });
+
+  $('#customersearch').on('autocomplete.select', function (evt, item) {
+					//console.log('select', item.data);
+          if(item.value > 0){
+            var customer = item.data;
+            var customer_address = customer.primary_address;
+          //  var cusdetail = $("<p></p>").html(customer.first_name + " " + customer.last_name + "<br />" + customer_address.address + "<br />Apt:" + customer_address.apartment + "<br />" + customer_address.city + "-" + customer_address.post_code + "," + customer_address.country + "<br />Tel:" + customer_address.phone );
+            $('#customerdetailarea').toggle();
+            $('#customersearcharea').toggle();
+            //$('#customerdetailarea').find(".card-title").text(customer.first_name + " " + customer.last_name);
+          //  $('#customerdetailarea').html(cusdetail);
+            $('#customer_id').val(customer.id);
+            $('#shipping_address').val(JSON.stringify(customer_address));
+
+            $('#cust_basic_info').html(customer.first_name + " " + customer.last_name + " <br  />" + customer.email + "<br  />Tel:" + customer.phone);
+            $('#cust_shipping_info').html(customer_address.first_name + " " + customer_address.last_name + "<br  />" + customer_address.address + "<br  />" + customer_address.apartment + "<br  />" + customer_address.city + ",Post Code:" + customer_address.post_code + "," + customer_address.country + "<br  />Tel:" + customer_address.phone);
+            $('#cust_billing_info').html("Same as shipping");
+
+          }else{
+            $("#customerAddressModal").modal();
+
+          }
+          //$('.basicAutoSelectSelected').html(item?JSON.stringify(item):'null');
+          $('#customersearch').val("");
+	});
+
+
+  $('#delcustomer').click(function(){
+    $('#customerdetailarea').toggle();
+    $('#customersearcharea').toggle();
+    $('#customer_id').val("");
+    $('#shipping_address').val("");
+    $('#billing_address').val("");
+
+
+  });
+
+
+
+  $('#product').autoComplete({
+    resolverSettings: {
+      url:'<?=$this->Url->build(['controller'=>'products','action'=>'list.json']);?>'
+    },
+    formatResult: function (item) {
+      return {
+        value: item.id,
+        text: "[" + item.id + "] " + item.text,
+        html: [
+            $('<img>').attr('src', item.icon).css("height", 18), ' ',
+            item.title  + ' Options:' + item.options + ' Price:' + item.price
+          ]
+      };
+    }
+
+  });
+
+  var add_product = function(item){
+    tCell1 = $('<td>').attr('style',"width:150px").html('<img src="<?=$this->Url->build('/img/missing_image.png')?>" alt="" class="h-8">');
+    tCell2 = $('<td>').html('<p><b>'+  item.title +'</b> <br />'+ item.options +' <br />'+ item.sku +'</p>');
+    tCell3 = $('<td>').attr('style','width:100px').html('<a href="javascript:;;" class="pricepopoveritem editable-click" data-type="text" data-container="body" data-placement="top" data-value="' + item.price + '"   title="Update price"  > <?=$this->Formats->moneySymbol()?> <span class="pricespan">'+ item.price +'</span>   </a> ');
+    tCell4 = $('<td>').attr('class','w-1').html('x');
+    tCell5 = $('<td>').attr('style','width:100px').html('<input type="number" name="product_quantity[]" class="form-control product_quantity"  value="' + item.quantity  + '">');
+    tCell6 = $('<td>').attr('class','w-1').html('<a href="javascript:;;" class="icon delproduct"><i class="fe fe-trash"></i></a>');
+
+    hid1 = $('<input>').attr("type","hidden").attr("name","product_title[]").val(item.title);
+    hid2 = $('<input>').attr("type","hidden").attr("name","product_weight[]").attr('class',"product_weight").attr('data-is-digital',item.is_digital).val(item.weight);
+    hid3 = $('<input>').attr("type","hidden").attr("name","product_is_digital[]").val(item.is_digital);
+    hid4 = $('<input>').attr("type","hidden").attr("name","product_options[]").val(item.options);
+    hid5 = $('<input>').attr("type","hidden").attr("name","product_sku[]").val(item.sku);
+    hid6 = $('<input>').attr("type","hidden").attr("name","product_price[]").attr('class',"product_price").val(item.price);
+    hid7 = $('<input>').attr("type","hidden").attr("name","product_total[]").attr('class',"product_total").val(item.price);
+    hid8 = $('<input>').attr("type","hidden").attr("name","products_id[]").val(item.id);
+    hid9 = $('<input>').attr("type","hidden").attr("name","product_variants_id[]").val(item.variant_id);
+
+    tCell6.append(hid1,hid2,hid3,hid4,hid5,hid6,hid7,hid8,hid9);
+
+    tRow = $('<tr>').attr("class","producttr").append(tCell1 , tCell2 , tCell3 , tCell4 , tCell5 ,  tCell6);
+    $('#productstable').append(tRow);
+    calc_total();
+
+  };
+
+  $('#product').on('autocomplete.select', function (evt, item) {
+          //console.log('select', item);
+          $('#product').val("");
+          add_product(item);
+
+
+  });
+
+  $('#add_manual_btn').click(function(){
+     var item = {
+       id: 0,
+       variant_id:0,
+       title: $('#custom-product-prduct-title').val(),
+       sku:$('#custom-product-sku').val(),
+       price:$('#custom-product-price').val(),
+       options:"",
+       quantity:1,
+       weight:"1 kg",
+       is_digital:false,
+       img:"",
+     };
+     add_product(item);
+
+  });
+
+
+
+
+
+
+
+  /*$('body').popover({
+            selector: '.pricepopoveritem',
+            content: '<div class="form-group text popoverdiv"><label class="form-label" for="priceupdatetxt"></label><div class="input-group"><input type="number" placeholder="Custom price" name="pricetextbox" id="priceupdatetxt" class="form-control" value=""> <span class="input-group-append"> <span ><span class="input-group-append"><button type="button" rel="" class="btn btn-primary priceupdatebtn" >Update</button></span></span</span></div></div>',
+            html: true,
+            container: '#pricepopovercontainer'
+  });
+
+  $('body').on('show.bs.popover','.pricepopoveritem' ,function (e) {
+      var button = $(e.target);
+      var $tr = $(button).closest('tr');
+      price = $($tr).find('.product_price').val();
+      $('#pricepopovercontainer').attr("pricedata",price);
+    //  $('#priceupdatetxt').val(price);
+  // do something...
+     //console.log('shown the popup',$(button).text());
+    //  $(this).off( "click", "**" );
+    $(button).attr('current',1);
+
+  }); */
+
+  $('#productstable').editable({
+      type: 'text',
+      selector:'.pricepopoveritem',
+      url: '',
+      title: 'Enter price',
+      display:false,
+      success: function(response, newValue) {
+        //userModel.set('username', newValue); //update backbone model
+        console.log("New price value",newValue);
+         price = parseFloat(newValue);
+         var $tr = $(this).closest('tr');
+
+         $tr.find('.product_price').val(price);
+         $tr.find('.product_total').val(price * $($tr).find('.product_quantity').val());
+         $($tr).find('.pricespan').text(price);
+         console.log($tr.find('.product_price'));
+         calc_total();
+        // newValue = "tk " + newValue;
+      }
+  });
+
+//data-container="body" data-placement="top" data-toggle="popover"
+
+
+/*  $('body').on('click', '.priceupdatebtn', function(e){
+       ////console.log('dispose here');
+
+
+      price = $(this).closest('div').find('#priceupdatetxt').val();
+      ////console.log("price before update",$($this).closest('tr').find('.product_price').val());
+      $('#pricepopovercontainer').attr("pricedata",price);
+      $('.pricepopoveritem[current="1"]').click();
+
+  });
+
+   //popovercontainer
+  $('body').on('hide.bs.popover','.pricepopoveritem', function (e) {
+      var button = $(e.target);
+  // do something...
+    $(button).removeAttr('current');
+     //console.log('hide the popup',$(button).text());
+     price = $('#pricepopovercontainer').attr("pricedata");
+     var $tr = $(button).closest('tr');
+     $($tr).find('.product_price').val(price);
+     $($tr).find('.product_total').val(price * $($tr).find('.product_quantity').val());
+     $($tr).find('.pricespan').text(price);
+     calc_total();
+
+  });*/
+
+
+
+
+
+  $('#productstable').on('click', '.delproduct', function() {
+       $(this).closest('tr').remove();
+       calc_total();
+  });
+  $('#productstable').on('change', '.product_quantity', function() {
+       if($(this).val() <=0)
+         $(this).val(1);
+
+       ptotal = $(this).closest('tr').find('.product_price').val() * $(this).val();
+
+       $(this).closest('tr').find('.product_total').val(ptotal);
+       calc_total();
+  });
+
+/*  (function ( $ ) {
+
+    $.fn.popoverinput = function( options ) {
+
+        // Default options
+        var settings = $.extend({
+            title: 'Enter price',
+            onUpdate: function(price,selector) {}
+        }, options );
+        var $this = this;
+
+        $(this).on('hide.bs.popover', function (e) {
+            var button = $(e.target);
+        // do something...
+            price = $($this).attr('current');
+            options.onUpdate.call(this,price,$this);
+            $($this).removeAttr('current');
+            //console.log('hide the discount popup',$($this).text());
+
+
+        });
+
+
+
+        var ID = function () {
+           // Math.random should be unique because of its seeding algorithm.
+           // Convert it to base 36 (numbers + letters), and grab the first 9 characters
+           // after the decimal.
+           return '_' + Math.random().toString(36).substr(2, 9);
+        };
+        var btnid = ID();
+        //console.log('unique id',btnid);
+
+        $('body').on('click', '#' + btnid, function(e){
+             price = $(this).closest('div').find('#priceupdatetext').val();
+             //console.log('dispose here',price);
+             $($this).attr('current',price);
+             $($this).popover('hide');
+        });
+        // Apply options
+        return $(this).popover({
+                  content: '<div class="form-group text popoverdiv"><label class="form-label" for="priceupdatetext"></label><div class="input-group"><input type="number" placeholder="Add discount" name="pricetextbox" id="priceupdatetext" class="form-control" value=""> <span class="input-group-append"> <span ><span class="input-group-append"><button type="button" rel="" class="btn btn-primary" id="' + btnid + '">Update</button></span></span</span></div></div>',
+                  html: true,
+                  container: 'body'
+        });
+
+
+
+    };
+
+}( jQuery ));*/
+
+
+  /*$('#discountpopuover').popoverinput({
+     onUpdate:function(price,selector){
+        //console.log("price returned",price);
+        $(selector).closest('div').next('div').find('span').text(price);
+        $('input[name ="discount"]').val(price);
+        calc_total();
+     }
+  });*/
+
+
+  $('#discountpopuover').editable({
+      type: 'text',
+      url: '',
+      title: 'Enter price',
+      display:false,
+      success: function(response, newValue) {
+        //userModel.set('username', newValue); //update backbone model
+        //console.log(response + " " + newValue);
+        $('#discount_span').text(newValue);
+        $('input[name ="discount"]').val(newValue);
+        calc_total();
+      }
+  });
+
+
+  $('#taxpopuover').editable({
+      type: 'text',
+      url: '',
+      title: 'Enter price',
+      placement:'bottom',
+      display:false,
+      success: function(response, newValue) {
+        //userModel.set('username', newValue); //update backbone model
+        //console.log(response + " " + newValue);
+        $('#taxes_span').text(newValue);
+        $('input[name ="taxes"]').val(newValue);
+        calc_total();
+      }
+  });
+
+/*  $('#shippingpopuover').popoverinput({
+     onUpdate:function(price,selector){
+        //console.log("price returned",price);
+        $(selector).closest('div').next('div').find('span').text(price);
+        $('input[name ="shipping_fee"]').val(price);
+        calc_total();
+     }
+  });
+
+
+  $('#taxpopuover').popoverinput({
+     onUpdate:function(price,selector){
+        //console.log("price returned",price);
+        $(selector).closest('div').next('div').find('span').text(price);
+        $('input[name ="taxes"]').val(price);
+        calc_total();
+     }
+  });*/
+
+  $('#btnordersubmit').click(function(){
+    //console.log("submitted");
+     $('#orderfmr').submit();
+  });
+
+
+  $("input[name=shipping_method]").val(['<?=$order->shipping_methods_id?>']);
+ $("input[name=shipping_method]").change(function(){
+    if($(this).val() == 0)
+      $('#customs-shipping-price').prop("disabled",false);
+    else {
+      $('#customs-shipping-price').prop("disabled",true);
+    }
+      ////console.log("shipping custom here");
+
+
+ });
+
+ $('#shiipingmethod_save_btn').click(function(){
+     //console.log("shipping save click" + $("input[name=shipping_method]").val());
+     $('#shipping_methods_id').val($("input[name=shipping_method]").val());
+     $('#shipping_rate').val($("input[name=shipping_method]").attr("data-rate"));
+     $('#shiipping_rate_flat').val($("input[name=shipping_method]").attr("data-rate-flat"));
+     calc_total();
+ });
+
+  <?php
+  if(!$order->isEmpty('id')):
+  foreach ($order->order_products as $key => $order_product):
+    $product = ['id'=>$order_product->products_id,'variant_id'=>$order_product->product_variants_id,'title'=>$order_product->product_title,'options'=>$order_product->product_options,'icon'=>'','price'=>$order_product->product_price,'sku'=>$order_product->sku,'quantity'=>$order_product->product_quantity];
+  ?>
+  add_product(JSON.parse('<?=json_encode($product)?>'));
+  <?php endforeach; endif; ?>
+
+
+
+
+});
+});
+
+
+</script>
+
+<?php debug($order); debug($shipping_methods);?>

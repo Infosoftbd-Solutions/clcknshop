@@ -1,0 +1,1 @@
+nohup php /var/www/html/clcknshop/bin/cake.php mail > /var/www/html/clcknshop/logs/cron.log  2>&1 &

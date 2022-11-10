@@ -1,0 +1,246 @@
+/*-------- 11. Subscribe style ---------*/
+
+.subscribe-form {
+    .subscribe-form-style {
+        position: relative;
+        .mc-form {
+            position: relative;
+            &::before {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 18px;
+                font-family: 'simple-line-icons';
+                content: "\e01e";
+                z-index: 999;
+                color: $black;
+            }
+            input {
+                color: #999999;
+                padding: 2px 115px 2px 30px;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid #999999;
+                height: 55px;
+                &::-moz-input-placeholder {
+                    color: #999999;
+                    opacity: 1;
+                }
+                &::-webkit-input-placeholder {
+                    color: #999999;
+                    opacity: 1;
+                }
+            }
+            .mc-news {
+                display: none;
+            }
+            .clear {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                input {
+                    width: auto;
+                    border: none;
+                    font-weight: bold;
+                    color: $black;
+                    font-size: 16px;
+                    font-family: $heebo;
+                    text-transform: uppercase;
+                    letter-spacing: .75px;
+                    padding: 0;
+                    &:hover {
+                        color: $theme-color-red;
+                    }
+                }
+            }
+        }
+    }
+    @media #{$xs-layout} {
+        margin-top: 15px;
+    }
+}
+
+.subscribe-form-2 {
+    .subscribe-form-style-2 {
+        position: relative;
+        .mc-form-2 {
+            position: relative;
+            &::before {
+                position: absolute;
+                left: 22px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 18px;
+                font-family: 'simple-line-icons';
+                content: "\e01e";
+                z-index: 999;
+                color: $black;
+            }
+            input {
+                color: #bbbbbb;
+                padding: 2px 165px 2px 60px;
+                background-color: $white;;
+                border: none;
+                height: 55px;
+                @media #{$xs-layout} {
+                    padding: 2px 113px 2px 60px;
+                }
+                @media #{$sm-layout} {
+                    padding: 2px 135px 2px 60px;
+                }
+                &::-moz-input-placeholder {
+                    color: #bbbbbb;
+                    opacity: 1;
+                }
+                &::-webkit-input-placeholder {
+                    color: #bbbbbb;
+                    opacity: 1;
+                }
+            }
+            &.mc-form-2-bg-gray {
+                input {
+                    background-color: #f5f5f5;
+                }
+            }
+            .mc-news-2 {
+                display: none;
+            }
+            .clear-2 {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                input {
+                    width: auto;
+                    border: none;
+                    font-weight: bold;
+                    color: $black;
+                    font-size: 16px;
+                    font-family: $heebo;
+                    text-transform: uppercase;
+                    letter-spacing: .75px;
+                    padding: 0 30px;
+                    color: $white;
+                    background-color: $theme-color-green;
+                    @media #{$xs-layout} {
+                        padding: 0 10px;
+                        font-size: 14px;
+                    }
+                    @media #{$sm-layout} {
+                        padding: 0 20px;
+                    }
+                    &:hover {
+                        background-color: $black;
+                    }
+                }
+                &.clear-2-purple {
+                    input {
+                        background-color: $theme-color-purple;
+                        &:hover {
+                            background-color: $black;
+                        }
+                    }
+                }
+                &.clear-2-blue {
+                    input {
+                        background-color: $theme-color-blue;
+                        &:hover {
+                            background-color: $black;
+                        }
+                    }
+                }
+                &.clear-2-orange {
+                    input {
+                        background-color: $orange;
+                        &:hover {
+                            background-color: $black;
+                        }
+                    }
+                }
+                &.clear-2-green-2 {
+                    right: -1px;
+                    input {
+                        background-color: #468707;
+                        min-height: 56px;
+                        &:hover {
+                            background-color: $black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media #{$xs-layout} {
+        margin-top: 15px;
+    }
+}
+
+@media #{$md-layout} {
+    .subscribe-area {
+        &.pt-95 {
+            padding-top: 75px;
+        }
+        &.pb-95 {
+            padding-bottom: 75px;
+        }
+    }
+}
+
+
+@media #{$xs-layout} {
+    .subscribe-area {
+        &.pt-95 {
+            padding-top: 55px;
+        }
+        &.pb-95 {
+            padding-bottom: 55px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

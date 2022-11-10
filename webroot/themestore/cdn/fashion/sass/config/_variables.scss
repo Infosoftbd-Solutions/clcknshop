@@ -1,0 +1,46 @@
+// Variables
+
+// Skin / Font
+$font-size: 1.4rem !default;
+$sidebar-font-size: 1.3rem !default;
+$footer-font-size: 1.3rem !default;
+$input-font-size: 1.2rem !default;
+$button-font-size: 1.4rem !default;
+
+// Skin / Color
+$primary-color: #08C !default;
+$primary-color-dark: #222529 !default;
+$secondary-color: #ff7272 !default;
+$secondary-color-dark: #2f3946 !default;
+$secondary-color-light: #515151 !default;
+$link-color: $primary-color !default;
+
+$body-text: #777 !default;
+$light-text: #666 !default;
+$headings-text: #222529 !default;
+
+// Skin / Border Radius
+$border-radius: 0 !default;
+
+// Skin / Font Family
+$font-family: 'Open Sans', sans-serif !default;
+$second-font-family: Poppins, sans-serif !default;
+
+// Skin / Shop Page Font Family
+$shop-font-family: 'Open Sans', sans-serif !default;
+$shop-second-font-family: Poppins, sans-serif !default;
+
+// Breakpoints
+$breakpoints: (xs: 480px, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1600px, xlst: 1920px);
+$max-breakpoints: (xs: 479px, sm: 575px, md: 767px, lg: 991px, xl: 1199px, xxl: 1599px);
+
+// Owl Carousel
+$dot-border: rgba(0, 0, 0, .4);
+$dot-width: 15px;
+$dot-height: 15px;
+$nav-color: $primary-color-dark;
+$nav-color-hover: $nav-color;
+$nav-font-size: 3rem !default;
+
+// Magnific Popup
+$mfp-overlay-opacity: .4;

@@ -1,0 +1,18 @@
+@mixin socialIcon($w:40px, $h:40px, $bgColor:#fff, $color:$thm-black, $fontSize:14px) {
+    border-radius: 50%;
+    width: $w;
+    height: $h;
+    background-color: $bgColor;
+    color: $color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: $fontSize;
+    transition: 500ms ease;
+
+    &:hover {
+        background-color: $color;
+        color: $bgColor;
+    }
+}

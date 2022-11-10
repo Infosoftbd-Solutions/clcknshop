@@ -1,0 +1,794 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <title>Clcknshop Documentation</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+<script type="text/javascript">(function () {
+  var basePath = location.pathname.split('/');
+  basePath.pop();
+  basePath = basePath.join('/');
+
+  var proxied = window.XMLHttpRequest.prototype.open;
+  window.XMLHttpRequest.prototype.open = function () {
+    if (arguments && arguments[1] && (arguments[1] + '').indexOf('.md') !== -1) {
+      var filename = arguments[1].replace(basePath + '/', '');
+
+      this.send = function(){};
+
+      this.addEventListener = function(event, cb) {
+        switch (event) {
+          case 'loadend':
+            cb({});
+            break;
+          case 'load':
+            var el = document.querySelector('[data-md="' + filename + '"]');
+
+            if(!el) {
+              cb({
+                target: {
+                  status: 400
+                }
+              });
+              break;
+            }
+
+            cb({
+              target: {
+                status: 200,
+                response: el.innerText
+              }
+            });
+            break;
+        }
+      }
+
+    }
+    return proxied.apply(this, [].slice.call(arguments));
+  };
+
+})();</script></head>
+<body>
+  <div style="display: none;"><pre data-md="_sidebar.md">- Getting started
+  - [Installation](install.md)
+  - [Registration](registration.md)
+  - [Login](sign_in_store.md)
+
+- Products &amp; Inventory
+
+  - [Add/Edit Product](product.md)
+  - [Add/Edit Collections](collection.md)
+  - [Inventory Management](inventory.md)
+  - [Inventrory Log](inventory_log)
+  - [Reviews](reviews.md)
+  - [Coupon Management](coupon.md)
+
+- Order and Invoicing
+
+  - [Add/Edit Orders](orders.md)
+  - [Add/Edit Customer](customer_profile.md)
+  - [Payment Process](process.md)
+  - [Payment Refund/History](payment-refund-history.md)
+  - [Invoice Print/packing Slip/Download](invice_print)
+  - [POS](pos.md)
+  
+  
+  &lt;!-- - [Sales](sales.md)
+  - [Purchase](purchase.md) --&gt;
+  
+  &lt;!-- - [Expenses](expenses.md)
+  
+  - [Reports](reports.md) --&gt;
+
+- Reports Management
+
+  - [Financial Reports](financial.md)
+  - [Daily Reports](daily.md)
+  - [Customer Reports](customer.md)
+  - [Product Reports](product-report.md)
+  - [Order Payment Report](order-payment-report.md)
+
+- Settings Managment
+  
+  - [General Option](general_option.md)
+  - [Payment Methods](payment-method.md)
+  - [Payment Gateway](payment-processor.md)
+  - [Shipping Methods](shipping-method.md)
+  - [Notifications](notify.md)
+  - [Profile Add/Edit](profile.md)
+
+- Store Management
+  
+  - [Theme Add/Edit](theme.md)
+  - [Manage Assets](manage-asset.md)
+  - [Facebook integration](fb-integration.md)
+  - [Web Master Tools](web-master-tools.md)
+
+&lt;!-- - Stores
+  
+  - [All Stores](all_stores.md)
+  - [Themes](themes.md)  --&gt;</pre><pre data-md="collection.md"># Collection Documentation
+
+&gt; Every eCommerce solution needs a category section so that people can easily find a specific product. All the categories or subcategories are usually classified by the product and services in one place.
+
+Adding proper categories improves the internal search and usability and results in a better customer experience. Make sure your categories include quality images, price tags, ratings, titles, and descriptions so that it becomes easy for your customers to get all the details. You need to find out what the customer wants, then add categories accordingly. Click on **"Products =&gt; Collections"** to create a new collections.Here are the steps you can follow to add a category :
+
+- Editing existing product categories in e-commerce 
+
+![image](img/11.png)
+
+- Automatic matching and Manual matching
+
+![image](img/12.png)
+
+You will get to edit or update your category as needed. Just go to the category list and click the edit button.
+
+
+</pre><pre data-md="coupon.md"># Coupon Management
+
+&gt; Coupons are a great way to offer discounts and rewards to your customers, and can help promote sales across your shop.
+
+**Add Coupoun**: To create a new coupon, first go to **"Products =&gt; Discount/Promotion"** to create an offer for your customer for a specific product.
+
+![image](img/45.png)
+
+
+A new discount offer has been created for **Black Friday** . It specifies the amount of the **Discount Offer** as well as the **Start to End Date**.
+
+![image](img/55.png)
+
+**Advantages of the Promotional offer**
+
+- They help create your online store’s reputation.
+
+- They promote word-of-mouth marketing.
+
+- They increase your e-commerce traffic
+
+- They help and convert new customers.
+
+- They convey credibility and security.
+
+
+</pre><pre data-md="customer_profile.md"># Customer Profile Add
+
+
+To add a new customer, first navigate to **Order-&gt;All Customers**. Click the **Add Customer** button on the right side. A new window will appear in front of you where you can see the list of customers' profiles being placed.To clarify, follow the below image.
+
+![image](img/37.png)
+
+A new page will come up to fill up some basic infomation like name, address etc then click to **Save Button** to save the customer informatio for further use.
+
+![image](img/38.png)
+
+You will get to edit or update your customer as needed. Just go to the customer list and click the edit button.</pre><pre data-md="customer.md"># Customer order Reports
+
+Go to the solution dashboard and click on **"Reports =&gt; Customer Reports"**. You can sort by date to see the day-wise total sales for each client.
+
+![image](img/52.png)</pre><pre data-md="daily.md"># Daily Reports 
+
+Go to the solution dashboard and click on **"Reports =&gt; Daily Reports"**. You can sort by date to see the day-wise total sales.
+
+We can easily search how many payments have been made and how many sales have been made against order ID in a single days. You can print a daily sales report,daily payment report, and those can be downloaded easily if you want.
+![image](img/51.png)</pre><pre data-md="expenses.md"># Expenses Documentation</pre><pre data-md="facebook_upload.md"># Upload Picture/Post to Facebook from **Product**
+
+Go to the dashboard and click on "Products =&gt; All Products" to see the list of products. Click the right side **...** to view the uploaded image for each product and post to Facebook here.
+There are some steps to adding picture and post to Facebook.
+
+![image](img/6.png)
+
+# Step -1: Upload Picture
+
+![image](img/7.png)
+
+# Step -2: Post to Facebook
+
+![image](img/8.png)</pre><pre data-md="fb-integration.md"># Facebook Integration Document
+
+Go to the dashboard and click on **"Store Front =&gt; Facebook Integration"** to set Facebook Shop Feed URL.
+
+(........Continue..........)
+
+![image](img/26.png)</pre><pre data-md="financial.md"># Financial Report
+
+&gt; Get better understanding of your website sales with just have a brief look at the sales report by order placement.
+
+Go to the solution dashboard and click on **"Reports =&gt; Financial Reports"**. You can sort by date to see the total financial amount. For example, you will see a financial order on a full month, half month,weekly basis, or day-to-day basis.
+
+We can easily search how many payments have been made and how many sales have been made in a single month. You can print a monthly sales report, a monthly payment report, and those can be downloaded easily if you want.
+
+![image](img/50.png)</pre><pre data-md="general_option.md"># About General Option
+
+Click on **Settings =&gt; General** Option to set the logo, update the store title, and also update your store information. Also update your mailing server and also update login and login setting.
+
+![image](img/42.png)</pre><pre data-md="install.md">### Installation procedure of Clcknshop Multitenant E-Commerce platform
+
+#### Server Requirements
+**Before you install  make sure your server meets the following requirements:**
+- PHP 7.x
+- MySQL 5.6+ or MariaDB 10.0+
+- Intl PHP Extension
+- OpenSSL PHP Extension
+- PDO PHP Extension
+- Mbstring PHP Extension
+- XML PHP Extension
+- Ctype PHP Extension
+- JSON PHP Extension
+- PHP GD Extension
+
+
+
+#### Please follow the instructions below to install the php script.
+- Step 1: Unzip the downloaded project zip  to your web hosting folder.\
+Say example `/var/www/html/clcknshop `
+
+- Step 2: Run composer update Command from shell(Optional).\
+COMMAND `composer update`
+
+- Step 3: Change permission some folders like tmp , logs etc.\
+COMMAND 
+```bash
+chmod -R 0777 tmp logs webroot/contents webroot/themestore
+```
+
+- Step 4: Open phpmyadmin or any other mysql management panel to create a database say example `clcknshop`
+
+- Step 5: Import database script from `config/schema/clcknshop.sql` 
+
+- Step 6: Open config file `config/clcnshop.php`
+
+- Step 7: Change clcknshop config strings as follows
+
+```php
+define('ADMIN_DOMAIN','clckn.shop'); 
+#Put your main domain name here in place of clckn.shop.
+
+define('BASE_DB_NAME','clcknshop'); 
+#Change clcnshop with your  database name here.
+
+define('DATABASE_URL', 'mysql://clcknshop:clcknshop@localhost/' . BASE_DB_NAME); 
+#Change database username:password here clcnshop:clcknshop. 
+#Make sure the mysql user has permission to create database with prefix of your base db name.
+#As example if your base db name is clcknshop, then the user should have permission to create database clcknshop_any-store-name.
+#Change database hostname in place of localhost.
+
+define('RECAPTCHA_SITE_KEY','6Ldc95IiAAAAALsUnD2Fj7KS0pGncI1L0LI7RlRv');
+define('RECAPTCHA_SECRET_KEY','6Ldc95IiAAAAAPsLY7xEFRMIW1GV3x_B9sPnh8x-');
+#Put recptcha site key and secret to use use captch in your site.
+#But if you don't want to setup recaptcha just comment above two lines (RECAPTCHA_SITE_KEY and RECAPTCHA_SECRET_KEY) by putting // or # 
+```
+#### Make some changes in server configuration file.
+
+- **For apache see configurations below**
+
+```html
+&lt;VirtualHost 209.127.124.3:80&gt;
+	    ServerAdmin webmaster@dummy-host.example.com
+	    DocumentRoot /var/www/html/clcnknshop/webroot
+	    ServerName clcnknshop.com
+	    ServerAlias *.clcnknshop.com
+	    IncludeOptional /var/www/html/clcnknshop/tmp/cache/domains.apache.conf
+	    RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+	&lt;/VirtualHost&gt;
+
+
+   &lt;IfModule mod_ssl.c&gt;
+	&lt;VirtualHost 209.127.124.3:443&gt;
+	    ServerAdmin webmaster@dummy-host.example.com
+	    DocumentRoot /var/www/html/clcnknshop/webroot
+	    ServerName clcnknshop.com
+	    ServerAlias *.clcnknshop.com
+	    IncludeOptional /var/www/html/clcnknshop/tmp/cache/domains.apache.conf
+	   
+	    &lt;Directory "/var/www/html/clcknshop/webroot"&gt;
+	        AllowOverride All
+	        Require all granted
+	    &lt;/Directory&gt;	    
+	SSLCertificateFile /etc/ssl/certs/clcknshop.com/cert.pem
+	SSLCertificateKeyFile /etc/ssl/certs/clcknshop.com/privkey.pem
+	&lt;/VirtualHost&gt;
+	&lt;/IfModule&gt;
+```
+
+- **For Nginx see configurations below**
+
+```html
+server {
+        #Replace all of domain by your domain won domain name.
+	    server_name  *.clckn.shop clckn.shop www.clckn.shop;
+
+	    include /var/www/html/clcknshop/tmp/cache/domains.nginx.conf;
+
+        
+	    root   /var/www/html/clcknshop/webroot; #put your project webroot path.
+	    index index.php index.html index.htm;
+
+	   
+	    
+	    location / {
+	        index  index.php index.html;
+
+	        # If the file exists as a static file serve it 
+	        # directly without running all
+	        # the other rewite tests on it
+	        if (-f $request_filename) { 
+	            break; 
+	        }
+	        if (!-f $request_filename) {
+	            rewrite ^/(.+)$ /index.php?url=$1 last;
+	            break;
+	        }
+	    }
+	    error_page 404 /404.html;
+	    error_page 500 502 503 504 /50x.html;
+
+	    location = /50x.html {
+	        root /usr/share/nginx/html;
+	    }
+
+	    location ~ \.php$ {
+	        try_files $uri =404;
+	        fastcgi_pass unix:/var/run/php-fpm/php-fpm.sock;
+	        fastcgi_index index.php;
+	        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+	        include /etc/nginx/fastcgi_params;
+	        fastcgi_param SERVER_NAME $host;
+	        
+	        #include fastcgi_params;
+	    }
+	   
+
+	    listen 209.127.124.5:443 ssl; # managed by Certbot
+	    ssl_certificate /etc/ssl/certs/clcknshop.com/cert.pem
+	    ssl_certificate_key /etc/ssl/certs/clcknshop.com/privkey.pem
+	}server {
+	   
+	    server_name  *.clckn.shop clckn.shop www.clckn.shop; #put your own damain name.
+	    include /var/www/html/clcknshop/tmp/cache/domains.nginx.conf;
+
+	    listen 209.127.124.5:80; #Replace by your server IP:Port
+	    return 302 https://$server_name$request_uri;
+
+	}
+
+```
+
+
+SSL certificate should be same for your primary ip and its subdomains. Eg. clckn.shop www.clckn.shop *.clckn.shop should have same SSL certificate.
+
+The additional domain configure will be loaded from file
+`/var/www/html/clcnknshop/tmp/cache/domains.apache.conf`
+`/var/www/html/clcnknshop/tmp/cache/domains.nginx.conf`
+
+this files need include only when your certificate is self signed and you are using a CDN provider like cloudflare for SSL .
+If you have different ssl files for other domains then all configuration need to be done separtely for addition domains.
+Also a manual restart of the webserver is needed after adding a new domain.
+
+- **DNS Settings** 
+Make sure your to set same ip same for the domain with asterisk mark. Eg. clckn.shop www.clckn.shop *.clckn.shop all should be pointed to same IP. 
+
+
+- **Additional configuration**
+Additional configuration needed for advance users. For default email , pdf , sms settings change file app_local.php
+For any advance configuration instruction please email us for support instructions.
+
+- **Lunch the site and login to admin panel**
+After all setup site can be browse. Admin login will be https://DOMAIN/admin . Eg. https://clckn.shop/admin \
+Default username : admin@clckn.shop \
+Default passsword: 123456 </pre><pre data-md="inventory_log.md"># Inventory Log Documentation
+
+Go to the dashboard and click on **"Products =&gt; Inventory"**. A new window will appear in front of you where you can see the product that you have created. From the right side, click the log button in the product list.
+
+![image](img/31.png)
+
+By clicking on any **LOG Button**, you can see the details for each product.Which product quantity increased or decreased? Also see who added all the information? Also, you see the current quantity as well as the previous quantity according to date-time and order ID.
+![image](img/30.png)</pre><pre data-md="inventory.md"># Inventory Management Documentation
+
+&gt;Inventory management is a system to help retailers grow in every aspect of their business.Ecommerce retailers need to have a few things to be successful: a functional and appealing website, a good shipping strategy, and visibility into their inventory counts and locations.
+
+Inventory management helps you keep track of your products that are readily available to you at any given time. You can access your inventory at any time and keep track of the products you have in stock.
+
+- Step-1: How to access inventory?
+
+	Go to the solutions dashboard and click on **"Products =&gt; Inventory"**. From there, click on the **'Inventory'** option. A new window will open where you will see a list of all the products in your stock along with their numbers.
+
+
+   ![image](img/1.png)
+
+- Step-2: How to add and set new items to your stock?
+
+	Select the **"Add"** menu of the product you want to increase stock of and enter the number you want to add and click the **"Save"** button. The following images will help you understand:
+
+   ![image](img/2.png)
+
+
+</pre><pre data-md="invice_print.md"># Invoice/Packet slip print/download
+
+
+Go to Dashboard and click on **Orders =&gt; All Orders** to view the list of orders. Click the **...** to view all printable invoices, packing slips, and download options here.
+
+![image](img/27.png)</pre><pre data-md="manage-asset.md"># Manage Asset Documentation
+
+Then click on **Store Front=&gt;Manage assets**, customization of your slider image, home page, nav bar, menu, header, and footer.
+
+![image](img/25.png)</pre><pre data-md="notify.md"># Notification DocumentW
+
+Go to the dashboard and click on **"Settings =&gt; Notifications".** To set notification for all valuable customers or a specific product for a specific customer.
+
+You can set all the notifications to send mail to your customer to process the order, such as content for order placed, content for order processing, content for order shipped, content for order delivered, content for order cancelled,etc.
+![image](img/67.png)
+
+You can set all the notifications to send SMS to your customer to process the order, such as content for order placed, content for order processing, content for order shipped, content for order delivered, content for order cancelled, etc.
+
+![image](img/68.png)
+
+You can make SMS content for order processing, content for orders shipped, content for orders delivered, and content for orders cancelled according to order ID.
+Example : Dear Customer, Percel from Bdhockers.com  your Order ID 1XXX is placed.Your order is placed. Thank you.
+![image](img/69.png)</pre><pre data-md="order-payment-report.md"># Order Payment Report
+
+Go to the smart dashboard and click on **"Reports =&gt; Order Payment Reports"**.A new window will appear in front of you where you can see the order payment list according to order ID. You also see the customer name,payment method,amount,payment type, and payment date.
+
+
+![image](img/49.png)
+
+There is two payment type :
+
+- Payment 
+- Refund
+
+We can easily search how much payment has been made and how much payment has been refunded against Order ID in a single month.You can print a monthly order payment report and also download it easily if you want.
+
+![image](img/48.png)</pre><pre data-md="orders.md">## Order management
+
+&gt;Order management for Add/Edit and manage orders
+
+**Add order:**
+To create a new order first goto **Order -&gt; All orders**. From the right side click **Create Order** button. 
+After create orders page come first browse the products to add in the order or You can add a custom-based product to the order.A new window will appear in front of you where you can see the list of orders being placed.
+
+![image](img/101.png)
+
+By clicking on any Order ID, you can see the details of the order and whether the customer's information is correct.
+&lt;!-- 
+![image](img/102.png) --&gt;
+
+**What are the steps in order processing?**
+
+For customers, once they hit the "Buy Now" button, the hard work is over. All they’ve got to do is sit back and wait for those to arrive on their doorstep.
+
+But if you’re an ecommerce business, that’s where the hard work truly begins. Each new order sets off a complex chain reaction—from accepting the payment through to picking, packing and finally shipping it to the right place.
+
+![image](img/5.png)
+
+If the order is going to the shipment or delivery stage, there is no chance to cancel it. At the stage of order placement and processing, he or she can cancel the order.</pre><pre data-md="payment-method.md"># Payment Methods Documentation
+
+&gt; What’s the very first thing you look for in an online store when making a purchase? Payment options are available. While some of us prefer online banking, there are also those who’d rather choose cash on delivery for their orders. But as a store owner, how do you ensure that you’re catering to all types of customers and their payment preferences?
+
+Go to the solution dashboard and click on **"Settings =&gt; Payment Method"** to add different kinds of payment methods manually.Different types of payment gateways are integrated according to user requirements.
+
+
+
+![image](img/3.png)
+
+
+
+What are the different types of payment modes? 
+
+Our solutions accept all popular payment methods from around the world.
+
+- Paypal
+
+- Credit cards including Visa, Mastercard, American Express.
+
+- TransferWise, Payoneer, Tipalti.
+
+- More .. 
+
+It seems like a lot of things to implement. Well, if your store is on our solutions, it’s easy to offer them all. Here’s how!
+
+How do you add multiple payment methods to your online store?
+
+- Enabling netbanking/ debit card/ credit card/ UPI 
+
+- Setting up cash on delivery 
+
+
+  &gt; **Cash On delevery:** Cash on delivery (COD), also known as “collect on delivery” and “cash on demand,” is a payment method in which customers don’t pay for mailed goods until they’ve received and decided to keep them.</pre><pre data-md="payment-processor.md"># Add Payment Gateway
+
+&gt; To accept electronic payments and be able to process credit or debit cards, a merchant uses a payment gateway.
+
+Go to the solution dashboard and click on **"Settings =&gt; Payment Processor"** to implement different kinds of online payment gateway.
+
+![image](img/62.png)</pre><pre data-md="payment-refund-history.md"># Payment Refund/Payment Log
+
+&gt;A returns policy is a statement which stipulates under which circumstances a retailer is willing to accept previously purchased products returned by the customer
+
+![image](img/23.png)
+
+
+**Payment Refund Process:**
+
+With today’s sophisticated consumer, who are becoming increasingly fickle by nature (and with the sheer volume of retailers at their disposal, they can afford to be), only the best level of customer service will do. This includes having a favourable returns policy which is deemed as of the most important factors when making a purchasing decision. 
+
+Select on the **Refund** to see the image as same as below.
+
+![image](img/21.png)
+
+**Payment Log:**
+
+By the log, we see how much time was paid against the single order. Also show the payment method ,amount, and date/time.
+
+![image](img/22.png)
+</pre><pre data-md="pos.md"># POS Documentation
+
+&gt; “Integrating your POS and ecommerce site means having one holistic view of your customers and business. Inventory, orders, gift cards, images — all of these and more sync, offering your customers a seamless omnichannel shopping experience and your team a 360-degree view of your sales performance and customer journey.”
+
+Go to the solutions dashboard and click on **"Products=&gt; POS"** to see how orders are generated easily from POS as well as managed manually from storefront orders. 
+
+Our solutions provides POS software for use by all types of retail outlets, variety stores, or supply companies for accounting, procurement, sales, and stock mechanization, as well as a customized payment gateway method for online transactions.Special Features our POS Software are :
+
+- Orders: Generate orders and invoices easily from POS(Point Of Sale).
+
+- Invoices : Generate and download invoices for your sales.
+
+- Reports : Get your payments, products, customers reports according to required filters.
+
+- Cash &amp; Digital Payment : Receive payment from customers and track your cash and online payments.
+
+![image](img/laptop.png)</pre><pre data-md="process.md"># Payment Process Documentation
+
+Go to Solution Dashboard and click on **"Orders =&gt; All Orders"** to view the list of orders. Click on the dropdown to see the menu of each order. **Payment-&gt;Payment Process**.To clarify with an image below how to process a payment? 
+
+![image](img/44.png)
+
+
+
+When you select **Payment-&gt;Payment Process**, you'll be taken to a new window where you can process transactions for individual orders via a specific payment method.
+
+![image](img/47.png)
+
+</pre><pre data-md="product-manger.md"># Payment Method
+
+&gt; Customer have numerous payment method options when making online purchases. For businesses implementing e-commerce its important to understand the forms of payment that consumers use, and prefer, for online purchasing.
+
+Go to the solutions dashboard and click on "Settings =&gt; Payment Methods" to add a new payment method and also add various kinds of payment gateway.
+
+![image](img/20.png)
+</pre><pre data-md="product-report.md"># Product Reports
+
+Go to the solution dashboard and click on **"Reports =&gt; Product Reports"**. You can sort by date to see the total number of orders,total quantity, and selling price of each product.
+
+![image](img/54.png)</pre><pre data-md="product.md"># Product Documentation
+
+&gt;One of the most appealing things about running an e-commerce solution is that you can add different products easily.
+
+Go to the solutions dashboard and click on **"Products =&gt; All Products"** to create a new product. There are some steps to adding products.
+
+&lt;!-- You can add a product to the main page of your solutions, this is a great way to feature your products so that customers can easily click through to the product and purchase the item. You can add a product to the main pages of your solutions by using a product description,varient, buttons or images. --&gt;
+
+- Step-1: Go to the Products option where you want to add the product.
+
+- Step-2:Click the Add button to create a product.
+
+- Step-3: Fill up all the required fields in the product.
+
+- Step-4: If you click on this check box under the slug box, "This product has multiple options," our website can create product variants for you. Now type in the type of variation you want to add in **"Product Option"**. Take, for example, "size". Go to "Option values" and add "Small", "Medium", "Large" etc. can do Some products may have more than one option. In that case, click on the **"Add Another Option"** button.
+
+![image](img/233.png)
+
+- Step-5: Click **"Save and Continue"**.
+
+- Step-6: If you click on the save option with all the information about the product, the product list will appear. Then you can provide some pictures of the product.
+
+![image](img/4.png)
+
+
+You will get to edit or update your product as needed. Just go to the product list and click the edit button.
+
+
+
+
+
+</pre><pre data-md="profile.md"># User Profile Documentation
+
+Go to the dashboard and click on **"Settings=&gt; User Management"** to see how to create a new profile.There are two types of user role: one for admin and another for pos.
+
+![image](img/65.png)
+
+To click on "**Add new User**" button.Then fill up all the required fields to make a user profile.&lt;!-- It is also possible to do so from the site's front page.Click on registration and then follow the rules. Then you would be a registered customer.You can check all your purchases from your own profile. --&gt;
+
+![image](img/66.png)</pre><pre data-md="README.md"># ClckcnShop Documentation
+
+&gt; A brief documentation about oprating the solution.
+
+![logo](img/laptop.png)
+</pre><pre data-md="registration.md"># Registration
+
+&gt;User first need to register to create a colud ecommerce solution
+
+Please goto reistration page and fillup with following information
+
+- Email address
+- Password
+- Store Name
+
+![image](img/28.png)
+
+
+After filling up all informations the cloud application will be ready. A new page will come up to fill up some basic infomation like name, address etc. After filling that form user will be redirected to admin dashboard of the cloud solution.
+
+![image](img/29.png)</pre><pre data-md="reports.md"># Reports Documentation
+
+&gt; One of the important and interesting things about online business is that you can see everything in one click.
+
+To check all reports, first go to the "Report" section. There are four types of reports our solutions provide. There is given description below.
+
+- Finance reports -  Finance report includes all sales data.
+
+- Daily reports - Daily total orders and payments data.
+
+- Customer reports -  Customer based orders and accounting.
+
+- Product reports - Product based reports with order and payments.
+
+![image](img/105.png)
+
+</pre><pre data-md="reviews.md"># Reviews 
+ &gt; Reviews can help you sell more, gain new customers, accompany the consumer’s satisfaction, and get to know your target better.
+
+Go to the solutions dashboard and click on **"Products =&gt; Reviews"** to see all the comments about your product.
+
+**Advantages of the reviews**
+
+- They help create your online store’s reputation.
+
+- They promote word-of-mouth marketing.
+
+- They increase your e-commerce traffic
+
+- They help and convert new customers.
+
+- They convey credibility and security.
+</pre><pre data-md="shipping-method.md"># Shipping Methods Documentation
+
+&gt; If your business sells a physical product, then you need to be able to get that product to your customers. As high delivery fees are the biggest cause of abandoned shopping carts, it’s important to choose the right e-commerce shipping options for your business.
+
+Go to the solution dashboard and click on **"Settings =&gt; Shipping Method"** to add different kinds of Shipping methods manually.
+
+![image](img/60.png)
+
+Go to the Shipping Method and click on **Add Shipping Method** button.A new window will appear to add a new shipping method and add a shipping charge for each delivery.
+
+![image](img/61.png)
+
+
+
+
+
+</pre><pre data-md="sign_in_store.md"># Logging in to Store
+
+You can log in to your clcknshop account using your internet browser on a desktop device, or a mobile device.
+
+If you forget your store account password, then you can reset your password. If you forget the email address then contact our  Support.
+
+**Steps:**
+
+- Go to the Stores admin login page. Like a https://clckn.shop/admin
+
+
+![image](img/17.png)
+
+
+
+- Enter your email address that's  use one of the login services to log in.
+- Enter your password, and then click Log in.
+- If you have two-step authentication activated on your  account, then enter the authentication code using your authentication method, and then click Log in.
+- If you have multiple stores associated to your account, then select the store that you want to access.
+
+After successfully logging in, you can see a dynamic and beautiful dashborad.
+
+![image](img/18.png)
+</pre><pre data-md="stock-adjustment.md"># Stock Adjustment Documentation
+
+&gt; The term "stock management" is the process of controlling and appropriately managing how much stock a company should have at any given time. Stock is part of your inventory. But, not all of your inventory is your stock. It involves all of the procedures associated with ordering, tracking, controlling, and storing inventory. 
+
+**Stock management involves:**
+
+- Tracking variations in your stock
+- Monitoring the condition of your stock
+- Understanding customer demand for stock
+- Determining costs for materials
+- Calculate shipping, handling, and delivery costs.
+
+![image](img/2.png)</pre><pre data-md="theme.md"># About Theme 
+
+&gt; Create and setup your ecommerce site without any coding skills.Bring your brand to life with customizable and responsive themes.
+
+
+Go to the dashboard and click on **"Store Front =&gt; Theme"** to install a new development theme or activate an existing theme.
+
+![image](img/15.png)
+
+Now let's first select a suitable theme for your store.  Note that under the theme that you like, Live Demo and Install are written. Now if you like, then install it. The theme will become active in your store.
+
+![image](img/16.png)
+
+There are few important terms in theme section:
+
+- Install Theme :
+
+Now, if you click on Theme from the dropdown menu, you will get several themes. Note that Live Demo and Install Theme are written below the theme that you like. Click on Live Demo to see how this theme will look. You will see that theme in a new window. Now install it if you like. The theme will be active in your store.
+
+![image](img/40.png)
+
+Click on **Settings =&gt; General** Option to set the logo, update the store title, and also update your store information. Then click on **Store Front=&gt;Manage assets**, customization of your slider image, home page, nav bar, menu, header, and footer.
+
+- Add New Theme : Now click on **Add New Theme** add your customizable theme.
+
+# Edit/Update Theme
+
+Click on **"Store Front =&gt; Theme Editor"**. Update your e-commerce site without any coding skills. Just click and open, then update your site with what you want.It's just like an editor. You can save, upload a new file, create a new file, create a new directory, and rename a file or directory. If you don't need it, you can delete it.
+
+![image](img/41.png)
+
+</pre><pre data-md="web-master-tools.md"># Webmaster Tools
+
+&gt;Get your site's performance data, take advantage of free SEO tools and analyse insights to improve your page rankings on search results.
+
+Go to our nice and smart dashboard and click on **"Store Front =&gt; Webmaster Tools"**. There is an option to upload two.xml files for the sitemap and Robots.xml .
+
+![image](img/9.png)
+
+
+
+There is an option to upload two.xml files for the sitemap and Robots.xml .
+
+![image](img/10.png)
+
+ - Sitemap
+
+ A sitemap lists a website's most important pages, thus, making sure search engines can find and crawl them. Sitemaps also help in understanding your website structure, making it easier to navigate your website.
+
+ **Sitemap formats:**
+
+
+- XML
+
+- RSS, mRSS, and Atom 1.0
+
+- Text
+
+![image](img/32.png)
+
+ - Robots.txt
+
+
+
+The robots. txt plays an essential role from a SEO point of view. It tells search engines how they can best crawl your website.
+
+
+![image](img/33.png)
+</pre></div><div id="app">Please wait..</div>
+  <script>
+    window.$docsify = {
+      name: '',
+      repo: '',
+      loadSidebar: true    
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+
+
+<script type="text/javascript">(function () {
+
+  setTimeout(function() {
+    var placeholder = 'Search';
+    if($docsify.search && $docsify.search.placeholder) {
+      placeholder = $docsify.search.placeholder;
+    }
+    document.querySelector('input[type=search]').setAttribute('placeholder', placeholder);
+  }, 50);
+
+})();</script></body></html>

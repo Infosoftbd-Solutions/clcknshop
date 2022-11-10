@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<root>
+    <images>
+        <image>
+            <title>Slider 1 Image</title>
+            <key>slider-1</key>
+            <width>1920</width>
+            <height>710</height>
+            <file>uploads/hm-4-slider-1jpg-10-06-2021-1623308394603.jpg</file>
+        </image>
+        <image>
+            <title>Slider 2 Image</title>
+            <key>slider-2</key>
+            <width>1920</width>
+            <height>710</height>
+            <file>uploads/hm-4-slider-2jpg-10-06-2021-1623308397910.jpg</file>
+        </image>
+
+        <image>
+            <title>Home Page Flash Image 1</title>
+            <key>home-page-flash-image-1</key>
+            <width>867</width>
+            <height>644</height>
+            <file>uploads/banner-8jpg-29-07-2021-1627539703726.jpg</file>
+        </image>
+        <image>
+            <title>Home Page Flash Image 2</title>
+            <key>home-page-flash-image-2</key>
+            <width>867</width>
+            <height>644</height>
+            <file>uploads/banner-9jpg-29-07-2021-1627539707620.jpg</file>
+        </image>
+
+    </images>
+
+    <menus>
+
+        <menu>
+            <title>Navbar Menu</title>
+            <key>navbar-menu</key>
+            <menujson>[{"text":"Home","href":"/","icon":"","target":"_self","title":""},{"text":"Clothing","href":"/collection/clothing","icon":"","target":"_self","title":""},{"text":"Lifestyle","href":"/collection/electronics","icon":"","target":"_self","title":""},{"text":"Health &amp; Beauty","href":"/collection/health-and-beauty","icon":"","target":"_self","title":""},{"text":"Watches","href":"/collection/watches","icon":"","target":"_self","title":""},{"text":"Jewellery","href":"/collection/jewellery","icon":"","target":"_self","title":""}]</menujson>
+        </menu>
+        <menu>
+            <title>Footer Menu</title>
+            <key>footer-menu</key>
+            <menujson>[{"text":"My Account","href":"/customer","icon":"","target":"_self","title":""},{"text":"Order Tracking","href":"/track-order","icon":"","target":"_self","title":""},{"text":"Contact Us","href":"/page/contact-us","icon":"","target":"_self","title":""},{"text":"About Us","href":"/page/about-us","icon":"","target":"_self","title":""}]</menujson>
+        </menu>
+    </menus>
+</root>

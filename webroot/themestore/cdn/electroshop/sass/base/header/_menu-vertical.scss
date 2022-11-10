@@ -1,0 +1,116 @@
+// Vertical Menu
+
+// Menu - Vertical
+
+// # Variables
+@include set-default(
+	(
+		menu: (
+			vertical: (
+				color: false,
+				background: false,
+				active-color: #fff,
+				active-background: $primary-color
+			)
+		)
+	)
+);
+
+.menu-vertical {
+	ul,
+	.megamenu {
+		top: 0;
+		left: 100%;
+		margin-left: -1px;
+		border-top: 0;
+	}
+
+	&.sf-arrows {
+		> li {
+			> .sf-with-ul {
+				&:before {
+					top: 50%;
+					bottom: auto;
+					left: calc(90% - 12px);
+					margin: -10px 0 0;
+					border-width: 10px 12px 10px 0;
+					border-color: transparent;
+					border-right-color: #fff;
+					transition: .2s;
+				}
+
+				&:after {
+					content: '\e81a';
+					position: absolute;
+					right: 2.8rem;
+					color: #838b90;
+					font-size: 1.5rem;
+				}
+			}
+
+			&.show > .sf-with-ul {
+				&:before {
+					left: calc(100% - 12px);
+				}
+
+				&:after {
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	// Nolink
+	.nolink {
+		font-size: 1.3rem;
+		font-weight: 700;
+	}
+
+	// Main Item
+	> li {
+		float: none;
+		margin: 0;
+		padding: 0 1.8rem 0 1.6rem;
+		@include css(background, menu, vertical, background);
+
+		&:not(:first-child) {
+			border-top: 1px solid #fff;
+
+			> a {
+				margin-top: -1px;
+				border-top: 1px solid #e7e7e7;
+			}
+		}
+
+		> a {
+			display: block;
+			padding: 1.2rem 1rem 1.4rem .5rem;
+			font-size: 1.4rem;
+			font-weight: 600;
+			text-transform: capitalize;
+			transition: none;
+			@include css(color, menu, vertical, color);
+		}
+
+		i {
+			position: relative;
+			margin-right: 8px;
+			top: 1px;
+		}
+	}
+
+	> li:hover,
+	> li.show,
+	> li.active {
+		@include css(background, menu, vertical, active-background);
+
+		> a {
+			border-bottom-color: transparent;
+			@include css(color, menu, vertical, active-color);
+		}
+
+		+ li > a {
+			border-top-color: transparent;
+		}
+	}
+}

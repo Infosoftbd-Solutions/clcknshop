@@ -1,0 +1,101 @@
+// 1. Footer Base
+.footer-bottom {
+	border-top: 1px solid #313438;
+}
+
+.footer {
+	letter-spacing: .005em;
+
+	p {
+		line-height: 24px;
+	}
+
+// 2. Footer Components
+
+// 2.1) Social Icon
+ 	.social-icon {
+		line-height: 3.8rem;
+		border: 1px solid transparent;
+
+		&:not(:hover):not(:active):not(:focus) {
+			background-color: transparent;
+			border-color: #313438;
+			color: #fff;
+		}
+	}
+
+// 2.2) Widget
+
+// 2.2) Contact Info
+	.contact-info li {
+		position: relative;
+		margin-bottom: 1rem;
+		line-height: 1.4;
+	}
+
+	.contact-info-label {
+		display: block;
+		color: #fff;
+		font-weight: 400;
+		text-transform: uppercase;
+		margin-bottom: 1px;
+	}
+
+// 2.4) Tagcloud
+	.tagcloud a {
+		padding: .6em;
+		margin: 0 .8rem .8rem 0;
+		border: 1px solid #313438;
+		color: inherit;
+		font-size: 11px;
+		background: transparent;
+
+		&:hover {
+			border-color: #fff;
+			background: transparent;
+		}
+	}
+	
+// 2.3) Newsletter
+	.widget-newsletter {
+		p {
+			margin-bottom: 1.3rem;
+			line-height: 1.846;
+		}
+
+		.form-control {
+			height: 4.4rem;
+			padding: .8rem 2.5rem;
+			border: 0;
+			border-radius: 5rem;
+			background: #292c30;
+			color: #777;
+			font-size: inherit;
+
+			&::placeholder {
+				color: #777;
+			}
+		}
+
+		.btn {
+			padding: 1.2rem 2.475rem;
+			border-radius: 5rem;
+			font-size: inherit;
+			font-family: $font-family;
+		}
+	}
+}
+
+footer {
+// Extra
+	.read-more {
+		font-weight: 700;
+		text-decoration: underline;
+	}
+}
+
+// 2.4) Copyright
+.footer-copyright {
+	color: #777;
+	font-size: 1.2rem;
+}

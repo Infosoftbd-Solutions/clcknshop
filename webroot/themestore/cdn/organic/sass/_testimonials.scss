@@ -1,0 +1,130 @@
+.testimonials-one {
+  padding-bottom: 30px;
+
+  @include laptop {
+    padding-bottom: 60px;
+  }
+
+  .thm-tiny__slider:not(.tns-slider) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+
+  &__head {
+    background-image: url(../images/shapes/testimonials-head-1-1.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-color: #f4f4f4;
+    padding-top: 80px;
+    padding-bottom: 140px;
+    margin-bottom: -80px;
+
+    @include laptop {
+      padding-top: 120px;
+      margin-bottom: -250px;
+      padding-bottom: 310px;
+    }
+
+    .block-title {
+      margin-bottom: 0;
+    }
+  }
+
+  &__image {
+    position: relative;
+    z-index: 10;
+
+    >img {
+      border-radius: 50%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__content {
+    text-align: center;
+    box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.05);
+    margin-bottom: 60px;
+    background-color: #fff;
+    margin-top: -79px;
+    padding-top: 79px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 4px;
+      background-color: $thm-base;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: scale(0, 1);
+      transform-origin: left center;
+      transition: transform 500ms ease;
+    }
+
+    &:hover::after {
+      transform-origin: right center;
+      transform: scale(1, 1);
+    }
+
+    @include laptop {
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-bottom: 60px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.8;
+      color: $thm-color;
+      margin-top: 30px;
+
+      @include large-tablet {
+        font-size: 18px;
+      }
+
+      @include laptop {
+        font-size: 20px;
+      }
+    }
+
+    h3 {
+      margin: 0;
+      font-family: $special-font;
+      color: $thm-base;
+      line-height: 1;
+      font-size: 18px;
+      margin-bottom: 10px;
+      margin-top: 20px;
+
+      @include laptop {
+        font-size: 20px;
+        margin-top: 30px;
+      }
+    }
+
+    span {
+      margin: 0;
+      font-size: 14px;
+      color: $thm-color;
+      display: block;
+      line-height: 1;
+
+      @include large-tablet {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .tns-outer .tns-controls {
+    position: relative;
+    top: -50px;
+  }
+}

@@ -1,0 +1,136 @@
+// Config Variable
+$config: ();
+
+// # Get value function
+@function _get( $obj, $keys ) {
+	$data: $obj;
+
+	@each $key in $keys {
+		$data: map-get( $data, $key );
+
+		@if ( $data == null or $data == false ) {
+			@return false;
+		}
+	}
+
+	@return $data;
+}
+
+// Use This
+@function get( $keys... ) {
+	@return _get( $config, $keys);
+}
+
+// # Set value function
+@function _set( $obj, $keys, $value ) {
+	$changes: $value;
+
+	@for $i from length( $keys ) through 1 {
+		$changes: ( 
+			nth( $keys, $i ) : $changes
+		);
+	}
+	@return merge( $obj, $changes );
+}
+
+@function _set-default( $obj, $keys, $value ) {
+	$changes: $value;
+
+	@for $i from length( $keys ) through 1 {
+		$changes: ( 
+			nth( $keys, $i ) : $changes
+		);
+	}
+	@return merge( $changes, $obj );
+}
+
+// Use This
+@function set( $keys, $value ) {
+	@return _set( $config, $keys, $value);
+}
+
+@function set-default( $keys, $value ) {
+	@return _set-default( $config, $keys, $value);
+}
+
+@function set( $value ) {
+	@return merge( $config, $value );
+}
+
+@function set-default( $value ) {
+	@return merge( $value, $config );
+}
+
+@function merge( $obj1, $obj2 ) {
+	$keys: map-keys( $obj1 );
+	$keys2: map-keys( $obj2 );
+
+	@each $key in $keys2 {
+		@if ( index( $keys, $key ) == null ) {
+			$keys: join( $keys, $key);
+		}
+	}
+
+	$total: ();
+
+	@each $key in $keys {
+		$value1: map-get( $obj1, $key);
+		$value2: map-get( $obj2, $key);
+		$value: null;
+
+		@if ( $value1 != null and $value2 != null ) {
+			@if ( type-of( $value1 ) == map and type-of( $value2 ) == map ) {
+				$value: merge( $value1, $value2 );
+			}
+			@else if ( type-of( $value1 ) == map or type-of( $value2 ) == map ) {
+				//Merge Error: #{$value1} >=< #{$value2}
+			}
+			@else {
+				$value: $value2;
+			}
+		}
+		@else if ( $value1 == null ) {
+			$value: $value2;
+		}
+		@else {
+			$value: $value1;
+		}
+
+		@if ($value != null) {
+			$total: map-merge( $total, ($key: $value));
+		}
+	}
+
+	@return $total;
+}
+
+@mixin set( $value ) {
+	$config: merge( $config, $value ) !global;
+}
+
+@mixin set-default( $value ) {
+	$config: merge( $value, $config ) !global;
+}
+
+// Print css property
+@mixin css( $prop, $keys... ) {
+	$value: _get( $config, $keys );
+
+	@if ( $value ) {
+		#{$prop}: $value;
+	}
+}
+
+// CSS for only Internet Explorer 10, 11
+@mixin only_for_ie() {
+	@media (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		@content;
+	}
+}
+
+// CSS for only Edge
+@mixin only_for_edge() {
+	@supports (-ms-ime-align:auto) {
+		@content;
+	}
+}

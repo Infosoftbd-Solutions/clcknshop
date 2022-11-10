@@ -1,0 +1,84 @@
+// Info Boxes
+
+// # Contents
+// 1. Info Box Container
+// 2. Info Box Base
+// 2.1) Icon
+// 2.2) Title
+// 2.3) Description
+// 3. Info Box Types
+// 3.1) Icon Top
+// 4. Responsive
+
+// # Variables
+@include set-default(
+	(
+		info-box: (
+			icon: (
+				size: 3.7rem,
+				space: 1.4rem
+			),
+
+			title: (
+				size: 1.4rem,
+				weight: 700,
+				transform: uppercase,
+				margin-bottom: 0
+			)
+		)
+	)
+);
+
+// 1. Info Box Container
+// 2. Info Box Base
+.info-box {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	color: $primary-color-dark;
+	padding: 2.5rem 2.4rem 2rem;
+
+	// 2.1) Icon
+	i {
+		color: inherit;
+		@include css( font-size, info-box, icon, size );
+		text-align: center;
+
+		&:before {
+			width: auto;
+			margin: 0 .1em;
+		}
+	}
+
+	// 2.2) Title
+	h4 {
+		color: inherit;
+		@include css( margin-bottom, info-box, title, margin-bottom );
+		@include css( font-size, info-box, title, size);
+		@include css( font-weight, info-box, title, weight);
+		@include css( text-transform, info-box, title, transform);
+		line-height: 1.1;
+	}
+
+	// 2.3) Description
+	p {
+		margin-bottom: 0;
+		font-size: 1.3rem;
+		letter-spacing: .01em;
+		line-height: 1.6;
+	}
+}
+
+.info-box-icon-left {
+	display: flex;
+	display: -ms-flexbox;
+	align-items: center;
+	-ms-flex-align: center;
+	justify-content: center;
+	-ms-flex-pack: center;
+
+	i {
+		line-height: 0;
+		@include css( margin-right, info-box, icon, space );
+	}
+}

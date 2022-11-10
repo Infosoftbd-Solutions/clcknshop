@@ -1,0 +1,54 @@
+.client-carousel {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @include laptop {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  &__has-border-top {
+    border-top: 1px solid #e9e7e2;
+  }
+
+  &__has-top-shadow {
+    box-shadow: 0px -1px 0px 0px RGBA(227, 227, 227, 0.004);
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    transition: 500ms;
+    opacity: 0.3;
+    max-width: 100%;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.client-carousel__about-page {
+  position: relative;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 16px;
+    background-image: url(../images/shapes/ripped-paper-white-up.png);
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    z-index: 10;
+    transform: rotate(0deg);
+    background-size: auto;
+    @media (min-width: 1700px) {
+      background-size: 100%;
+      bottom: -15px;
+    }
+  }
+  .container {
+    position: relative;
+  }
+}

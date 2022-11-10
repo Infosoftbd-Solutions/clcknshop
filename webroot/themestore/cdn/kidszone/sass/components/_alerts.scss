@@ -1,0 +1,10 @@
+// Alerts
+.alert {
+	margin-bottom: 2rem;
+	padding: 1.4rem 1.5rem;
+	border-radius: 0;
+
+	&.alert-intro {
+		font-size: 1.5rem;
+	}
+}

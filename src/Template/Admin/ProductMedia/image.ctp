@@ -1,0 +1,3 @@
+<div class="col-sm-6 col-lg-4"><div class="card p-3"><a href="javascript:void(0)" class="mb-3">
+            <img src="https://preview.tabler.io/demo/photos/grant-ritchie-338179-500.jpg"
+                 alt="Photo by Nathan Guerrero" class="rounded"></a><div class="d-flex align-items-center px-2"><div><div contenteditable="true">Edit image title</div></div><div class="ml-auto text-muted"><a href="javascript:void(0)" class="icon d-none d-md-inline-block ml-3"><i class="fe fe-x mr-1"></i> <?= __('Delete') ?></a></div></div></div></div>

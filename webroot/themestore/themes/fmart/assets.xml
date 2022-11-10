@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<root>
+    <images>
+        <image>
+            <title>Slider 1 Image</title>
+            <key>slider-1</key>
+            <file>uploads/01jpg-26-05-2021-1622019578705.jpg</file>
+        </image>
+        <image>
+            <title>Slider 2 Image</title>
+            <key>slider-2</key>
+            <file>uploads/02jpg-26-05-2021-1622019582030.jpg</file>
+        </image>
+
+        <image>
+            <title>Home Page Flash Image 1</title>
+            <key>home-page-flash-image-1</key>
+            <file>uploads/home-banner1jpg-26-05-2021-1622019748771.jpg</file>
+        </image>
+        <image>
+            <title>Home Page Flash Image 2</title>
+            <key>home-page-flash-image-2</key>
+            <file>uploads/home-banner2jpg-26-05-2021-1622019753539.jpg</file>
+        </image>
+        <image>
+            <title>Home Page Flash Image 3</title>
+            <key>home-page-flash-image-3</key>
+            <file>uploads/home-bannerjpg-26-05-2021-1622019762702.jpg</file>
+        </image>
+                
+        <image>
+            <title>Collection Page Hero Image</title>
+            <key>collection-page-hero-image</key>
+            <file>uploads/cat-banner-1jpg-26-05-2021-1622019860090.jpg</file>
+        </image>
+
+        <image>
+            <title>About Us Page Hero Image</title>
+            <key>about-us-page-hero-image</key>
+            <file>uploads/page-header-bgjpg-25-04-2021-1619347488484.jpg</file>
+        </image>
+        <image>
+            <title>Contact Us Page Hero Image</title>
+            <key>contact-us-page-hero-image</key>
+            <file>uploads/banner-topjpg-25-04-2021-1619347542327.jpg</file>
+        </image>
+
+    </images>
+
+    <menus>
+        <menu>
+            <title>Top Menubar</title>
+            <key>top-menubar</key>
+            <menujson>[{"text":"Order Tracking","href":"/track-order","icon":"","target":"_self","title":""},{"text":"My Account","href":"/customer","icon":"","target":"_self","title":""},{"text":"Cart","href":"/cart","icon":"","target":"_self","title":""},{"text":"Checkout","href":"checkout","icon":"","target":"_self","title":""}]</menujson>
+        </menu>
+        <menu>
+            <title>Navbar Menu</title>
+            <key>navbar-menu</key>
+            <menujson>[{"text":"Home","href":"/","icon":"","target":"_self","title":""},{"text":"Clothing","href":"/collection/clothing","icon":"","target":"_self","title":""},{"text":"Lifestyle","href":"/collection/electronics","icon":"","target":"_self","title":""},{"text":"Health &amp; Beauty","icon":"","href":"/collection/health-and-beauty","target":"_self","title":""},{"text":"Watches","icon":"","href":"/collection/watches","target":"_self","title":""},{"text":"Jewellery","icon":"","href":"/collection/jewellery","target":"_self","title":""},{"text":"Shoes","icon":"","href":"/collection/shoes","target":"_self","title":""},{"text":"Kids &amp; Girls","icon":"","href":"kids and girls","target":"_self","title":""},{"text":"Todays Offer","href":"/collection/todays-offer","icon":"","target":"_self","title":""}]</menujson>
+        </menu>
+
+        <menu>
+            <title>Category Menu</title>
+            <key>category-menu</key>
+            <menujson>[{"text":"Clothing","href":"/collection/clothing","icon":"","target":"_self","title":"","children":[{"text":"Dresses","href":"/collection/dresses","icon":"","target":"_self","title":""},{"text":"Shoes","href":"/collection/shoes","icon":"","target":"_self","title":""},{"text":"Jackets","href":"/collection/jackets","icon":"","target":"_self","title":""},{"text":"Sunglasses","href":"collection/sunglasses","icon":"","target":"_self","title":""},{"text":"Sport Wear","href":"/collection/sport-wear","icon":"","target":"_self","title":""},{"text":"Blazers","href":"/collection/blazers","icon":"","target":"_self","title":""}]},{"text":"Lifestyle","href":"/collection/electronics","icon":"","target":"_self","title":""},{"text":"Health &amp; Beauty","href":"/collection/health-and-beauty","icon":"","target":"_self","title":""},{"text":"Watches","href":"/collection/watches","icon":"","target":"_self","title":""},{"text":"Jewellery","href":"/collection/jewellery","icon":"","target":"_self","title":""},{"text":"Shoes","href":"/collection/shoes","icon":"","target":"_self","title":""},{"text":"Kids &amp; Girls","href":"kids and girls","icon":"","target":"_self","title":""},{"text":"Todays Offer","href":"/collection/todays-offer","icon":"","target":"_self","title":""}]</menujson>
+        </menu>
+
+        <menu>
+            <title>Footer Menu</title>
+            <key>footer-menu</key>
+            <menujson>[{"text":"CUSTOMER SERVICE","href":"#","icon":"","target":"_self","title":"","children":[{"text":"My Account","href":"/login","icon":"","target":"_self","title":""},{"text":"Order-history","href":"/customer","icon":"","target":"_self","title":""},{"text":"FAQ","href":"/page/faq","icon":"","target":"_self","title":""},{"text":"Specials","href":"#","icon":"","target":"_self","title":""},{"text":"Help Center","href":"#","icon":"","target":"_self","title":""}]},{"text":"Corporation","href":"#","icon":"","target":"_self","title":"","children":[{"text":"About Us","href":"/page/about-us","icon":"","target":"_self","title":""},{"text":"Customer Service","href":"#","icon":"","target":"_self","title":""},{"text":"Company","href":"#","icon":"","target":"_self","title":""},{"text":"Investor Relations","href":"#","icon":"","target":"_self","title":""},{"text":"Track Order","href":"/track-order","icon":"","target":"_self","title":""}]},{"text":"WHY CHOOSE US","href":"page/why-choose-us","icon":"","target":"_self","title":"","children":[{"text":"Shopping Guide","href":"/page/shopping-guide","icon":"","target":"_self","title":""},{"text":"Blog","href":"#","icon":"","target":"_self","title":""},{"text":"Company","href":"#","icon":"","target":"_self","title":""},{"text":"Terms and Conditions","href":"/page/terms-and-conditions","icon":"","target":"_self","title":""},{"text":"Contact Us","href":"/page/contact-us","icon":"","target":"_self","title":""}]}]</menujson>
+        </menu>
+    </menus>
+</root>

@@ -1,0 +1,760 @@
+.call-to-action {
+  overflow: hidden;
+  background-color: $thm-base;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+
+  @include laptop {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .floated-text {
+    position: absolute;
+    display: none;
+    top: 60px;
+    right: 150px;
+    font-size: 80px;
+    color: $thm-black;
+    font-family: 'Homemade Apple', cursive;
+    opacity: 0.1;
+
+    @include laptop {
+      display: block;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+    margin-bottom: 50px;
+
+    @include laptop {
+      max-width: none;
+      margin-bottom: 0;
+      float: right;
+    }
+  }
+
+  .block-title {
+
+    h3,
+    p {
+      color: #fff;
+    }
+  }
+
+  &__content {
+    @include laptop {
+      padding-left: 90px;
+      padding-top: 120px;
+    }
+
+    >p {
+      margin: 0;
+      color: #fff;
+      margin-top: -20px;
+
+      @include laptop {
+        font-size: 18px;
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__wrap {
+    border-top: 1px solid rgba($color: #fff, $alpha: .15);
+    border-bottom: 1px solid rgba($color: #fff, $alpha: .15);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    @include laptop {
+      margin-top: 40px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      margin-bottom: 30px;
+    }
+
+    [class*=col-]+[class*=col-] {
+      .call-to-action__box {
+        @include laptop {
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    >i {
+      font-size: 50px;
+      color: #fff;
+    }
+
+    h3 {
+      margin: 0;
+      color: #fff;
+      font-size: 18px;
+      line-height: 1.5;
+      font-family: $special-font;
+      margin-left: 30px;
+
+      @include laptop {
+        max-width: 115px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .thm-btn {
+    background-color: $thm-black;
+    color: #fff;
+    padding: 18px 51px;
+
+    &:hover {
+      background-color: #fff;
+      color: $thm-black;
+    }
+  }
+}
+
+[class*=call-to-action-five__shape-],
+[class*=call-to-action-four__shape-],
+[class*=call-to-action-two__shape-],
+[class*=call-to-action__shape-] {
+  position: absolute;
+  display: none;
+
+  @include large-tablet {
+    display: block;
+  }
+}
+
+.call-to-action__shape-1 {
+  bottom: -140px;
+  right: 0;
+  animation: treeMove 5s linear infinite;
+}
+
+.call-to-action__shape-2 {
+  top: 120px;
+  left: 25%;
+  z-index: 10;
+}
+
+
+.call-to-action-two {
+  position: relative;
+  border-top: 2px solid #f4f4f4;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @include laptop {
+    padding-top: 120px;
+    padding-bottom: 70px;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  &__image {
+    position: relative;
+
+    .floated-text {
+      font-family: 'Homemade Apple', cursive;
+      display: none;
+      position: absolute;
+      font-size: 80px;
+      color: #faf4f0;
+      right: -50px;
+      top: -45px;
+
+      @include laptop {
+        display: block;
+      }
+    }
+
+    >img {
+      max-width: 100%;
+      position: relative;
+      z-index: 10;
+
+      @include laptop {
+        max-width: none;
+      }
+    }
+  }
+
+  &__content {
+    h4 {
+      color: $thm-base;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.8;
+      margin: 0;
+      margin-top: -20px;
+
+      @include tablet {
+        margin-top: 0;
+        max-width: 270px;
+      }
+
+      @include laptop {
+        font-size: 20px;
+        margin-bottom: 30px;
+      }
+    }
+
+    p {
+      margin: 0;
+      color: $thm-color;
+      line-height: 2;
+      margin-top: 15px;
+
+      @include laptop {
+        max-width: 270px;
+        font-size: 18px;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      margin-top: 20px;
+      margin-bottom: 30px;
+
+      @include tablet {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      @include laptop {
+        margin-left: -10px;
+      }
+
+      li {
+        position: relative;
+        font-size: 16px;
+        color: $thm-color;
+        padding-left: 26px;
+
+        @include laptop {
+          font-size: 18px;
+          padding-left: 30px;
+        }
+
+        +li {
+          @include laptop {
+            margin-top: 5px;
+          }
+        }
+
+        >i {
+          font-size: 16px;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          color: $thm-base;
+          transform: translateY(-50%);
+
+          @include laptop {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    .thm-btn {
+      background-color: $thm-base;
+      color: #fff;
+      padding: 18px 51px;
+
+      &:hover {
+        background-color: $thm-black;
+        color: #fff;
+      }
+
+      @include laptop {
+        margin-top: 55px;
+      }
+    }
+  }
+
+}
+
+.call-to-action-two__shape-1 {
+  bottom: 0;
+  left: 0;
+  animation: treeMove 5s ease-in infinite;
+}
+
+.call-to-action-two__shape-2 {
+  bottom: -40px;
+  left: 180px;
+  -webkit-animation-name: shapeMover;
+  animation-name: shapeMover;
+  -webkit-animation-duration: 9s;
+  animation-duration: 9s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+}
+
+.call-to-action-two__shape-3 {
+  left: 43%;
+  bottom: 19%;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: banner3Shake;
+  animation-name: banner3Shake;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.call-to-action-two__shape-4 {
+  left: 52%;
+  bottom: 100px;
+  -webkit-animation-name: bubbleMover;
+  animation-name: bubbleMover;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+}
+
+.call-to-action-two__shape-5 {
+  right: 100px;
+  bottom: 350px;
+  -webkit-animation-name: shapeMover;
+  animation-name: shapeMover;
+  -webkit-animation-duration: 9s;
+  animation-duration: 9s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+}
+
+.call-to-action-two__shape-6 {
+  bottom: 0;
+  right: 250px;
+}
+
+.call-to-action-three {
+  padding-top: 80px;
+
+  @include large-tablet {
+    padding-top: 120px;
+  }
+
+  .inner-container {
+    background-repeat: no-repeat;
+    background-position: 0% 140%;
+    background-color: $thm-base;
+    text-align: center;
+    position: relative;
+    padding-top: 80px;
+
+    @include laptop {
+      text-align: left;
+      padding-bottom: 80px;
+      padding-top: 60px;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+
+    @include laptop {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__discount {
+    width: 120px;
+    height: 120px;
+    box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+
+    @include tablet {
+      bottom: 30%;
+      left: auto;
+      right: 20%;
+    }
+
+    @include laptop {
+      width: 155px;
+      height: 155px;
+      bottom: auto;
+      right: auto;
+      top: 50px;
+      left: 350px;
+      z-index: 10;
+    }
+
+    &::before {
+      content: '';
+      width: 15px;
+      height: 15px;
+      background-color: #fff;
+      position: absolute;
+      bottom: 7.5px;
+      left: 15px;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      transform: rotate(-15deg);
+
+      @include laptop {
+        bottom: 15px;
+      }
+    }
+
+    h4 {
+      margin: 0;
+      color: $thm-black;
+      font-size: 30px;
+      font-family: $special-font;
+      line-height: 1;
+      margin-bottom: 5px;
+
+      span {
+        font-size: 18px;
+        position: relative;
+        top: -10px;
+        left: 5px;
+
+        @include laptop {
+          font-size: 30px;
+          top: -20px;
+          left: 0;
+        }
+      }
+
+      @include large-tablet {
+        font-size: 35px;
+      }
+
+      @include laptop {
+        font-size: 50px;
+      }
+    }
+
+    p {
+      margin: 0;
+      color: $thm-color;
+      font-size: 16px;
+      line-height: 1;
+
+      @include laptop {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__content {
+    @include laptop {
+      padding-left: 65px;
+    }
+  }
+
+  h3 {
+    margin: 0;
+    font-family: $special-font;
+    font-size: 30px;
+    line-height: 1.4;
+    color: #fff;
+    margin-bottom: 25px;
+
+    @include large-tablet {
+      font-size: 40px;
+    }
+
+    @include laptop {
+      font-size: 50px;
+    }
+  }
+
+  .thm-btn {
+    background-color: $thm-black;
+    padding: 18px 51px;
+
+    &:hover {
+      background-color: #fff;
+      color: $thm-black;
+    }
+  }
+}
+
+.call-to-action-four {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+  background-color: #f4f4f4;
+  position: relative;
+
+
+  .container {
+    position: relative;
+  }
+
+  &__content {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @include large-tablet {
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
+
+    >p {
+      margin: 0;
+      margin-top: -20px;
+
+      @include laptop {
+        font-size: 18px;
+        line-height: 34px;
+        margin-top: 0;
+        max-width: 570px;
+      }
+    }
+
+    .thm-btn {
+      background-color: $thm-base;
+      color: #fff;
+      padding: 18px 51px;
+      margin-top: 50px;
+
+      &:hover {
+        background-color: $thm-black;
+        color: #fff;
+      }
+
+    }
+  }
+}
+
+.call-to-action-four__shape-1 {
+  bottom: 0;
+  left: 80px;
+  animation: treeMove 5s linear infinite;
+}
+
+.call-to-action-four__shape-2 {
+  top: -55px;
+  left: 170px;
+  -webkit-animation-name: shapeMover;
+  animation-name: shapeMover;
+  -webkit-animation-duration: 9s;
+  animation-duration: 9s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+}
+
+.call-to-action-four__shape-3 {
+  bottom: 85px;
+  left: 32%;
+  -webkit-animation-name: shapeMover;
+  animation-name: shapeMover;
+  -webkit-animation-duration: 9s;
+  animation-duration: 9s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+}
+
+.call-to-action-four__shape-4 {
+  top: 175px;
+  left: 45%;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: banner3Shake;
+  animation-name: banner3Shake;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.call-to-action-four__shape-5 {
+  right: 365px;
+  top: 250px;
+}
+
+.countdown-one__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  margin-bottom: 0;
+  margin-top: 40px;
+
+  @include large-tablet {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+
+  li {
+    background-color: #fff;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @include laptop {
+      min-height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    i {
+      font-style: normal;
+      color: $thm-base;
+      font-size: 30px;
+      line-height: 1;
+
+      @include laptop {
+        font-size: 40px;
+      }
+    }
+
+    span {
+      margin: 0;
+      font-size: 16px;
+      color: $thm-black;
+      line-height: 1;
+      display: block;
+      margin-top: 5px;
+
+      @include laptop {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.call-to-action-five {
+  position: relative;
+  padding-top: 60px;
+
+  .inner-container {
+    background-color: $thm-base;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 30px;
+      height: 100%;
+      background-color: #fff;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 11;
+      display: none;
+
+      @include large-tablet {
+        display: block;
+      }
+    }
+
+    @include large-tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    @include laptop {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #fff;
+      font-family: $special-font;
+      padding-top: 20px;
+
+      @include large-tablet {
+        padding-top: 0;
+      }
+
+      @include laptop {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.call-to-action-five__shape-1 {
+  position: absolute;
+  top: calc(50% - 75px);
+  left: calc(50% - 117px);
+  z-index: 10;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: banner3Shake;
+  animation-name: banner3Shake;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}

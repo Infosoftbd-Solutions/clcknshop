@@ -1,0 +1,91 @@
+.gallery-one {
+    padding-bottom: 80px;
+
+    @include large-tablet {
+        padding-bottom: 120px;
+    }
+
+    .container-fluid {
+        width: 100%;
+        max-width: 1620px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__item {
+        position: relative;
+        background-color: $thm-black;
+
+        >img {
+            width: 100%;
+            opacity: 1;
+            transition: all 500ms ease;
+        }
+
+        &:hover>img {
+            opacity: 0.1;
+        }
+
+
+        >a {
+            display: flex;
+            background-color: $thm-base;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            justify-content: center;
+            align-items: center;
+            transform: translate(-50%, -50%);
+            transition: opacity 500ms ease, transform 500ms ease, background-color 500ms ease;
+            opacity: 0;
+
+            @include large-tablet {
+                width: 69px;
+                height: 69px;
+            }
+
+            &:hover {
+                background-color: #fff;
+            }
+
+
+            &::before,
+            &::after {
+                content: "";
+                width: 16px;
+                height: 2px;
+                background-color: #fff;
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: all 500ms ease;
+
+                @include large-tablet {
+                    width: 22px;
+                }
+            }
+
+            &::after {
+                transform: translate(-50%, -50%) rotate(90deg);
+            }
+
+            &:hover {
+
+                &::before,
+                &::after {
+                    background-color: $thm-black;
+                }
+            }
+        }
+
+
+        &:hover>a {
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,136 @@
+.video-one {
+  background-color: $thm-black;
+
+  .jarallax-img {
+    opacity: .3;
+  }
+
+  .container {
+    padding-bottom: 80px;
+    padding-top: 80px;
+    position: relative;
+    @include laptop {
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
+  }
+
+  .video-popup {
+    width: 66px;
+    height: 66px;
+    background-color: $thm-base;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    position: relative;
+    transition: all 500ms ease;
+
+    @include tablet {
+      width: 76px;
+      height: 76px;
+    }
+
+    @include laptop {
+      width: 96px;
+      height: 96px;
+      font-size: 24px;
+      margin-bottom: 50px;
+    }
+
+    &:hover {
+      background-color: #fff;
+      color: $thm-black;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      right: -15px;
+      bottom: -15px;
+      border: 1px solid #ffffff;
+      opacity: 0.15;
+      animation: videoAnim 5s linear 0ms infinite;
+    }
+
+    @keyframes videoAnim {
+      0% {
+        transform: scale(1);
+      }
+
+      25% {
+        transform: scale(1.1);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
+
+      75% {
+        transform: scale(1.1);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+
+  h3 {
+    margin: 0;
+    color: #fff;
+    font-family: $special-font;
+    font-size: 36px;
+    line-height: 1.25;
+
+    @include tablet {
+      font-size: 42px;
+    }
+
+    @include laptop {
+      font-size: 80px;
+    }
+
+    span {
+      position: relative;
+
+      &::before {
+        content: '';
+        background-image: url(../images/shapes/video-title-1.png);
+        width: 65px;
+        height: 52px;
+        background-repeat: no-repeat;
+        background-position: top left;
+        position: absolute;
+        bottom: 80%;
+        left: -35px;
+      }
+    }
+
+  }
+}
+
+[class*=video-one__leaf-] {
+  position: absolute;
+  display: none;
+  z-index: 10;
+  @include large-tablet {
+    display: block;
+  }
+}
+
+.video-one__leaf-1 {
+  left: 180px;
+  bottom: 160px;
+}
+.video-one__leaf-2 {
+  right: 180px;
+  bottom: 160px;
+}

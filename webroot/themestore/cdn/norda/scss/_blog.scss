@@ -1,0 +1,172 @@
+/*-------- 14. Blog style ---------*/
+
+.blog-area-pb {
+    padding-bottom: 90px;
+    @media #{$md-layout} {
+        padding-bottom: 45px;
+    }
+    @media #{$xs-layout} {
+        padding-bottom: 20px;
+    }
+}
+.blog-wrap {
+    .blog-img {
+        overflow: hidden;
+        a {
+            display: block;
+            img {
+                width: 100%;
+                transform: scale(1);
+                transition: all .5s ease 0s;
+            }
+        }
+        @media #{$xs-layout} {
+            &.mb-25 {
+                margin-bottom: 15px;
+            }
+            &.mb-20 {
+                margin-bottom: 15px;
+            }
+        }
+    }
+    .blog-content {
+        .blog-meta {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                li {
+                    margin-right: 30px;
+                    position: relative;
+                    &:before {
+                        position: absolute;
+                        content: "";
+                        right: -16px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 1px;
+                        height: 12px;
+                        background-color: #000;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                        &:before {
+                            display: none;
+                        }
+                    }
+                    a {
+                        color: $black;
+                        font-weight: 600;
+                        &:hover {
+                            color: $theme-color-red;
+                        }
+                    }
+                }
+            }
+        }
+        h3 , h1 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 12px 0 0;
+            line-height: 30px;
+            letter-spacing: -.25px;
+            @media #{$lg-layout} {
+                font-size: 17px;
+                margin: 8px 0 0;
+            }
+            @media #{$md-layout} {
+                font-size: 18px;
+                margin: 8px 0 0;
+            }
+            @media #{$xs-layout} {
+                font-size: 17px;
+                margin: 5px 0 0;
+                line-height: 28px;
+            }
+            a {
+                color: #222222;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    &:hover {
+        .blog-img {
+            a {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    @media #{$xs-layout} {
+        &.mb-40 {
+            margin-bottom: 30px;
+        }
+    }
+}
+.single-sidebar-blog {
+	display: flex !important;
+    align-items: center;
+    margin-bottom: 28px;
+    .sidebar-blog-img {
+        margin-right: 20px;
+        flex: 0 0 30%;
+        @media #{$md-layout} {
+            flex: 0 0 20%;
+        }
+        @media #{$sm-layout} {
+            flex: 0 0 20%;
+        }
+        a {
+            display: block;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .sidebar-blog-content {
+        h5 {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 20px;
+            margin: 0 0 3px;
+            a {
+                color: $black;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        span {
+            font-size: 13px;
+            color: #999999;
+        }
+    }
+}
+
+@media #{$md-layout} {
+    .blog-area {
+        &.pb-80 {
+            padding-bottom: 45px;
+        }
+        &.pb-75 {
+            padding-bottom: 35px;
+        }
+    }
+}
+
+@media #{$xs-layout} {
+    .blog-area {
+        &.pb-80 {
+            padding-bottom: 25px;
+        }
+        &.pb-75 {
+            padding-bottom: 15px;
+        }
+    }
+}
+
+
+
+

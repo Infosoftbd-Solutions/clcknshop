@@ -1,0 +1,115 @@
+.top-notice small {
+    letter-spacing: .03em;
+}
+
+.main-nav {
+    margin-left: 6.4rem;
+}
+
+.menu.sf-arrows > li > .sf-with-ul:after {
+    content: none;
+}
+
+.dropdown-arrow:after {
+    margin: -5px 0px 0 11px;
+    font-size: 1.6rem;
+}
+
+.header-middle .header-right {
+    margin-top: 1px;
+}
+
+.dropdown-toggle i {
+    font-size: 2.5rem;
+}
+
+.header-icon.header-wishlist {
+    margin-right: 2.7rem;
+}
+
+.header-icon.login-link {
+    margin-right: 2.3rem;
+}
+
+.badge-circle {
+    top: 0 !important;
+    left: 1.7rem !important;
+}
+
+.main-nav .tip.hot {
+    top: -5px;
+    right: -8px;
+    padding: 2px;
+    font-size: 9px;
+    font-style: normal;
+    background-color: #eb2771;
+    border-color: #eb2771;
+
+    &::before {
+        right: auto;
+        top: 100%;
+        margin-top: 0;
+        border-top-color: #eb2771;
+    }
+}
+
+.header-search-wrapper {
+    font-family: "Open Sans", sans-serif;
+    color: #777;
+
+    input::placeholder {
+        font-family: "Open Sans", sans-serif;
+        font-size: 13px;
+        font-weight: 300;
+        color: #777;
+    }
+}
+
+.header-search-popup .form-control {
+    min-width: 23.6rem;
+}
+
+.search-toggle:after {
+    right: calc( 50% - 1px );
+}
+
+.sticky-header.fixed {
+    padding: 8px 0;
+}
+
+// elements header
+
+.elements-header {
+    margin: 0;
+
+    .header-top {
+        border-bottom: 1px solid #e7e7e7;
+        padding: 1.3rem;
+    }
+
+    .header-middle {
+        padding: 2.7rem 0;
+    }
+
+    .sticky-header.fixed {
+        padding: 8px 0;
+    }
+}
+
+@include mq( 1200px, max ) {
+    .main-nav .menu > li {
+        margin-right: 1.7rem;
+    }
+}
+
+@include mq( lg, max ) {
+    .dropdown-expanded ul {
+        opacity: 1;
+    };
+}
+
+@include mq( md, max ) {
+    .dropdown-expanded ul {
+        opacity: 0;
+    };
+}

@@ -1,0 +1,71 @@
+// Feature Box
+
+@include set-default(
+	(
+		feature-box: (
+			icon: (
+				display: inline-block,
+				margin-bottom: 2.2rem,
+				color: $primary-color,
+				font-size: 5rem,
+				line-height: 1
+			),
+
+			title: (
+				color: false,
+				font-size: 1.6rem,
+				font-weight: 700,
+				margin-bottom: 2rem,
+				text-transform: uppercase,
+				line-height: 1.1,
+				letter-spacing: 0
+			),
+
+			content: (
+				margin-bottom: 0
+			)
+		)
+	)
+);
+
+.feature-box {
+	color: #7b858a;
+	font-size: 1.5rem;
+	line-height: 2;
+	margin-bottom: 4rem;
+
+	i {
+		@include print_css( feature-box, icon );
+
+		&:before {
+			margin: 0;
+		}
+	}
+
+	h3 {
+		@include print_css( feature-box, title );
+	}
+
+	h5 {
+		@include print_css( feature-box, subtitle );		
+	}
+
+	p {
+		@include print_css( feature-box, content );
+	}
+}
+
+.feature-box-content {
+	color: #7b858a;
+	line-height: 1.8;
+}
+
+.feature-rounded {
+	i {
+		width: 80px;
+		height: 80px;
+		border-radius: 500px;
+		font-size: 35px;
+		line-height: 80px;
+	}
+}

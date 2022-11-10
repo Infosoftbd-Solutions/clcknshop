@@ -1,0 +1,506 @@
+// Cart & Compare Dropdown
+
+// # Contents
+// 1. Common
+// 2. Header Dropdown
+// 3. Cart Dropdown
+// 4. Compare Dropdown
+// 5. Responsive
+
+// # Variables
+@include set-default(
+	(
+		header: (
+			dropdown: (
+				space: 1.4rem,
+				shadow: 0 29px 29px rgba(0, 0, 0, .1),
+
+				font: (
+					size: false,
+					weight: false,
+				),
+
+				item: (
+					space: 3rem,
+					padding: .5em 1.5em,
+					active-background: #f4f4f4,
+					active-color: false
+				),
+
+				expanded: (
+					active-color: false,
+				)
+			)
+		)
+	)
+);
+
+// 1. Common
+
+.dropdownmenu-wrapper {
+	position: relative;
+	background-color: #fff;
+	padding: 1rem 1.5rem .5rem;
+	box-shadow: 0 5px 8px rgba(0,0,0,0.15);
+}
+
+.cart-dropdown, .compare-dropdown {
+	.dropdown-menu {
+		display: block;
+		left: 0;
+		top: -999rem;
+		width: 300px;
+		padding-top: 10px;
+		z-index: 100;
+		font-size: 1.1rem;
+		color: #696969;
+		border: 0;
+		margin: 0;
+		background-color: transparent;
+		box-shadow: none;
+		visibility: hidden;
+		opacity: 0;
+		transition: opacity .2s;
+
+		&.show {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&:hover {
+		.dropdown-menu {
+			top: 100%;
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+
+.dropdown-toggle {
+	i {
+		font-size: 2.8rem;
+	}
+
+	&:not(.dropdown-arrow):after {
+		display: none;
+	}
+}
+
+.dropdown-arrow {
+	&:after {
+		content: "\e81c";
+		border: 0;
+		margin: -5px 2px 0 11px;
+		font-size: 15px;
+		font-family: porto;
+		width: auto;
+		height: auto;
+	}
+
+	.badge-circle {
+		top: 3px;
+		left: 19px;
+	}
+}
+
+// 2. Header Dropdown
+
+.header-dropdowns {
+	display: flex;
+	display: -ms-flexbox;
+	align-items: center;
+	-ms-flex-align: center;
+}
+
+// Dropdown Menu Triangle
+.header-menu:before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 50%;
+	width: 0;
+	height: 0;
+	z-index: 1151;
+	margin-left: -9px;
+	margin-top: -1rem;
+	border-width: 0 9px 10px;
+	border-style: solid;
+	border-color: transparent transparent #fff;
+	visibility: hidden;
+	opacity: 1;
+	transform: translateY(-1rem);
+}
+
+// General Header Dropdown
+.header-dropdown {
+	position: relative;
+	@include css( font-size, header, dropdown, font, size );
+	@include css( font-weight, header, dropdown, font, weight );
+	line-height: 1.5;
+	padding: 5px 0;
+
+	// Top Anchor
+	> a {
+		padding: 0 5px;
+
+		&:after {
+			content: '\e81c';
+			font-family: 'porto';
+			font-weight: 400;
+			margin-left: .5rem;
+		}
+	}
+
+	img {
+		display: inline-block;
+		max-width: none;
+		margin: -2px 6px 0 1px;
+	}
+
+	ul {
+		position: absolute;
+		top: -300rem;
+		z-index: 1150;
+		min-width: 100%;
+		margin: 0;
+		padding: .5rem 0;
+		background: #fff;
+		@include css( box-shadow, header, dropdown, shadow );
+		transition: transform .2s ease-out;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-1rem);
+
+		a {
+			display: block;
+			@include css( padding, header ,dropdown, item, padding );
+			color: $body-text;
+			white-space: nowrap;
+
+			&:hover {
+				@include css( color, header, dropdown, item, active-color );
+				@include css( background, header, dropdown, item, active-background );
+			}
+		}
+	}
+
+	& + & {
+		@include css( margin-left, header, dropdown, space );
+	}
+
+	&:hover {
+		.header-menu:before,
+		ul {
+			top: 100%;
+			opacity: 1;
+			visibility: visible;
+			transform: none;
+		}
+	}
+}
+
+// 3. Cart Dropdown
+.cart-dropdown {
+	.dropdown-menu {
+		right: 0;
+		left: auto;
+		padding-top: 8px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: -12px;
+			right: 28px;
+			border: 10px solid;
+			border-color: transparent transparent #fff;
+		}
+	}
+
+	.dropdownmenu-wrapper {
+		&:before {
+			right: 28px;
+			left: auto;
+		}
+
+		&:after {
+			right: 29px;
+			left: auto;
+		}
+	}
+
+	.product {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-align: center;
+		align-items: center;
+		margin: 0 !important;
+		padding: 1.6rem 1rem;
+		border-bottom: 1px solid #e6ebee;
+		box-shadow: none !important;
+	}
+
+	.product-image-container {
+		position: relative;
+		max-width: 80px;
+		margin: 0;
+		margin-left: auto;
+		border: 1px solid #ededed;
+
+		img {
+			object-fit: none;
+		}
+
+		a:after {
+			display: none;
+		}
+	}
+
+	.product-title {
+		padding-right: 1.5rem;
+		margin-bottom: 8px;
+		font-size: 1.3rem;
+		line-height: 19px;
+
+		a {
+			color: #696969;
+		}
+	}
+
+	.product-details {
+		font-size: 1.3rem;
+	}
+
+	.btn-remove {
+		position: absolute;
+		top: -9px;
+		right: -3px;
+		width: 2rem;
+		height: 2rem;
+		border-radius: 50%;
+		color: inherit;
+		background-color: #fff;
+		box-shadow: 0 2px 6px rgba(0, 0, 0, .5);
+		text-align: center;
+		line-height: 2rem;
+
+		&:hover,
+		&:focus {
+			color: $primary-color;
+		}
+	}
+
+	.sticky-header & {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+
+.dropdown-cart-header,
+.dropdown-cart-total {
+	padding: .3rem 1rem;
+	color: #474747;
+	font-weight: 700;
+	line-height: 38px;
+	text-transform: uppercase;
+}
+
+.dropdown-cart-total {
+	margin-bottom: 1.1rem;
+	font-size: 1.4rem;
+
+	.cart-total-price {
+		margin-left: auto;
+		font-size: 1.5rem;
+	}
+}
+
+.dropdown-cart-header {
+	border-bottom: 1px solid #e6ebee;
+	color: #696969;
+	font-size: 1.3rem;
+
+	a {
+		color: #474747;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+}
+
+.dropdown-cart-action {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding: .2rem 1rem 1.5rem;
+
+	.btn {
+		padding: 1.4rem 2.5rem;
+		border-radius: .2rem;
+		color: #fff;
+		font-size: 1.2rem;
+		font-weight: 400;
+		font-family: $font-family;
+		letter-spacing: .025em;
+	}
+}
+
+// 4. Compare Dropdown
+
+.compare-dropdown {
+	.dropdown-toggle {
+		text-transform: uppercase;
+
+		i {
+			margin-top: -.2rem;
+			margin-right: .2rem;
+
+			&:before {
+				margin: 0;
+			}
+		}
+
+		&:after {
+			display: none;
+		}
+	}
+}
+
+.compare-products {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	.product {
+		position: relative;
+		margin: 0;
+		padding: .5rem 0;
+		box-shadow: none !important;
+
+		&:hover {
+			box-shadow: none;
+		}
+	}
+
+	.product-title {
+		margin: 0;
+		color: #696969;
+		font-size: 1.1rem;
+		font-weight: 400;
+		line-height: 1.35;
+		text-transform: uppercase;
+	}
+
+	.btn-remove {
+		display: -ms-flexbox;
+		display: flex;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		-ms-flex-align: center;
+		align-items: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		width: 2.3rem;
+		height: 2.3rem;
+		margin-top: -1.2rem;
+		padding: .5rem 0;
+		color: #777;
+		font-size: 1.3rem;
+		line-height: 1;
+		text-align: center;
+		overflow: hidden;
+	}
+}
+
+.compare-actions {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-top: 2rem;
+
+	.action-link {
+		display: inline-block;
+		color: #777;
+		font-size: 1.1rem;
+		text-transform: uppercase;
+	}
+
+	.btn {
+		min-width: 110px;
+		margin-left: auto;
+		padding: .9rem 1rem;
+		border: 0;
+		border-radius: .2rem;
+		color: #fff;
+		font-size: 1.2rem;
+		font-weight: 400;
+		letter-spacing: .025rem;
+		text-align: center;
+		text-transform: uppercase;
+	}
+}
+
+// 5. Responsive
+
+@include mq(lg) {
+	.dropdown-expanded {
+		> a,
+		.header-menu:before {
+			display: none;
+		}
+
+		li + li {
+			@include css( margin-left, header, dropdown, item, space );
+		}
+
+		ul {
+			position: static;
+			display: flex;
+			display: -ms-flexbox;
+			padding: 0;
+			border: 0;
+			background-color: transparent;
+			box-shadow: none;
+			opacity: 1;
+			visibility: visible;
+
+			a {
+				padding: 0;
+				color: inherit;
+
+				&:hover {
+					background-color: transparent;
+					@include css( color, header, dropdown, expanded, active-color );
+				}
+			}
+		}
+
+		.header-menu ul {
+			transform: none;
+		}
+	}
+}
+
+@include mq(sm, max) {
+	.compare-dropdown {
+		display: none;
+	}
+}
+
+@media (max-width: 480px) {
+	.cart-dropdown, .compare-dropdown {
+		.dropdown-menu {
+			width: 260px;
+		}
+
+		.dropdownmenu-wrapper {
+			padding: 1rem 1.4rem;
+		}
+	}
+}

@@ -1,0 +1,91 @@
+// Side Menu
+
+@include set-default(
+	(
+		side-menu: (
+			color: #555,
+			active-color: false,
+		)
+	)
+);
+
+// 1. Wrapper
+.side-menu-wrapper {
+	border: 1px solid #e7e7e7;
+}
+
+// 2. Title
+.side-menu-title {
+	padding: 1.45rem 2rem;
+	margin-bottom: 0;
+	background: #f6f7f9;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+}
+
+// 3. Side Menu
+.side-menu {
+
+    // 3.1) Item
+	li {
+        position: relative;
+
+        > a {
+            display: block;
+            border-bottom: 1px solid #e7e7e7;
+			padding: 1.2rem 0;
+			@include css( color, side-menu, color );
+			font-weight: 600;
+
+			&:hover {
+				@include css( color, side-menu, active-color );
+			}
+        }
+
+		i {
+			margin-right: 1.2rem;
+			font-size: 20px;
+			line-height: 1;
+			vertical-align: middle;
+		}
+	}
+	
+
+    // 3.2) Sub Menu
+	ul {
+		display: none;
+		padding-left: 1.0714em;
+	}
+
+	// To remove last item's border
+	&:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		margin-top: -1px;
+		background: #fff;
+	}
+}
+
+// 3.3) Toggle
+.side-menu-toggle {
+	position: absolute;
+	top: 1rem;
+	right: 0;
+	width: 24px;
+	color: $primary-color-dark;
+	text-align: center;
+	line-height: 24px;
+	cursor: pointer;
+
+	&:before {
+		content: '\e81c';
+		font-family: 'porto';
+		font-weight: 600;
+
+		.show > & {
+			content: '\e81b';
+		}
+	}
+}

@@ -1,0 +1,93 @@
+// Sticky Header
+
+@-webkit-keyframes fixedHeader {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(-60px);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+	}
+}
+
+@keyframes fixedHeader {
+	0% {
+		opacity: 0;
+		transform: translateY(-60px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@include set-default(
+	(
+		header: (
+			logo: (
+				sticky: (
+					transform: false,
+					transform-origin: false,
+				)
+			)
+		)
+	)
+);
+
+.sticky-header {
+
+	&.fixed {
+		position: fixed;
+		right: 0;
+		left: 0;
+		padding: 0;
+		background-color: #fff;
+		box-shadow: 0 1px 5px rgba(0, 0, 0, .08);
+		z-index: 1040;
+
+		.logo {
+			img {
+				@include print_css( header, logo, sticky );
+			}
+		}
+		.nav-tabs {
+			border-bottom-width: 0;
+		}
+	}
+
+	&.deprecated-sticky {
+		&:not(.fixed) {
+			.logo,
+			.cart-dropdown {
+				display: none;
+			}
+		}
+
+		&.fixed .main-nav {
+			width: auto;
+		}
+	}
+
+	.main &:not(.fixed) {
+		> .container {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	.main &.fixed {
+		min-height: 38px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+		overflow: hidden;
+		z-index: 1039;
+
+		.container {
+			margin: 0 auto;
+		}
+	}
+}

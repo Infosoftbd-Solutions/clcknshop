@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<root>
+    <images>
+        <image>
+            <title>Slider 1 Image</title>
+            <width>880</width>
+            <height>428</height>
+            <key>slider-1</key>
+            <file>uploads/slider-11jpg-25-04-2021-1619337275111.jpg</file>
+        </image>
+        <image>
+            <title>Slider 2 Image</title>
+            <width>880</width>
+            <height>428</height>
+            <key>slider-2</key>
+            <file>uploads/citybankofferwebjpg-25-04-2021-1619337676217.jpg</file>
+        </image>
+        <image>
+            <title>Slider 3 Image</title>
+            <key>slider-3</key>
+            <width>880</width>
+            <height>428</height>
+            <file>uploads/air-conditioner-big--25-04-2021-1619337680289.jpg</file>
+        </image>
+
+        <image>
+            <title>Home Page Flash Image 1</title>
+            <key>home-page-flash-image-1</key>
+            <width>280</width>
+            <height>180</height>
+            <file>uploads/banner-1jpg-25-04-2021-1619345076362.jpg</file>
+        </image>
+        <image>
+            <title>Home Page Flash Image 2</title>
+            <width>280</width>
+            <height>180</height>
+            <key>home-page-flash-image-2</key>
+            <file>uploads/banner-2jpg-25-04-2021-1619345081591.jpg</file>
+        </image>
+        <image>
+            <title>Home Page Flash Image 3</title>
+            <width>280</width>
+            <height>180</height>
+            <key>home-page-flash-image-3</key>
+            <file>uploads/banner-3jpg-25-04-2021-1619345090303.jpg</file>
+        </image>
+        <image>
+            <title>About Us Page Hero Image</title>
+            <width>1970</width>
+            <height>300</height>
+            <key>about-us-page-hero-image</key>
+            <file>uploads/page-header-bgjpg-25-04-2021-1619347488484.jpg</file>
+        </image>
+        <image>
+            <title>Contact Us Page Hero Image</title>
+            <width>1970</width>
+            <height>300</height>
+            <key>contact-us-page-hero-image</key>
+            <file>uploads/banner-topjpg-25-04-2021-1619347542327.jpg</file>
+        </image>
+
+    </images>
+
+    <menus>
+        <menu>
+            <title>Top Menubar</title>
+            <key>top-menubar</key>
+            <menujson>[{"text":"Order Tracking","href":"/track-order","icon":"","target":"_self","title":""},{"text":"My Account","href":"/customer","icon":"","target":"_self","title":""},{"text":"About Us","href":"/page/about-us","icon":"","target":"_self","title":""},{"text":"Contact Us","href":"/page/contact-us","icon":"","target":"_self","title":""},{"text":"Help &amp; FAQ","href":"/page/help-faq","icon":"","target":"_self","title":""}]</menujson>
+        </menu>
+        <menu>
+            <title>Navbar Menu</title>
+            <key>navbar-menu</key>
+            <menujson>[{"text":"Home","href":"/","icon":"","target":"_self","title":""},{"text":"Smartphone","href":"collection/smartphone","icon":"","target":"_self","title":"","children":[{"text":"Samsung","href":"/collection/samsung-smart-phone","icon":"","target":"_self","title":""},{"text":"Realme","href":"/collection/realme-smart-phone","icon":"","target":"_self","title":""},{"text":"Oppo","href":"/collection/oppo-smart-phone","icon":"","target":"_self","title":""},{"text":"Vivo","href":"/collection/vivo-smart-phone","icon":"","target":"_self","title":""},{"text":"Xiaomi","href":"/collection/xiaomi-smart-phone","icon":"","target":"_self","title":""},{"text":"Infinix","href":"/collection/infinix-smart-phone","icon":"","target":"_self","title":""},{"text":"Motorola","href":"/collection/motorola-smart-phone","icon":"","target":"_self","title":""},{"text":"Huawei","href":"/collection/huawei-smart-phone","icon":"","target":"_self","title":""},{"text":"Iphone","href":"/collection/iphone","icon":"","target":"_self","title":""},{"text":"Oneplus","href":"/collection/one-plus-smart-phone","icon":"","target":"_self","title":""}]},{"text":"Featured Phone","href":"collection/featured-phone","icon":"","target":"_self","title":"","children":[{"text":"Samsung","href":"/collection/samsung-featured-phone","icon":"","target":"_self","title":""},{"text":"Nokia","href":"/collection/nokia-featured-phone","icon":"","target":"_self","title":""},{"text":"Symphony ","href":"collection/symphony-featured-phone","icon":"","target":"_self","title":""},{"text":"Techno","href":"/collection/techno-featured-phone","icon":"","target":"_self","title":""},{"text":"Wolton","href":"/collection/wolton-featured-phone","icon":"","target":"_self","title":""}]},{"text":"Electronics &amp; Appliances","href":"/collection/electronics-appliances","icon":"","target":"_self","title":"","children":[{"text":"Televisions","href":"/collection/smart-tv","icon":"","target":"_self","title":""},{"text":"AC","href":"/collection/air-conditioner","icon":"","target":"_self","title":""},{"text":"Refrigerator &amp; Fridge","href":"/collection/refrigerator-fridge","icon":"","target":"_self","title":""},{"text":"Room Heaters","href":"/collection/washing-machine","icon":"","target":"_self","title":""},{"text":"Camera &amp;  Accessories","href":"/collection/camera-accessories","icon":"","target":"_self","title":""}]},{"text":"Accessories ","href":"/collection/accessories","icon":"","target":"_self","title":""},{"text":"Lifestyle","href":"/collection/lifestyle","icon":"","target":"_self","title":""},{"text":"Special Offer","href":"/collection/special-offer","icon":"","target":"_self","title":""}]</menujson>
+        </menu>
+
+        <menu>
+            <title>Footer Menu (Customer Service)</title>
+            <key>footer-menu-customer-service</key>
+            <menujson>[{"text":"Help &amp; FAQ","href":"/page/help-faq","icon":"","target":"_self","title":""},{"text":"Order Tracking","href":"/track-order","icon":"","target":"_self","title":""},{"text":"Shipping &amp; Delivery","href":"/page/shipping-delivery","icon":"","target":"_self","title":""},{"text":"My Account","href":"/customer","icon":"","target":"_self","title":""},{"text":"About Us","href":"/page/about-us","icon":"","target":"_self","title":""},{"text":"Contact Us","href":"/page/contact-us","icon":"","target":"_self","title":""},{"text":"Privacy","href":"/page/privacy ","icon":"","target":"_self","title":""}]</menujson>
+        </menu>
+    </menus>
+</root>

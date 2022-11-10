@@ -1,0 +1,4262 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2022-09-28 16:31+0600\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/CheckoutController.php:129
+#: Controller/CheckoutController.php:531
+#: Controller/CheckoutControllerbackup.php:234
+msgid "The payment processor does not Exists. Please contact our support center"
+msgstr ""
+
+#: Controller/CheckoutController.php:195
+#: Controller/CheckoutController.php:597
+#: Controller/CheckoutControllerbackup.php:300
+msgid "The order product could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/CheckoutController.php:267
+#: Controller/CheckoutController.php:676
+#: Controller/CheckoutControllerbackup.php:379
+#: Controller/OrdersController.php:64
+#: Controller/OrdersController.php:91
+#: Controller/Admin/OrdersController.php:421
+#: Controller/Admin/OrdersController.php:425
+#: Controller/Admin/OrdersController.php:583
+msgid "The order could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/CheckoutController.php:410
+#: Controller/CheckoutControllerbackup.php:111
+msgid "Sorry, this coupon is not valid. Please check for any typing errors"
+msgstr ""
+
+#: Controller/CheckoutController.php:839
+#: Controller/CheckoutController.php:863
+#: Controller/CheckoutControllerbackup.php:539
+#: Controller/CheckoutControllerbackup.php:563
+msgid "The checkout has been saved."
+msgstr ""
+
+#: Controller/CheckoutController.php:843
+#: Controller/CheckoutController.php:867
+#: Controller/CheckoutControllerbackup.php:543
+#: Controller/CheckoutControllerbackup.php:567
+msgid "The checkout could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/CheckoutController.php:884
+#: Controller/CheckoutControllerbackup.php:584
+msgid "The checkout has been deleted."
+msgstr ""
+
+#: Controller/CheckoutController.php:886
+#: Controller/CheckoutControllerbackup.php:586
+msgid "The checkout could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/CustomersController.php:457
+msgid "Your registration has been completed."
+msgstr ""
+
+#: Controller/CustomersController.php:637
+#: Controller/Admin/CustomersController.php:147
+#: Controller/Admin/CustomersController.php:188
+msgid "The customer has been saved."
+msgstr ""
+
+#: Controller/CustomersController.php:640
+#: Controller/Admin/CustomersController.php:160
+#: Controller/Admin/CustomersController.php:191
+msgid "The customer could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/FrontendController.php:428
+msgid "Item added to cart successfully"
+msgstr ""
+
+#: Controller/FrontendController.php:736
+#: Controller/Admin/ReviewsController.php:59
+msgid "The review has been saved."
+msgstr ""
+
+#: Controller/FrontendController.php:738
+#: Controller/Admin/ReviewsController.php:63
+msgid "The review could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/FrontendController.php:758
+#: Controller/Admin/ContactsController.php:54
+#: Controller/Admin/ContactsController.php:78
+msgid "The contact has been saved."
+msgstr ""
+
+#: Controller/FrontendController.php:760
+#: Controller/Admin/ContactsController.php:58
+#: Controller/Admin/ContactsController.php:82
+msgid "The contact could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/OrderPaymentsController.php:57
+#: Controller/OrderPaymentsController.php:82
+#: Controller/Admin/OrderPaymentsController.php:122
+#: Controller/Admin/OrderPaymentsController.php:158
+msgid "The order payment has been saved."
+msgstr ""
+
+#: Controller/OrderPaymentsController.php:61
+#: Controller/OrderPaymentsController.php:86
+#: Controller/Admin/OrderPaymentsController.php:136
+#: Controller/Admin/OrderPaymentsController.php:162
+msgid "The order payment could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/OrderPaymentsController.php:104
+#: Controller/Admin/OrderPaymentsController.php:180
+msgid "The order payment has been deleted."
+msgstr ""
+
+#: Controller/OrderPaymentsController.php:106
+#: Controller/Admin/OrderPaymentsController.php:182
+msgid "The order payment could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/OrdersController.php:60
+#: Controller/OrdersController.php:87
+#: Controller/Admin/OrdersController.php:417
+#: Controller/Admin/OrdersController.php:483
+#: Controller/Admin/OrdersController.php:576
+msgid "The order has been saved."
+msgstr ""
+
+#: Controller/OrdersController.php:111
+#: Controller/Admin/OrdersController.php:952
+msgid "The order has been deleted."
+msgstr ""
+
+#: Controller/OrdersController.php:113
+#: Controller/Admin/OrdersController.php:954
+msgid "The order could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/PaymentMethodsController.php:54
+#: Controller/PaymentMethodsController.php:78
+#: Controller/Admin/PaymentMethodsController.php:55
+msgid "The payment method has been saved."
+msgstr ""
+
+#: Controller/PaymentMethodsController.php:58
+#: Controller/PaymentMethodsController.php:82
+#: Controller/Admin/PaymentMethodsController.php:59
+msgid "The payment method could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/PaymentMethodsController.php:99
+#: Controller/Admin/PaymentMethodsController.php:136
+msgid "The payment method has been deleted."
+msgstr ""
+
+#: Controller/PaymentMethodsController.php:101
+#: Controller/Admin/PaymentMethodsController.php:138
+msgid "The payment method could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/ProductsController.php:85
+#: Controller/ProductsController.php:109
+#: Controller/Admin/ProductsController.php:526
+#: Controller/Admin/ProductsController.php:759
+msgid "The product has been saved."
+msgstr ""
+
+#: Controller/ProductsController.php:89
+#: Controller/ProductsController.php:113
+#: Controller/Admin/ProductsController.php:530
+#: Controller/Admin/ProductsController.php:762
+msgid "The product could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/ProductsController.php:130
+#: Controller/Admin/ProductsController.php:937
+msgid "The product has been deleted."
+msgstr ""
+
+#: Controller/ProductsController.php:132
+#: Controller/Admin/ProductsController.php:939
+msgid "The product could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:54
+#: Controller/UsersController.php:78
+#: Controller/Admin/UsersController.php:482
+#: Controller/Admin/UsersController.php:529
+msgid "The user has been saved."
+msgstr ""
+
+#: Controller/UsersController.php:58
+#: Controller/UsersController.php:82
+#: Controller/Admin/UsersController.php:487
+#: Controller/Admin/UsersController.php:533
+msgid "The user could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:99
+#: Controller/Admin/UsersController.php:553
+msgid "The user has been deleted."
+msgstr ""
+
+#: Controller/UsersController.php:101
+#: Controller/Admin/UsersController.php:555
+msgid "The user could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/BlogsController.php:54
+#: Controller/Admin/BlogsController.php:108
+msgid "The blog has been saved."
+msgstr ""
+
+#: Controller/Admin/BlogsController.php:58
+#: Controller/Admin/BlogsController.php:112
+msgid "The blog could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/BlogsController.php:129
+msgid "The blog has been deleted."
+msgstr ""
+
+#: Controller/Admin/BlogsController.php:131
+msgid "The blog could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/CategoriesController.php:62
+#: Controller/Admin/CategoriesController.php:190
+msgid "Collection Image could not be saved. Invalid file format."
+msgstr ""
+
+#: Controller/Admin/CategoriesController.php:73
+#: Controller/Admin/CategoriesController.php:198
+msgid "Collection Image could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/CategoriesController.php:83
+#: Controller/Admin/CategoriesController.php:210
+msgid "The category has been saved."
+msgstr ""
+
+#: Controller/Admin/CategoriesController.php:87
+#: Controller/Admin/CategoriesController.php:215
+msgid "The category could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/CategoriesController.php:240
+msgid "The category has been deleted."
+msgstr ""
+
+#: Controller/Admin/CategoriesController.php:242
+msgid "The category could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/ContactsController.php:99
+msgid "The contact has been deleted."
+msgstr ""
+
+#: Controller/Admin/ContactsController.php:101
+msgid "The contact could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/CouponsController.php:82
+#: Controller/Admin/CouponsController.php:129
+msgid "The coupon has been saved."
+msgstr ""
+
+#: Controller/Admin/CouponsController.php:88
+#: Controller/Admin/CouponsController.php:135
+msgid "The coupon could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/CouponsController.php:153
+msgid "The coupon has been deleted."
+msgstr ""
+
+#: Controller/Admin/CouponsController.php:155
+msgid "The coupon could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/CustomersController.php:213
+msgid "The customer has been deleted."
+msgstr ""
+
+#: Controller/Admin/CustomersController.php:215
+msgid "The customer could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/CustomersController.php:217
+msgid "The customer has existing order."
+msgstr ""
+
+#: Controller/Admin/FacebookController.php:117
+#: Controller/Admin/FacebookController.php:189
+#: Controller/Admin/FacebookController.php:505
+msgid "Graph returned an error: {0}"
+msgstr ""
+
+#: Controller/Admin/FacebookController.php:123
+#: Controller/Admin/FacebookController.php:192
+msgid "Facebook SDK returned an error: {0}"
+msgstr ""
+
+#: Controller/Admin/FacebookController.php:221
+msgid "The facebook Business manager has been saved."
+msgstr ""
+
+#: Controller/Admin/FacebookController.php:223
+msgid "The facebook Business manager could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/FacebookController.php:255
+msgid "The facebook catalog has been saved."
+msgstr ""
+
+#: Controller/Admin/FacebookController.php:257
+msgid "The facebook catalog could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/FacebookController.php:352
+#: Controller/Admin/FacebookController.php:447
+msgid "The facebook page has been saved."
+msgstr ""
+
+#: Controller/Admin/FacebookController.php:354
+#: Controller/Admin/FacebookController.php:449
+msgid "The facebook page could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/FacebookController.php:497
+msgid "The product has been posted on facebook."
+msgstr ""
+
+#: Controller/Admin/FacebookController.php:499
+msgid "The product could not be publish Please, try again."
+msgstr ""
+
+#: Controller/Admin/FacebookController.php:508
+#: Controller/Admin/FacebookController.php:511
+msgid "Facebook SDK returned an error: "
+msgstr ""
+
+#: Controller/Admin/FacebookController.php:550
+#: Controller/Admin/FacebookController.php:572
+msgid "The facebook has been saved."
+msgstr ""
+
+#: Controller/Admin/FacebookController.php:552
+#: Controller/Admin/FacebookController.php:576
+msgid "The facebook could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/GeneralOptionsController.php:46
+#: Controller/Admin/GeneralOptionsController.php:56
+msgid "The notification settings could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/GeneralOptionsController.php:49
+#: Controller/Admin/GeneralOptionsController.php:59
+msgid "The notification settings has been saved."
+msgstr ""
+
+#: Controller/Admin/GeneralOptionsController.php:93
+#: Controller/Admin/GeneralOptionsController.php:102
+msgid "The SMS Content ({0}) could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/GeneralOptionsController.php:108
+msgid "All of messages have been saved."
+msgstr ""
+
+#: Controller/Admin/GeneralOptionsController.php:142
+msgid "The general option has been saved."
+msgstr ""
+
+#: Controller/Admin/GeneralOptionsController.php:146
+msgid "The general option could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/GeneralOptionsController.php:192
+msgid "{0} Image could not be saved. Invalid file format."
+msgstr ""
+
+#: Controller/Admin/GeneralOptionsController.php:195
+msgid "{0} should be in ico format."
+msgstr ""
+
+#: Controller/Admin/GeneralOptionsController.php:233
+msgid "Logo Image could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/GeneralOptionsController.php:251
+msgid "The setting could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/GeneralOptionsController.php:256
+msgid "The setting has been saved."
+msgstr ""
+
+#: Controller/Admin/GeneralOptionsController.php:274
+msgid "The general option has been deleted."
+msgstr ""
+
+#: Controller/Admin/GeneralOptionsController.php:276
+msgid "The general option could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/MailSettingsController.php:62
+#: Controller/Admin/MailSettingsController.php:89
+msgid "The mail setting has been saved."
+msgstr ""
+
+#: Controller/Admin/MailSettingsController.php:66
+#: Controller/Admin/MailSettingsController.php:91
+msgid "The mail setting could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/MailSettingsController.php:110
+msgid "The mail setting has been deleted."
+msgstr ""
+
+#: Controller/Admin/MailSettingsController.php:112
+msgid "The mail setting could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/OrdersController.php:392
+msgid "Your order is placed order #{0}"
+msgstr ""
+
+#: Controller/Admin/OrdersController.php:630
+#: Controller/Admin/OrdersController.php:711
+msgid "Ops There was something wrong. please try again"
+msgstr ""
+
+#: Controller/Admin/OrdersController.php:777
+msgid "Sorry, Order could not be cancelled. Already order has been paid"
+msgstr ""
+
+#: Controller/Admin/OrdersController.php:802
+msgid "Order status has been changed."
+msgstr ""
+
+#: Controller/Admin/OrdersController.php:857
+msgid "Opps There was something wrong."
+msgstr ""
+
+#: Controller/Admin/OrdersController.php:915
+msgid "{0} Inventory Decrement for this Order"
+msgstr ""
+
+#: Controller/Admin/OrdersController.php:930
+msgid "The order has been marked as Pending."
+msgstr ""
+
+#: Controller/Admin/OrdersController.php:933
+msgid "There was something wrong."
+msgstr ""
+
+#: Controller/Admin/OrdersController.php:978
+msgid "Increased {0} quantity due to  remove from the order."
+msgstr ""
+
+#: Controller/Admin/OrdersController.php:1031
+msgid "Decreased {0} quantity due to  Modify the order."
+msgstr ""
+
+#: Controller/Admin/OrdersController.php:1093
+msgid "Order Placed For Testing Purpose"
+msgstr ""
+
+#: Controller/Admin/PagesController.php:55
+#: Controller/Admin/PagesController.php:79
+msgid "The page has been saved."
+msgstr ""
+
+#: Controller/Admin/PagesController.php:59
+#: Controller/Admin/PagesController.php:83
+msgid "The page could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/PagesController.php:101
+msgid "The page has been deleted."
+msgstr ""
+
+#: Controller/Admin/PagesController.php:103
+msgid "The page could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/PaymentProcessorController.php:81
+msgid "The payment processor has been saved."
+msgstr ""
+
+#: Controller/Admin/PaymentProcessorController.php:83
+msgid "The payment processor could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/PaymentProcessorController.php:110
+#: Controller/Admin/ThemesController.php:128
+msgid "Invalid file extension"
+msgstr ""
+
+#: Controller/Admin/PaymentProcessorController.php:132
+msgid "Instruction Image Could not be uploaded"
+msgstr ""
+
+#: Controller/Admin/PaymentProcessorController.php:140
+msgid "Configuration Changes Successfully"
+msgstr ""
+
+#: Controller/Admin/PaymentProcessorController.php:143
+msgid "Configuration Could not be Saved"
+msgstr ""
+
+#: Controller/Admin/PaymentProcessorController.php:190
+msgid "The payment processor has been deleted."
+msgstr ""
+
+#: Controller/Admin/PaymentProcessorController.php:192
+msgid "The payment processor could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/ProductMediaController.php:126
+msgid "The Youtube video has been saved."
+msgstr ""
+
+#: Controller/Admin/ProductMediaController.php:128
+msgid "Ops there was something wrong"
+msgstr ""
+
+#: Controller/Admin/ProductMediaController.php:208
+msgid "Unsupported Image format. Only support jpg png jpeg"
+msgstr ""
+
+#: Controller/Admin/ProductMediaController.php:233
+msgid "Default Image set successfully"
+msgstr ""
+
+#: Controller/Admin/ProductMediaController.php:239
+msgid "Default Image Not set"
+msgstr ""
+
+#: Controller/Admin/ProductMediaController.php:334
+msgid "The product media has been deleted."
+msgstr ""
+
+#: Controller/Admin/ProductMediaController.php:336
+msgid "The product media could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/ProductsController.php:842
+msgid "The product variant has been saved."
+msgstr ""
+
+#: Controller/Admin/ProductsController.php:873
+msgid "The product variant has been deleted."
+msgstr ""
+
+#: Controller/Admin/ProductsController.php:875
+msgid "The product variant could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/ReportsController.php:142
+#: Controller/Admin/ReportsController.php:176
+#: Controller/Admin/ReportsController.php:215
+msgid "Please select Date range to filter"
+msgstr ""
+
+#: Controller/Admin/ReportsController.php:272
+#: Controller/Admin/ReportsController.php:296
+msgid "The report has been saved."
+msgstr ""
+
+#: Controller/Admin/ReportsController.php:276
+#: Controller/Admin/ReportsController.php:300
+msgid "The report could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/ReportsController.php:317
+msgid "The report has been deleted."
+msgstr ""
+
+#: Controller/Admin/ReportsController.php:319
+msgid "The report could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/ReviewsController.php:143
+msgid "The review has been deleted."
+msgstr ""
+
+#: Controller/Admin/ReviewsController.php:145
+msgid "The review could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/ShippingMethodsController.php:53
+#: Controller/Admin/ShippingMethodsController.php:82
+msgid "The shipping method has been saved."
+msgstr ""
+
+#: Controller/Admin/ShippingMethodsController.php:57
+#: Controller/Admin/ShippingMethodsController.php:86
+msgid "The shipping method could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/ShippingMethodsController.php:112
+msgid "The shipping method has been deleted."
+msgstr ""
+
+#: Controller/Admin/ShippingMethodsController.php:114
+msgid "The shipping method could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/ShippingZonesController.php:68
+#: Controller/Admin/ShippingZonesController.php:93
+msgid "The shipping zone has been saved."
+msgstr ""
+
+#: Controller/Admin/ShippingZonesController.php:72
+#: Controller/Admin/ShippingZonesController.php:97
+msgid "The shipping zone could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/ShippingZonesController.php:114
+msgid "The shipping zone has been deleted."
+msgstr ""
+
+#: Controller/Admin/ShippingZonesController.php:116
+msgid "The shipping zone could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:35
+msgid "Please active your favorite theme first."
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:83
+msgid "{0} theme Already Installed"
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:97
+msgid "{0} theme installed successfully"
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:101
+msgid "{0} theme doesn't Download. please try again"
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:111
+msgid "Assets.xml file not found in theme root directory"
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:146
+msgid "Image Uploaded successfully"
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:148
+msgid "Image could not be upload!. please try again"
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:163
+msgid "Menu Item changes successfully"
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:234
+msgid "Please select a valid theme from our collection."
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:239
+msgid "{0} theme doesn't exist. please choose valid theme."
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:254
+msgid "{0} theme is activated successfully"
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:255
+msgid "Ops! {0} theme is not activated. please try again."
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:439
+msgid "There was something."
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:453
+msgid "Invalid file format."
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:457
+msgid "Undetectable file format."
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:462
+msgid "File already exists."
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:466
+msgid "File uploaded successfully."
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:469
+msgid "There was something wrong, file could not be upload"
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:501
+msgid "Invalid Structure: assets folder not exists"
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:502
+msgid "Invalid Structure: templates folder not exists"
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:503
+msgid "Invalid Structure: theme xml file not exists"
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:509
+#: Controller/Admin/ThemesController.php:511
+msgid "Meta data messing: theme name not exists"
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:514
+#: Controller/Admin/ThemesController.php:516
+msgid "Meta data messing: theme author not exists"
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:519
+#: Controller/Admin/ThemesController.php:521
+msgid "Meta data messing: theme description not exists"
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:525
+#: Controller/Admin/ThemesController.php:527
+msgid "Meta data messing: theme thumbnail image not exists"
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:530
+#: Controller/Admin/ThemesController.php:532
+msgid "Meta data messing: theme preview image not exists"
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:536
+#: Controller/Admin/ThemesController.php:538
+msgid "Meta data messing: theme version image not exists"
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:567
+msgid "There was something wrong. File could not  be extract"
+msgstr ""
+
+#: Controller/Admin/ThemesController.php:571
+msgid "There was something wrong. File could not  be open"
+msgstr ""
+
+#: Controller/Admin/TransactionsController.php:59
+msgid "The transaction record could not found. Please, try again."
+msgstr ""
+
+#: Controller/Admin/TransactionsController.php:76
+msgid "Order Amount can not be transferred. please Contact our support Center"
+msgstr ""
+
+#: Controller/Admin/TransactionsController.php:82
+msgid "Order Amount Already transferred but transaction could not be updated. please contact our support center"
+msgstr ""
+
+#: Controller/Admin/TransactionsController.php:86
+msgid "The Transaction is updated and Order Amount transferred"
+msgstr ""
+
+#: Controller/Admin/TransactionsController.php:122
+#: Controller/Admin/TransactionsController.php:147
+msgid "The transaction has been saved."
+msgstr ""
+
+#: Controller/Admin/TransactionsController.php:126
+#: Controller/Admin/TransactionsController.php:151
+msgid "The transaction could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/TransactionsController.php:169
+msgid "The transaction has been deleted."
+msgstr ""
+
+#: Controller/Admin/TransactionsController.php:171
+msgid "The transaction could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/UsersController.php:55
+#: Controller/Admin/UsersController.php:160
+msgid "You are successfully logged in."
+msgstr ""
+
+#: Controller/Admin/UsersController.php:58
+msgid "Your account has been disabled."
+msgstr ""
+
+#: Controller/Admin/UsersController.php:61
+msgid "username or password wrong."
+msgstr ""
+
+#: Controller/Admin/UsersController.php:128
+msgid "token mismatched"
+msgstr ""
+
+#: Controller/Admin/UsersController.php:133
+msgid "nonce expired"
+msgstr ""
+
+#: Controller/Admin/UsersController.php:143
+msgid "invalid email"
+msgstr ""
+
+#: Controller/Admin/UsersController.php:148
+msgid "invalid response token"
+msgstr ""
+
+#: Controller/Admin/UsersController.php:281
+msgid "Created successfully"
+msgstr ""
+
+#: Controller/Admin/UsersController.php:305
+msgid "User information could not update."
+msgstr ""
+
+#: Controller/Admin/UsersController.php:307
+msgid "User Information has been updated"
+msgstr ""
+
+#: Controller/Admin/UsersController.php:322
+msgid "Reset Password token Invalid or Expired"
+msgstr ""
+
+#: Controller/Admin/UsersController.php:328
+#: Controller/Admin/UsersController.php:361
+msgid "Invalid Token. Please try to reset again"
+msgstr ""
+
+#: Controller/Admin/UsersController.php:343
+msgid "Password field is required"
+msgstr ""
+
+#: Controller/Admin/UsersController.php:346
+msgid "Password must be at least 6 characters"
+msgstr ""
+
+#: Controller/Admin/UsersController.php:350
+msgid "Confirm Password field is required"
+msgstr ""
+
+#: Controller/Admin/UsersController.php:354
+msgid "Confirm password does not match"
+msgstr ""
+
+#: Controller/Admin/UsersController.php:369
+msgid "Your password has been changed."
+msgstr ""
+
+#: Controller/Admin/UsersController.php:373
+msgid "Ops There was something wrong. please try again later"
+msgstr ""
+
+#: Controller/Admin/UsersController.php:382
+msgid "The email address could not be empty."
+msgstr ""
+
+#: Controller/Admin/UsersController.php:388
+msgid "The email address does not exists, Please enter valid email."
+msgstr ""
+
+#: Controller/Admin/UsersController.php:396
+#: Controller/Admin/UsersController.php:403
+msgid "Ops! there was something wrong. please try again later."
+msgstr ""
+
+#: Controller/Admin/UsersController.php:406
+msgid "An email has been sent to the email address. please follow the instruction to reset password."
+msgstr ""
+
+#: Controller/Admin/UsersController.php:468
+msgid "Confirm password does not matched."
+msgstr ""
+
+#: Controller/Admin/UsersController.php:476
+msgid "The email already exist. please try another"
+msgstr ""
+
+#: Controller/Admin/UsersController.php:514
+msgid "confirm password does not matched."
+msgstr ""
+
+#: Controller/Admin/UsersController.php:524
+msgid "The email address already exist. please try another"
+msgstr ""
+
+#: Controller/Admin/UsersController.php:648
+msgid "SQL Exicution Failed - {0} "
+msgstr ""
+
+#: Controller/Admin/UsersController.php:661
+msgid "Fail to connect to mysql! {0}"
+msgstr ""
+
+#: Controller/Admin/UsersController.php:666
+msgid "New User Insertion failed"
+msgstr ""
+
+#: Controller/Admin/UsersController.php:671
+#: Controller/Admin/UsersController.php:674
+msgid "New Settings Insertion failed"
+msgstr ""
+
+#: Template/Admin/Blogs/index.ctp:56
+#: Template/Admin/Blogs/view.ctp:11
+#: Template/Admin/Categories/edit.ctp:13
+#: Template/Admin/Categories/index.ctp:46
+#: Template/Admin/Categories/view.ctp:11
+#: Template/Admin/Contacts/edit.ctp:13
+#: Template/Admin/Contacts/index.ctp:64
+#: Template/Admin/Contacts/view.ctp:11
+#: Template/Admin/Coupons/index.ctp:49
+#: Template/Admin/Customers/customer_display.ctp:27
+#: Template/Admin/Customers/edit.ctp:13
+#: Template/Admin/Facebook/edit.ctp:15
+#: Template/Admin/Facebook/view.ctp:11
+#: Template/Admin/OrderPayments/edit.ctp:13
+#: Template/Admin/OrderPayments/index.ctp:41
+#: Template/Admin/OrderPayments/view.ctp:11
+#: Template/Admin/Orders/drafts_order_display.ctp:28
+#: Template/Admin/Orders/edit.ctp:13
+#: Template/Admin/Pages/edit.ctp:13
+#: Template/Admin/Pages/index.ctp:60
+#: Template/Admin/Pages/view.ctp:11
+#: Template/Admin/Pages/view.ctp:80
+#: Template/Admin/PaymentMethods/edit.ctp:13
+#: Template/Admin/PaymentMethods/index.ctp:51
+#: Template/Admin/PaymentMethods/view.ctp:11
+#: Template/Admin/PaymentProcessor/edit.ctp:13
+#: Template/Admin/PaymentProcessor/index.ctp:68
+#: Template/Admin/PaymentProcessor/view.ctp:11
+#: Template/Admin/ProductMedia/edit.ctp:13
+#: Template/Admin/ProductMedia/index.ctp:89
+#: Template/Admin/ProductMedia/view.ctp:11
+#: Template/Admin/Products/reviews.ctp:81
+#: Template/Admin/Products/view.ctp:11
+#: Template/Admin/Products/view.ctp:110
+#: Template/Admin/Reviews/edit.ctp:13
+#: Template/Admin/Reviews/index.ctp:89
+#: Template/Admin/Reviews/view.ctp:11
+#: Template/Admin/ShippingMethods/shipping_display.ctp:11
+#: Template/Admin/ShippingMethods/view.ctp:11
+#: Template/Admin/ShippingZones/edit.ctp:13
+#: Template/Admin/ShippingZones/view.ctp:11
+#: Template/Admin/ShippingZones/zone_display.ctp:10
+#: Template/Admin/Transactions/edit.ctp:13
+#: Template/Admin/Transactions/view.ctp:11
+#: Template/Admin/Users/user_display.ctp:33
+#: Template/Admin/Users/view.ctp:11
+#: Template/Customers/customer_display.ctp:28
+#: Template/Customers/edit.ctp:13
+#: Template/Customersbackup/edit.ctp:13
+#: Template/Orders/edit.ctp:13
+#: Template/Orders/index.ctp:81
+#: Template/Orders/view.ctp:11
+#: Template/Orders/view.ctp:162
+#: Template/PaymentMethods/edit.ctp:13
+#: Template/PaymentMethods/index.ctp:39
+#: Template/PaymentMethods/view.ctp:11
+msgid "Are you sure you want to delete # {0}?"
+msgstr ""
+
+#: Template/Admin/Blogs/view.ctp:9
+#: Template/Admin/Categories/edit.ctp:9
+#: Template/Admin/Categories/index.ctp:31
+#: Template/Admin/Categories/view.ctp:9
+#: Template/Admin/Contacts/add.ctp:9
+#: Template/Admin/Contacts/edit.ctp:9
+#: Template/Admin/Contacts/view.ctp:9
+#: Template/Admin/Coupons/index.ctp:33
+#: Template/Admin/Customers/customer_display.ctp:12
+#: Template/Admin/Customers/edit.ctp:9
+#: Template/Admin/Facebook/add.ctp:9
+#: Template/Admin/Facebook/edit.ctp:11
+#: Template/Admin/Facebook/view.ctp:9
+#: Template/Admin/OrderPayments/add.ctp:9
+#: Template/Admin/OrderPayments/edit.ctp:9
+#: Template/Admin/OrderPayments/index.ctp:9
+#: Template/Admin/OrderPayments/index.ctp:26
+#: Template/Admin/OrderPayments/view.ctp:9
+#: Template/Admin/Orders/drafts_order_display.ctp:10
+#: Template/Admin/Orders/edit.ctp:9
+#: Template/Admin/Orders/order_display.ctp:11
+#: Template/Admin/Pages/edit.ctp:9
+#: Template/Admin/Pages/index.ctp:49
+#: Template/Admin/Pages/view.ctp:9
+#: Template/Admin/Pages/view.ctp:58
+#: Template/Admin/PaymentMethods/add.ctp:9
+#: Template/Admin/PaymentMethods/edit.ctp:9
+#: Template/Admin/PaymentMethods/view.ctp:9
+#: Template/Admin/PaymentProcessor/add.ctp:9
+#: Template/Admin/PaymentProcessor/edit.ctp:9
+#: Template/Admin/PaymentProcessor/view.ctp:9
+#: Template/Admin/ProductMedia/add.ctp:9
+#: Template/Admin/ProductMedia/edit.ctp:9
+#: Template/Admin/ProductMedia/view.ctp:9
+#: Template/Admin/Products/add.ctp:9
+#: Template/Admin/Products/view.ctp:9
+#: Template/Admin/Products/view.ctp:101
+#: Template/Admin/Reviews/add.ctp:9
+#: Template/Admin/Reviews/edit.ctp:9
+#: Template/Admin/Reviews/view.ctp:9
+#: Template/Admin/ShippingMethods/add.ctp:9
+#: Template/Admin/ShippingMethods/index.ctp:24
+#: Template/Admin/ShippingMethods/view.ctp:9
+#: Template/Admin/ShippingZones/add.ctp:9
+#: Template/Admin/ShippingZones/edit.ctp:9
+#: Template/Admin/ShippingZones/index.ctp:22
+#: Template/Admin/ShippingZones/view.ctp:9
+#: Template/Admin/Transactions/add.ctp:9
+#: Template/Admin/Transactions/edit.ctp:9
+#: Template/Admin/Transactions/view.ctp:9
+#: Template/Admin/Users/user_display.ctp:14
+#: Template/Admin/Users/view.ctp:9
+#: Template/Customers/customer_display.ctp:12
+#: Template/Customers/edit.ctp:9
+#: Template/Customersbackup/add.ctp:9
+#: Template/Customersbackup/edit.ctp:9
+#: Template/Orders/add.ctp:9
+#: Template/Orders/edit.ctp:9
+#: Template/Orders/index.ctp:9
+#: Template/Orders/index.ctp:49
+#: Template/Orders/view.ctp:9
+#: Template/Orders/view.ctp:144
+#: Template/PaymentMethods/add.ctp:9
+#: Template/PaymentMethods/edit.ctp:9
+#: Template/PaymentMethods/index.ctp:9
+#: Template/PaymentMethods/index.ctp:24
+#: Template/PaymentMethods/view.ctp:9
+msgid "Actions"
+msgstr ""
+
+#: Template/Admin/Blogs/view.ctp:10
+msgid "Edit Blog"
+msgstr ""
+
+#: Template/Admin/Blogs/view.ctp:11
+msgid "Delete Blog"
+msgstr ""
+
+#: Template/Admin/Blogs/view.ctp:12
+msgid "List Blogs"
+msgstr ""
+
+#: Template/Admin/Blogs/view.ctp:13
+msgid "New Blog"
+msgstr ""
+
+#: Template/Admin/Blogs/view.ctp:20
+#: Template/Admin/Categories/view.ctp:32
+#: Template/Admin/Contacts/view.ctp:32
+#: Template/Admin/Facebook/view.ctp:36
+#: Template/Admin/OrderPayments/view.ctp:26
+#: Template/Admin/Pages/view.ctp:26
+#: Template/Admin/Pages/view.ctp:43
+#: Template/Admin/PaymentMethods/view.ctp:28
+#: Template/Admin/PaymentProcessor/view.ctp:34
+#: Template/Admin/ProductMedia/view.ctp:34
+#: Template/Admin/Products/view.ctp:42
+#: Template/Admin/Products/view.ctp:99
+#: Template/Admin/Reviews/view.ctp:32
+#: Template/Admin/ShippingMethods/view.ctp:28
+#: Template/Admin/ShippingZones/view.ctp:28
+#: Template/Admin/Transactions/view.ctp:26
+#: Template/Admin/Users/view.ctp:48
+#: Template/Orders/view.ctp:88
+#: Template/Orders/view.ctp:133
+#: Template/PaymentMethods/view.ctp:28
+msgid "Id"
+msgstr ""
+
+#: Template/Admin/Blogs/view.ctp:24
+#: Template/Admin/Products/index.ctp:73
+msgid "Published"
+msgstr ""
+
+#: Template/Admin/Blogs/view.ctp:28
+msgid "Sort By"
+msgstr ""
+
+#: Template/Admin/Blogs/view.ctp:32
+#: Template/Admin/Categories/view.ctp:40
+#: Template/Admin/Contacts/view.ctp:36
+#: Template/Admin/Facebook/view.ctp:60
+#: Template/Admin/Pages/view.ctp:56
+#: Template/Admin/PaymentMethods/view.ctp:36
+#: Template/Admin/ProductMedia/view.ctp:46
+#: Template/Admin/Products/view.ctp:66
+#: Template/Admin/Reviews/view.ctp:44
+#: Template/Admin/ShippingMethods/view.ctp:40
+#: Template/Admin/Users/view.ctp:60
+#: Template/Orders/view.ctp:142
+#: Template/PaymentMethods/view.ctp:36
+msgid "Created"
+msgstr ""
+
+#: Template/Admin/Blogs/view.ctp:36
+#: Template/Admin/Categories/view.ctp:44
+#: Template/Admin/PaymentMethods/view.ctp:40
+#: Template/Admin/Products/view.ctp:70
+#: Template/Admin/ShippingMethods/view.ctp:44
+#: Template/Orders/view.ctp:143
+#: Template/PaymentMethods/view.ctp:40
+msgid "Modified"
+msgstr ""
+
+#: Template/Admin/Blogs/view.ctp:41
+#: Template/Admin/Coupons/add.ctp:32
+#: Template/Admin/Coupons/edit.ctp:32
+#: Template/Admin/Coupons/view.ctp:71
+#: Template/Admin/Orders/add.ctp:549
+#: Template/Admin/Products/view.ctp:22
+msgid "Title"
+msgstr ""
+
+#: Template/Admin/Blogs/view.ctp:45
+msgid "Parmalink"
+msgstr ""
+
+#: Template/Admin/Blogs/view.ctp:49
+msgid "Body"
+msgstr ""
+
+#: Template/Admin/Blogs/view.ctp:53
+msgid "Labels"
+msgstr ""
+
+#: Template/Admin/Categories/add.ctp:14
+#: Template/Admin/Products/index.ctp:25
+msgid "Collection"
+msgstr ""
+
+#: Template/Admin/Categories/add.ctp:28
+msgid "Collection Image"
+msgstr ""
+
+#: Template/Admin/Categories/add.ctp:31
+msgid "Choose file"
+msgstr ""
+
+#: Template/Admin/Categories/add.ctp:48
+msgid "Product title match with"
+msgstr ""
+
+#: Template/Admin/Categories/add.ctp:49
+msgid "Product type match with"
+msgstr ""
+
+#: Template/Admin/Categories/add.ctp:50
+msgid "Product tag match with"
+msgstr ""
+
+#: Template/Admin/Categories/add.ctp:64
+msgid "Save Collection"
+msgstr ""
+
+#: Template/Admin/Categories/edit.ctp:11
+#: Template/Admin/Contacts/edit.ctp:11
+#: Template/Admin/Customers/edit.ctp:11
+#: Template/Admin/Facebook/edit.ctp:13
+#: Template/Admin/OrderPayments/edit.ctp:11
+#: Template/Admin/OrderPayments/index.ctp:41
+#: Template/Admin/Orders/edit.ctp:11
+#: Template/Admin/Pages/edit.ctp:11
+#: Template/Admin/Pages/index.ctp:60
+#: Template/Admin/Pages/view.ctp:80
+#: Template/Admin/PaymentMethods/edit.ctp:11
+#: Template/Admin/PaymentProcessor/edit.ctp:11
+#: Template/Admin/ProductMedia/edit.ctp:11
+#: Template/Admin/ProductMedia/image.ctp:3
+#: Template/Admin/ProductMedia/index.ctp:89
+#: Template/Admin/Products/media.ctp:56
+#: Template/Admin/Products/media.ctp:77
+#: Template/Admin/Products/view.ctp:110
+#: Template/Admin/Reviews/edit.ctp:11
+#: Template/Admin/ShippingZones/edit.ctp:11
+#: Template/Admin/ShippingZones/zone_display.ctp:10
+#: Template/Admin/Themes/editor.ctp:726
+#: Template/Admin/Transactions/edit.ctp:11
+#: Template/Customers/customer_display.ctp:28
+#: Template/Customers/edit.ctp:11
+#: Template/Customersbackup/edit.ctp:11
+#: Template/Orders/edit.ctp:11
+#: Template/Orders/index.ctp:81
+#: Template/Orders/view.ctp:162
+#: Template/PaymentMethods/edit.ctp:11
+#: Template/PaymentMethods/index.ctp:39
+msgid "Delete"
+msgstr ""
+
+#: Template/Admin/Categories/edit.ctp:16
+#: Template/Admin/Categories/view.ctp:12
+msgid "List Categories"
+msgstr ""
+
+#: Template/Admin/Categories/edit.ctp:22
+#: Template/Admin/Categories/view.ctp:10
+msgid "Edit Category"
+msgstr ""
+
+#: Template/Admin/Categories/edit.ctp:32
+#: Template/Admin/Contacts/add.ctp:25
+#: Template/Admin/Contacts/edit.ctp:31
+#: Template/Admin/Customers/edit.ctp:31
+#: Template/Admin/Facebook/add.ctp:32
+#: Template/Admin/Facebook/edit.ctp:40
+#: Template/Admin/Facebook/index.ctp:301
+#: Template/Admin/Facebook/index.ctp:328
+#: Template/Admin/Facebook/index.ctp:355
+#: Template/Admin/Facebook/index.ctp:382
+#: Template/Admin/OrderPayments/add.ctp:28
+#: Template/Admin/OrderPayments/edit.ctp:34
+#: Template/Admin/Orders/edit.ctp:58
+#: Template/Admin/Pages/edit.ctp:31
+#: Template/Admin/PaymentMethods/add.ctp:24
+#: Template/Admin/PaymentMethods/edit.ctp:30
+#: Template/Admin/PaymentProcessor/add.ctp:27
+#: Template/Admin/PaymentProcessor/edit.ctp:33
+#: Template/Admin/ProductMedia/add.ctp:27
+#: Template/Admin/ProductMedia/edit.ctp:33
+#: Template/Admin/Products/add.ctp:38
+#: Template/Admin/Reviews/add.ctp:29
+#: Template/Admin/Reviews/edit.ctp:35
+#: Template/Admin/ShippingMethods/add.ctp:25
+#: Template/Admin/ShippingZones/add.ctp:22
+#: Template/Admin/ShippingZones/edit.ctp:28
+#: Template/Admin/Transactions/add.ctp:25
+#: Template/Admin/Transactions/edit.ctp:31
+#: Template/Customers/edit.ctp:31
+#: Template/Customersbackup/add.ctp:25
+#: Template/Customersbackup/edit.ctp:31
+#: Template/Orders/add.ctp:52
+#: Template/Orders/edit.ctp:58
+#: Template/PaymentMethods/add.ctp:24
+#: Template/PaymentMethods/edit.ctp:30
+msgid "Submit"
+msgstr ""
+
+#: Template/Admin/Categories/index.ctp:13
+#: Template/Admin/Coupons/view.ctp:102
+#: Template/Admin/Coupons/view.ctp:108
+#: Template/Admin/Layout/default.ctp:229
+#: Template/Admin/Products/edit.ctp:87
+msgid "Collections"
+msgstr ""
+
+#: Template/Admin/Categories/index.ctp:15
+msgid "Add Collection"
+msgstr ""
+
+#: Template/Admin/Categories/index.ctp:21
+#: Template/Admin/Coupons/index.ctp:21
+#: Template/Admin/Customers/index.ctp:39
+#: Template/Admin/Products/index.ctp:41
+#: Template/Admin/ShippingMethods/index.ctp:14
+#: Template/Admin/ShippingZones/index.ctp:14
+#: Template/Admin/Transactions/index.ctp:40
+msgid "Search"
+msgstr ""
+
+#: Template/Admin/Categories/index.ctp:72
+#: Template/Admin/Coupons/add.ctp:232
+#: Template/Admin/Coupons/edit.ctp:255
+#: Template/Admin/Orders/add.ctp:530
+msgid "Product List"
+msgstr ""
+
+#: Template/Admin/Categories/index.ctp:102
+msgid "Selected Product for"
+msgstr ""
+
+#: Template/Admin/Categories/index.ctp:102
+msgid "collection"
+msgstr ""
+
+#: Template/Admin/Categories/index.ctp:113
+#: Template/Admin/Coupons/edit.ctp:239
+#: Template/Admin/GeneralOptions/edit.ctp:230
+#: Template/Admin/Orders/add.ctp:61
+#: Template/Admin/Orders/add.ctp:250
+#: Template/Admin/Themes/assets.ctp:114
+msgid "Save Changes"
+msgstr ""
+
+#: Template/Admin/Categories/view.ctp:11
+msgid "Delete Category"
+msgstr ""
+
+#: Template/Admin/Categories/view.ctp:13
+msgid "New Category"
+msgstr ""
+
+#: Template/Admin/Categories/view.ctp:20
+#: Template/Admin/Contacts/view.ctp:20
+#: Template/Admin/Facebook/view.ctp:20
+#: Template/Admin/Orders/add.ctp:505
+#: Template/Admin/Pages/view.ctp:22
+#: Template/Admin/Pages/view.ctp:44
+#: Template/Admin/PaymentMethods/view.ctp:20
+#: Template/Admin/PaymentProcessor/view.ctp:26
+#: Template/Admin/ShippingMethods/view.ctp:20
+#: Template/Admin/ShippingZones/view.ctp:20
+#: Template/Admin/Themes/index.ctp:127
+#: Template/Admin/Themes/install.ctp:93
+#: Template/PaymentMethods/view.ctp:20
+msgid "Name"
+msgstr ""
+
+#: Template/Admin/Categories/view.ctp:24
+#: Template/Admin/Pages/view.ctp:31
+msgid "Slug"
+msgstr ""
+
+#: Template/Admin/Categories/view.ctp:28
+#: Template/Admin/PaymentProcessor/view.ctp:30
+#: Template/Admin/Products/products_display.ctp:6
+msgid "Image"
+msgstr ""
+
+#: Template/Admin/Categories/view.ctp:36
+msgid "Categories Id"
+msgstr ""
+
+#: Template/Admin/Categories/view.ctp:49
+#: Template/Admin/Products/view.ctp:91
+#: Template/Admin/Themes/index.ctp:139
+#: Template/Admin/Themes/install.ctp:105
+msgid "Description"
+msgstr ""
+
+#: Template/Admin/Categories/view.ctp:53
+msgid "Match With"
+msgstr ""
+
+#: Template/Admin/Contacts/add.ctp:10
+#: Template/Admin/Contacts/edit.ctp:16
+#: Template/Admin/Contacts/view.ctp:12
+msgid "List Contacts"
+msgstr ""
+
+#: Template/Admin/Contacts/add.ctp:16
+msgid "Add Contact"
+msgstr ""
+
+#: Template/Admin/Contacts/edit.ctp:22
+#: Template/Admin/Contacts/view.ctp:10
+msgid "Edit Contact"
+msgstr ""
+
+#: Template/Admin/Contacts/index.ctp:19
+msgid "Contacts"
+msgstr ""
+
+#: Template/Admin/Contacts/index.ctp:34
+#: Template/Admin/Customers/add.ctp:18
+#: Template/Admin/Orders/add.ctp:90
+#: Template/Admin/Orders/dashboard.ctp:1591
+#: Template/Admin/Products/reviews.ctp:27
+#: Template/Admin/Reviews/index.ctp:45
+#: Template/Admin/Reviews/view.ctp:28
+#: Template/Orders/view.ctp:36
+msgid "Customer"
+msgstr ""
+
+#: Template/Admin/Contacts/index.ctp:35
+#: Template/Admin/Contacts/view.ctp:28
+#: Template/Admin/GeneralOptions/edit.ctp:78
+#: Template/Admin/Orders/add.ctp:506
+#: Template/Admin/Users/view.ctp:32
+msgid "Phone"
+msgstr ""
+
+#: Template/Admin/Contacts/index.ctp:36
+#: Template/Admin/Contacts/view.ctp:24
+#: Template/Admin/Facebook/view.ctp:24
+#: Template/Admin/GeneralOptions/edit.ctp:83
+#: Template/Admin/Pages/view.ctp:45
+#: Template/Admin/Users/reset_password.ctp:72
+#: Template/Admin/Users/view.ctp:28
+msgid "Email"
+msgstr ""
+
+#: Template/Admin/Contacts/index.ctp:37
+#: Template/Admin/Contacts/view.ctp:49
+#: Template/Admin/Layout/default.ctp:178
+msgid "Message"
+msgstr ""
+
+#: Template/Admin/Contacts/index.ctp:38
+msgid "Sent At"
+msgstr ""
+
+#: Template/Admin/Contacts/index.ctp:40
+#: Template/Admin/PaymentProcessor/index.ctp:38
+#: Template/Admin/Products/edit.ctp:185
+#: Template/Admin/Products/reviews.ctp:32
+#: Template/Admin/Reviews/index.ctp:50
+msgid "Action"
+msgstr ""
+
+#: Template/Admin/Contacts/view.ctp:11
+msgid "Delete Contact"
+msgstr ""
+
+#: Template/Admin/Contacts/view.ctp:13
+msgid "New Contact"
+msgstr ""
+
+#: Template/Admin/Contacts/view.ctp:40
+#: Template/Admin/Facebook/view.ctp:64
+#: Template/Admin/Pages/view.ctp:57
+#: Template/Admin/ProductMedia/view.ctp:50
+#: Template/Admin/Reviews/view.ctp:48
+#: Template/Admin/Users/view.ctp:64
+msgid "Updated"
+msgstr ""
+
+#: Template/Admin/Contacts/view.ctp:44
+#: Template/Admin/Coupons/add.ctp:36
+#: Template/Admin/Coupons/edit.ctp:36
+#: Template/Admin/Coupons/view.ctp:77
+#: Template/Admin/Orders/dashboard.ctp:1596
+#: Template/Admin/Orders/view.ctp:302
+#: Template/Admin/PaymentMethods/index.ctp:87
+#: Template/Admin/PaymentMethods/view.ctp:32
+#: Template/Admin/PaymentProcessor/index.ctp:166
+#: Template/Admin/PaymentProcessor/view.ctp:38
+#: Template/Admin/Products/reviews.ctp:31
+#: Template/Admin/Reviews/index.ctp:49
+#: Template/Admin/Reviews/view.ctp:40
+#: Template/Admin/ShippingMethods/view.ctp:36
+#: Template/Admin/Transactions/view.ctp:30
+#: Template/Admin/Users/add.ctp:47
+#: Template/Admin/Users/view.ctp:56
+#: Template/PaymentMethods/view.ctp:32
+msgid "Status"
+msgstr ""
+
+#: Template/Admin/Contacts/view.ctp:45
+#: Template/Admin/PaymentProcessor/view.ctp:39
+#: Template/Admin/Products/view.ctp:75
+#: Template/Admin/Products/view.ctp:79
+#: Template/Admin/Products/view.ctp:83
+#: Template/Admin/Products/view.ctp:87
+#: Template/Admin/ShippingMethods/view.ctp:49
+#: Template/Admin/Transactions/view.ctp:31
+msgid "Yes"
+msgstr ""
+
+#: Template/Admin/Contacts/view.ctp:45
+#: Template/Admin/PaymentProcessor/view.ctp:39
+#: Template/Admin/Products/view.ctp:75
+#: Template/Admin/Products/view.ctp:79
+#: Template/Admin/Products/view.ctp:83
+#: Template/Admin/Products/view.ctp:87
+#: Template/Admin/ShippingMethods/view.ctp:49
+#: Template/Admin/Transactions/view.ctp:31
+msgid "No"
+msgstr ""
+
+#: Template/Admin/Coupons/add.ctp:26
+#: Template/Admin/Coupons/index.ctp:15
+msgid "Add New Coupon"
+msgstr ""
+
+#: Template/Admin/Coupons/add.ctp:38
+#: Template/Admin/Coupons/edit.ctp:38
+#: Template/Admin/Coupons/view.ctp:87
+#: Template/Admin/PaymentMethods/index.ctp:89
+#: Template/Admin/PaymentProcessor/index.ctp:168
+#: Template/Admin/Products/view.ctp:86
+#: Template/Admin/ShippingMethods/form.ctp:15
+#: Template/Admin/ShippingMethods/index.ctp:104
+#: Template/Admin/Themes/index.ctp:89
+#: Template/Admin/Users/add.ctp:47
+#: Template/Admin/Users/edit.ctp:43
+msgid "Active"
+msgstr ""
+
+#: Template/Admin/Coupons/add.ctp:39
+#: Template/Admin/Coupons/edit.ctp:39
+#: Template/Admin/Coupons/view.ctp:87
+#: Template/Admin/PaymentMethods/index.ctp:90
+#: Template/Admin/PaymentProcessor/index.ctp:169
+msgid "Inactive"
+msgstr ""
+
+#: Template/Admin/Coupons/add.ctp:50
+#: Template/Admin/Coupons/edit.ctp:50
+#: Template/Admin/Coupons/view.ctp:72
+msgid "Start Date"
+msgstr ""
+
+#: Template/Admin/Coupons/add.ctp:52
+#: Template/Admin/Coupons/edit.ctp:52
+#: Template/Admin/Coupons/edit.ctp:70
+#: Template/Admin/Reports/daily.ctp:24
+#: Template/Admin/Reports/finance.ctp:24
+#: Template/Admin/Reports/product_orders.ctp:24
+msgid "Select a date"
+msgstr ""
+
+#: Template/Admin/Coupons/add.ctp:68
+#: Template/Admin/Coupons/edit.ctp:68
+#: Template/Admin/Coupons/view.ctp:73
+msgid "End Date"
+msgstr ""
+
+#: Template/Admin/Coupons/add.ctp:91
+#: Template/Admin/Coupons/edit.ctp:91
+msgid "Discount Type"
+msgstr ""
+
+#: Template/Admin/Coupons/add.ctp:93
+#: Template/Admin/Coupons/edit.ctp:93
+msgid "Flat Discount"
+msgstr ""
+
+#: Template/Admin/Coupons/add.ctp:94
+#: Template/Admin/Coupons/edit.ctp:94
+msgid "Percentage(%) Discount"
+msgstr ""
+
+#: Template/Admin/Coupons/add.ctp:98
+#: Template/Admin/Coupons/view.ctp:74
+#: Template/Admin/Orders/invoice_html.ctp:91
+#: Template/Admin/Orders/packing_slip.ctp:99
+#: Template/Admin/Orders/view.ctp:253
+#: Template/Orders/view.ctp:96
+msgid "Discount"
+msgstr ""
+
+#: Template/Admin/Coupons/add.ctp:103
+#: Template/Admin/Coupons/edit.ctp:103
+msgid "Maximum Amount"
+msgstr ""
+
+#: Template/Admin/Coupons/add.ctp:114
+msgid "Products Selection"
+msgstr ""
+
+#: Template/Admin/Coupons/add.ctp:119
+#: Template/Admin/Coupons/edit.ctp:119
+#: Template/Admin/Layout/default.ctp:228
+msgid "All Products"
+msgstr ""
+
+#: Template/Admin/Coupons/add.ctp:124
+#: Template/Admin/Coupons/edit.ctp:124
+msgid "Specific Product"
+msgstr ""
+
+#: Template/Admin/Coupons/add.ctp:134
+#: Template/Admin/Coupons/add.ctp:192
+#: Template/Admin/Coupons/edit.ctp:134
+#: Template/Admin/Coupons/edit.ctp:207
+msgid "Browse Products"
+msgstr ""
+
+#: Template/Admin/Coupons/add.ctp:150
+#: Template/Admin/Coupons/edit.ctp:163
+msgid "Specific Collection"
+msgstr ""
+
+#: Template/Admin/Coupons/add.ctp:171
+#: Template/Admin/Coupons/edit.ctp:187
+msgid "Customers Selection"
+msgstr ""
+
+#: Template/Admin/Coupons/add.ctp:176
+#: Template/Admin/Coupons/edit.ctp:192
+#: Template/Admin/Layout/default.ctp:242
+msgid "All Customers"
+msgstr ""
+
+#: Template/Admin/Coupons/add.ctp:181
+#: Template/Admin/Coupons/edit.ctp:197
+msgid "Specific  Customer"
+msgstr ""
+
+#: Template/Admin/Coupons/add.ctp:216
+msgid "Send data"
+msgstr ""
+
+#: Template/Admin/Coupons/add.ctp:269
+#: Template/Admin/Coupons/edit.ctp:292
+#: Template/Admin/Orders/add.ctp:482
+msgid "Customer List"
+msgstr ""
+
+#: Template/Admin/Coupons/add.ctp:280
+#: Template/Admin/Coupons/edit.ctp:266
+#: Template/Admin/Coupons/edit.ctp:303
+#: Template/Admin/Orders/add.ctp:539
+msgid "Search products"
+msgstr ""
+
+#: Template/Admin/Coupons/edit.ctp:26
+msgid "Edit existing Coupon"
+msgstr ""
+
+#: Template/Admin/Coupons/edit.ctp:33
+msgid "Black Friday"
+msgstr ""
+
+#: Template/Admin/Coupons/edit.ctp:98
+msgid "Discount</label"
+msgstr ""
+
+#: Template/Admin/Coupons/edit.ctp:108
+msgid "1000"
+msgstr ""
+
+#: Template/Admin/Coupons/edit.ctp:129
+msgid "product"
+msgstr ""
+
+#: Template/Admin/Coupons/edit.ctp:131
+#: Template/Admin/Orders/add.ctp:143
+msgid "Search Products"
+msgstr ""
+
+#: Template/Admin/Coupons/edit.ctp:204
+#: Template/Admin/Orders/add.ctp:491
+msgid "Search Customers"
+msgstr ""
+
+#: Template/Admin/Coupons/edit.ctp:238
+msgid "cancel"
+msgstr ""
+
+#: Template/Admin/Coupons/index.ctp:13
+msgid "Coupons"
+msgstr ""
+
+#: Template/Admin/Coupons/index.ctp:21
+#: Template/Admin/Customers/index.ctp:31
+#: Template/Admin/Orders/drafts.ctp:47
+#: Template/Admin/Orders/sms_histories.ctp:26
+#: Template/Admin/PaymentMethods/index.ctp:28
+#: Template/Admin/PaymentProcessor/index.ctp:28
+#: Template/Admin/Reviews/index.ctp:28
+#: Template/Admin/ShippingMethods/index.ctp:14
+#: Template/Admin/ShippingZones/index.ctp:14
+#: Template/Admin/Transactions/index.ctp:31
+#: Template/Admin/Users/index.ctp:31
+msgid "Show"
+msgstr ""
+
+#: Template/Admin/Coupons/index.ctp:21
+#: Template/Admin/Orders/drafts.ctp:47
+#: Template/Admin/Products/inventory.ctp:31
+#: Template/Admin/ShippingZones/index.ctp:14
+#: Template/Admin/Transactions/index.ctp:37
+#: Template/Admin/Users/index.ctp:37
+msgid "entries"
+msgstr ""
+
+#: Template/Admin/Coupons/view.ctp:75
+msgid "Max Amount"
+msgstr ""
+
+#: Template/Admin/Coupons/view.ctp:76
+msgid "Min Shopping"
+msgstr ""
+
+#: Template/Admin/Coupons/view.ctp:109
+#: Template/Admin/Orders/view.ctp:303
+#: Template/Admin/Products/inventory_log.ctp:17
+#: Template/Admin/Products/inventory_product_display.ctp:56
+#: Template/Admin/Products/inventory_product_display.ctp:64
+msgid "Log"
+msgstr ""
+
+#: Template/Admin/Coupons/view.ctp:110
+#: Template/Admin/Orders/view.ctp:304
+#: Template/Admin/Products/inventory_log.ctp:18
+#: Template/Admin/Reports/daily_content.ctp:16
+msgid "Date"
+msgstr ""
+
+#: Template/Admin/Coupons/view.ctp:111
+#: Template/Admin/Orders/view.ctp:305
+#: Template/Admin/Products/inventory_log.ctp:19
+msgid "Added By"
+msgstr ""
+
+#: Template/Admin/Customers/add.ctp:22
+#: Template/Admin/Customers/view.ctp:98
+msgid "Customer Overview"
+msgstr ""
+
+#: Template/Admin/Customers/add.ctp:31
+#: Template/Admin/Customers/view.ctp:106
+#: Template/Admin/Customers/view.ctp:142
+#: Template/Admin/Orders/add.ctp:364
+#: Template/Admin/Orders/add.ctp:408
+msgid "City/District/State"
+msgstr ""
+
+#: Template/Admin/Customers/add.ctp:42
+#: Template/Admin/Customers/view.ctp:119
+#: Template/Admin/Users/edit.ctp:37
+msgid "Customer Authentication"
+msgstr ""
+
+#: Template/Admin/Customers/add.ctp:56
+#: Template/Admin/Orders/add.ctp:249
+#: Template/Admin/Products/edit.ctp:307
+#: Template/Admin/Products/edit.ctp:353
+#: Template/Admin/ShippingMethods/edit.ctp:30
+#: Template/Admin/Users/add.ctp:57
+#: Template/Admin/Users/edit.ctp:53
+msgid "Cancel"
+msgstr ""
+
+#: Template/Admin/Customers/add.ctp:57
+msgid "Save Customer"
+msgstr ""
+
+#: Template/Admin/Customers/customer_display.ctp:10
+#: Template/Admin/GeneralOptions/edit.ctp:102
+#: Template/Admin/GeneralOptions/edit.ctp:103
+#: Template/Admin/Orders/add.ctp:507
+msgid "Address"
+msgstr ""
+
+#: Template/Admin/Customers/customer_display.ctp:27
+#: Template/Admin/ShippingMethods/shipping_display.ctp:11
+#: Template/Admin/Users/user_display.ctp:33
+msgid "<i class=\"fe fe-trash\"></i>"
+msgstr ""
+
+#: Template/Admin/Customers/edit.ctp:16
+#: Template/Admin/Orders/edit.ctp:21
+#: Template/Admin/Reviews/add.ctp:13
+#: Template/Admin/Reviews/edit.ctp:19
+#: Template/Admin/Reviews/view.ctp:16
+#: Template/Customers/edit.ctp:16
+#: Template/Customersbackup/add.ctp:10
+#: Template/Customersbackup/edit.ctp:16
+#: Template/Orders/add.ctp:15
+#: Template/Orders/edit.ctp:21
+#: Template/Orders/index.ctp:15
+#: Template/Orders/view.ctp:18
+msgid "List Customers"
+msgstr ""
+
+#: Template/Admin/Customers/edit.ctp:22
+#: Template/Customers/edit.ctp:22
+#: Template/Customersbackup/edit.ctp:22
+msgid "Edit Customer"
+msgstr ""
+
+#: Template/Admin/Customers/index.ctp:19
+msgid "Customers"
+msgstr ""
+
+#: Template/Admin/Customers/index.ctp:23
+#: Template/Customersbackup/add.ctp:16
+msgid "Add Customer"
+msgstr ""
+
+#: Template/Admin/Customers/view.ctp:16
+#: Template/Admin/OrderPayments/index.ctp:40
+#: Template/Admin/Pages/view.ctp:79
+#: Template/Admin/Products/view.ctp:109
+#: Template/Orders/index.ctp:80
+#: Template/Orders/view.ctp:161
+#: Template/PaymentMethods/index.ctp:38
+msgid "Edit"
+msgstr ""
+
+#: Template/Admin/Customers/view.ctp:23
+msgid "Customer addresses"
+msgstr ""
+
+#: Template/Admin/Customers/view.ctp:40
+msgid "Area: {0}"
+msgstr ""
+
+#: Template/Admin/Customers/view.ctp:54
+#: Template/Admin/Layout/default.ctp:239
+#: Template/Admin/Orders/index.ctp:36
+#: Template/Orders/index.ctp:22
+msgid "Orders"
+msgstr ""
+
+#: Template/Admin/Customers/view.ctp:59
+#: Template/Admin/Orders/index.ctp:56
+msgid "Order ID"
+msgstr ""
+
+#: Template/Admin/Customers/view.ctp:60
+#: Template/Admin/Orders/dashboard.ctp:1592
+#: Template/Orders/view.ctp:116
+msgid "Order Date"
+msgstr ""
+
+#: Template/Admin/Customers/view.ctp:61
+#: Template/Admin/Orders/index.ctp:50
+#: Template/Orders/view.ctp:104
+msgid "Order Status"
+msgstr ""
+
+#: Template/Admin/Customers/view.ctp:62
+msgid "Order total Amount"
+msgstr ""
+
+#: Template/Admin/Customers/view.ctp:90
+msgid "Update Customer Info"
+msgstr ""
+
+#: Template/Admin/Customers/view.ctp:123
+msgid "type new password to change password"
+msgstr ""
+
+#: Template/Admin/Customers/view.ctp:134
+#: Template/Admin/Orders/add.ctp:297
+#: Template/Admin/Orders/add.ctp:331
+#: Template/Admin/Orders/add.ctp:375
+#: Template/Admin/Orders/add.ctp:419
+#: Template/Admin/Orders/add.ctp:465
+#: Template/Admin/Orders/dashboard.ctp:1758
+#: Template/Admin/Orders/dashboard.ctp:1830
+#: Template/Admin/Orders/drafts.ctp:93
+#: Template/Admin/Orders/drafts.ctp:132
+#: Template/Admin/Orders/index.ctp:139
+#: Template/Admin/Orders/index.ctp:209
+#: Template/Admin/PaymentMethods/index.ctp:97
+#: Template/Admin/PaymentProcessor/index.ctp:118
+#: Template/Admin/PaymentProcessor/index.ctp:176
+#: Template/Admin/ProductMedia/index.ctp:145
+#: Template/Admin/ShippingMethods/form.ctp:25
+#: Template/Admin/ShippingMethods/index.ctp:72
+#: Template/Admin/ShippingMethods/index.ctp:118
+#: Template/Admin/ShippingZones/index.ctp:65
+#: Template/Admin/ShippingZones/index.ctp:97
+msgid "Close"
+msgstr ""
+
+#: Template/Admin/Customers/view.ctp:135
+#: Template/Admin/Orders/add.ctp:298
+#: Template/Admin/Orders/dashboard.ctp:1759
+#: Template/Admin/Orders/dashboard.ctp:1831
+#: Template/Admin/Orders/drafts.ctp:94
+#: Template/Admin/Orders/drafts.ctp:133
+#: Template/Admin/Orders/index.ctp:140
+#: Template/Admin/Orders/index.ctp:210
+#: Template/Admin/Orders/status_modal.ctp:27
+#: Template/Admin/PaymentMethods/index.ctp:98
+#: Template/Admin/PaymentProcessor/index.ctp:119
+#: Template/Admin/PaymentProcessor/index.ctp:177
+#: Template/Admin/Products/edit.ctp:386
+#: Template/Admin/Products/edit.ctp:397
+#: Template/Admin/ShippingZones/index.ctp:66
+#: Template/Admin/ShippingZones/index.ctp:98
+#: Template/Admin/Users/profile.ctp:48
+msgid "Save changes"
+msgstr ""
+
+#: Template/Admin/Facebook/add.ctp:10
+#: Template/Admin/Facebook/edit.ctp:18
+#: Template/Admin/Facebook/view.ctp:12
+#: Template/Admin/Pages/edit.ctp:17
+#: Template/Admin/Pages/view.ctp:14
+msgid "List Facebook"
+msgstr ""
+
+#: Template/Admin/Facebook/add.ctp:16
+msgid "Add Facebook"
+msgstr ""
+
+#: Template/Admin/Facebook/edit.ctp:24
+#: Template/Admin/Facebook/view.ctp:10
+msgid "Edit Facebook"
+msgstr ""
+
+#: Template/Admin/Facebook/index.ctp:9
+msgid "Facebook Shop Feed URL"
+msgstr ""
+
+#: Template/Admin/Facebook/index.ctp:15
+msgid "Filter By Collection"
+msgstr ""
+
+#: Template/Admin/Facebook/index.ctp:19
+msgid "All Collection"
+msgstr ""
+
+#: Template/Admin/Facebook/index.ctp:31
+msgid "Filter By Product Type"
+msgstr ""
+
+#: Template/Admin/Facebook/index.ctp:35
+msgid "All Product"
+msgstr ""
+
+#: Template/Admin/Facebook/index.ctp:48
+msgid "Filter By Product Tag"
+msgstr ""
+
+#: Template/Admin/Facebook/index.ctp:60
+msgid "Search By Keyword"
+msgstr ""
+
+#: Template/Admin/Facebook/index.ctp:71
+msgid "Filter By Price Range"
+msgstr ""
+
+#: Template/Admin/Facebook/index.ctp:89
+msgid "Limit Filter Result"
+msgstr ""
+
+#: Template/Admin/Facebook/index.ctp:106
+msgid "Copy to clipboard"
+msgstr ""
+
+#: Template/Admin/Facebook/index.ctp:149
+msgid "Associate Business Manager"
+msgstr ""
+
+#: Template/Admin/Facebook/index.ctp:150
+msgid "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+msgstr ""
+
+#: Template/Admin/Facebook/index.ctp:155
+msgid "Linked with your business Manager"
+msgstr ""
+
+#: Template/Admin/Facebook/index.ctp:164
+msgid "Change Business Manager"
+msgstr ""
+
+#: Template/Admin/Facebook/index.ctp:186
+msgid "Associate Facebook Page"
+msgstr ""
+
+#: Template/Admin/Facebook/index.ctp:187
+msgid "Lorem Ipsum is simply dummy text of the printing and typesetting\n                        industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+msgstr ""
+
+#: Template/Admin/Facebook/index.ctp:193
+msgid "Linked with your business Page"
+msgstr ""
+
+#: Template/Admin/Facebook/index.ctp:201
+msgid "Change Business Page"
+msgstr ""
+
+#: Template/Admin/Facebook/index.ctp:224
+msgid "Catalog"
+msgstr ""
+
+#: Template/Admin/Facebook/index.ctp:228
+msgid "Connect with Catalog"
+msgstr ""
+
+#: Template/Admin/Facebook/index.ctp:248
+msgid "No feed connected your page."
+msgstr ""
+
+#: Template/Admin/Facebook/index.ctp:270
+msgid "Connect with pixel"
+msgstr ""
+
+#: Template/Admin/Facebook/index.ctp:291
+msgid "Select Your Business Manager"
+msgstr ""
+
+#: Template/Admin/Facebook/index.ctp:318
+msgid "Select your shop page"
+msgstr ""
+
+#: Template/Admin/Facebook/index.ctp:345
+msgid "Select Your Pixel"
+msgstr ""
+
+#: Template/Admin/Facebook/index.ctp:372
+msgid "Select Your Catalog"
+msgstr ""
+
+#: Template/Admin/Facebook/option.ctp:5
+msgid "No page available."
+msgstr ""
+
+#: Template/Admin/Facebook/option.ctp:16
+msgid "No Business Manager available."
+msgstr ""
+
+#: Template/Admin/Facebook/option.ctp:28
+msgid "No Pixel account available."
+msgstr ""
+
+#: Template/Admin/Facebook/option.ctp:40
+msgid "No Catalog available."
+msgstr ""
+
+#: Template/Admin/Facebook/view.ctp:11
+msgid "Delete Facebook"
+msgstr ""
+
+#: Template/Admin/Facebook/view.ctp:13
+#: Template/Admin/Pages/edit.ctp:18
+#: Template/Admin/Pages/view.ctp:15
+msgid "New Facebook"
+msgstr ""
+
+#: Template/Admin/Facebook/view.ctp:28
+#: Template/Admin/Pages/view.ctp:47
+msgid "Page Name"
+msgstr ""
+
+#: Template/Admin/Facebook/view.ctp:32
+#: Template/Admin/Pages/view.ctp:53
+msgid "Feed Url"
+msgstr ""
+
+#: Template/Admin/Facebook/view.ctp:40
+#: Template/Admin/Pages/view.ctp:48
+msgid "Page Id"
+msgstr ""
+
+#: Template/Admin/Facebook/view.ctp:44
+#: Template/Admin/Pages/view.ctp:50
+msgid "Business Id"
+msgstr ""
+
+#: Template/Admin/Facebook/view.ctp:48
+#: Template/Admin/Pages/view.ctp:51
+msgid "Catalog Id"
+msgstr ""
+
+#: Template/Admin/Facebook/view.ctp:52
+#: Template/Admin/Pages/view.ctp:52
+msgid "Feed Id"
+msgstr ""
+
+#: Template/Admin/Facebook/view.ctp:56
+#: Template/Admin/Pages/view.ctp:54
+msgid "Pixel Id"
+msgstr ""
+
+#: Template/Admin/Facebook/view.ctp:69
+#: Template/Admin/Pages/view.ctp:46
+#: Template/Admin/Users/view.ctp:44
+msgid "Token"
+msgstr ""
+
+#: Template/Admin/Facebook/view.ctp:73
+#: Template/Admin/Pages/view.ctp:49
+msgid "Page Token"
+msgstr ""
+
+#: Template/Admin/Facebook/view.ctp:77
+#: Template/Admin/Pages/view.ctp:55
+msgid "Pixel Code"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:28
+msgid "General options / Settings"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:35
+msgid "Store Information"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:36
+msgid "Enter your basic store information like store title, currency, email, phone etc."
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:42
+msgid "Store Title"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:43
+#: Template/Admin/GeneralOptions/edit.ctp:74
+msgid "Type your store title"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:48
+msgid "Store Logo"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:61
+msgid "Store Favicon"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:73
+msgid "Store Currency"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:79
+msgid "Phone number, use comma for multiple"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:84
+msgid "Type your email address"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:93
+msgid "Store Address"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:94
+msgid "Enter your Store address information."
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:108
+#: Template/Admin/GeneralOptions/edit.ctp:109
+msgid "Area"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:114
+#: Template/Admin/GeneralOptions/edit.ctp:115
+#: Template/Admin/ShippingZones/view.ctp:24
+#: Template/Orders/view.ctp:84
+msgid "City"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:120
+#: Template/Admin/GeneralOptions/edit.ctp:121
+#: Template/Orders/view.ctp:112
+msgid "Post Code"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:126
+#: Template/Admin/GeneralOptions/edit.ctp:127
+msgid "Country"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:138
+msgid "Mail Settings"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:139
+msgid "Enter your mailing server information to send email form your mail server"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:148
+msgid "Do you have SMTP(Mail Sever) Information"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:156
+#: Template/Admin/MailSettings/edit.ctp:42
+msgid "SMTP Host"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:157
+#: Template/Admin/MailSettings/edit.ctp:47
+msgid "SMTP Port"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:160
+#: Template/Admin/MailSettings/edit.ctp:64
+msgid "SMTP TLS"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:162
+msgid "True"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:163
+msgid "False"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:168
+#: Template/Admin/MailSettings/edit.ctp:53
+msgid "SMTP Username"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:169
+#: Template/Admin/MailSettings/edit.ctp:59
+msgid "SMTP Password"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:174
+msgid "SMTP Sender Name"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:175
+msgid "SMTP Sender Email"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:185
+msgid "Login and Checkout Settings"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:201
+msgid "Allow Anonymous Checkout"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:212
+msgid "One Page Checkout"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/edit.ctp:224
+msgid "Use OTP One Time Password Login system."
+msgstr ""
+
+#: Template/Admin/GeneralOptions/notification.ctp:20
+#: Template/Admin/Layout/default.ctp:278
+msgid "Notification Settings"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/notification.ctp:28
+msgid "Mail Notifications"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/notification.ctp:41
+#: Template/Admin/GeneralOptions/notification.ctp:141
+msgid "Customer Notify when order placed from storefront."
+msgstr ""
+
+#: Template/Admin/GeneralOptions/notification.ctp:52
+#: Template/Admin/GeneralOptions/notification.ctp:152
+msgid "Admin Notify when order placed from storefront."
+msgstr ""
+
+#: Template/Admin/GeneralOptions/notification.ctp:63
+#: Template/Admin/GeneralOptions/notification.ctp:163
+msgid "Customer Notify when order placed from admin and POS."
+msgstr ""
+
+#: Template/Admin/GeneralOptions/notification.ctp:74
+#: Template/Admin/GeneralOptions/notification.ctp:174
+msgid "Customer Notify when order status processing."
+msgstr ""
+
+#: Template/Admin/GeneralOptions/notification.ctp:84
+#: Template/Admin/GeneralOptions/notification.ctp:184
+msgid "Customer Notify when order status shipped."
+msgstr ""
+
+#: Template/Admin/GeneralOptions/notification.ctp:94
+#: Template/Admin/GeneralOptions/notification.ctp:194
+msgid "Customer Notify when order status delivered."
+msgstr ""
+
+#: Template/Admin/GeneralOptions/notification.ctp:104
+#: Template/Admin/GeneralOptions/notification.ctp:204
+msgid "Customer Notify when order status cancelled."
+msgstr ""
+
+#: Template/Admin/GeneralOptions/notification.ctp:114
+#: Template/Admin/GeneralOptions/notification.ctp:214
+msgid "Customer Notify when payment received from storefront."
+msgstr ""
+
+#: Template/Admin/GeneralOptions/notification.ctp:128
+msgid "SMS Notifications"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/notification.ctp:230
+msgid "SMS Content"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/notification.ctp:239
+msgid "Content for order placed"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/notification.ctp:245
+msgid "Content for order processing"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/notification.ctp:253
+msgid "Content for order shipped"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/notification.ctp:260
+msgid "Content for order delivered"
+msgstr ""
+
+#: Template/Admin/GeneralOptions/notification.ctp:268
+msgid "Content for order cancelled"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:23
+msgid "admin interface"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:151
+msgid "Visit Live Store"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:172
+msgid "Profile"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:185
+msgid "Need help"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:189
+msgid "Sign out"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:221
+msgid "Home"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:225
+#: Template/Admin/Products/index.ctp:14
+msgid "Products"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:230
+#: Template/Admin/Products/inventory.ctp:23
+msgid "Inventroy"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:231
+#: Template/Admin/Reviews/index.ctp:19
+msgid "Reviews"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:232
+msgid "Discount/Promotion"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:241
+msgid "All orders"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:243
+#: Template/Admin/Orders/drafts.ctp:39
+msgid "Draft Orders"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:244
+msgid "Order Transactions"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:246
+msgid "POS-Point of Sale"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:254
+msgid "Reports"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:256
+#: Template/Admin/Reports/finance.ctp:17
+msgid "Finance Reports"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:257
+#: Template/Admin/Reports/daily.ctp:17
+msgid "Daily Reports"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:258
+msgid "Customer Reports"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:259
+msgid "Product Reports"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:264
+msgid "Settings"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:267
+#: Template/Admin/MailSettings/edit.ctp:28
+msgid "General Options"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:270
+#: Template/Admin/Orders/view.ctp:143
+#: Template/Admin/ShippingMethods/edit.ctp:7
+#: Template/Admin/ShippingMethods/form.ctp:3
+#: Template/Admin/ShippingMethods/index.ctp:6
+#: Template/Admin/ShippingMethods/index.ctp:51
+#: Template/Admin/ShippingMethods/index.ctp:91
+#: Template/Orders/view.ctp:28
+msgid "Shipping Method"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:273
+#: Template/PaymentMethods/index.ctp:14
+msgid "Payment Methods"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:275
+#: Template/Admin/Orders/view.ctp:158
+#: Template/Admin/PaymentProcessor/index.ctp:20
+#: Template/Admin/PaymentProcessor/index.ctp:149
+#: Template/Admin/Transactions/index.ctp:20
+msgid "Payment Processor"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:282
+msgid "User Management"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:292
+msgid "Store Front"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:295
+msgid "Theme"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:297
+msgid "Theme Editor"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:299
+msgid "Manage Assets"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:301
+msgid "Facebook Integration"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:332
+msgid "Documentation"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:333
+msgid "FAQ"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:342
+msgid "Copyright"
+msgstr ""
+
+#: Template/Admin/Layout/default.ctp:343
+msgid "All rights reserved."
+msgstr ""
+
+#: Template/Admin/OrderPayments/add.ctp:10
+#: Template/Admin/OrderPayments/edit.ctp:16
+#: Template/Admin/OrderPayments/view.ctp:12
+msgid "List Order Payments"
+msgstr ""
+
+#: Template/Admin/OrderPayments/add.ctp:11
+#: Template/Admin/OrderPayments/edit.ctp:17
+#: Template/Admin/OrderPayments/index.ctp:11
+#: Template/Admin/OrderPayments/view.ctp:14
+#: Template/Admin/Orders/edit.ctp:16
+#: Template/Admin/Transactions/add.ctp:11
+#: Template/Admin/Transactions/edit.ctp:17
+#: Template/Admin/Transactions/view.ctp:14
+#: Template/Orders/add.ctp:10
+#: Template/Orders/edit.ctp:16
+#: Template/Orders/view.ctp:12
+msgid "List Orders"
+msgstr ""
+
+#: Template/Admin/OrderPayments/add.ctp:12
+#: Template/Admin/OrderPayments/edit.ctp:18
+#: Template/Admin/OrderPayments/index.ctp:12
+#: Template/Admin/OrderPayments/view.ctp:15
+#: Template/Admin/Transactions/add.ctp:12
+#: Template/Admin/Transactions/edit.ctp:18
+#: Template/Admin/Transactions/view.ctp:15
+#: Template/Orders/index.ctp:10
+#: Template/Orders/view.ctp:13
+msgid "New Order"
+msgstr ""
+
+#: Template/Admin/OrderPayments/add.ctp:18
+msgid "Add Order Payment"
+msgstr ""
+
+#: Template/Admin/OrderPayments/edit.ctp:24
+#: Template/Admin/OrderPayments/view.ctp:10
+msgid "Edit Order Payment"
+msgstr ""
+
+#: Template/Admin/OrderPayments/index.ctp:10
+#: Template/Admin/OrderPayments/view.ctp:13
+msgid "New Order Payment"
+msgstr ""
+
+#: Template/Admin/OrderPayments/index.ctp:16
+msgid "Order Payments"
+msgstr ""
+
+#: Template/Admin/OrderPayments/index.ctp:39
+#: Template/Admin/Pages/view.ctp:78
+#: Template/Admin/Products/view.ctp:108
+#: Template/Admin/ShippingZones/zone_display.ctp:8
+#: Template/Customers/customer_display.ctp:27
+#: Template/Orders/index.ctp:79
+#: Template/Orders/view.ctp:160
+#: Template/PaymentMethods/index.ctp:37
+msgid "View"
+msgstr ""
+
+#: Template/Admin/OrderPayments/index.ctp:49
+#: Template/Orders/index.ctp:89
+#: Template/PaymentMethods/index.ctp:47
+msgid "first"
+msgstr ""
+
+#: Template/Admin/OrderPayments/index.ctp:50
+#: Template/Orders/index.ctp:90
+#: Template/PaymentMethods/index.ctp:48
+msgid "previous"
+msgstr ""
+
+#: Template/Admin/OrderPayments/index.ctp:52
+#: Template/Orders/index.ctp:92
+#: Template/PaymentMethods/index.ctp:50
+msgid "next"
+msgstr ""
+
+#: Template/Admin/OrderPayments/index.ctp:53
+#: Template/Orders/index.ctp:93
+#: Template/PaymentMethods/index.ctp:51
+msgid "last"
+msgstr ""
+
+#: Template/Admin/OrderPayments/index.ctp:55
+#: Template/Orders/index.ctp:95
+#: Template/PaymentMethods/index.ctp:53
+#: View/Helper/TablerPaginatorHelper.php:34
+msgid "Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total"
+msgstr ""
+
+#: Template/Admin/OrderPayments/view.ctp:11
+msgid "Delete Order Payment"
+msgstr ""
+
+#: Template/Admin/OrderPayments/view.ctp:22
+#: Template/Admin/Orders/dashboard.ctp:1590
+#: Template/Admin/Products/inventory_log.ctp:16
+#: Template/Admin/Transactions/view.ctp:22
+msgid "Order"
+msgstr ""
+
+#: Template/Admin/OrderPayments/view.ctp:30
+#: Template/Admin/Orders/dashboard.ctp:1784
+#: Template/Admin/Orders/index.ctp:164
+#: Template/Admin/Orders/invoice.ctp:42
+#: Template/Admin/Orders/invoice_html.ctp:67
+#: Template/Admin/Orders/packing_slip.ctp:75
+#: Template/Admin/Orders/view.ctp:223
+msgid "Amount"
+msgstr ""
+
+#: Template/Admin/OrderPayments/view.ctp:34
+#: Template/Admin/PaymentMethods/index.ctp:20
+#: Template/Admin/PaymentProcessor/index.ctp:157
+#: Template/Admin/PaymentProcessor/view.ctp:22
+#: Template/Orders/view.ctp:32
+msgid "Payment Method"
+msgstr ""
+
+#: Template/Admin/OrderPayments/view.ctp:38
+#: Template/Admin/Orders/dashboard.ctp:1785
+#: Template/Admin/Orders/index.ctp:165
+msgid "Payment Date"
+msgstr ""
+
+#: Template/Admin/OrderPayments/view.ctp:42
+msgid "Created At"
+msgstr ""
+
+#: Template/Admin/OrderPayments/view.ctp:47
+#: Template/Orders/view.ctp:121
+msgid "Comments"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:56
+msgid "Create new Draft Order"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:57
+msgid "Create New Order"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:58
+msgid "Edit order #{0}"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:69
+msgid "Search or create customer"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:71
+msgid "Search customer"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:101
+#: Template/Admin/Orders/view.ctp:106
+#: Template/Orders/view.ctp:68
+msgid "Shipping Address"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:112
+#: Template/Admin/Orders/view.ctp:123
+#: Template/Orders/view.ctp:48
+msgid "Billing Address"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:130
+msgid "Order details"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:132
+#: Template/Admin/Orders/add.ctp:310
+msgid "Add Custom Product"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:174
+#: Template/Admin/Orders/invoice_html.ctp:87
+#: Template/Admin/Orders/view.ctp:247
+#: Template/Orders/view.ctp:92
+msgid "Subtotal"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:184
+msgid "Add Discount"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:195
+msgid "Add Shipping"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:206
+#: Template/Admin/Reports/finance_content.ctp:43
+msgid "Taxes"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:214
+#: Template/Admin/Orders/packing_slip.ctp:115
+#: Template/Admin/Orders/view.ctp:269
+#: Template/Orders/view.ctp:141
+msgid "Total"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:266
+msgid "Add new Customer"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:276
+msgid "Customer information"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:332
+#: Template/Admin/Products/edit.ctp:269
+#: Template/Admin/Themes/assets.ctp:224
+msgid "Add"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:347
+msgid "Change shipping address"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:377
+#: Template/Admin/Orders/add.ctp:421
+#: Template/Admin/Orders/add.ctp:467
+#: Template/Admin/ProductMedia/index.ctp:146
+#: Template/Admin/Products/edit.ctp:311
+#: Template/Admin/ShippingMethods/form.ctp:26
+#: Template/Admin/ShippingMethods/index.ctp:73
+#: Template/Admin/ShippingMethods/index.ctp:119
+#: Template/Admin/Themes/editor.ctp:707
+msgid "Save"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:391
+msgid "Change billing address"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:397
+msgid "Uncheck if billing address is different"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:435
+msgid "Add shipping method"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:442
+msgid "Shipping methods"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:457
+msgid "Custom Shipping (Enter price)"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:461
+msgid "Enter price"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:494
+msgid "Add A New Customer"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:547
+#: Template/Admin/PaymentMethods/view.ctp:24
+#: Template/PaymentMethods/view.ctp:24
+msgid "Icon"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:550
+msgid "Stock"
+msgstr ""
+
+#: Template/Admin/Orders/add.ctp:551
+#: Template/Admin/Orders/invoice_html.ctp:66
+msgid "Unit Price"
+msgstr ""
+
+#: Template/Admin/Orders/dashboard.ctp:20
+msgid "Dashboard"
+msgstr ""
+
+#: Template/Admin/Orders/dashboard.ctp:24
+#: Template/Admin/Orders/dashboard.ctp:28
+msgid "Today"
+msgstr ""
+
+#: Template/Admin/Orders/dashboard.ctp:32
+msgid "Yesterday"
+msgstr ""
+
+#: Template/Admin/Orders/dashboard.ctp:36
+msgid "Last 7 Days"
+msgstr ""
+
+#: Template/Admin/Orders/dashboard.ctp:50
+#: Template/Admin/Reports/finance_content.ctp:19
+msgid "Total Orders"
+msgstr ""
+
+#: Template/Admin/Orders/dashboard.ctp:427
+msgid "Total Sales"
+msgstr ""
+
+#: Template/Admin/Orders/dashboard.ctp:804
+#: Template/Admin/Reports/finance_content.ctp:93
+msgid "Total Payments"
+msgstr ""
+
+#: Template/Admin/Orders/dashboard.ctp:1175
+msgid "Users online"
+msgstr ""
+
+#: Template/Admin/Orders/dashboard.ctp:1191
+msgid "Total Customers"
+msgstr ""
+
+#: Template/Admin/Orders/dashboard.ctp:1570
+msgid "Last 30 Days Sales Summary"
+msgstr ""
+
+#: Template/Admin/Orders/dashboard.ctp:1584
+msgid "Recent Orders"
+msgstr ""
+
+#: Template/Admin/Orders/dashboard.ctp:1593
+msgid "Order Total"
+msgstr ""
+
+#: Template/Admin/Orders/dashboard.ctp:1594
+msgid "Total Paid"
+msgstr ""
+
+#: Template/Admin/Orders/dashboard.ctp:1595
+#: Template/Admin/Orders/packing_slip.ctp:119
+#: Template/Admin/Orders/view.ctp:279
+msgid "Total Due"
+msgstr ""
+
+#: Template/Admin/Orders/dashboard.ctp:1678
+#: Template/Admin/Orders/order_display.ctp:51
+msgid "Process Payment"
+msgstr ""
+
+#: Template/Admin/Orders/dashboard.ctp:1687
+#: Template/Admin/Orders/order_display.ctp:58
+msgid "Process Refund"
+msgstr ""
+
+#: Template/Admin/Orders/dashboard.ctp:1693
+#: Template/Admin/Orders/dashboard.ctp:1773
+#: Template/Admin/Orders/index.ctp:153
+#: Template/Admin/Orders/order_display.ctp:62
+msgid "Payment Log"
+msgstr ""
+
+#: Template/Admin/Orders/dashboard.ctp:1699
+#: Template/Admin/Orders/invoice.ctp:5
+#: Template/Admin/Orders/order_display.ctp:75
+msgid "Print Invoice"
+msgstr ""
+
+#: Template/Admin/Orders/dashboard.ctp:1703
+#: Template/Admin/Orders/order_display.ctp:78
+msgid "Print Packing Slip"
+msgstr ""
+
+#: Template/Admin/Orders/dashboard.ctp:1706
+#: Template/Admin/Orders/order_display.ctp:80
+msgid "Download Invoice"
+msgstr ""
+
+#: Template/Admin/Orders/dashboard.ctp:1709
+#: Template/Admin/Orders/order_display.ctp:83
+msgid "Download Packing Slip"
+msgstr ""
+
+#: Template/Admin/Orders/dashboard.ctp:1736
+#: Template/Admin/Orders/drafts.ctp:71
+#: Template/Admin/Orders/index.ctp:117
+msgid "Process payment for order"
+msgstr ""
+
+#: Template/Admin/Orders/dashboard.ctp:1783
+#: Template/Admin/Orders/index.ctp:163
+msgid "Method"
+msgstr ""
+
+#: Template/Admin/Orders/dashboard.ctp:1809
+#: Template/Admin/Orders/drafts.ctp:111
+#: Template/Admin/Orders/index.ctp:188
+msgid "Process refund for order"
+msgstr ""
+
+#: Template/Admin/Orders/drafts.ctp:41
+msgid "Create Draft Order"
+msgstr ""
+
+#: Template/Admin/Orders/drafts.ctp:122
+#: Template/Admin/Orders/index.ctp:199
+msgid "Refund Method"
+msgstr ""
+
+#: Template/Admin/Orders/drafts_order_display.ctp:26
+#: Template/Admin/Orders/edit.ctp:30
+#: Template/Admin/Orders/view.ctp:212
+#: Template/Orders/edit.ctp:30
+#: Template/Orders/view.ctp:10
+msgid "Edit Order"
+msgstr ""
+
+#: Template/Admin/Orders/drafts_order_display.ctp:27
+msgid "Mark as Pending"
+msgstr ""
+
+#: Template/Admin/Orders/drafts_order_display.ctp:28
+#: Template/Orders/view.ctp:11
+msgid "Delete Order"
+msgstr ""
+
+#: Template/Admin/Orders/edit.ctp:17
+#: Template/Admin/ShippingMethods/add.ctp:10
+#: Template/Admin/ShippingMethods/view.ctp:12
+#: Template/Orders/add.ctp:11
+#: Template/Orders/edit.ctp:17
+#: Template/Orders/index.ctp:11
+#: Template/Orders/view.ctp:14
+msgid "List Shipping Methods"
+msgstr ""
+
+#: Template/Admin/Orders/edit.ctp:18
+#: Template/Admin/ShippingMethods/view.ctp:13
+#: Template/Orders/add.ctp:12
+#: Template/Orders/edit.ctp:18
+#: Template/Orders/index.ctp:12
+#: Template/Orders/view.ctp:15
+msgid "New Shipping Method"
+msgstr ""
+
+#: Template/Admin/Orders/edit.ctp:19
+#: Template/Admin/PaymentMethods/add.ctp:10
+#: Template/Admin/PaymentMethods/edit.ctp:16
+#: Template/Admin/PaymentMethods/view.ctp:12
+#: Template/Admin/PaymentProcessor/add.ctp:11
+#: Template/Admin/PaymentProcessor/edit.ctp:17
+#: Template/Admin/PaymentProcessor/view.ctp:14
+#: Template/Orders/add.ctp:13
+#: Template/Orders/edit.ctp:19
+#: Template/Orders/index.ctp:13
+#: Template/Orders/view.ctp:16
+#: Template/PaymentMethods/add.ctp:10
+#: Template/PaymentMethods/edit.ctp:16
+#: Template/PaymentMethods/view.ctp:12
+msgid "List Payment Methods"
+msgstr ""
+
+#: Template/Admin/Orders/edit.ctp:20
+#: Template/Admin/PaymentMethods/view.ctp:13
+#: Template/Admin/PaymentProcessor/add.ctp:12
+#: Template/Admin/PaymentProcessor/edit.ctp:18
+#: Template/Admin/PaymentProcessor/view.ctp:15
+#: Template/Orders/add.ctp:14
+#: Template/Orders/edit.ctp:20
+#: Template/Orders/index.ctp:14
+#: Template/Orders/view.ctp:17
+#: Template/PaymentMethods/index.ctp:10
+#: Template/PaymentMethods/view.ctp:13
+msgid "New Payment Method"
+msgstr ""
+
+#: Template/Admin/Orders/edit.ctp:22
+#: Template/Admin/Reviews/add.ctp:14
+#: Template/Admin/Reviews/edit.ctp:20
+#: Template/Admin/Reviews/view.ctp:17
+#: Template/Orders/add.ctp:16
+#: Template/Orders/edit.ctp:22
+#: Template/Orders/index.ctp:16
+#: Template/Orders/view.ctp:19
+msgid "New Customer"
+msgstr ""
+
+#: Template/Admin/Orders/edit.ctp:23
+#: Template/Orders/add.ctp:17
+#: Template/Orders/edit.ctp:23
+#: Template/Orders/index.ctp:17
+#: Template/Orders/view.ctp:20
+msgid "List Order Products"
+msgstr ""
+
+#: Template/Admin/Orders/edit.ctp:24
+#: Template/Orders/add.ctp:18
+#: Template/Orders/edit.ctp:24
+#: Template/Orders/index.ctp:18
+#: Template/Orders/view.ctp:21
+msgid "New Order Product"
+msgstr ""
+
+#: Template/Admin/Orders/index.ctp:38
+msgid "Create Order"
+msgstr ""
+
+#: Template/Admin/Orders/index.ctp:61
+msgid "Customer Name/Phone"
+msgstr ""
+
+#: Template/Admin/Orders/index.ctp:66
+msgid "Select Date Range"
+msgstr ""
+
+#: Template/Admin/Orders/invoice.ctp:3
+#: Template/Admin/Orders/invoice_html.ctp:46
+#: Template/Admin/Orders/packing_slip.ctp:35
+#: Template/Admin/Orders/view.ctp:188
+#: Template/Admin/Orders/view.ctp:201
+msgid "Invoice"
+msgstr ""
+
+#: Template/Admin/Orders/invoice.ctp:38
+#: Template/Admin/Orders/packing_slip.ctp:71
+#: Template/Admin/Orders/view.ctp:219
+msgid "SL. No"
+msgstr ""
+
+#: Template/Admin/Orders/invoice.ctp:39
+#: Template/Admin/Orders/invoice_html.ctp:64
+#: Template/Admin/Orders/packing_slip.ctp:72
+#: Template/Admin/Orders/view.ctp:220
+#: Template/Admin/ProductMedia/view.ctp:22
+#: Template/Admin/Products/inventory_log.ctp:13
+#: Template/Admin/Reviews/index.ctp:46
+#: Template/Admin/Reviews/view.ctp:24
+msgid "Product"
+msgstr ""
+
+#: Template/Admin/Orders/invoice.ctp:40
+#: Template/Admin/Orders/packing_slip.ctp:73
+#: Template/Admin/Orders/view.ctp:221
+msgid "Qnt"
+msgstr ""
+
+#: Template/Admin/Orders/invoice.ctp:41
+#: Template/Admin/Orders/packing_slip.ctp:74
+#: Template/Admin/Orders/view.ctp:222
+msgid "Unit"
+msgstr ""
+
+#: Template/Admin/Orders/invoice.ctp:63
+msgid "Subtotal</td>"
+msgstr ""
+
+#: Template/Admin/Orders/invoice.ctp:67
+msgid "Discount</td>"
+msgstr ""
+
+#: Template/Admin/Orders/invoice.ctp:71
+msgid "Tax</td>"
+msgstr ""
+
+#: Template/Admin/Orders/invoice.ctp:75
+msgid "Shipping</td>"
+msgstr ""
+
+#: Template/Admin/Orders/invoice.ctp:79
+msgid "Total</td>"
+msgstr ""
+
+#: Template/Admin/Orders/invoice.ctp:83
+msgid "Deposit</td>"
+msgstr ""
+
+#: Template/Admin/Orders/invoice.ctp:87
+msgid "Total Due</td>"
+msgstr ""
+
+#: Template/Admin/Orders/invoice.ctp:92
+#: Template/Admin/Orders/packing_slip.ctp:125
+msgid "Thank you very much for doing business with us. We look forward to working with\n            you again!"
+msgstr ""
+
+#: Template/Admin/Orders/invoice_html.ctp:63
+msgid "SL. No."
+msgstr ""
+
+#: Template/Admin/Orders/invoice_html.ctp:65
+#: Template/Admin/Reports/finance_content.ctp:47
+#: Template/Orders/view.ctp:140
+msgid "Quantity"
+msgstr ""
+
+#: Template/Admin/Orders/invoice_html.ctp:95
+#: Template/Admin/Orders/packing_slip.ctp:106
+#: Template/Admin/Orders/view.ctp:258
+msgid "Tax"
+msgstr ""
+
+#: Template/Admin/Orders/invoice_html.ctp:99
+#: Template/Admin/Orders/packing_slip.ctp:111
+#: Template/Admin/Orders/view.ctp:263
+#: Template/Admin/Products/variants.ctp:196
+#: Template/Admin/Reports/finance_content.ctp:38
+#: Template/Orders/view.ctp:100
+msgid "Shipping"
+msgstr ""
+
+#: Template/Admin/Orders/invoice_html.ctp:103
+msgid "TOTAL"
+msgstr ""
+
+#: Template/Admin/Orders/invoice_html.ctp:107
+#: Template/Admin/Orders/view.ctp:274
+msgid "Deposit"
+msgstr ""
+
+#: Template/Admin/Orders/invoice_html.ctp:111
+msgid "Balance due"
+msgstr ""
+
+#: Template/Admin/Orders/invoice_html.ctp:118
+msgid "Payment terms: payment due in 30 days"
+msgstr ""
+
+#: Template/Admin/Orders/packing_slip.ctp:27
+#: Template/Admin/Orders/view.ctp:193
+#: Template/Admin/Orders/view.ctp:207
+msgid "Packing Slip"
+msgstr ""
+
+#: Template/Admin/Orders/packing_slip.ctp:29
+#: Template/Admin/Reports/customer_orders.ctp:45
+#: Template/Admin/Reports/daily.ctp:45
+#: Template/Admin/Reports/finance.ctp:45
+#: Template/Admin/Reports/product_orders.ctp:45
+msgid "Print"
+msgstr ""
+
+#: Template/Admin/Orders/packing_slip.ctp:54
+msgid "Recipient"
+msgstr ""
+
+#: Template/Admin/Orders/sms_histories.ctp:19
+msgid "SMS Histories"
+msgstr ""
+
+#: Template/Admin/Orders/sms_histories_display.ctp:21
+msgid "SMS Sent Successfully"
+msgstr ""
+
+#: Template/Admin/Orders/sms_histories_display.ctp:23
+msgid "SMS failed due to insufficient Balance"
+msgstr ""
+
+#: Template/Admin/Orders/status_modal.ctp:7
+#: Template/Admin/Orders/view.ctp:296
+msgid "Change Status"
+msgstr ""
+
+#: Template/Admin/Orders/status_modal.ctp:23
+msgid "Add Custom Message"
+msgstr ""
+
+#: Template/Admin/Orders/view.ctp:59
+msgid "Order Placement"
+msgstr ""
+
+#: Template/Admin/Orders/view.ctp:63
+#: Template/Admin/Orders/view.ctp:70
+#: Template/Admin/Orders/view.ctp:76
+msgid "completed"
+msgstr ""
+
+#: Template/Admin/Orders/view.ctp:65
+msgid "Order Processing"
+msgstr ""
+
+#: Template/Admin/Orders/view.ctp:72
+msgid "Order Shipped"
+msgstr ""
+
+#: Template/Admin/Orders/view.ctp:78
+msgid "Order Cancelled"
+msgstr ""
+
+#: Template/Admin/Orders/view.ctp:78
+msgid "Order Delivered"
+msgstr ""
+
+#: Template/Admin/Orders/view.ctp:95
+msgid "Customer Info"
+msgstr ""
+
+#: Template/Admin/Orders/view.ctp:130
+msgid "Apartment:"
+msgstr ""
+
+#: Template/Admin/Orders/view.ctp:133
+msgid "Tel:"
+msgstr ""
+
+#: Template/Admin/Orders/view.ctp:135
+msgid "Same as shipping"
+msgstr ""
+
+#: Template/Admin/Orders/view.ctp:149
+msgid "(Unit)"
+msgstr ""
+
+#: Template/Admin/Orders/view.ctp:181
+msgid "Order # "
+msgstr ""
+
+#: Template/Admin/Orders/view.ctp:294
+msgid "Order Log"
+msgstr ""
+
+#: Template/Admin/Pages/edit.ctp:16
+#: Template/Admin/Pages/view.ctp:12
+msgid "List Pages"
+msgstr ""
+
+#: Template/Admin/Pages/edit.ctp:24
+#: Template/Admin/Pages/view.ctp:10
+msgid "Edit Page"
+msgstr ""
+
+#: Template/Admin/Pages/index.ctp:59
+msgid "edit"
+msgstr ""
+
+#: Template/Admin/Pages/view.ctp:11
+msgid "Delete Page"
+msgstr ""
+
+#: Template/Admin/Pages/view.ctp:13
+msgid "New Page"
+msgstr ""
+
+#: Template/Admin/Pages/view.ctp:35
+msgid "Content"
+msgstr ""
+
+#: Template/Admin/Pages/view.ctp:39
+msgid "Related Facebook"
+msgstr ""
+
+#: Template/Admin/PaymentMethods/add.ctp:16
+#: Template/PaymentMethods/add.ctp:16
+msgid "Add Payment Method"
+msgstr ""
+
+#: Template/Admin/PaymentMethods/edit.ctp:22
+#: Template/Admin/PaymentMethods/view.ctp:10
+#: Template/PaymentMethods/edit.ctp:22
+#: Template/PaymentMethods/view.ctp:10
+msgid "Edit Payment Method"
+msgstr ""
+
+#: Template/Admin/PaymentMethods/index.ctp:22
+#: Template/Admin/PaymentMethods/index.ctp:77
+msgid "Add New Payment Method"
+msgstr ""
+
+#: Template/Admin/PaymentMethods/view.ctp:11
+#: Template/PaymentMethods/view.ctp:11
+msgid "Delete Payment Method"
+msgstr ""
+
+#: Template/Admin/PaymentMethods/view.ctp:45
+#: Template/Admin/PaymentProcessor/view.ctp:43
+#: Template/Admin/Products/edit.ctp:170
+#: Template/Admin/Products/variants.ctp:69
+#: Template/PaymentMethods/view.ctp:45
+msgid "Options"
+msgstr ""
+
+#: Template/Admin/PaymentProcessor/add.ctp:10
+#: Template/Admin/PaymentProcessor/edit.ctp:16
+#: Template/Admin/PaymentProcessor/view.ctp:12
+msgid "List Payment Processor"
+msgstr ""
+
+#: Template/Admin/PaymentProcessor/add.ctp:18
+msgid "Add Payment Processor"
+msgstr ""
+
+#: Template/Admin/PaymentProcessor/edit.ctp:24
+#: Template/Admin/PaymentProcessor/view.ctp:10
+msgid "Edit Payment Processor"
+msgstr ""
+
+#: Template/Admin/PaymentProcessor/index.ctp:22
+#: Template/Admin/PaymentProcessor/index.ctp:138
+msgid "Add New Payment Processor"
+msgstr ""
+
+#: Template/Admin/PaymentProcessor/index.ctp:102
+msgid "Configure {0}"
+msgstr ""
+
+#: Template/Admin/PaymentProcessor/view.ctp:11
+msgid "Delete Payment Processor"
+msgstr ""
+
+#: Template/Admin/PaymentProcessor/view.ctp:13
+msgid "New Payment Processor"
+msgstr ""
+
+#: Template/Admin/ProductMedia/add.ctp:10
+#: Template/Admin/ProductMedia/edit.ctp:16
+#: Template/Admin/ProductMedia/view.ctp:12
+msgid "List Product Media"
+msgstr ""
+
+#: Template/Admin/ProductMedia/add.ctp:11
+#: Template/Admin/ProductMedia/edit.ctp:17
+#: Template/Admin/ProductMedia/view.ctp:14
+#: Template/Admin/Products/add.ctp:10
+#: Template/Admin/Products/view.ctp:12
+#: Template/Admin/Reviews/add.ctp:11
+#: Template/Admin/Reviews/edit.ctp:17
+#: Template/Admin/Reviews/view.ctp:14
+msgid "List Products"
+msgstr ""
+
+#: Template/Admin/ProductMedia/add.ctp:12
+#: Template/Admin/ProductMedia/edit.ctp:18
+#: Template/Admin/ProductMedia/view.ctp:15
+#: Template/Admin/Products/view.ctp:13
+#: Template/Admin/Reviews/add.ctp:12
+#: Template/Admin/Reviews/edit.ctp:18
+#: Template/Admin/Reviews/view.ctp:15
+msgid "New Product"
+msgstr ""
+
+#: Template/Admin/ProductMedia/add.ctp:18
+msgid "Add Product Media"
+msgstr ""
+
+#: Template/Admin/ProductMedia/edit.ctp:24
+#: Template/Admin/ProductMedia/view.ctp:10
+msgid "Edit Product Media"
+msgstr ""
+
+#: Template/Admin/ProductMedia/index.ctp:32
+msgid "{0} /Gallery"
+msgstr ""
+
+#: Template/Admin/ProductMedia/index.ctp:34
+msgid "{0} photos/video"
+msgstr ""
+
+#: Template/Admin/ProductMedia/index.ctp:47
+#: Template/Admin/Products/edit.ctp:48
+#: Template/Admin/Products/options.ctp:5
+#: Template/Admin/Products/variants.ctp:35
+msgid "Back to list"
+msgstr ""
+
+#: Template/Admin/ProductMedia/index.ctp:75
+msgid "Set Default"
+msgstr ""
+
+#: Template/Admin/ProductMedia/index.ctp:86
+msgid "Click here to edit caption"
+msgstr ""
+
+#: Template/Admin/ProductMedia/index.ctp:128
+msgid "Add Youtube Video"
+msgstr ""
+
+#: Template/Admin/ProductMedia/view.ctp:11
+msgid "Delete Product Media"
+msgstr ""
+
+#: Template/Admin/ProductMedia/view.ctp:13
+msgid "New Product Media"
+msgstr ""
+
+#: Template/Admin/ProductMedia/view.ctp:26
+msgid "Path"
+msgstr ""
+
+#: Template/Admin/ProductMedia/view.ctp:30
+msgid "Caption"
+msgstr ""
+
+#: Template/Admin/ProductMedia/view.ctp:38
+msgid "Variant Id"
+msgstr ""
+
+#: Template/Admin/ProductMedia/view.ctp:42
+msgid "Type"
+msgstr ""
+
+#: Template/Admin/Products/add.ctp:11
+#: Template/Admin/Products/view.ctp:14
+msgid "List Tags"
+msgstr ""
+
+#: Template/Admin/Products/add.ctp:12
+#: Template/Admin/Products/view.ctp:15
+msgid "New Tag"
+msgstr ""
+
+#: Template/Admin/Products/add.ctp:18
+#: Template/Admin/Products/edit.ctp:56
+#: Template/Admin/Products/index.ctp:16
+#: Template/Admin/Products/inventory.ctp:25
+msgid "Add Product"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:56
+msgid "Edit {0}"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:59
+#: Template/Admin/Products/edit.ctp:355
+msgid "Save and Continue"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:69
+msgid "Show this product in online store"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:70
+msgid "This product has multiple variatons"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:79
+msgid "eg. Shirt, Pant etc"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:89
+msgid "add comma separated tags eg. sharts,clothes"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:98
+#: Template/Admin/Products/edit.ctp:103
+#: Template/Admin/Products/edit.ctp:107
+msgid "0.00"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:118
+#: Template/Admin/Products/variants.ctp:167
+msgid "SKU (Stock Keeping Unit)"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:122
+#: Template/Admin/Products/variants.ctp:171
+msgid "Barcode (ISBN, UPC, GTIN, etc.)"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:126
+#: Template/Admin/Products/variants.ctp:175
+msgid "Quantity available"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:133
+msgid "checkbox"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:134
+#: Template/Admin/Products/variants.ctp:186
+msgid "Sell without stock"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:143
+#: Template/Admin/Products/variants.ctp:204
+msgid "This is a physical product"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:153
+msgid "Add Variant"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:155
+msgid "Change options"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:158
+#: Template/Admin/Products/options.ctp:11
+msgid "Product Variants"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:173
+#: Template/Admin/Products/view.ctp:46
+#: Template/Admin/ShippingMethods/view.ctp:32
+#: Template/Orders/view.ctp:138
+msgid "Price"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:176
+msgid "C. Price"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:179
+msgid "Inventory"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:182
+#: Template/Admin/Products/view.ctp:30
+msgid "Sku"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:198
+#: Template/Admin/Products/variants.ctp:113
+msgid "Click here to add Media"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:251
+#: Template/Admin/Products/options.ctp:19
+msgid "Product Options"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:263
+#: Template/Admin/Products/edit.ctp:324
+#: Template/Admin/Products/options.ctp:27
+msgid "Option"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:266
+msgid "Option Values"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:293
+msgid "Add New"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:309
+msgid "Add New Option"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:319
+msgid "Product options"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:347
+#: Template/Admin/Products/options.ctp:44
+msgid "Add another option"
+msgstr ""
+
+#: Template/Admin/Products/edit.ctp:368
+msgid "Choose Variant Image"
+msgstr ""
+
+#: Template/Admin/Products/index.ctp:27
+msgid "All"
+msgstr ""
+
+#: Template/Admin/Products/index.ctp:60
+msgid "New Facebook Post"
+msgstr ""
+
+#: Template/Admin/Products/inventory_log.ctp:6
+msgid "Inventory Log for {0}"
+msgstr ""
+
+#: Template/Admin/Products/inventory_log.ctp:7
+#: Template/Admin/Users/add.ctp:20
+#: Template/Layout/error.ctp:43
+msgid "Back"
+msgstr ""
+
+#: Template/Admin/Products/inventory_log.ctp:14
+#: View/Helper/TablerPaginatorHelper.php:65
+msgid "Previous"
+msgstr ""
+
+#: Template/Admin/Products/inventory_log.ctp:15
+msgid "Current"
+msgstr ""
+
+#: Template/Admin/Products/inventory_product_display.ctp:15
+msgid "Edit Quantity Available"
+msgstr ""
+
+#: Template/Admin/Products/inventory_product_display.ctp:31
+msgid "variatons"
+msgstr ""
+
+#: Template/Admin/Products/media.ctp:17
+msgid "Product title/ Gallery"
+msgstr ""
+
+#: Template/Admin/Products/media.ctp:19
+msgid "10 photos"
+msgstr ""
+
+#: Template/Admin/Products/media.ctp:51
+#: Template/Admin/Products/media.ctp:72
+msgid "Edit image title"
+msgstr ""
+
+#: Template/Admin/Products/options.ctp:8
+msgid "Product Details"
+msgstr ""
+
+#: Template/Admin/Products/options.ctp:9
+msgid "Product Pictures/Media"
+msgstr ""
+
+#: Template/Admin/Products/options.ctp:10
+msgid "Product Options/Variants"
+msgstr ""
+
+#: Template/Admin/Products/options.ctp:12
+msgid "Product Inventory"
+msgstr ""
+
+#: Template/Admin/Products/options.ctp:45
+msgid "Update option pricing"
+msgstr ""
+
+#: Template/Admin/Products/products_display.ctp:7
+msgid "TITLE"
+msgstr ""
+
+#: Template/Admin/Products/products_display.ctp:30
+msgid "Media/Pictures "
+msgstr ""
+
+#: Template/Admin/Products/products_display.ctp:32
+msgid "Products variants"
+msgstr ""
+
+#: Template/Admin/Products/products_display.ctp:36
+msgid "Products Reviews"
+msgstr ""
+
+#: Template/Admin/Products/products_display.ctp:41
+msgid "Post To Facebook"
+msgstr ""
+
+#: Template/Admin/Products/reviews.ctp:28
+#: Template/Admin/Reviews/index.ctp:47
+#: Template/Admin/Reviews/view.ctp:36
+msgid "Rating"
+msgstr ""
+
+#: Template/Admin/Products/reviews.ctp:29
+#: Template/Admin/Reviews/view.ctp:53
+msgid "Comment"
+msgstr ""
+
+#: Template/Admin/Products/reviews.ctp:30
+#: Template/Admin/Reviews/index.ctp:48
+msgid "Review date"
+msgstr ""
+
+#: Template/Admin/Products/reviews.ctp:67
+msgid "see more"
+msgstr ""
+
+#: Template/Admin/Products/variants.ctp:44
+msgid "variants"
+msgstr ""
+
+#: Template/Admin/Products/variants.ctp:224
+msgid "Delete This Option"
+msgstr ""
+
+#: Template/Admin/Products/variants.ctp:224
+msgid "Are you sure you want to delete this variant ? This action is irreversible."
+msgstr ""
+
+#: Template/Admin/Products/view.ctp:10
+msgid "Edit Product"
+msgstr ""
+
+#: Template/Admin/Products/view.ctp:11
+msgid "Delete Product"
+msgstr ""
+
+#: Template/Admin/Products/view.ctp:26
+msgid "Media"
+msgstr ""
+
+#: Template/Admin/Products/view.ctp:34
+msgid "Barcode"
+msgstr ""
+
+#: Template/Admin/Products/view.ctp:38
+msgid "Weight Unit"
+msgstr ""
+
+#: Template/Admin/Products/view.ctp:50
+msgid "Cost"
+msgstr ""
+
+#: Template/Admin/Products/view.ctp:54
+msgid "Compare Price"
+msgstr ""
+
+#: Template/Admin/Products/view.ctp:58
+msgid "Q Available"
+msgstr ""
+
+#: Template/Admin/Products/view.ctp:62
+msgid "Wieight"
+msgstr ""
+
+#: Template/Admin/Products/view.ctp:74
+msgid "Track Inventory"
+msgstr ""
+
+#: Template/Admin/Products/view.ctp:78
+msgid "Sell W Stock"
+msgstr ""
+
+#: Template/Admin/Products/view.ctp:82
+msgid "Is Physical"
+msgstr ""
+
+#: Template/Admin/Products/view.ctp:95
+msgid "Related Tags"
+msgstr ""
+
+#: Template/Admin/Products/view.ctp:100
+msgid "Tag"
+msgstr ""
+
+#: Template/Admin/Reports/customer_orders.ctp:17
+msgid "Customer Orders Reports"
+msgstr ""
+
+#: Template/Admin/Reports/customer_orders.ctp:49
+#: Template/Admin/Reports/daily.ctp:49
+#: Template/Admin/Reports/finance.ctp:49
+#: Template/Admin/Reports/product_orders.ctp:49
+msgid "Export"
+msgstr ""
+
+#: Template/Admin/Reports/customer_orders_content.ctp:15
+msgid "Customer Name"
+msgstr ""
+
+#: Template/Admin/Reports/customer_orders_content.ctp:16
+msgid "City "
+msgstr ""
+
+#: Template/Admin/Reports/customer_orders_content.ctp:17
+#: Template/Admin/Reports/product_orders_content.ctp:16
+msgid "total orders"
+msgstr ""
+
+#: Template/Admin/Reports/customer_orders_content.ctp:18
+#: Template/Admin/Reports/daily_content.ctp:18
+msgid "subtotal"
+msgstr ""
+
+#: Template/Admin/Reports/customer_orders_content.ctp:19
+#: Template/Admin/Reports/daily_content.ctp:19
+msgid "discount(-)"
+msgstr ""
+
+#: Template/Admin/Reports/customer_orders_content.ctp:20
+#: Template/Admin/Reports/daily_content.ctp:20
+msgid "shipping fee"
+msgstr ""
+
+#: Template/Admin/Reports/customer_orders_content.ctp:21
+#: Template/Admin/Reports/daily_content.ctp:21
+msgid "taxes"
+msgstr ""
+
+#: Template/Admin/Reports/customer_orders_content.ctp:22
+#: Template/Admin/Reports/daily_content.ctp:22
+#: Template/Admin/Reports/finance_content.ctp:53
+msgid "Total sales"
+msgstr ""
+
+#: Template/Admin/Reports/daily_content.ctp:17
+msgid "total orders "
+msgstr ""
+
+#: Template/Admin/Reports/finance_content.ctp:4
+msgid "Sales"
+msgstr ""
+
+#: Template/Admin/Reports/finance_content.ctp:25
+msgid "Discounts"
+msgstr ""
+
+#: Template/Admin/Reports/finance_content.ctp:29
+msgid "Returns"
+msgstr ""
+
+#: Template/Admin/Reports/finance_content.ctp:33
+msgid "Net sales"
+msgstr ""
+
+#: Template/Admin/Reports/finance_content.ctp:70
+msgid "Payments"
+msgstr ""
+
+#: Template/Admin/Reports/finance_content.ctp:98
+msgid "Total Refunds"
+msgstr ""
+
+#: Template/Admin/Reports/product_orders.ctp:17
+msgid "Orders Product Reports"
+msgstr ""
+
+#: Template/Admin/Reports/product_orders_content.ctp:14
+#: Template/Orders/view.ctp:137
+msgid "Product Title"
+msgstr ""
+
+#: Template/Admin/Reports/product_orders_content.ctp:15
+msgid "Product SKU"
+msgstr ""
+
+#: Template/Admin/Reports/product_orders_content.ctp:17
+msgid "Total Quantity"
+msgstr ""
+
+#: Template/Admin/Reports/product_orders_content.ctp:18
+msgid "Selling Price"
+msgstr ""
+
+#: Template/Admin/Reviews/add.ctp:10
+#: Template/Admin/Reviews/edit.ctp:16
+#: Template/Admin/Reviews/view.ctp:12
+msgid "List Reviews"
+msgstr ""
+
+#: Template/Admin/Reviews/add.ctp:20
+msgid "Add Review"
+msgstr ""
+
+#: Template/Admin/Reviews/edit.ctp:26
+#: Template/Admin/Reviews/view.ctp:10
+msgid "Edit Review"
+msgstr ""
+
+#: Template/Admin/Reviews/view.ctp:11
+msgid "Delete Review"
+msgstr ""
+
+#: Template/Admin/Reviews/view.ctp:13
+msgid "New Review"
+msgstr ""
+
+#: Template/Admin/ShippingMethods/add.ctp:16
+#: Template/Admin/ShippingMethods/index.ctp:8
+msgid "Add Shipping Method"
+msgstr ""
+
+#: Template/Admin/ShippingMethods/edit.ctp:13
+#: Template/Admin/ShippingMethods/form.ctp:12
+#: Template/Admin/ShippingMethods/index.ctp:100
+msgid "Shipping Method Name"
+msgstr ""
+
+#: Template/Admin/ShippingMethods/edit.ctp:31
+msgid "Save Shipping Method"
+msgstr ""
+
+#: Template/Admin/ShippingMethods/form.ctp:14
+#: Template/Admin/ShippingMethods/index.ctp:103
+#: Template/Admin/ShippingMethods/view.ctp:48
+msgid "Flat Rate"
+msgstr ""
+
+#: Template/Admin/ShippingMethods/form.ctp:16
+#: Template/Admin/ShippingZones/index.ctp:58
+#: Template/Admin/ShippingZones/index.ctp:90
+msgid "City/District"
+msgstr ""
+
+#: Template/Admin/ShippingMethods/view.ctp:10
+msgid "Edit Shipping Method"
+msgstr ""
+
+#: Template/Admin/ShippingMethods/view.ctp:11
+msgid "Delete Shipping Method"
+msgstr ""
+
+#: Template/Admin/ShippingMethods/view.ctp:24
+msgid "Zone Id"
+msgstr ""
+
+#: Template/Admin/ShippingZones/add.ctp:10
+#: Template/Admin/ShippingZones/edit.ctp:16
+#: Template/Admin/ShippingZones/view.ctp:12
+msgid "List Shipping Zones"
+msgstr ""
+
+#: Template/Admin/ShippingZones/add.ctp:16
+#: Template/Admin/ShippingZones/index.ctp:8
+msgid "Add Shipping Zone"
+msgstr ""
+
+#: Template/Admin/ShippingZones/edit.ctp:22
+#: Template/Admin/ShippingZones/view.ctp:10
+msgid "Edit Shipping Zone"
+msgstr ""
+
+#: Template/Admin/ShippingZones/index.ctp:6
+#: Template/Admin/ShippingZones/index.ctp:47
+#: Template/Admin/ShippingZones/index.ctp:78
+msgid "Shipping Zone"
+msgstr ""
+
+#: Template/Admin/ShippingZones/view.ctp:11
+msgid "Delete Shipping Zone"
+msgstr ""
+
+#: Template/Admin/ShippingZones/view.ctp:13
+msgid "New Shipping Zone"
+msgstr ""
+
+#: Template/Admin/Themes/assets.ctp:61
+msgid "Manage Images"
+msgstr ""
+
+#: Template/Admin/Themes/assets.ctp:62
+msgid "Manage your  store images like slider images, flash deal images etc."
+msgstr ""
+
+#: Template/Admin/Themes/assets.ctp:103
+msgid "Manage Site Menu"
+msgstr ""
+
+#: Template/Admin/Themes/assets.ctp:113
+#: Template/Admin/Themes/assets.ctp:186
+msgid "Add Menu Item"
+msgstr ""
+
+#: Template/Admin/Themes/assets.ctp:194
+msgid "Text"
+msgstr ""
+
+#: Template/Admin/Themes/assets.ctp:204
+msgid "URL"
+msgstr ""
+
+#: Template/Admin/Themes/assets.ctp:208
+msgid "Target"
+msgstr ""
+
+#: Template/Admin/Themes/assets.ctp:210
+msgid "Self"
+msgstr ""
+
+#: Template/Admin/Themes/assets.ctp:211
+msgid "Blank"
+msgstr ""
+
+#: Template/Admin/Themes/assets.ctp:212
+msgid "Top"
+msgstr ""
+
+#: Template/Admin/Themes/assets.ctp:216
+#: Template/Admin/Themes/assets.ctp:217
+msgid "Tooltip"
+msgstr ""
+
+#: Template/Admin/Themes/assets.ctp:223
+msgid "Update"
+msgstr ""
+
+#: Template/Admin/Themes/editor.ctp:712
+msgid "Upload"
+msgstr ""
+
+#: Template/Admin/Themes/editor.ctp:719
+msgid "New\n                    File"
+msgstr ""
+
+#: Template/Admin/Themes/editor.ctp:721
+msgid "New\n                    Directory"
+msgstr ""
+
+#: Template/Admin/Themes/editor.ctp:724
+msgid "Rename"
+msgstr ""
+
+#: Template/Admin/Themes/editor.ctp:761
+msgid "Create New Directory"
+msgstr ""
+
+#: Template/Admin/Themes/editor.ctp:768
+msgid "Enter your directory name"
+msgstr ""
+
+#: Template/Admin/Themes/editor.ctp:770
+msgid "Invalid Directory Name !!"
+msgstr ""
+
+#: Template/Admin/Themes/editor.ctp:776
+#: Template/Admin/Themes/editor.ctp:804
+#: Template/Admin/Themes/editor.ctp:833
+msgid "submit"
+msgstr ""
+
+#: Template/Admin/Themes/editor.ctp:818
+msgid "Create New File"
+msgstr ""
+
+#: Template/Admin/Themes/editor.ctp:825
+msgid "Enter your file name"
+msgstr ""
+
+#: Template/Admin/Themes/editor.ctp:827
+msgid "Invalid File Name"
+msgstr ""
+
+#: Template/Admin/Themes/index.ctp:50
+msgid "All Themes"
+msgstr ""
+
+#: Template/Admin/Themes/index.ctp:53
+msgid "Install Theme"
+msgstr ""
+
+#: Template/Admin/Themes/index.ctp:58
+msgid "Add New Theme"
+msgstr ""
+
+#: Template/Admin/Themes/index.ctp:81
+#: Template/Admin/Themes/install.ctp:50
+msgid "Preview"
+msgstr ""
+
+#: Template/Admin/Themes/index.ctp:85
+msgid "Activated"
+msgstr ""
+
+#: Template/Admin/Themes/index.ctp:131
+#: Template/Admin/Themes/install.ctp:97
+msgid "Author"
+msgstr ""
+
+#: Template/Admin/Themes/index.ctp:135
+#: Template/Admin/Themes/install.ctp:101
+msgid "Version"
+msgstr ""
+
+#: Template/Admin/Themes/install.ctp:30
+msgid "Choose your favorite theme from our collection"
+msgstr ""
+
+#: Template/Admin/Themes/install.ctp:55
+msgid "Install"
+msgstr ""
+
+#: Template/Admin/Transactions/add.ctp:10
+#: Template/Admin/Transactions/edit.ctp:16
+#: Template/Admin/Transactions/view.ctp:12
+msgid "List Transactions"
+msgstr ""
+
+#: Template/Admin/Transactions/add.ctp:18
+msgid "Add Transaction"
+msgstr ""
+
+#: Template/Admin/Transactions/ajax.ctp:44
+msgid "Verified"
+msgstr ""
+
+#: Template/Admin/Transactions/ajax.ctp:46
+msgid "Not Verified"
+msgstr ""
+
+#: Template/Admin/Transactions/ajax.ctp:52
+msgid "Approve"
+msgstr ""
+
+#: Template/Admin/Transactions/ajax.ctp:52
+msgid "Are you sure you want to Approve the transaction ?"
+msgstr ""
+
+#: Template/Admin/Transactions/edit.ctp:24
+#: Template/Admin/Transactions/view.ctp:10
+msgid "Edit Transaction"
+msgstr ""
+
+#: Template/Admin/Transactions/view.ctp:11
+msgid "Delete Transaction"
+msgstr ""
+
+#: Template/Admin/Transactions/view.ctp:13
+msgid "New Transaction"
+msgstr ""
+
+#: Template/Admin/Transactions/view.ctp:35
+msgid "Payment Data"
+msgstr ""
+
+#: Template/Admin/Users/add.ctp:18
+#: Template/Admin/Users/index.ctp:23
+msgid "Add New User"
+msgstr ""
+
+#: Template/Admin/Users/add.ctp:26
+#: Template/Admin/Users/edit.ctp:22
+#: Template/Admin/Users/profile.ctp:29
+msgid "User Information"
+msgstr ""
+
+#: Template/Admin/Users/add.ctp:41
+msgid "User Authentication"
+msgstr ""
+
+#: Template/Admin/Users/add.ctp:44
+#: Template/Admin/Users/login.ctp:76
+#: Template/Admin/Users/view.ctp:40
+msgid "Password"
+msgstr ""
+
+#: Template/Admin/Users/add.ctp:45
+#: Template/Admin/Users/edit.ctp:41
+#: Template/Admin/Users/new_password.ctp:77
+msgid "Confirm Password"
+msgstr ""
+
+#: Template/Admin/Users/add.ctp:46
+msgid "User Role"
+msgstr ""
+
+#: Template/Admin/Users/add.ctp:47
+#: Template/Admin/Users/edit.ctp:43
+msgid "Disabled"
+msgstr ""
+
+#: Template/Admin/Users/add.ctp:58
+#: Template/Admin/Users/edit.ctp:54
+msgid "Save User"
+msgstr ""
+
+#: Template/Admin/Users/edit.ctp:40
+#: Template/Admin/Users/new_password.ctp:72
+msgid "New Password"
+msgstr ""
+
+#: Template/Admin/Users/edit.ctp:40
+msgid "Type new password to change old password"
+msgstr ""
+
+#: Template/Admin/Users/edit.ctp:41
+msgid "Type confirm password to change old password"
+msgstr ""
+
+#: Template/Admin/Users/index.ctp:19
+msgid "Users"
+msgstr ""
+
+#: Template/Admin/Users/login.ctp:18
+#: Template/Admin/Users/new_password.ctp:18
+#: Template/Admin/Users/reset_password.ctp:18
+msgid "Clcknshop admin interface"
+msgstr ""
+
+#: Template/Admin/Users/login.ctp:69
+msgid "Login to your account"
+msgstr ""
+
+#: Template/Admin/Users/login.ctp:71
+msgid "Email address"
+msgstr ""
+
+#: Template/Admin/Users/login.ctp:72
+msgid "Enter your email"
+msgstr ""
+
+#: Template/Admin/Users/login.ctp:77
+msgid "I forgot password"
+msgstr ""
+
+#: Template/Admin/Users/login.ctp:79
+msgid "Enter your password"
+msgstr ""
+
+#: Template/Admin/Users/login.ctp:84
+msgid "Sign in"
+msgstr ""
+
+#: Template/Admin/Users/new_password.ctp:69
+#: Template/Admin/Users/new_password.ctp:81
+#: Template/Admin/Users/reset_password.ctp:70
+msgid "Reset Password"
+msgstr ""
+
+#: Template/Admin/Users/new_password.ctp:73
+msgid "Enter New Password"
+msgstr ""
+
+#: Template/Admin/Users/new_password.ctp:78
+msgid "Enter Confirm Password"
+msgstr ""
+
+#: Template/Admin/Users/profile.ctp:17
+msgid "User Login Log"
+msgstr ""
+
+#: Template/Admin/Users/reset_password.ctp:73
+msgid "Enter your phone number"
+msgstr ""
+
+#: Template/Admin/Users/reset_password.ctp:76
+msgid "Send Me New Password"
+msgstr ""
+
+#: Template/Admin/Users/view.ctp:10
+msgid "Edit User"
+msgstr ""
+
+#: Template/Admin/Users/view.ctp:11
+msgid "Delete User"
+msgstr ""
+
+#: Template/Admin/Users/view.ctp:12
+msgid "List Users"
+msgstr ""
+
+#: Template/Admin/Users/view.ctp:13
+msgid "New User"
+msgstr ""
+
+#: Template/Admin/Users/view.ctp:20
+msgid "First Name"
+msgstr ""
+
+#: Template/Admin/Users/view.ctp:24
+msgid "Last Name"
+msgstr ""
+
+#: Template/Admin/Users/view.ctp:36
+msgid "Username"
+msgstr ""
+
+#: Template/Admin/Users/view.ctp:52
+msgid "Role"
+msgstr ""
+
+#: Template/Layout/error.ctp:35
+msgid "Error"
+msgstr ""
+
+#: Template/Orders/add.ctp:24
+msgid "Add Order"
+msgstr ""
+
+#: Template/Orders/view.ctp:40
+msgid "Billing First Name"
+msgstr ""
+
+#: Template/Orders/view.ctp:44
+msgid "Billing Last Name"
+msgstr ""
+
+#: Template/Orders/view.ctp:52
+msgid "Billing Phone Number"
+msgstr ""
+
+#: Template/Orders/view.ctp:56
+msgid "Shipping First Name"
+msgstr ""
+
+#: Template/Orders/view.ctp:60
+msgid "Shipping Last Name"
+msgstr ""
+
+#: Template/Orders/view.ctp:64
+msgid "Shipping Phone Number"
+msgstr ""
+
+#: Template/Orders/view.ctp:72
+msgid "Shipping Dimention"
+msgstr ""
+
+#: Template/Orders/view.ctp:76
+msgid "Payment Reference"
+msgstr ""
+
+#: Template/Orders/view.ctp:80
+msgid "Shipping Reference"
+msgstr ""
+
+#: Template/Orders/view.ctp:108
+msgid "Shipping Weight"
+msgstr ""
+
+#: Template/Orders/view.ctp:125
+msgid "Stuff Notes"
+msgstr ""
+
+#: Template/Orders/view.ctp:129
+msgid "Related Order Products"
+msgstr ""
+
+#: Template/Orders/view.ctp:134
+msgid "Product Variants Id"
+msgstr ""
+
+#: Template/Orders/view.ctp:135
+msgid "Products Id"
+msgstr ""
+
+#: Template/Orders/view.ctp:136
+msgid "Orders Id"
+msgstr ""
+
+#: Template/Orders/view.ctp:139
+msgid "Discounted Price"
+msgstr ""
+
+#: View/Helper/TablerPaginatorHelper.php:65
+msgid "Next"
+msgstr ""
+

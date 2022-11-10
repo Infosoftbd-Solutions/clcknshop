@@ -1,0 +1,218 @@
+// Footer
+
+// # Contents
+// 1. Footer Base
+// 2. Footer Elements
+// 2.1) Social Icon
+// 2.2) Scroll Top Button
+// 3. Footer Widget
+// 3.1) Footer Widget Title
+// 3.2) Footer Widget Link
+
+// # Variables
+@include set-default(
+	(
+		footer: (
+			_link-color: false,
+			_link-active-color: false,
+
+			// top: (
+			// ),
+			// middle: (
+			// ),
+			// bottom: (
+			// ),
+
+			widget: (
+				margin-bottom: 3rem,
+				
+				title: (
+					// color: false,
+					font-size: 1.6rem,
+					font-weight: 600,
+					// family: false,
+					text-transform: uppercase,
+					margin: 0 0 1.7rem
+				)
+
+				// link: (
+				// )
+			),
+
+			social-icon: (
+				color: false,
+				_hover-background: transparent,
+				font-size: 1.8rem
+			),
+
+		)
+	)
+);
+
+// 1. Footer Base
+
+footer {
+	// Footer's color, font-size
+	font-size: $footer-font-size;
+	@include print_css( footer );
+
+	.container {
+		position: relative;
+	}
+
+	p {
+		color: inherit;
+	}
+}
+
+// Link Color
+@if ( get( footer, _link-color ) ) {
+	.footer a {
+		color: get( footer, _link-color );
+	}
+} @else {
+	footer a {
+		color: inherit;
+	}
+}
+
+footer {
+	a:hover,
+	a:focus {
+		@include css( color, footer, _link-active-color);
+	}
+}
+
+.footer {
+	&-top {
+		@include print_css( footer, top );
+	}
+
+	&-middle {
+		@include print_css( footer, middle );
+	}
+
+	&-bottom {
+		@include print_css( footer, bottom );
+
+		// @if ( get( footer, bottom, _border-top-inner ) ) {
+		// 	.container:before {
+		// 		content: '';
+		// 		display: block;
+		// 		flex: 0 0 100%;
+		// 		-ms-flex: 0 0 100%;
+		// 		border-top: get( footer, bottom, _border-top-inner );
+		// 		@include css( padding-top, footer, bottom, padding-top );
+		// 	}
+		// } @else {
+		// 	@include css( padding-top, footer, bottom, padding-top );
+		// }
+	}
+}
+
+footer {
+// 2. Footer Elements
+	a {
+		@include print_css( footer, a );
+
+		&:hover {
+			@include css( color, footer, a, _link-color );
+		}
+	}
+
+// 2.1) Social Icon
+	.social-icon {
+		border-radius: 50%;
+		@include print_css( footer, social-icon );
+		
+		&:not(:hover):not(:active):not(:focus) {
+			@include css( background, footer, social-icon, _hover-background);
+		}
+
+		@if get( footer, social-icon, _space ) {
+			& + .social-icon {
+				margin-left: get( footer, social-icon, _space );
+			}
+		}
+	}
+
+// 2.2) Footer Widget
+	.widget {
+		@include print_css( footer, widget );
+	}
+
+	.widget-title {
+		@include print_css( footer, widget, title );
+	}
+
+	.links li {
+		@include css(margin-bottom, footer, widget, link, _space);
+	}
+
+// 2.3) Tag Cloud
+	.tagcloud a {
+		padding: .6em;
+		margin: 0 .8rem .8rem 0;
+		border: 1px solid #313438;
+		color: inherit;
+		font-size: 11px;
+		background: transparent;
+
+		&:hover {
+			border-color: #fff;
+			background: transparent;
+		}
+	}
+
+// 2.4) Contact Info
+	.contact-info {
+		margin: 0;
+		padding: 0;
+
+		li {
+			position: relative;
+			margin-bottom: 1rem;
+			line-height: 1.4;
+		}
+	}
+
+	.contact-info-label {
+		display: block;
+		@include css( color, footer, widget, title, color );
+		font-weight: 400;
+		text-transform: uppercase;
+		margin-bottom: 1px;
+	}
+}
+
+// 4. Scroll Top Button
+#scroll-top {
+	position: fixed;
+	right: 15px;
+	width: 49px;
+	height: 48px;
+	z-index: 9999;
+	bottom: 0;
+	color: #fff;
+	background-color: #43494e;
+	font-size: 16px;
+	text-align: center;
+	line-height: 1.6;
+	padding: 11px 0;
+	visibility: hidden;
+	opacity: 0;
+	border-radius: $border-radius $border-radius 0 0;
+	transition: all .3s, margin-right 0s;
+	transform: translateY(40px);
+
+	&:hover,
+	&:focus {
+		background-color: #3a4045;
+	}
+
+	&.fixed {
+		transform: translateY(0);
+		opacity: 1;
+		visibility: visible;
+	}
+}

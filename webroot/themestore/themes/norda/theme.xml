@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+    <name>Norda</name>
+    <author>Infosoftbd Solutions</author>
+    <description>        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod&#13;
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,&#13;
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo&#13;
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse&#13;
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non&#13;
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&#13;
+    </description>
+    <thumbnail>norda.jpg</thumbnail>
+    <preview>https://norda.clckn.shop</preview>
+    <version>1.0</version>
+<folder_name>norda</folder_name><active>0</active></template>

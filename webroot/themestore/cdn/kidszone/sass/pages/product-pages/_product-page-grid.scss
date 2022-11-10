@@ -1,0 +1,80 @@
+// Product Grid Layout
+.product-single-grid {
+	.product-single-gallery .product-item {
+		margin-bottom: 2rem;
+	}
+
+	.inner {
+		position: relative;
+	}
+
+	.product-item:hover {
+		.prod-full-screen {
+			opacity: 1;
+		}
+	}
+}
+
+.product-size-content {
+	img {
+		margin-right: auto;
+		margin-bottom: 2rem;
+		margin-left: auto;
+	}
+}
+
+.table.table-size {
+	thead tr th,
+	tbody tr td {
+		border: 0;
+		color: #21293c;
+		font-size: 1.5rem;
+		letter-spacing: .005em;
+		text-transform: uppercase;
+	}
+
+	thead {
+		tr {
+			th {
+				padding: 2.8rem 1.5rem 1.7rem;
+				background-color: #f4f4f2;
+				font-weight: 600;
+			}
+		}
+	}
+
+	tbody {
+		tr {
+			td {
+				padding: 1rem 1.5rem;
+				background-color: #fff;
+				font-weight: 700;
+
+				&:first-child {
+					font-weight: 600;
+				}
+			}
+
+			&:nth-child(2n) {
+				td {
+					background-color: #ebebeb;
+				}
+			}
+		}
+	}
+}
+
+@include mq(lg) {
+	.table.table-size {
+		thead tr th {
+			padding-top: 4.2rem;
+			padding-bottom: 2.8rem;
+		}
+
+		thead tr th,
+		tbody tr td {
+			padding-right: 3.5rem;
+			padding-left: 3.5rem;
+		}
+	}
+}

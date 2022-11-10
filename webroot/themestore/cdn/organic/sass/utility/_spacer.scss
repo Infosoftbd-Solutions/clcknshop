@@ -1,0 +1,94 @@
+$topMargins: 20,
+30,
+40,
+50,
+60,
+80,
+120,
+-60,
+-120;
+
+@each $topMargin in $topMargins {
+    .mt-#{$topMargin} {
+        margin-top: $topMargin*1px;
+    }
+}
+
+
+$bottomMargins: 20,
+30,
+40,
+50,
+60,
+80,
+120,
+-60,
+-120;
+
+@each $bottomMargin in $bottomMargins {
+    .mb-#{$bottomMargin} {
+        margin-bottom: $bottomMargin*1px;
+    }
+}
+
+// paddings
+
+$topPaddings: 20,
+30,
+40,
+50,
+60,
+80,
+110,
+115,
+120,
+142;
+
+@each $topPadding in $topPaddings {
+    .pt-#{$topPadding} {
+        padding-top: $topPadding*1px;
+    }
+}
+
+
+$bottomPaddings: 20,
+30,
+40,
+50,
+60,
+80,
+90,
+110,
+115,
+120;
+
+@each $bottomPadding in $bottomPaddings {
+    .pb-#{$bottomPadding} {
+        padding-bottom: $bottomPadding*1px;
+    }
+}
+
+
+$leftPaddings: 5,
+10,
+15,
+20,
+30;
+
+@each $leftPadding in $leftPaddings {
+    .pl-#{$leftPadding} {
+        padding-left: $leftPadding*1px;
+    }
+}
+
+$rightPaddings: 5,
+10,
+15,
+20,
+30;
+
+@each $rightPadding in $rightPaddings {
+    .pr-#{$rightPadding} {
+        padding-right: $rightPadding*1px;
+    }
+}

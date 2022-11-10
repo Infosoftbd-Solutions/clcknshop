@@ -1,0 +1,921 @@
+// Product Page
+
+// # Contents
+// 1. Add Buttons
+// 		1.1) Add To Cart
+// 		1.1) Add To Wishlist
+// 		1.1) Add To Compare
+// 2. Product Single Details
+// 		2.1) Details
+// 		2.2) Sticky
+// 		2.3) Single Info List
+// 		2.4) Filter
+// 		2.5) Add to Cart Quantity
+// 		2.6) Share
+// 3. Product Single Gallery
+// 		3.1) Gallery
+// 		3.2) Thumbnail
+// 		3.3) Transparent Dots (Only used in product-full-width.html)
+// 		3.4) Sliders
+// 		3.5) Full Screen Toggler
+// 4. Product Single Tabs
+// 		4.1) Tabs
+// 		4.2) Description Content
+// 		4.3) Tags Content
+// 		4.4) Reviews Content
+// 5. Products Section - Related
+// 6. Responsive
+
+// # Variables
+$product-single-thumbnail-gutter: 3px !default;
+
+// 1. Add Buttons
+
+// 1.1) Add To Cart
+.add-cart {
+	padding: 11px 28px;
+	font-size: 1.4rem;
+	font-weight: 700;
+	letter-spacing: -.015em;
+	line-height: 24px;
+	@if ($second-font-family != $shop-second-font-family) {
+		font-family: $shop-second-font-family;
+	}
+
+	&:before {
+		font-size: 1.8rem;
+		line-height: 0;
+		vertical-align: middle;
+		margin-right: 8px;
+		font-weight: 900;
+	}
+}
+
+// 1.1) Add To Wishlist
+.add-wishlist {
+	display: inline-block;
+	padding: 16px 8px;
+	color: $primary-color-dark;
+	font-size: 1.2rem;
+	font-weight: 700;
+	font-family: $shop-second-font-family;
+	letter-spacing: -.015em;
+	text-transform: uppercase;
+	white-space: nowrap;
+
+	&:before {
+		content: '\e91b';
+		margin-right: .5rem;
+		display: inline-block;
+		font-size: 1.8rem;
+		font-family: 'porto';
+		line-height: 0;
+		transform: translateY(2px);
+	}
+}
+
+// 1.1) Add To Compare
+.add-compare {
+	&:before {
+		content: '\e810';
+		font-size: 1.8rem;
+		font-family: 'porto';
+		margin-right: 6px;
+	}
+}
+
+// 2. Product Single Details
+.product-single-container {
+	margin-bottom: 3rem;
+}
+
+// 2.1) Details
+.product-single-details {
+	margin-top: -.6rem;
+	margin-bottom: 3rem;
+
+	.product-title {
+		margin-bottom: .5rem;
+		color: $primary-color-dark;
+		font-size: 3rem;
+		font-weight: 700;
+		letter-spacing: -.01em;
+		@if ($second-font-family != $shop-second-font-family) {
+			font-family: $shop-second-font-family;
+		}
+	}
+
+	.price-box {
+		margin-bottom: 2.4rem;
+		color: $primary-color;
+		font-weight: 700;
+		font-family: $shop-second-font-family;
+	}
+
+	.product-price {
+		font-size: 2.4rem;
+		letter-spacing: -.02em;
+		vertical-align: middle;
+	}
+
+	.old-price {
+		color: #777;
+		font-size: 2rem;
+		vertical-align: middle;
+
+		& + .product-price {
+			margin-left: 1rem;
+		}
+	}
+
+	.short-divider {
+		width: 40px;
+		height: 0;
+		border-top: 2px solid #e7e7e7;
+		margin: 0 0 1.5rem;
+		text-align: left; // align left for IE, Edge
+	}
+
+	.divider {
+		border-top: 1px solid #e7e7e7;
+		margin: 2rem 0;
+	}
+
+	.divider + .product-action {
+		margin-top: -.5rem;
+	}
+
+	.product-action + .divider {
+		margin-top: 1.5rem;
+	}
+
+	.ratings-container {
+		margin-bottom: 2.1rem;
+
+		.product-ratings,
+		.ratings {
+			font-size: 1.4rem;
+		}
+
+		.product-ratings {
+			height: 14px;
+
+			&:before {
+				color: #999;
+			}
+		}
+
+		.ratings:before {
+			color: #FD5B5A;
+		}
+	}
+
+	.rating-link {
+		color: $body-text;
+		font-size: 1.4rem;
+		font-weight: 400;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.product-desc {
+		margin-bottom: 4.2rem;
+		font-size: 1.6rem;
+		letter-spacing: -.015em;
+		line-height: 1.92;
+
+		a {
+			color: $primary-color-dark;
+			border-bottom: 1px solid $primary-color-dark;
+		}
+	}
+
+	.container {
+		align-items: center;
+		-ms-flex-align: center;
+
+		img {
+			max-width: 5rem;
+			max-height: 5rem;
+			margin-right: 2rem;
+		}
+	}
+
+	.product-single-qty{
+		margin: .5rem 4px .5rem 0;
+
+		.form-control {
+			height: 4.8rem;
+			font-size: 1.6rem;
+			font-weight: 700;
+		}
+	}
+}
+
+// 2.2) Sticky
+main .sticky-header {
+	&:not(.fixed) {
+		.sticky-img, .sticky-detail {
+			display: none;
+		}
+
+		&.container {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	&.fixed {
+		.container, .container-fluid {
+			display: flex;
+			display: -ms-flexbox;
+			align-items: center;
+			-ms-flex-align: center;
+			flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+		}
+
+		.product-action {
+			flex: 1;
+			-ms-flex: 1;
+			border: 0;
+			margin: 0;
+			padding: 0;
+			min-width: 260px;
+			text-align: right;
+		}
+	}
+
+	.sticky-img img {
+		max-width: 60px;
+	}
+
+	.sticky-detail {
+		display: flex;
+		display: -ms-flexbox;
+	}
+
+	.product-title {
+		margin-right: 2rem;
+		margin-bottom: 0;
+		font-size: 16px;
+		font-weight: 600;
+	}
+
+	.price-box {
+		margin: 0;
+		color: #2b2b2d;
+		font-family: 'Oswald', 'Poppins';
+		font-weight: 400;
+	}
+
+	.old-price {
+		font-size: 1.4rem;
+	}
+
+	.product-price {
+		font-size: 1.8rem;
+	}
+
+	.ratings-container {
+		line-height: 24px;
+	}
+
+	.product-ratings:before {
+		color: rgba(0,0,0,0.16);
+	}
+}
+
+.product-both-info {
+	.product-single-details {
+		margin-top: 0;
+
+		.product-desc {
+			border-bottom: 0;
+		}
+	}
+}
+
+// 2.3) Single Info List
+.single-info-list {
+	margin-bottom: 2rem;
+	padding: 0;
+	font-size: 1.2rem;
+	line-height: 1.5;
+	letter-spacing: .005em;
+	text-transform: uppercase;
+
+	li {
+		margin-bottom: 1rem;
+		letter-spacing: .005em;
+
+		strong {
+			color: #4c4c4c;
+		}
+	}
+}
+
+// 2.4) Filter
+.product-single-filter {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-bottom: 2.1rem;
+
+	label {
+		margin-right: 1.3rem;
+		margin-bottom: 0;
+		color: $body-text;
+		font-weight: 400;
+		font-family: $shop-font-family;
+		letter-spacing: .005em;
+		text-transform: uppercase;
+	}
+
+	.config-swatch-list {
+		display: inline-flex;
+		margin: 0;
+	}
+
+	.config-size-list li {
+		margin-bottom: 0;
+
+		&:not(:last-child) {
+			margin-right: .7rem;
+		}
+
+		a {
+			min-width: 3rem;
+			height: 3rem;
+			border: 1px solid #dae2e6;
+			background-color: #f4f4f4;
+			color: #21293c;
+			font-size: 1.5rem;
+			font-weight: 600;
+			line-height: 2.8rem;
+
+			&:hover,
+			&:focus {
+				border-color: $secondary-color;
+				background-color: #f4f4f4;
+				color: #21293c;
+			}
+		}
+
+		&.active a {
+			border-color: $secondary-color;
+			outline: none;
+			background-color: #f4f4f4;
+			color: #21293c;
+		}
+	}
+
+	&.product-single-qty {
+		max-width: 148px;
+		max-height: 7.5rem;
+		border-bottom: 0;
+	}
+}
+
+// 2.5) Add to Cart Quantity
+.product-single-qty label {
+	color: $primary-color-dark;
+	font-weight: 600;
+	font-size: 1.5rem;
+}
+
+// 2.6) Share
+.product-single-share {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+
+	label {
+		margin-right: 1.2rem;
+		margin-bottom: .5rem;
+		color: $primary-color-dark;
+		font-weight: 600;
+		font-size: 1.4rem;
+		line-height: 1.1;
+		font-family: $shop-font-family;
+		letter-spacing: .005em;
+		text-transform: uppercase;
+	}
+
+	.social-icon {
+		border-radius: 50%;
+		line-height: 2em;
+		border: 2px solid transparent;
+		margin: 0.2857em 0.4285em 0.2857em 0;
+
+		&:not(:hover):not(:active):not(:focus) {
+			color: $primary-color-dark;
+			background-color: transparent;
+			border-color: #e7e7e7;
+		}
+	}
+}
+
+
+// 3. Product Single Gallery
+
+// 3.1) Gallery
+.product-single-gallery {
+	margin-bottom: 3rem;
+
+	.sticky-slider {
+		position: relative;
+	}
+
+	a {
+		display: block;
+	}
+
+	img {
+		display: block;
+		width: 100%;
+		max-width: none;
+		height: auto;
+	}
+
+	.owl-nav {
+		font-size: 2.8rem;
+
+		.owl-prev {
+			left: 2.5rem;
+		}
+
+		.owl-next {
+			right: 2.5rem;
+		}
+
+		button {
+			transition: opacity .5s;
+			opacity: .5;
+		}
+	}
+
+	.product-item {
+		position: relative;
+
+		&:not(:last-child) {
+			margin-bottom: 4px;
+		}
+	}
+
+	.product-single-grid {
+		margin-bottom: 3.6rem;
+	}
+}
+
+// 3.2) Thumbnail
+.prod-thumbnail {
+	display: flex;
+	display: -ms-flexbox;
+	margin: $product-single-thumbnail-gutter -#{$product-single-thumbnail-gutter} 0;
+
+	> .owl-dot {
+		flex: 1;
+		-ms-flex: 1 1 100px; // only for IE
+		margin: $product-single-thumbnail-gutter;
+	}
+
+	img {
+		width: 100%;
+		cursor: pointer;
+	}
+
+	.active img, img:hover {
+		border: 2px solid #21293c;
+	}
+}
+
+// 3.3) Transparent Dots
+// Only used in product-full-width.html
+.transparent-dots {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	width: 110px;
+	margin: 0;
+	padding: 0;
+	z-index: 99;
+
+	.owl-dot {
+		margin: 4px;
+		border: 1px solid rgba(0,0,0,0.1);
+		transition: border-color .2s;
+
+		img {
+			border: 0;
+			opacity: .5;
+		}
+
+		&.active,
+		&:hover {
+			border-color: $primary-color;
+		}
+	}
+}
+
+// 3.4) Sliders
+.product-slider-container {
+	position: relative;
+
+	&:hover {
+		.prod-full-screen,
+		.owl-prev,
+		.owl-next {
+			opacity: 1;
+		}
+	}
+}
+
+// 3.5) Full Screen Toggler
+.prod-full-screen {
+	position: absolute;
+	right: 2rem;
+	bottom: 1.7rem;
+	transition: all .5s;
+	outline: none;
+	opacity: 0;
+	z-index: 1;
+
+	i {
+		color: #000;
+		font-size: 1.4rem;
+		cursor: pointer;
+	}
+}
+
+// 4. Product Single Tabs
+
+// 4.1) Tabs
+.product-single-tabs {
+	margin-bottom: 5.5rem;
+
+	.tab-pane {
+		padding-top: 3.5rem;
+		color: #7b858a;
+		line-height: 1.92;
+	}
+
+	.sticky-header {
+		height: auto;
+	}
+
+	.nav.nav-tabs .nav-item .nav-link {
+		color: #818692;
+
+		&.active {
+			color: $primary-color-dark;
+		}
+	}
+
+	.nav.nav-tabs .nav-link {
+		font-family: $shop-font-family;
+
+		&:hover,
+		&.active {
+			border-bottom-color: $primary-color-dark;
+		}
+	}
+}
+
+.scrolling-box .tab-pane + .tab-pane {
+	margin-top: 3.5rem;
+	border-top: 2px solid #dae2e6;
+}
+
+// 4.2) Description Content
+.product-desc-content {
+	p {
+		margin-bottom: 2.2rem;
+		letter-spacing: -.015em;
+	}
+
+	ul,
+	ol {
+		margin-bottom: 2.2rem;
+		padding-left: 2.1rem;
+		letter-spacing: .005em;
+	}
+
+	li {
+		margin-bottom: .4rem;
+
+		i {
+			margin-right: 1.2rem;
+			color: #21293c;
+			font-size: 1.5rem;
+		}
+	}
+
+	img.float-right,
+	img.float-left {
+		max-width: 50%;
+	}
+
+	.feature-box i {
+		float: none;
+		display: inline-block;
+	}
+
+	.feature-box-content {
+		margin-left: 0;
+	}
+}
+
+// 4.3) Tags Content
+.product-tags-content {
+	h4 {
+		margin: 0 0 2rem;
+		font-size: 1.8rem;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	form {
+		margin-bottom: 2rem;
+	}
+
+	.form-group {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-align: stretch;
+		align-items: stretch;
+	}
+
+	.form-control{
+		margin-right: 10px;
+	}
+
+	.btn {
+		padding-top: .5rem;
+		padding-bottom: .5rem;
+	}
+}
+
+// 4.4) Reviews Content
+.product-reviews-content {
+	line-height: 1.92;
+
+	.reviews-title {
+		font-size: 1.6rem;
+		font-weight: 600;
+		letter-spacing: -.015em;
+		margin-bottom: 0;
+	}
+}
+
+.comment-container {
+	display: flex;
+	display: -ms-flexbox;
+	padding: 29px 0 8px;
+
+	&:not(:first-child) {
+		border-top: 1px solid #e7e7e7;
+	}
+
+	.comment-avatar {
+		flex: 1 0 auto;
+		padding: 0 22px 5px 8px;
+	}
+
+	img {
+		border-radius: 10rem;
+	}
+
+	.ratings-container {
+		margin-bottom: 6px;
+	}
+
+	.product-ratings,
+	.ratings {
+		font-size: 14px;
+	}
+
+	.product-ratings:before {
+		color: #999;
+	}
+
+	.ratings:before {
+		color: #FD5B5A;
+	}
+
+	.comment-info {
+		font-family: $shop-font-family;
+		font-size: 1.4rem;
+		line-height: 1;
+		letter-spacing: -.02em;
+	}
+
+	.avatar-name {
+		display: inline;
+		font-family: inherit;
+		font-size: inherit;
+	}
+
+	.comment-text {
+		letter-spacing: -0.015em;
+	}
+}
+
+.add-product-review {
+	background-color: #f4f4f4;
+	padding: 3rem 2rem 3.5rem;
+
+	h3 {
+		font-size: 1.6rem;
+		margin-bottom: 2.4rem;
+	}
+
+	label {
+		display: block;
+		font-size: 1.4rem;
+		font-weight: 600;
+		line-height: 1;
+		margin-bottom: 1.1rem;
+	}
+
+	.form-control {
+		font-size: 1.4rem;
+		margin-bottom: 3rem;
+		max-width: 100%;
+	}
+
+	.btn {
+		padding: .93em 1.78em;
+	}
+}
+
+.rating-stars {
+	display: flex;
+	display: -ms-flexbox;
+	position: relative;
+	height: 14px;
+	font-size: 1.4rem;
+	margin-bottom: 2.8rem;
+
+	a {
+		color: #999;
+		text-indent: -9999px;
+		letter-spacing: 1px;
+		width: 16px;
+	}
+
+	a:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		height: 14px;
+		line-height: 1;
+		font-family: 'Font Awesome 5 Free';
+		text-indent: 0;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+
+	a.active:before,
+	a:hover:before {
+		content: '\f005\f005\f005\f005\f005';
+		font-weight: 900;
+	}
+
+	.star-1 {
+		z-index: 10;
+	}
+
+	.star-2 {
+		z-index: 9;
+	}
+
+	.star-3 {
+		z-index: 8;
+	}
+
+	.star-4 {
+		z-index: 7;
+	}
+
+	.start-5 {
+		z-index: 6;
+	}
+
+	.star-1:before {
+		width: 16px;
+	}
+
+	.star-2:before {
+		width: 32px;
+	}
+
+	.star-3:before {
+		width: 48px;
+	}
+
+	.star-4:before {
+		width: 64px;
+	}
+
+	.star-5:before {
+		content: '\f005\f005\f005\f005\f005';
+	}
+}
+
+// 5. Products Section - Related
+
+.products-section {
+	padding-top: 3.8rem;
+	padding-bottom: 3rem;
+
+	h2 {
+		padding-bottom: 1rem;
+		border-bottom: 1px solid #e7e7e7;
+		margin-bottom: 2.4rem;
+		font-size: 1.8rem;
+		font-family: $shop-font-family;
+		line-height: 22px;
+		letter-spacing: -.01em;
+		text-transform: uppercase;
+	}
+
+	&.pt-sm {
+		padding-top: 2.5rem;
+	}
+}
+
+// 6. Responsive
+
+@include mq(xxl, max) {
+	.transparent-dots {
+		width: 90px;
+	}
+}
+
+@include mq(md) {
+	.products-section {
+		padding-top: 4.8rem;
+		padding-bottom: 4rem;
+	}
+
+	.product-both-info .product-single-share {
+		-ms-flex-pack: end;
+		justify-content: flex-end;
+	}
+
+	.add-product-review {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+}
+
+@include mq(lg) {
+	.product-single-container {
+		.col-lg-7 {
+			-ms-flex: 0 0 55.56%;
+			flex: 0 0 55.56%;
+			max-width: 55.56%;
+		}
+
+		.col-lg-5 {
+			-ms-flex: 0 0 44.44%;
+			flex: 0 0 44.44%;
+			max-width: 44.44%;
+		}
+	}
+}
+
+@include mq(lg, max) {
+	.transparent-dots {
+		top: 10px;
+		left: 10px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.product-all-icons.product-action {
+		.product-single-qty {
+			margin-right: 50%;
+			margin-bottom: 1.2rem;
+		}
+	}
+}
+
+@include mq(sm) {
+	.product-tags-content .form-control {
+		width: 250px;
+	}
+}
+
+@include mq(sm, max) {
+	.transparent-dots {
+		width: 70px;
+	}
+}

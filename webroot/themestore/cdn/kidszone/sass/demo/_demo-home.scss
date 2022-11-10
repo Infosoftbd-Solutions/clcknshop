@@ -1,0 +1,696 @@
+.owl-carousel {
+    overflow: hidden;
+}
+
+.home-banner.banner {
+    height: 100vh;
+    font-size: 1.6rem;
+
+    h4 {
+        font-size: 1.4375em;
+        color: rgba(34,37,41,0.7);
+    }
+    
+    h3 {
+        font-size: 7.125em;
+        text-transform: uppercase;
+    }
+    
+    h2 {
+        font-size: 4.0625em;
+        letter-spacing: .005em;
+    }
+
+    .banner-layer {
+        left: 20%;
+        padding-left: 12.5px;
+    }
+
+    .btn-lg {
+        font-size: 1.125em;
+        padding: 1.05em 3.125em;        
+    }
+
+    .coupon-sale-text {
+        margin: 0 12px;
+    }
+
+    h5 {
+        span {
+            transform: translateY( -3px );
+        }
+    }
+}
+
+.banner {
+    font-size: 0.83333vw;
+
+    &.banner-2 img {
+        min-height: 26.25em;        
+    }
+
+    figure img {
+        min-height: 19.375em;
+        max-height: 90vw;
+    }
+
+    h4 {
+        letter-spacing: .08em;
+        font-weight: 500;
+    }
+
+    h2 {
+        font-family: 'Segoe Script','Savoye LET';
+    }
+
+    h5 {
+        font-size: 1em;
+        text-transform: uppercase;
+        vertical-align: super;
+
+        span {
+            display: inline-block;
+            letter-spacing: -.02em;
+            transform: translateY( -6px );
+        }
+    }
+
+    .btn-lg {
+        font-size: .8125em;
+    }
+}
+
+.coupon-sale-text {
+    display: inline-block;
+    position: relative;
+    margin: 0 0 2.1rem 1.2rem;
+    padding: .2em .4em;
+    font-size: 2em;
+    transform: rotate(-1.5deg);
+
+    b {
+        padding: 0.5px 12.5px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.6em;
+        background-color: #e8e3e1;
+    }
+
+    em {
+        font-size: 100%;
+        font-style: normal;
+    }
+
+    sup {
+        font-size: 54%;
+    }
+
+    i {
+        position: absolute;
+        left: -2.1em;
+        top: 50%;
+        transform: translateY(-50%) rotate(-90deg);
+        font-size: .65em;
+        font-style: normal;
+        opacity: .6;
+    }
+
+    sub {
+        bottom: -1px;
+        left: 4px;
+        font-size: 118%;
+    }
+}
+
+.btn-lg {
+    font-size: 1.125em;
+    line-height: 1.5;
+}
+
+.cat-section {
+    left: 50%;
+    transform: translate( -50%, -100% );
+    bottom: 1.8rem;
+
+    .btn-lg {
+        width: 100%;
+        padding: 1.7rem 0 1.4rem;
+        font-size: 1.4rem;
+        letter-spacing: -.005em;
+    }
+}
+
+// banner section
+
+.banner-section {
+    padding: 6px;
+}
+
+.banner.banner-1 {
+    width: 44%;
+
+    h4 {
+        margin-bottom: 5px;
+        font-size: 0.96em;
+        opacity: .7;
+    }
+
+    h2 {
+        font-size: 3.5em;
+        letter-spacing: .01em;
+    }
+
+    h3 {
+        margin-bottom: 6px;
+        font-size: 4.75em;
+    }
+
+    h5 {
+        font-size: 0.75em;
+        transform: translateY( 7px );
+
+        b {
+            font-size: 1.87em;
+        }
+    }
+
+    .btn {
+        padding: .8em 2.22em;
+        font-size: .8125em;
+    }
+
+    .coupon-sale-text {
+        margin: 0px 2px 0 14px;
+    }
+
+    .banner-layer {
+        padding: 2px 0 0 1.4rem;
+        left: 4%;
+        transform: translateY(-52%);
+    }
+}
+
+.banner.banner-2 {
+    width: 32%;
+
+    .btn-block {
+        background-color: #000;
+        width: 95%;
+        transform: translateX( 11px );
+    }
+}
+
+.banner.banner-2, .banner.banner-5 {
+    h3 {
+        margin-bottom: 1.6rem;
+        font-size: 2.25em;
+    }
+
+    h4 {
+        margin-bottom: 1.3rem;
+        padding: .45em .67em;
+        font-size: 1.125em;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.125em;
+        font-weight: 700;
+    }
+
+    .coupon-sale-text {
+        padding: .55em .7em;
+
+        i {
+            font-weight: 600;
+            font-size: .65em;
+        }
+    }
+
+    .banner-layer {
+        right: 14.4%;
+    }
+}
+
+.heading-border {
+    &::before, &::after {
+        content: '';
+        margin: 0 8px;
+        height: 0;
+        border-top: 1px solid #e0e2e4;
+        flex: 1;
+        -ms-flex: 1;
+    }
+}
+
+.banner.banner-3 {
+    width: 24%;
+
+    h4 {
+        margin-bottom: 8px;
+        font-weight: 600;
+        font-size: 1.1em;
+        letter-spacing: .2em;
+    }
+
+    h3 {
+        margin-bottom: 1.3rem;
+        font-size: 2.5em;
+    }
+
+    img {
+        height: 46em;
+    }
+
+    .sub-title {
+        padding-top: 11px;
+        opacity: .7;
+        font-weight: 500;
+    }
+
+    .btn {
+        font-size: .8125em;
+        padding: 1.15rem 3rem;
+    }
+
+    .banner-layer-top {
+        top: 9.3%;
+    }
+
+    .banner-layer-bottom {
+        bottom: 9.1%;
+    }
+}
+
+.banner.banner-4 {
+    width: 76%;
+
+    h2 {
+        margin-bottom: 8px;
+        font-size: 2.0625em;
+        font-weight: 400;
+        opacity: .7;
+    }
+
+    h4 {
+        font-size: 3.125em; 
+    }
+
+    h3 {
+        font-size: 8.75em;
+
+        small {
+            width: 1em;
+            word-break: break-all;
+            font-size: 27%;
+        }
+    }
+
+    .banner-layer {
+        left: 5%;
+        right: 42%;
+        padding-left: 2px;
+    }
+
+    .banner-layer-right {
+        margin: 2px -4px 0 0;
+    }
+
+    .banner-layer-left {
+        padding-top: 2.7rem;
+    }
+}
+
+.banner.banner-5 {
+    h3 {
+        font-size: 2.85em;
+        line-height: 1.2;
+    }
+
+    h4 {
+        font-size: 1.45em;
+    }
+
+    img {
+        min-height: 23.5em;
+    }
+
+    .btn-lg {
+        max-width: 100%;
+        padding: 1.375em 4.5em;
+        font-size: 1em;
+    }
+
+    .coupon-sale-text {
+        padding: .55em .4em;
+
+        b {
+            font-size: 2em;
+        }
+
+        sub {
+            font-size: 145%;
+        }
+
+        i {
+            font-size: .82em;
+            left: -2.2em;
+        }
+    }
+}
+
+.banner.banner-6 {
+    h2 {
+        font-size: 1.75em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+        font-weight: 500;
+        line-height: 1.2;
+        color: #a2a2a2;
+    }
+
+    h4 {
+        font-size: 2.25em;
+        font-weight: 700;
+        line-height: 1.1;
+    }
+
+    sup {
+        font-size: 54%;
+        top: -.55em;
+    }
+
+    .btn-lg {
+        padding: 1.05em 2.25em;
+        font-size: 1.125em;
+    }
+
+    .banner-layer {
+        top: 31.5%;
+        right: 10.5%;
+    }
+}
+
+.banner-6 {
+    width: 26%;
+
+    figure img {
+        min-height: 46.25em;
+    }
+}
+
+.banner.banner-7 {
+    width: 34%;
+
+    figure img {
+        height: 26.75em;
+    }
+
+    h4 {
+        margin-bottom: 1.6rem;
+        font-size: 0.875em;
+        letter-spacing: .2em;
+    }
+
+    h3 {
+        font-size: 1.9375em;
+        letter-spacing: .15em;
+
+        span {
+            margin: 3px 0  2.4rem;
+            letter-spacing: .15em;
+            font-size: 1.065em;
+        }
+    }
+
+    .btn {
+        padding: 1em 3em;
+        background: #000;
+        font-size: .875em;
+    }
+
+    .row img {
+        filter: brightness( 0 ) invert( 1 );
+    }
+
+    .banner-layer-right {
+        left: 51.9%;
+        right: 5.5%;
+    }
+
+    h5 {
+        left: 50%;
+        font-size: 1.15em;
+        transform: translateX( -50% ) rotate( -1.5deg );
+    }
+}
+
+.service-grid {
+    width: 24%;
+    padding: 5px 4px 0 2px;
+
+    &.service-grid-2 {
+        width: 26%;
+    }
+}
+
+.service-grid .feature-box {
+    height: 100%;
+    min-height: 19.125em;
+    font-size: 0.83333vw;
+    background-color: #f6f7f9;
+
+    i {
+        margin-bottom: 1.7rem;
+        font-size: 3.5rem;
+    }
+
+    h3 {
+        margin-bottom: 2px;
+        font-size: 1.25em;
+    }
+
+    h5 {
+        margin-bottom: 13px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 0.875em; 
+        font-weight: 600;
+        color: #979797;
+    }
+
+    p {
+        font-family: "Open Sans", sans-serif;
+        font-size: 0.8125em;
+        line-height: 1.8;
+    }
+
+    .feature-content {
+        width: 87%;
+    }
+}
+
+.banner-8 {
+    width: 40%;
+
+    .banner-label {
+        position: absolute;
+        border-radius: 50%;
+        width: 2.25em;
+        height: 2.25em;
+        background-color: $primary-color-dark;
+        padding-top: calc(1.125em - .5em);
+        letter-spacing: -.08em;
+        line-height: 1;
+        color: #fff;
+        text-align: center;
+    }
+
+    .left-label {
+        left: 8.3%;
+        top: 15.5%;
+        font-size: 2.125em;
+    }
+
+    .right-label {
+        right: 8.2%;
+        top: 16.5%;   
+        font-size: 1.6em;
+    }
+
+    .bottom-label {
+        font-size: 1.3475em;
+        right: 44%;
+        bottom: 15%;
+    }
+
+    h3 {
+        font-size: 2.5625em;
+    }
+
+    h4 {
+        margin-bottom: 2.5rem;
+        font-size: 1.75em;
+        font-weight: 600;
+    }
+
+    .btn {
+        font-size: 1em;
+        padding: 1em 3em;
+    }
+
+    sup {
+        position: static;
+        font-size: 75%;
+    }
+
+    sub {
+        display: block;
+        font-size: 36%;
+        line-height: 1;
+        position: static;
+        font-weight: 400;
+        letter-spacing: 0;
+        padding-left: .1em;
+        letter-spacing: -.025em;
+        opacity: .5;
+    }
+
+    small {
+        letter-spacing: -0.025em;
+        font-size: 70%;
+        display: inline-block;
+        font-weight: inherit;
+    }
+
+    figure {
+        min-height: 26.75em;
+        border: .8rem solid $primary-color-dark;
+    }
+
+    .banner-layer {
+        top: 44%;
+    }
+}
+
+.banner.grid-item {
+    padding: 0.1875em;
+}
+
+.grid-item {
+    position: absolute;
+}
+
+.banners-grid {
+    position: relative;
+    margin: -0.1875em -0.1875em 0.1875em;
+    font-size: 0.83333vw;
+
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.grid-col-sizer {
+    width: 2%;
+    flex: 0 0 2%;
+}
+
+// brand section, product-collection
+
+.brand-section {
+    padding-top: 4.4rem;
+
+    .owl-carousel .owl-item img {
+        width: auto;
+        height: 100%;
+        margin: 0 auto;
+    }
+}
+
+.brands-slider {
+    padding-bottom: 4.8rem;
+    border-bottom: 1px solid #e7e7e7;    
+}
+
+.section-title {
+    margin: 4.5rem 0 1.3rem;
+}
+
+.top-collection .product-default {
+    margin-top: -1px;
+}
+
+.products-slider {
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.small-products-collection {
+    padding: 4.8rem 0 3rem;
+}
+
+.product-default.product-widget {
+    margin-bottom: 1.6rem;
+
+    .product-details {
+        margin-top: -2px;
+    }
+
+    .product-title {
+        margin-bottom: 7px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.4rem;
+        letter-spacing: 0.005em;
+    }
+
+    .ratings-container {
+        margin-bottom: 1.4rem;
+        margin-left: 0;
+    }
+}
+
+@include mq( md, max ) {
+    .home-banner .banner-layer {
+        font-size: 12px;
+        left: 5%;
+    }
+
+    .banner.grid-item {
+        width: 100%;
+    }
+
+    .banner.banner-4 .banner-layer-left {
+        padding-top: 0;
+    }
+
+    .service-grid.grid-item {
+        width: 100%;
+    }
+
+    .service-grid .feature-box {
+        font-size: 1.6rem;
+    }
+    
+    .banner {
+        font-size: 2vw;
+    }
+
+    .banner.banner-5 {
+        font-size: 1.2vw;
+    }
+
+    .banner-layer-middle {
+        top: 50% !important;
+    }
+}
+
+@include mq( sm, max) {
+    .home-banner.banner .banner-layer {
+        left: 0;
+    }
+}
+
+@include mq( 425px, max ) {
+    .home-banner .banner-layer {
+        font-size: 1rem;
+    }
+}

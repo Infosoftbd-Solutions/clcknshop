@@ -1,0 +1,71 @@
+#map {
+	height: 280px;
+	margin-bottom: 4rem;
+	background-color: #ccc;
+
+	address {
+		margin: 0;
+		padding: .625rem .875rem;
+		font-size: 1.3rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 1.5;
+	}
+
+	a {
+		display: inline-block;
+		margin-top: .8rem;
+		font-size: 1.2rem;
+		text-transform: uppercase;
+	}
+}
+
+.contact-info {
+	margin-bottom: 3rem;
+	padding-top: .5rem;
+}
+
+.contact-info > div {
+	@include clearfix;
+	margin-bottom: 1.5rem;
+}
+
+.contact-info i {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	width: 4.3rem;
+	height: 4.3rem;
+	float: left;
+	border-radius: 0;
+	background-color: $primary-color;
+	color: #fff;
+	font-size: 1.6rem;
+	text-align: center;
+}
+
+.contact-info p {
+	margin-bottom: 0;
+	margin-left: 5.5rem;
+
+	&:first-of-type {
+		padding-top: .1rem;
+	}
+}
+
+@include mq(md) {
+	#map {
+		height: 380px;
+		margin-bottom: 5rem;
+	}
+}
+
+@include mq(lg) {
+	#map {
+		height: 460px;
+		margin-bottom: 6rem;
+	}
+}

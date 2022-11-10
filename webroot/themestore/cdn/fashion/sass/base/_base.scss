@@ -1,0 +1,206 @@
+// Base
+
+// # Variables
+
+@include set-default (
+	(
+		body: (
+			background: #fff
+		)
+	)
+);
+
+html {
+	overflow-x: hidden;
+	font-size: 62.5%;
+	font-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	color: $body-text;
+	@include css( background, body, background );
+	font-size: #{$font-size};
+	font-weight: 400;
+	line-height: 1.4;
+	font-family: $font-family;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
+
+	&:not(.loaded) > *:not(.loading-overlay) {
+		visibility: hidden;
+	}
+}
+
+::-moz-selection {
+	background-color: $primary-color;
+	color: #fff;
+}
+
+::selection {
+	background-color: $primary-color;
+	color: #fff;
+}
+
+p {
+	margin-bottom: 1.5rem;
+}
+
+ul,
+ol {
+	margin: 0 0 2.25rem;
+	padding: 0;
+	list-style: none;
+}
+
+b,
+strong {
+	font-weight: 700;
+}
+
+em,
+i {
+	font-style: italic;
+}
+
+hr {
+	max-width: 1730px;
+	margin: 5.5rem auto 5.2rem;
+	border: 0;
+	border-top: 1px solid #e7e7e7;
+}
+
+sub,
+sup {
+	font-size: 70%;
+}
+
+sup {
+	font-size: 50%;
+}
+
+sub {
+	bottom: -.25em;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+button:focus {
+	outline: none;
+}
+
+// add product to cart message box / bs-modal
+body.modal-open {
+	padding-right: 0 !important;
+}
+
+@keyframes rotating {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(359deg);
+	}
+}
+
+@keyframes bouncedelay {
+	0%,
+	80%,
+	100% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+
+	40% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+@-webkit-keyframes bouncedelay {
+	0%,
+	80%,
+	100% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+
+	40% {
+		transform: scale(1);
+	}
+}
+
+.loading-overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transition: all .5s ease-in-out;
+	background: #fff;
+	opacity: 1;
+	visibility: visible;
+	z-index: 999999;
+
+	.loaded > & {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+.bounce-loader {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 70px;
+	margin: -9px 0 0 -35px;
+	transition: all .2s;
+	text-align: center;
+	z-index: 10000;
+
+	.bounce1,
+	.bounce2,
+	.bounce3 {
+		display: inline-block;
+		width: 18px;
+		height: 18px;
+		border-radius: 100%;
+		background-color: #CCC;
+		box-shadow: 0 0 20px 0 rgba(0, 0, 0, .15);
+		-webkit-animation: 1.4s ease-in-out 0s normal both infinite bouncedelay;
+		animation: 1.4s ease-in-out 0s normal both infinite bouncedelay;
+	}
+
+	.bounce1 {
+		-webkit-animation-delay: -.32s;
+		animation-delay: -.32s;
+	}
+
+	.bounce2 {
+		-webkit-animation-delay: -.16s;
+		animation-delay: -.16s;
+	}
+}
+
+@include mq(md, max) {
+	html {
+		font-size: 9px;
+	}
+}

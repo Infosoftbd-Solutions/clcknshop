@@ -1,0 +1,259 @@
+// Footer
+
+// # Contents
+// 1. Footer Base
+// 2. Footer Elements
+// 2.1) Social Icon
+// 2.2) Scroll Top Button
+// 3. Footer Widget
+// 3.1) Footer Widget Title
+// 3.2) Footer Widget Link
+
+// # Variables
+@include set-default(
+	(
+		footer: (
+			color: false,
+			background: false,
+			link-color: false,
+			link-active-color: false,
+			line-height: 24px,
+			letter-spacing: false,
+
+			top: (
+				color: false,
+				background: false,
+				border-top: false,
+				padding-top: false,
+				padding-bottom: false
+			),
+			middle: (
+				color: false,
+				background: false,
+				border-top: false,
+				padding-top: false,
+				padding-bottom: false
+			),
+			bottom: (
+				font-size: false,
+				color: false,
+				background: false,
+				border-top: false,
+				padding-top: false,
+				padding-bottom: false
+			),
+
+			widget: (
+				title: (
+					color: false,
+					size: 1.6rem,
+					weight: 600,
+					family: false,
+					transform: uppercase,
+					margin: 0 0 1.7rem
+				),
+
+				link: (
+					space: false
+				)
+			),
+
+			social-icon: (
+				color: false,
+				background: transparent,
+				font-size: 1.8rem,
+				size: 4rem,
+				space: false,
+				border: false
+			),
+
+		)
+	)
+);
+
+// 1. Footer Base
+
+footer {
+	// Footer's color, font-size
+	font-size: $footer-font-size;
+	@include css( color, footer, color );
+	@include css( background, footer, background );
+	@include css( line-height, footer, line-height );
+	@include css( letter-spacing, footer, letter-spacing );
+
+	.container {
+		position: relative;
+	}
+
+	p {
+		color: inherit;
+	}
+}
+
+// Link Color
+@if ( get( footer, link-color ) ) {
+	.footer a {
+		color: get( footer, link-color );
+	}
+} @else {
+	footer a {
+		color: inherit;
+	}
+}
+
+footer {
+	a:hover,
+	a:focus {
+		@include css( color, footer, link-active-color);
+	}
+}
+
+.footer {
+	&-top {
+		@include css( color, footer, top, color );
+		@include css( background, footer, top, background );
+		@include css( border-top, footer, top, border-top );
+		@include css( padding-top, footer, top, padding-top );
+		@include css( padding-bottom, footer, top, padding-bottom );
+
+	}
+
+	&-middle {
+		@include css( color, footer, middle, color );
+		@include css( background, footer, middle, background );
+		@include css( border-top, footer, middle, border-top );
+		@include css( padding-top, footer, middle, padding-top );
+		@include css( padding-bottom, footer, middle, padding-bottom );
+	}
+
+	&-bottom {
+		@include css( font-size, footer, bottom, font-size );
+		@include css( color, footer, bottom, color );
+		@include css( background, footer, bottom, background );
+		@include css( border-top, footer, bottom, border-top );
+		@include css( padding-bottom, footer, bottom, padding-bottom );
+
+		@if ( get( footer, bottom, border-top-inner ) ) {
+			.container:before {
+				content: '';
+				display: block;
+				flex: 0 0 100%;
+				-ms-flex: 0 0 100%;
+				border-top: get( footer, bottom, border-top-inner );
+				@include css( padding-top, footer, bottom, padding-top );
+			}
+		} @else {
+			@include css( padding-top, footer, bottom, padding-top );
+		}
+	}
+}
+
+footer {
+// 2. Footer Elements
+
+// 2.1) Social Icon
+	.social-icon {
+		border-radius: 50%;
+		@include css( width, footer, social-icon, size);
+		@include css( height, footer, social-icon, size);
+		@include css( border, footer, social-icon, border );
+		@include css( color, footer, social-icon, color );
+		@include css( font-size, footer, social-icon, font-size );
+		@include css( line-height, footer, social-icon, size);
+
+		&:not(:hover):not(:active):not(:focus) {
+			@include css( background, footer, social-icon, background);
+		}
+
+		@if get( footer, social-icon, space ) {
+			& + .social-icon {
+				margin-left: get( footer, social-icon, space );
+			}
+		}
+	}
+
+// 2.2) Footer Widget
+	.widget {
+		margin-bottom: 3rem;
+	}
+
+	.widget-title {
+		@include css(color, footer, widget, title, color);
+		@include css(font-size, footer, widget, title, size);
+		@include css(font-weight, footer, widget, title, weight);
+		@include css(font-family, footer, widget, title, family);
+		@include css(text-transform, footer, widget, title, transform);
+		@include css(margin, footer, widget, title, margin);
+	}
+
+	.links li {
+		@include css(margin-bottom, footer, widget, link, space);
+	}
+
+// 2.3) Tag Cloud
+	.tagcloud a {
+		padding: .6em;
+		margin: 0 .8rem .8rem 0;
+		border: 1px solid #313438;
+		color: inherit;
+		font-size: 11px;
+		background: transparent;
+
+		&:hover {
+			border-color: #fff;
+			background: transparent;
+		}
+	}
+
+// 2.4) Contact Info
+	.contact-info {
+		margin: 0;
+		padding: 0;
+
+		li {
+			position: relative;
+			margin-bottom: 1rem;
+			line-height: 1.4;
+		}
+	}
+
+	.contact-info-label {
+		display: block;
+		@include css( color, footer, widget, title, color );
+		font-weight: 400;
+		text-transform: uppercase;
+		margin-bottom: 1px;
+	}
+}
+
+// 4. Scroll Top Button
+#scroll-top {
+	height: 40px;
+	position: fixed;
+	right: 15px;
+	width: 40px;
+	z-index: 9999;
+	bottom: 0;
+	color: #fff;
+	background-color: #43494e;
+	font-size: 16px;
+	text-align: center;
+	line-height: 1;
+	padding: 11px 0;
+	visibility: hidden;
+	opacity: 0;
+	border-radius: $border-radius $border-radius 0 0;
+	transition: all .3s, margin-right 0s;
+	transform: translateY(40px);
+
+	&:hover,
+	&:focus {
+		background-color: #3a4045;
+	}
+
+	&.fixed {
+		transform: translateY(0);
+		opacity: 1;
+		visibility: visible;
+	}
+}

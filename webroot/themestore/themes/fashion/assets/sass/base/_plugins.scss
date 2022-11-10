@@ -1,0 +1,197 @@
+// Customize Plugins
+
+// # Contents
+// 1. Owl Carousel
+// 1.1) Customize Plugin
+// 1.2) Nav Big, Nav Large
+// 1.3) Nav Image Center Pos
+// 1.4) Show Nav Hover
+// 1.5) Nav Inner
+// 1.6) Nav Outer
+// 1.7) Dots Top, Align
+// 1.8) Images Align Center
+// 1.8) Lazy Load - Preview : Home-Slider, Category-Slider
+// 2. noUi Slider
+// 3. Responsive
+
+// # Variables
+
+@include set-default(
+	(
+		owl-carousel: (
+			nav: (
+				image-center: 35%
+			)
+		)
+	)
+);
+
+// 1. Owl Carousel
+.owl-carousel {
+	// 1.1) Customize Plugin
+	// Use This: when dots do not take place in center of circle
+	.owl-dots .owl-dot span:before {
+		width: 7px;
+		height: 7px;
+		margin-top: -3.5px;
+		margin-left: -3.5px;
+	}
+
+	&.dots-m-0 .disabled + .owl-dots {
+		margin: 0;
+	}
+
+	&.dots-mt-1 .disabled + .owl-dots {
+		margin-top: 1rem;
+	}
+
+	// 1.2) Nav Big, Nav Large
+	&.nav-big .owl-nav {
+		font-size: 3.7rem;
+
+		i {
+			padding: 4px 7px;
+		}
+	}
+
+	&.nav-large .owl-nav {
+		font-size: 4.5rem;
+
+		i {
+			padding: 4px 2px;
+		}
+	}
+
+	// 1.3) Nav Image Center Pos
+	&.nav-image-center .owl-nav button {
+		@include css( top, owl-carousel, nav, image-center );
+	}
+
+	// 1.4) Show Nav Hover
+	&.show-nav-hover {
+		.owl-nav {
+			opacity: 0;
+			transition: opacity .2s, color .2s;
+		}
+
+		&:hover .owl-nav {
+			opacity: 1;
+		}
+	}
+
+	// 1.5) Nav Inner
+	.owl-nav {
+		.owl-prev {
+			left: 1vw;
+		}
+
+		.owl-next {
+			right: 1vw;
+		}
+	}
+
+	// 1.6) Nav Outer
+	@include mq(lg) {
+		&.nav-outer {
+			.owl-prev {
+				left: -1.7vw;
+			}
+	
+			.owl-next {
+				right: -1.7vw;
+			}
+
+			// Large Nav Outer
+			&.nav-large {
+				.owl-prev {
+					left: -2.3vw;
+				}
+		
+				.owl-next {
+					right: -2.3vw;
+				}	
+			}
+		}
+	}
+
+	// 1.7) Dots Top, Align, Small
+	&.dots-top .owl-dots {
+		position: absolute;
+		right: 0;
+		bottom: 100%;
+		margin: 0 0 2.5rem;
+	}
+
+	&.dots-small .owl-dots span {
+		width: 14px;
+		height: 14px;
+
+		&:before {
+			width: 4px;
+			height: 4px;
+			margin-left: -2px;
+			margin-top: -2px;
+		}
+	}
+	
+	// 1.8) Images Align Center
+	&.images-center img {
+		width: auto;
+		margin: auto;
+	}
+}
+
+// -1.7) Dots Align Left
+.dots-left .owl-dots {
+	text-align: left;
+}
+
+
+// 1.9) Lazy Load - Preview : Home-Slider, Category-Slider
+.owl-carousel-lazy {
+	display: block;
+
+	.home-slide:first-child,
+	.category-slide:first-child,
+	.owl-item:first-child .home-slide,
+	.owl-item:first-child .category-slide {
+		display: block;
+	}
+
+	&:not(.owl-loaded) > *:not(:first-child) {
+		display: none;
+	}
+}
+
+.home-slide,
+.category-slide {
+	width: 100%;
+	@include lazy-anim;
+}
+
+div.slide-bg {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+img.slide-bg {
+	object-fit: cover;
+	object-position: center top;
+}
+
+// 2. noUi Slider
+.noUi-target {
+	background: #eee;
+}
+
+.noUi-handle {
+	background: $primary-color;
+}
+
+.noUi-connect {
+	background: none;
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.38) inset;
+}
+
+// 3. Responsive

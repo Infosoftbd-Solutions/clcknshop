@@ -1,0 +1,289 @@
+/*-------- 18. Sidebar style ---------*/
+
+.sidebar-wrapper {
+    &.sidebar-wrapper-mrg-left {
+        margin-left: 20px;
+        @media #{$lg-layout} {
+            margin-left: 0px;
+        }
+        @media #{$md-layout} {
+            margin-left: 0px;
+        }
+        @media #{$xs-layout} {
+            margin-left: 0px;
+        }
+    }
+    &.sidebar-wrapper-mrg-right {
+        margin-right: 20px;
+        @media #{$lg-layout} {
+            margin-right: 0px;
+        }
+        @media #{$md-layout} {
+            margin-right: 0px;
+        }
+        @media #{$xs-layout} {
+            margin-right: 0px;
+        }
+    }
+    @media #{$md-layout} {
+        margin-top: 50px;
+    }
+    @media #{$xs-layout} {
+        margin-top: 30px;
+    }
+}
+.sidebar-widget {
+    h4 {
+        &.sidebar-widget-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0;
+            line-height: 1;
+        }
+    }
+    .sidebar-search {
+        margin-top: 20px;
+        .sidebar-search-form {
+            position: relative;
+            input {
+                background: transparent none repeat scroll 0 0;
+                border: 1px solid #e6e6e6;
+                font-size: 14px;
+                height: 43px;
+                padding: 2px 55px 2px 18px;
+                color: #000;
+                &::-moz-input-placeholder {
+                    color: #000;
+                    opacity: 1;
+                }
+                &::-webkit-input-placeholder {
+                    color: #000;
+                    opacity: 1;
+                }
+            }
+            button {
+                background: transparent none repeat scroll 0 0;
+                border-color: #a1a5aa;
+                border-image: none;
+                border-style: none none none solid;
+                border-width: medium medium medium 1px;
+                padding: 1px 15px 0;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+                color: #000;
+                transition: all .3s ease 0s;
+                font-size: 17px;
+                &:hover {
+                    color: $theme-color-red;
+                }
+            }
+        }
+    }
+    .shop-catigory {
+        margin-top: 18px;
+        ul {
+            li {
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                a {
+                    color: $black;
+                    display: block;
+                    &:hover {
+                        color: $theme-color-red;
+                    }
+                }
+            }
+        }
+    }
+    .price-filter {
+        margin-top: 15px;
+        span {
+            display: block;
+            margin: 0 0 16px;
+        }
+        .price-slider-amount {
+            input {
+                background: transparent;
+                padding: 0;
+                border: none;
+                font-size: 15px;
+                font-weight: 500;
+            }
+        }
+        #slider-range {
+            background: #dbdbdb none repeat scroll 0 0;
+            border: medium none;
+            border-radius: 0px;
+            height: 5px;
+            margin-bottom: 12px;
+            margin-left: auto;
+            margin-top: 5px;
+            span {
+                transition: all .0s ease 0s;
+            }
+            .ui-slider-range {
+                position: absolute;
+                display: block;
+                border: 0;
+                background: $theme-color-red none repeat scroll 0 0;
+                border: none;
+                transition: all .0s ease 0s;
+            }
+            .ui-slider-handle {
+                background: #fff none repeat scroll 0 0;
+                border: medium none;
+                border-radius: 50%;
+                height: 15px;
+                margin-left: 0;
+                width: 15px;
+                border: 4px solid $theme-color-red;
+            }
+        }
+        .price-slider-amount {
+            .label-input {
+                input {
+                    color: $black;
+                    height: 37px;
+                }
+            }
+            button {
+                background-color: $black;
+                border: medium none;
+                color: #fff;
+                line-height: 1;
+                padding: 8px 16px;
+                cursor: pointer;
+                transition: all .3s ease 0s;
+                &:hover {
+                    background-color: $theme-color-red;
+                }
+            }
+        }
+    }
+    .sidebar-widget-list {
+        margin-top: 20px;
+        ul {
+            li {
+                align-items: center;
+                position: relative;
+                padding: 0px 0 10px;
+                &:last-child {
+                    padding: 0px 0 0px;
+                }
+                .sidebar-widget-list-left {
+                    position: relative;
+                    input {
+                        position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                        z-index: 999;
+                        height: 15px;
+                        width: 15px;
+                        top: 5px;
+                        left: 0;
+                        &:checked ~ .checkmark {
+                            background-color: $theme-color-red;
+                            border: 2px solid $theme-color-red;
+                        }
+                        &:checked ~ .checkmark::after {
+                            display: block;
+                        }
+                    }
+                    .checkmark {
+                        position: absolute;
+                        top: 5px;
+                        left: 0;
+                        height: 15px;
+                        width: 15px;
+                        background-color: #fff;
+                        border: 1px solid #888888;
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            display: none;
+                        }
+                        &::after {
+                            left: 3px;
+                            top: 0px;
+                            width: 5px;
+                            height: 8px;
+                            border: solid white;
+                            border-top-width: medium;
+                            border-right-width: medium;
+                            border-bottom-width: medium;
+                            border-left-width: medium;
+                            border-width: 0 2px 2px 0;
+                            transform: rotate(45deg);
+                        }
+                    }
+                }
+                a {
+                    margin-left: 25px;
+                    display: block;
+                    color: $black;
+                    &:hover {
+                        color: $theme-color-red;
+                    }
+                    span {
+                        background-color: #eeeeee;
+                        width: 25px;
+                        height: 25px;
+                        display: inline-block;
+                        text-align: center;
+                        line-height: 25px;
+                        border-radius: 50px;
+                        float: right;
+                        transition: all .3s ease 0s;
+                        font-size: 13px;
+                    }
+                    &:hover span {
+                        color: #fff;
+                        background-color: $theme-color-red;
+                    }
+                }
+                
+            }
+        }
+    }
+    .sidebar-widget-tag {
+        margin-top: 26px;
+        a {
+            padding: 8px 12px 10px;
+            &:hover {
+                border: 1px solid $theme-color-red;
+                color: $theme-color-red;
+            }
+        }
+    }
+    .recent-post {
+        margin-top: 22px;
+        .single-sidebar-blog {
+            margin-bottom: 18px;
+        }
+    }
+    .archives-wrap {
+        margin-top: 20px;
+        select {
+            height: 40px;
+            border: 1px solid #ebebeb;
+            color: $black;
+            cursor: pointer;
+            padding: 2px 35px 2px 15px;
+            -moz-appearance: none;
+            background: rgba(0, 0, 0, 0) url("../../assets/images/icon-img/select.png") no-repeat scroll right 18px center;
+        }
+    }   
+}
+
+.shop-sidebar-border {
+	border-top: 1px solid #ebebeb;
+}
+
+
+
+

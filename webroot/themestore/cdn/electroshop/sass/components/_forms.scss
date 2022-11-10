@@ -1,0 +1,286 @@
+// Form Controls
+
+form {
+	margin-bottom: 3.5rem;
+
+	h2 {
+		margin-top: 3.4rem;
+		margin-bottom: 2.3rem;
+	}
+}
+
+.form-group {
+	margin-bottom: 1.4rem;
+
+	.form-control,
+	.select-custom {
+		margin-bottom: 0;
+	}
+
+	.form-control + .form-control {
+		margin-top: 1rem;
+	}
+}
+
+.form-group-sm {
+	max-width: 480px;
+	margin-bottom: .9rem;
+}
+
+.form-control {
+	height: 6rem;
+	margin-bottom: 1rem;
+	padding: 2rem;
+	transition: all .3s;
+	border: 1px solid #dfdfdf;
+	border-radius: $border-radius;
+	background-color: #fff;
+	color: $body-text;
+	font-family: $font-family;
+	font-size: $input-font-size;
+	font-weight: 400;
+	line-height: 1.5;
+
+	&:focus {
+		border-color: #dfdfdf;
+		background-color: #fff;
+		color: $body-text;
+		box-shadow: none;
+	}
+}
+
+.form-control-sm {
+	height: 4.6rem;
+	padding: .8rem 1.2rem;
+}
+
+select.form-control:not([size]):not([multiple]) {
+	height: 6rem;
+}
+
+select.form-control-sm:not([size]):not([multiple]) {
+	height: 4.6rem;
+}
+
+.main .form-control::-webkit-input-placeholder,
+.main .form-control::-moz-placeholder,
+.main .form-control:-ms-input-placeholder,
+.main .form-control::-ms-input-placeholder,
+.main .form-control::placeholder {
+	font-family: $second-font-family;
+}
+
+textarea.form-control {
+	max-width: 680px;
+	min-height: 112px;
+}
+
+.form-footer {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-top: 2rem;
+	margin-bottom: 3.5rem;
+	font-size: $input-font-size;
+	vertical-align: middle;
+
+	.form-footer-right {
+		margin-right: 0;
+		margin-left: auto;
+
+		.btn {
+			margin: 0;
+		}
+	}
+
+	.btn {
+		margin-right: 3rem;
+	}
+}
+
+.forget-pass {
+	line-height: 1.3;
+}
+
+label {
+	margin: 0 0 .6rem;
+	color: #000;
+	font-family: $second-font-family;
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+.required-field > label:after {
+	margin: 0 0 0 .45rem;
+	color: #e02b27;
+	font-size: 1.2rem;
+	content: '*';
+}
+
+.required {
+	color: #e02b27;
+	font-size: 1.2rem;
+
+	+ .form-footer {
+		margin-top: .8rem;
+	}
+}
+
+.select-custom {
+	position: relative;
+	margin-bottom: 1rem;
+	background: #fff;
+
+	select {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-ms-appearance: none;
+		position: relative;
+		z-index: 1;
+		background: transparent;
+
+		&:focus {
+			background: transparent;
+		}
+
+		// For IE
+		@media (-ms-high-contrast: active), (-ms-high-contrast: none) {
+			&::-ms-expand { display: none }
+			&:focus::-ms-value { background: transparent; color: currentColor }
+		}
+	}
+
+	&:after {
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		right: 1.9rem;
+		transform: translateY(-50%);
+		font-family: 'porto';
+		font-size: 1.5rem;
+		content: '\e81c';
+	}
+
+	.form-control,
+	.form-control-sm {
+		padding-right: 4rem;
+	}
+}
+
+.form-group-custom-control {
+	margin-top: 2rem;
+
+	.custom-control {
+		margin-top: 0;
+		margin-bottom: 2rem;
+	}
+
+	+ .form-group-custom-control {
+		margin-top: -.5rem;
+	}
+
+	.custom-control-label {
+		font-family: $font-family;
+		font-weight: 400;
+		letter-spacing: 0;
+		text-transform: initial;
+	}
+}
+
+.custom-control {
+	position: relative;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	padding-left: 3rem;
+}
+
+.custom-control-label {
+	position: static;
+	margin-top: .1rem;
+	margin-bottom: 0;
+
+	&:before,
+	&:after {
+		top: 0;
+		left: 0;
+		width: 2rem;
+		height: 2rem;
+	}
+
+	&:before {
+		border: 1px solid #000;
+		background-color: #fff;
+	}
+}
+
+.custom-checkbox .custom-control-label:before {
+	border-radius: 0;
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label:before {
+	background-color: $primary-color;
+}
+
+.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label:before {
+	background-color: $primary-color;
+}
+
+.custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label:before {
+	background-color: rgba($primary-color, 0.5);
+}
+
+.custom-checkbox .custom-control-input:disabled:indeterminate ~ .custom-control-label:before {
+	background-color: rgba($primary-color, 0.5);
+}
+
+.form-control-tooltip {
+	position: relative;
+	padding-right: 4rem;
+
+	.input-tooltip {
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+		transition: all .3s;
+		color: #777;
+		font-size: 2.4rem;
+
+		&:hover,
+		&:focus {
+			color: #000;
+		}
+	}
+}
+
+.form-input {
+	padding: 1rem 1.2rem;
+	border: 1px solid #ddd;
+	border-radius: 2px;
+}
+
+.form-wide {
+	width: 100%;
+}
+
+@include mq(md) {
+	form,
+	.form-footer {
+		margin-bottom: 4rem;
+	}
+
+	form {
+		h2 {
+			margin-top: 4.4rem;
+		}
+	}
+}
+
+@include mq(lg) {
+	form,
+	.form-footer {
+		margin-bottom: 5rem;
+	}
+}

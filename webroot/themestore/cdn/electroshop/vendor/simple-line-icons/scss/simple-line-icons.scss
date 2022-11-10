@@ -1,0 +1,225 @@
+// Default Variables
+$simple-line-font-path: "../fonts/" !default;
+$simple-line-font-family: "simple-line-icons" !default;
+$simple-line-icon-prefix: "sicon-" !default;
+
+// Fonts
+@if $simple-line-font-family == "simple-line-icons" {
+	@font-face {
+		font-family: '#{$simple-line-font-family}';
+		font-weight: normal;
+		font-display:swap;
+		src: url("#{$simple-line-font-path}/Simple-Line-Icons.eot?nuc4d1");
+		src: url("#{$simple-line-font-path}/Simple-Line-Icons.eot?nuc4d1#iefix") format("embedded-opentype"),
+		url("#{$simple-line-font-path}/Simple-Line-Icons.ttf?nuc4d1") format("truetype"),
+		url("#{$simple-line-font-path}/Simple-Line-Icons.woff?nuc4d1") format("woff"),
+		url("#{$simple-line-font-path}/Simple-Line-Icons.svg?nuc4d1#Simple-Line-Icons") format("svg");
+		font-style: normal;
+	}
+}
+
+[class^="#{$simple-line-icon-prefix}"]:before, [class*=" #{$simple-line-icon-prefix}"]:before {
+	font-family: '#{$simple-line-font-family}';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.#{$simple-line-icon-prefix} {
+	&user-female:before { content: "\e000"; }
+	&people:before,&users:before { content: "\e001"; }
+	&user-follow:before { content: "\e002"; }
+	&user-following:before { content: "\e003"; }
+	&user-unfollow:before { content: "\e004"; }
+	&user:before { content: "\e005"; }
+	&trophy:before { content: "\e006"; }
+	&speedometer:before { content: "\e007"; }
+	&social-youtube:before { content: "\e008"; }
+	&social-twitter:before { content: "\e009"; }
+	&social-tumblr:before { content: "\e00a"; }
+	&social-facebook:before { content: "\e00b"; }
+	&social-dropbox:before { content: "\e00c"; }
+	&social-dribbble:before { content: "\e00d"; }
+	&shield:before { content: "\e00e"; }
+	&screen-tablet:before { content: "\e00f"; }
+	&screen-smartphone:before { content: "\e010"; }
+	&screen-desktop:before { content: "\e011"; }
+	&plane:before { content: "\e012"; }
+	&notebook:before { content: "\e013"; }
+	&mustache:before,&moustache:before { content: "\e014"; }
+	&mouse:before { content: "\e015"; }
+	&magnet:before { content: "\e016"; }
+	&magic-wand:before { content: "\e017"; }
+	&hourglass:before { content: "\e018"; }
+	&graduation:before { content: "\e019"; }
+	&ghost:before { content: "\e01a"; }
+	&game-controller:before { content: "\e01b"; }
+	&fire:before { content: "\e01c"; }
+	&eyeglass:before,&eyeglasses:before { content: "\e01d"; }
+	&envelope-open:before { content: "\e01e"; }
+	&envolope-letter:before,&envelope-letter:before { content: "\e01f"; }
+	&energy:before { content: "\e020"; }
+	&emotsmile:before { content: "\e021"; }
+	&disc:before { content: "\e022"; }
+	&cursor-move:before { content: "\e023"; }
+	&crop:before { content: "\e024"; }
+	&credit-card:before { content: "\e025"; }
+	&chemistry:before { content: "\e026"; }
+	&bell:before { content: "\e027"; }
+	&badge:before { content: "\e028"; }
+	&anchor:before { content: "\e029"; }
+	&wallet:before { content: "\e02a"; }
+	&vector:before { content: "\e02b"; }
+	&speech:before { content: "\e02c"; }
+	&puzzle:before { content: "\e02d"; }
+	&printer:before { content: "\e02e"; }
+	&present:before { content: "\e02f"; }
+	&playlist:before { content: "\e030"; }
+	&pin:before { content: "\e031"; }
+	&picture:before { content: "\e032"; }
+	&map:before { content: "\e033"; }
+	&layers:before { content: "\e034"; }
+	&handbag:before { content: "\e035"; }
+	&globe-alt:before { content: "\e036"; }
+	&globe:before { content: "\e037"; }
+	&frame:before { content: "\e038"; }
+	&folder-alt:before { content: "\e039"; }
+	&film:before { content: "\e03a"; }
+	&feed:before { content: "\e03b"; }
+	&earphones-alt:before { content: "\e03c"; }
+	&earphones:before { content: "\e03d"; }
+	&drop:before { content: "\e03e"; }
+	&drawar:before,&drawer:before { content: "\e03f"; }
+	&docs:before { content: "\e040"; }
+	&directions:before { content: "\e041"; }
+	&direction:before { content: "\e042"; }
+	&diamond:before { content: "\e043"; }
+	&cup:before { content: "\e044"; }
+	&compass:before { content: "\e045"; }
+	&call-out:before { content: "\e046"; }
+	&call-in:before { content: "\e047"; }
+	&call-end:before { content: "\e048"; }
+	&calculator:before { content: "\e049"; }
+	&bubbles:before { content: "\e04a"; }
+	&briefcase:before { content: "\e04b"; }
+	&book-open:before { content: "\e04c"; }
+	&basket-loaded:before { content: "\e04d"; }
+	&basket:before { content: "\e04e"; }
+	&bag:before { content: "\e04f"; }
+	&action-undo:before { content: "\e050"; }
+	&action-redo:before { content: "\e051"; }
+	&wrench:before { content: "\e052"; }
+	&umbrella:before { content: "\e053"; }
+	&trash:before { content: "\e054"; }
+	&tag:before { content: "\e055"; }
+	&support:before { content: "\e056"; }
+	&size-fullscreen:before { content: "\e057"; }
+	&size-actual:before { content: "\e058"; }
+	&shuffle:before { content: "\e059"; }
+	&share-alt:before { content: "\e05a"; }
+	&share:before { content: "\e05b"; }
+	&rocket:before { content: "\e05c"; }
+	&question:before { content: "\e05d"; }
+	&pie-chart:before { content: "\e05e"; }
+	&pencil:before { content: "\e05f"; }
+	&note:before { content: "\e060"; }
+	&music-tone-alt:before { content: "\e061"; }
+	&music-tone:before { content: "\e062"; }
+	&microphone:before { content: "\e063"; }
+	&loop:before { content: "\e064"; }
+	&logout:before { content: "\e065"; }
+	&login:before { content: "\e066"; }
+	&list:before { content: "\e067"; }
+	&like:before { content: "\e068"; }
+	&home:before { content: "\e069"; }
+	&grid:before { content: "\e06a"; }
+	&graph:before { content: "\e06b"; }
+	&equalizer:before { content: "\e06c"; }
+	&dislike:before { content: "\e06d"; }
+	&cursor:before { content: "\e06e"; }
+	&control-start:before { content: "\e06f"; }
+	&control-rewind:before { content: "\e070"; }
+	&control-play:before { content: "\e071"; }
+	&control-pause:before { content: "\e072"; }
+	&control-forward:before { content: "\e073"; }
+	&control-end:before { content: "\e074"; }
+	&calender:before,&calendar:before { content: "\e075"; }
+	&bulb:before { content: "\e076"; }
+	&chart:before,&bar-chart:before { content: "\e077"; }
+	&arrow-up-circle:before { content: "\e078"; }
+	&arrow-right-circle:before { content: "\e079"; }
+	&arrow-left-circle:before { content: "\e07a"; }
+	&arrow-down-circle:before { content: "\e07b"; }
+	&ban:before { content: "\e07c"; }
+	&bubble:before { content: "\e07d"; }
+	&camrecorder:before,&camcorder:before { content: "\e07e"; }
+	&camera:before { content: "\e07f"; }
+	&check:before { content: "\e080"; }
+	&clock:before { content: "\e081"; }
+	&close:before { content: "\e082"; }
+	&cloud-download:before { content: "\e083"; }
+	&cloud-upload:before { content: "\e084"; }
+	&doc:before { content: "\e085"; }
+	&envolope:before,&envelope:before { content: "\e086"; }
+	&eye:before { content: "\e087"; }
+	&flag:before { content: "\e088"; }
+	&folder:before { content: "\e089"; }
+	&heart:before { content: "\e08a"; }
+	&info:before { content: "\e08b"; }
+	&key:before { content: "\e08c"; }
+	&link:before { content: "\e08d"; }
+	&lock:before { content: "\e08e"; }
+	&lock-open:before { content: "\e08f"; }
+	&magnifier:before { content: "\e090"; }
+	&magnifier-add:before { content: "\e091"; }
+	&magnifier-remove:before { content: "\e092"; }
+	&paper-clip:before { content: "\e093"; }
+	&paper-plane:before { content: "\e094"; }
+	&plus:before { content: "\e095"; }
+	&location-pin:before,&pointer:before { content: "\e096"; }
+	&power:before { content: "\e097"; }
+	&refresh:before { content: "\e098"; }
+	&reload:before { content: "\e099"; }
+	&settings:before { content: "\e09a"; }
+	&star:before { content: "\e09b"; }
+	&symbol-female:before,&symbol-fermale:before { content: "\e09c"; }
+	&symbol-male:before { content: "\e09d"; }
+	&target:before { content: "\e09e"; }
+	&volume-1:before { content: "\e09f"; }
+	&volume-2:before { content: "\e0a0"; }
+	&volume-off:before { content: "\e0a1"; }
+	&phone:before { content: "\e600"; }
+	&menu:before { content: "\e601"; }
+	&options-vertical:before { content: "\e602"; }
+	&options:before { content: "\e603"; }
+	&arrow-down:before { content: "\e604"; }
+	&arrow-left:before { content: "\e605"; }
+	&arrow-right:before { content: "\e606"; }
+	&arrow-up:before { content: "\e607"; }
+	&paypal:before { content: "\e608"; }
+	&social-instagram:before { content: "\e609"; }
+	&social-linkedin:before { content: "\e60a"; }
+	&social-pinterest:before { content: "\e60b"; }
+	&social-github:before { content: "\e60c"; }
+	&social-google:before { content: "\e60d"; }
+	&social-reddit:before { content: "\e60e"; }
+	&social-skype:before { content: "\e60f"; }
+	&social-behance:before { content: "\e610"; }
+	&social-foursqare:before { content: "\e611"; }
+	&social-soundcloud:before { content: "\e612"; }
+	&social-spotify:before { content: "\e613"; }
+	&social-stumbleupon:before { content: "\e614"; }
+	&minus:before { content: "\e615"; }
+	&organization:before { content: "\e616"; }
+	&exclamation:before { content: "\e617"; }
+	&social-vkontakte:before { content: "\e618"; }
+	&event:before { content: "\e619"; }
+	&social-steam:before { content: "\e620"; }
+}

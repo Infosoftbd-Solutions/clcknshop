@@ -1,0 +1,74 @@
+.share-links {
+
+    .share-twitter {
+        background-color: #1aa9e1
+    }
+
+    .share-facebook {
+        background-color: #3b5a9a
+    }
+
+    .share-linkedin {
+        background-color: #0073b2
+    }
+
+    .share-rss {
+        background-color: #ff8201
+    }
+
+    .share-googleplus {
+        background-color: #dd4b39
+    }
+
+    .share-pinterest {
+        background-color: #cc2127
+    }
+
+    .share-youtube {
+        background-color: #c3191e
+    }
+
+    .share-instagram {
+        background-color: #7c4a3a
+    }
+
+    .share-skype {
+        background-color: #00b0f6
+    }
+
+    .share-email {
+        background-color: #dd4b39
+    }
+
+    a {
+        display: inline-block;
+        position: relative;
+        width: 3rem;
+        height: 3rem;
+        margin: 3.65rem 7.31rem 3.65rem 0;
+        color: #fff;
+        font-size: 1.28rem;
+        text-indent: -9999em;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        transition: .25s;
+        
+        &:hover {
+            color: #fff;
+            opacity: .9;
+        }
+
+        &::before {
+            text-indent: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            line-height: 23px;
+            height: 22px;
+            margin: auto;
+        }
+    }
+}

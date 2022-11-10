@@ -1,0 +1,244 @@
+.mobile-nav__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  transform: translateX(-50%);
+  transform-origin: right center;
+  transition: transform 500ms ease-in, opacity 500ms linear, visibility 500ms ease-in;
+  z-index: 999;
+  visibility: hidden;
+
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.mobile-nav__wrapper.expanded {
+  opacity: 1;
+  transform: translateX(0%);
+  visibility: visible;
+}
+
+.mobile-nav__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.mobile-nav__content {
+  width: 300px;
+  background-color: #313332;
+  z-index: 10;
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.mobile-nav__content .thm-btn {
+  padding: 8px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.mobile-nav__content .logo-box {
+  margin-bottom: 40px;
+  display: flex;
+}
+
+.mobile-nav__close {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  font-size: 18px;
+  color: $thm-text-dark;
+  cursor: pointer;
+}
+
+.mobile-nav__content .main-menu__list,
+.mobile-nav__content .main-menu__list ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.mobile-nav__content .main-menu__list ul {
+  display: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav__content .main-menu__list ul li a {
+  padding-left: 1em;
+}
+
+.mobile-nav__content .main-menu__list li:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav__content .main-menu__list li a {
+  display: flex;
+  justify-content: space-between;
+  line-height: 30px;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: $thm-font;
+  font-weight: 500;
+  height: 46px;
+  align-items: center;
+  transition: 500ms;
+}
+
+.mobile-nav__content .main-menu__list li a.expanded {
+  color: $thm-base;
+}
+
+.mobile-nav__content .main-menu__list li a button {
+  width: 30px;
+  height: 30px;
+  background-color: $thm-base;
+  border: none;
+  outline: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: rotate(-90deg);
+  transition: transform 500ms ease;
+}
+
+.mobile-nav__content .main-menu__list li a button.expanded {
+  transform: rotate(0deg);
+  background-color: #fff;
+  color: $thm-black;
+}
+
+.mobile-nav__content .main-menu__list li.cart-btn span {
+  position: relative;
+  top: auto;
+  right: auto;
+  transform: translate(0, 0);
+}
+
+.mobile-nav__content .main-menu__list li.cart-btn i {
+  font-size: 16px;
+}
+
+.mobile-nav__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  .main-menu__login a {
+    color: $thm-text-dark;
+  }
+}
+
+.mobile-nav__language {
+  display: flex;
+  align-items: center;
+
+  img {
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 70px;
+  }
+
+  .bootstrap-select>.dropdown-toggle {
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    outline: none;
+    color: $thm-text-dark;
+    font-size: 14px;
+  }
+}
+
+.mobile-nav__social {
+  display: flex;
+  align-items: center;
+
+  a {
+    font-size: 16px;
+    color: $thm-text-dark;
+    transition: 500ms;
+
+    +a {
+      margin-left: 10px;
+    }
+
+    &:hover {
+      color: $thm-base;
+    }
+  }
+}
+
+.mobile-nav__contact {
+  margin-bottom: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  li {
+    color: $thm-text-dark;
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    +li {
+      margin-top: 15px;
+    }
+
+    a {
+      color: inherit;
+      transition: 500ms;
+
+      &:hover {
+        color: $thm-base;
+      }
+    }
+
+    >i {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: $thm-base;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 18px;
+      margin-right: 10px;
+      color: #fff;
+    }
+  }
+}
+
+.mobile-nav__container {
+
+  .main-logo,
+  .topbar__buttons,
+  .main-menu__language,
+  .main-menu__login {
+    display: none;
+  }
+
+}

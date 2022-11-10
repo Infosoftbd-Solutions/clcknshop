@@ -1,0 +1,142 @@
+/*-------- 21. Compare style ---------*/
+
+.compare-table {
+    & .table {
+        & tbody {
+            & tr {
+                margin-bottom: 20px;
+                & td {
+                    padding: 20px 20px;
+                    vertical-align: middle;
+                    border-color: #ccc;
+                    @media #{$md-layout} {
+                        padding: 20px 15px;
+                    }
+                    @media #{$xs-layout} {
+                        padding: 10px 20px;
+                        display: block;
+                        width: 100%;
+                        overflow: hidden;
+                        margin-bottom: 5px;
+                    }
+                    &.first-column {
+                        min-width: 175px;
+                        font-size: 16px;
+                        font-weight: 600;
+                        margin: 0;
+                        @media #{$md-layout} {
+                            min-width: 110px;
+                        }
+                        @media #{$xs-layout} {
+                            min-width: 100%;
+                            display: block;
+                            width: 100%;
+                            overflow: hidden;
+                            margin-bottom: 5px;
+                            margin-top: 35px;
+                        }
+                    }
+                    &.product-image-title {
+                        min-width: 310px;
+                        vertical-align: bottom;
+                        text-align: left;
+                        @media #{$lg-layout} {
+                            min-width: 210px;
+                        }
+                        @media #{$md-layout} {
+                            min-width: 110px;
+                        }
+                        @media #{$xs-layout} {
+                            min-width: 100%;
+                            display: block;
+                            width: 100%;
+                            overflow: hidden;
+                            padding: 20px;
+                        }
+                        & .image {
+                            clear: both;
+                            width: 100%;
+                            margin-bottom: 15px;
+                            display: block;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        & .category {
+                            float: left;
+                            clear: both;
+                            color: $theme-color-red;
+                            text-transform: capitalize;
+                            letter-spacing: 0.5px;
+                        }
+                        & .title {
+                            float: left;
+                            clear: both;
+                            font-size: 16px;
+                            line-height: 1.2;
+                            font-weight: 600;
+                            text-transform: capitalize;
+                            margin-top: 5px;
+                            @media #{$md-layout} {
+                                font-size: 16px;
+                            }
+                            &:hover {
+                                color: $theme-color-red;
+                            }
+                        }
+                    }
+                    &.pro-desc {
+                        & p {
+                            text-align: left;
+                            margin: 0;
+                        }
+                    }
+                    a {
+                        &.check-btn {
+                            color: $black;
+                            font-size: 15px;
+                            &:hover {
+                                color: $theme-color-red;
+                            }
+                        }
+                    }
+                    &.pro-price,
+                    &.pro-color,
+                    &.pro-stock {
+                        font-size: 15px;
+                        font-weight: 400;
+                        color: $black;
+                    }
+                    &.pro-remove {
+                        & button {
+                            border: none;
+                            background-color: transparent;
+                            padding: 0;
+                            cursor: pointer;
+                            &:hover {
+                                color: $theme-color-red; 
+                            }
+                            & i {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                    &.pro-ratting {
+                        & i {
+                            color: #e7a415;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media #{$xs-layout} {
+    .compare-page-wrapper {
+        &.pt-90 {
+            padding-top: 20px;
+        }
+    }
+}
+
+/*------ end Compare Page Wrapper -----*/

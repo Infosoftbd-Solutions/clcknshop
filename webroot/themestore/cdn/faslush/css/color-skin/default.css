@@ -1,0 +1,48 @@
+
+/*------color 1 ----*/
+
+a:hover, .pri-color, .products .product:hover .detl a, .modern .products .product .detl a:hover, .blog-wrap a.link, .blog-style-1 h4 a:hover,
+.insta-title span, footer .subscription input[type="submit"]:hover, footer .subscription button[type="submit"]:hover,
+.breadcrumb>li>a:hover, .thumb-wrap .slick-prev:hover:before, .thumb-wrap .slick-next:hover:before, .shop-info a, .top-bar-menu li>ul>li a:hover,
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>li>a:focus, 
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li.current-menu-item a,
+.entry-tag a,
+.mini-cart li.item .pdt-content span a, .full-sreen-search button[type="submit"]:hover, .menu-list li a:hover,
+.banner-slide .slick-dots li.slick-active button:before{
+    color: #6ccad0;
+} 
+
+
+/*-------- bg 1 -------*/
+
+.pri-bg, .btn.btn-white:hover, .look-top .content:before, .feature-cat .wrap:hover .btn.btn-white,
+.menu-vertical .navbar-nav li a:after, ul.products li.product .action-buttons li a:hover,
+.modern ul.products li.product .action-buttons li a:hover, .modern .products .product:hover .detl .action-buttons li a:hover,
+.widget-title:after, .comment-meta .reply:hover, .scrollup, .modal button.close, .navbar-nav li .sub-menu li a:hover, .full-sreen-search .screen-close:hover, .feature-cat .wrap:hover .btn-default,
+.btn.btn-default:hover, button[type="submit"]:hover, .modal .modal-content.newsletter button.close,.promo-banner .box .content span:after{ background-color: #6ccad0; }
+
+
+/*-------- border 1 ---------*/
+ blockquote, .bdr-sub-title, .tabs.help>li.active>a, .tabs.help>li.active>a:focus, .tabs.help>li.active>a:hover, .tabs.help>li>a:hover {
+    border-color: #6ccad0; 
+}
+
+/* --------- bg 2 ---------*/
+
+.sec-bg{ background-color: #d05d6a; }
+
+.btn.sec-bg:hover{ background-color: #a52c3a; }
+
+
+
+/*--------- bg 3 ----------*/
+
+.product figure .tag{ background-color: #ff4f2c;}
+
+
+/*--------- color 3 ----------*/
+.product-rating, .promo-text{ color: #ff4f2c;}

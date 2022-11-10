@@ -1,0 +1,61 @@
+// Page Header
+
+// # Contents
+// 1. Page Header
+// 2. Page Title
+// 3. Responsive
+
+// # Variables
+@include set-default(
+	(
+		page-header: (
+			color: $primary-color-dark,
+		)
+	)
+);
+
+// 1. Page Header
+
+.page-header {
+	padding: 4.4rem 0 4.5rem;
+	@include css(color, page-header, color);
+	text-align: center;
+
+	.breadcrumb-nav + & {
+		margin-top: -2rem;
+	}
+}
+
+// 2. Page Title
+
+.page-header h1,
+.page-title {
+	margin-bottom: 0;
+	@include css(color, page-header, color);
+	font-family: $second-font-family;
+	text-transform: uppercase;
+}
+
+// 3. Responsive
+
+@include mq(md) {
+	.page-header {
+		padding-top: 7rem;
+		padding-bottom: 7rem;
+
+		.breadcrumb-nav + & {
+			margin-top: -3rem;
+		}
+	}
+}
+
+@include mq(lg) {
+	.page-header {
+		padding-top: 9.2rem;
+		padding-bottom: 9rem;
+
+		.breadcrumb-nav + & {
+			margin-top: -4rem;
+		}
+	}
+}

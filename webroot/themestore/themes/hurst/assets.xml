@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<root>
+    <images>
+        <image>
+            <title>Slider 1 Image</title>
+            <key>slider-1</key>
+            <width>1220</width>
+            <height>800</height>
+            <file>uploads/1jpg-29-07-2021-1627573738699.jpg</file>
+        </image>
+        <image>
+            <title>Slider 2 Image</title>
+            <key>slider-2</key>
+            <width>1220</width>
+            <height>800</height>
+            <file>uploads/2jpg-29-07-2021-1627573741783.jpg</file>
+        </image>
+        <image>
+            <title>Slider 3 Image</title>
+            <key>slider-3</key>
+            <width>1220</width>
+            <height>800</height>
+            <file>uploads/3jpg-29-07-2021-1627573798928.jpg</file>
+        </image>
+
+        <image>
+            <title>Flash Image Slider 1</title>
+            <key>flash-slider-1</key>
+            <width>1170</width>
+            <height>500</height>
+            <file>uploads/flash-1jpg-29-07-2021-1627574522929.jpg</file>
+        </image>
+        <image>
+            <title>Flash Image Slider 2</title>
+            <key>flash-slider-2</key>
+            <width>1170</width>
+            <height>500</height>
+            <file>uploads/flash-3jpg-29-07-2021-1627574529986.jpg</file>
+        </image>
+        <image>
+            <title>Flash Image Slider 3</title>
+            <key>flash-slider-3</key>
+            <width>1170</width>
+            <height>500</height>
+            <file>uploads/flash-1jpg-29-07-2021-1627574534197.jpg</file>
+        </image>
+        <image>
+            <title>Flash Image Slider 4</title>
+            <key>flash-slider-4</key>
+            <width>1170</width>
+            <height>500</height>
+            <file>uploads/flash-3jpg-29-07-2021-1627574538354.jpg</file>
+        </image>
+
+        <image>
+            <title>About Us</title>
+            <key>about-us</key>
+            <width>530</width>
+            <height>450</height>
+            <file>uploads/aboutpng-08-08-2021-1628403206711.png</file>
+        </image>
+
+    </images>
+
+    <menus>
+
+        <menu>
+            <title>Navbar Menu</title>
+            <key>navbar-menu</key>
+            <menujson>[{"text":"Home","href":"/","icon":"","target":"_self","title":""},{"text":"Collections","href":"#","icon":"","target":"_self","title":"","children":[{"text":"Dining ","href":"/collection/dining","icon":"","target":"_self","title":""}]},{"text":"Cart","href":"/cart","icon":"","target":"_self","title":""},{"text":"About Us","href":"/page/about-us","icon":"","target":"_self","title":""},{"text":"Contact Us","href":"/page/contact-us","icon":"","target":"_self","title":""},{"text":"Login","icon":"","href":"/login","target":"_self","title":""}]</menujson>
+        </menu>
+        <menu>
+            <title>Footer Menu</title>
+            <key>footer-menu</key>
+            <menujson>[{"text":"My Account","href":"/customer","icon":"","target":"_self","title":""},{"text":"Order Tracking","href":"/track-order","icon":"","target":"_self","title":""},{"text":"Contact Us","href":"/page/contact-us","icon":"","target":"_self","title":""},{"text":"About Us","href":"/page/about-us","icon":"","target":"_self","title":""}]</menujson>
+        </menu>
+    </menus>
+</root>

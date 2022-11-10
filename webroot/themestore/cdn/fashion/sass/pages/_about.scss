@@ -1,0 +1,120 @@
+// About
+
+.page-header h1 {
+	color: #1e3636;
+	font-size: 3.6rem;
+	font-weight: 900;
+	margin-bottom: 2.7rem;
+
+	span {
+		display: block;
+		color:#1e3636;
+		font-size: .5em;
+		font-weight:700;
+	}
+}
+
+.subtitle {
+	color: #21293c;
+	font-size: 1.9rem;
+}
+
+.about-section {
+	padding: 1rem 0 2.5rem;
+	color: #7b858a;
+	font-size: 1.5rem;
+	line-height: 1.8;
+
+	p {
+		margin-bottom: 2rem;
+	}
+
+	.lead {
+		font-family: $second-font-family;
+		color: #21293c;
+		font-size: 1.8rem;
+		line-height: 1.5;
+		font-weight: 400;
+	}
+}
+
+.features-section {
+	padding: 5rem 0 2.4rem;
+
+	h3 {
+		font-family: $second-font-family;
+	}
+
+	.feature-box {
+		padding: 3rem 4rem;
+	}
+}
+
+.testimonials-section {
+	padding: 5rem 0;
+
+	.subtitle {
+		margin-bottom: 3.5rem;
+	}
+}
+
+.testimonials-carousel {
+	blockquote {
+		margin-bottom: 0;
+	}
+
+	&.owl-theme .owl-nav.disabled + .owl-dots {
+		margin-top: .5rem;
+	}
+}
+
+.counters-section {
+	padding: 4.5rem 0 4rem
+}
+
+.count-container {
+	.count-wrapper {
+		color: #0087cb;
+		font-size: 3.2rem;
+		font-weight: 800;
+		line-height: 3.2rem;
+	}
+
+	span:not(.count-to) {
+		font-size: 1.9rem;
+	}
+
+	.count-title {
+		color: #7b858a;
+		font-size: 1.4rem;
+		font-weight: 600;
+	}
+}
+
+.owl-carousel.images-left img {
+	width: auto;
+}
+
+@include mq(lg) {
+	.counters-section .col-md-4 {
+		-ms-flex: 0 0 20%;
+		flex: 0 0 20%;
+		max-width: 20%;
+	}
+}
+
+@include mq(md) {
+	.about-section {
+		padding-top: 3rem;
+		padding-bottom: 3.5rem;
+	}
+}
+
+@include mq(sm) {
+	.testimonial {
+		blockquote {
+			margin-left: 85px;
+			padding: 1.5rem 3rem 1.5rem 2rem;
+		}
+	}
+}

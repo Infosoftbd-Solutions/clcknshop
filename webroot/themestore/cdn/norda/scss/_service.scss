@@ -1,0 +1,202 @@
+/*-------- 5. Service style ---------*/
+
+.service-wrap {
+	background-color: #ffffff;
+	margin-top: -100px;
+	position: relative;
+	z-index: 1;
+    padding: 51px 0 25px;
+    &.service-wrap-hm9 {
+        margin-top: -70px;
+        @media #{$lg-layout} {
+            margin-top: -50px;
+        }
+        @media #{$md-layout} {
+            margin-top: -30px;
+        }
+        @media #{$xs-layout} {
+            margin-top: 0px;
+            border-bottom: 1px solid #e1e1e1;
+        }
+    }
+    @media #{$lg-layout} {
+        margin-top: -50px;
+    }
+    @media #{$md-layout} {
+        margin-top: -50px;
+    }
+    @media #{$xs-layout} {
+        margin-top: -30px;
+        padding: 41px 0 15px;
+    }
+}
+.service-wrap-border {
+    border: 1px solid #dfdfdf;
+}
+.service-wrap-padding {
+    padding: 32px 0 3px;
+}
+.single-service-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .service-icon {
+        margin-right: 23px;
+        line-height: 1;
+        i {
+            font-size: 24px;
+            color: $theme-color-red;
+            display: inline-block;
+            transition: all .3s ease 0s;
+        }
+        &.service-icon-black {
+            i {
+                color: $black;
+            }
+        }
+        &.service-icon-blue {
+            i {
+                color: $blue;
+            }
+        }
+    }
+    .service-content {
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 8px;
+            color: #222222; 
+        }
+        span {
+            display: block;
+            line-height: 1; 
+            color: #999999;
+        }
+    }
+    &:hover {
+        .service-icon {
+            i {
+                animation: 500ms ease-in-out 0s normal none 1 running flipOutY;
+            }
+        }
+    }
+}
+
+.service-border-1 {
+    position: relative;
+    &:before {
+        position: absolute;
+        content: "";
+        right: 0;
+        top: -6%;
+        width: 1px;
+        height: 63px;
+        background-color: #e0e0e0;
+    }
+    @media #{$md-layout} {
+        &.service-border-1-none-md {
+            &:before {
+                display: none;
+            }
+        }
+    }
+    @media #{$xs-layout} {
+        &:before {
+            display: none;
+        }
+        &.service-border-1-none-xs {
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
+
+.service-wrap-padding-2 {
+    padding: 37px 35px 7px 35px;
+}
+.service-wrap-padding-3 {
+    padding: 32px 0 3px;
+    @media #{$xs-layout} {
+        padding: 32px 20px 3px;
+    }
+}
+
+.single-service-wrap-2 { 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; 
+    @media #{$xs-layout} {
+        justify-content: flex-start;
+    }
+    .service-icon-2 {
+        margin-right: 25px;
+        i {
+            font-size: 34px;
+            color: #999999;
+            transition: all .3s ease 0s;
+        }
+    }
+    .service-content-2 {
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 5px;
+        }
+        p {
+            margin: 0;
+            letter-spacing: .25px; 
+        }
+    }
+    &.single-service-wrap-2-modify {
+        justify-content: flex-start;
+        .service-icon-2 {
+            i {
+                font-size: 30px; 
+            }
+        }
+        .service-content-2 {
+            h3 {
+                font-size: 16px;
+            }
+        }
+    }
+    &:hover {
+        .service-icon-2 {
+            i {
+                color: $theme-color-green;
+            }
+            &.icon-purple {
+                i {
+                    color: $theme-color-purple;
+                }
+            }
+            &.icon-green-2 {
+                i {
+                    color: $theme-color-green-2;
+                }
+            }
+            &.icon-red {
+                i {
+                    color: $theme-color-red;
+                }
+            }
+        }
+    }
+}
+
+@media #{$xs-layout} {
+    .service-area {
+        &.pt-45 {
+            padding-top: 25px;
+        }
+        .pb-50 {
+            padding-bottom: 30px;
+        }
+    }
+}
+
+
+
+

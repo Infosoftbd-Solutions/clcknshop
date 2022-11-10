@@ -1,0 +1,80 @@
+@charset 'UTF-8';
+
+// Mixins
+@import 'mixins/core';
+@import 'mixins/clearfix';
+@import 'mixins/breakpoints';
+@import 'mixins/lazy';
+@import 'mixins/buttons';
+
+// Config
+@import 'config/fonts';
+@import 'config/variables';
+@import 'config/helpers';
+@import 'config/spacing';
+@import 'demo/demo-variables';
+
+// Plugins CSS
+@import 'plugins/owl-carousel/owl.carousel';
+@import 'plugins/owl-carousel/owl.theme.default';
+@import 'plugins/magnific-popup/main';
+@import 'plugins/jquery.bootstrap-touchspin';
+@import 'plugins/nouislider';
+
+// Components
+@import 'components/alerts';
+@import 'components/banners';
+@import 'components/breadcrumb';
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/counters';
+@import 'components/feature-boxes';
+@import 'components/font-icons';
+@import 'components/forms';
+@import 'components/info-boxes';
+// @import 'components/instagram';
+// @import 'components/member';
+@import 'components/modals';
+@import 'components/page-header';
+@import 'components/pagination';
+@import 'components/popup';
+@import 'components/product';
+@import 'components/product-category';
+@import 'components/testimonials';
+@import 'components/social-icons';
+@import 'components/tabs';
+@import 'components/tooltips';
+
+// Base
+@import 'base/base';
+@import 'base/type';
+@import 'base/layout';
+@import 'base/plugins';
+@import 'base/header/sticky-header';
+@import 'base/header';
+@import 'base/header/dropdowns';
+@import 'base/header/search';
+// @import 'base/header/popup-menu';
+// @import 'base/header/top-menu';
+@import 'base/header/menu';
+// @import 'base/header/menu-vertical';
+// @import 'base/header/side-menu';
+@import 'base/header/mobile-menu';
+@import 'base/footer';
+@import 'demo/demo-header';
+@import 'demo/demo-footer';
+
+// Pages CSS
+@import 'pages/about';
+@import 'pages/category';
+@import 'pages/product-pages/product-page';
+@import 'pages/product-pages/product-page-extended';
+@import 'pages/product-pages/product-page-sidebar';
+@import 'pages/product-pages/product-page-grid';
+@import 'pages/cart';
+@import 'pages/checkout';
+@import 'pages/blog';
+@import 'pages/contact';
+@import 'pages/dashboard';
+
+@import 'demo/demo-home';

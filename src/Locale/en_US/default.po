@@ -1,0 +1,3 @@
+msgid "Visit Live Store"
+msgstr "Visit Live Site"
+

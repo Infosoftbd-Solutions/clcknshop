@@ -1,0 +1,27 @@
+// Member
+.member {
+	margin-bottom: 2.8rem;
+	transition: all .3s ease;
+	text-align: center;
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}
+
+.member-title {
+	margin: 0;
+	padding-top: 2rem;
+	color: #111;
+	font-size: 1.4rem;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.member-job {
+	text-transform: uppercase;
+	line-height: 24px;
+	margin-bottom: 1rem;
+}

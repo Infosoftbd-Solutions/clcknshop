@@ -1,0 +1,8 @@
+.starrr {
+  display: inline-block; }
+  .starrr a {
+    font-size: 30px;
+    padding: 0 1px;
+    cursor: pointer;
+    color: #ff9806;
+    text-decoration: none; }

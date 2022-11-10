@@ -1,0 +1,522 @@
+// Post
+
+// 1. Post Base
+.post {
+	margin-bottom: 3rem;
+
+	a {
+		color: inherit;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+
+	.read-more {
+		float: right;
+	
+		i:before {
+			margin: 0;
+		}
+	}	
+}
+
+// 2. Post Media
+.post-media {
+	margin-bottom: 2rem;
+	border-radius: $border-radius;
+	background-color: #ccc;
+
+// 2.1) Post date in post media
+	.post-date {
+		position: absolute;
+		top: 1rem;
+		left: 1rem;
+		width: 4.5rem;
+		padding: 1rem .8rem;
+		color: #fff;
+		background: #222529;
+		font-family: $second-font-family;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: .05em;
+	}
+
+	.day {
+		display: block;
+		font-size: 1.8rem;
+		font-weight: 700;
+		line-height: 1;
+	}
+
+	.month {
+		display: block;
+		font-size: 1.12rem;
+		line-height: 1;
+		opacity: .7;
+	}
+}
+
+.post-slider {
+	margin-bottom: 3rem;
+
+	.owl-dots {
+		position: absolute;
+		right: 0;
+		bottom: .25rem;
+		left: 0;
+		margin: 0 !important;
+	}
+}
+
+// 3. Post Body
+.post-body {
+	padding-bottom: 2.7rem;
+	border-bottom: 1px solid #ddd;
+
+	// Post date in post body
+	.post-date {
+		width: 45px;
+		margin-right: 10px;
+		float: left;
+		text-align: center;
+		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
+
+		.day {
+			display: block;
+			margin-bottom: .3rem;
+			padding: 1rem .2rem;
+			border-radius: .2rem .2rem 0 0;
+			background-color: #f4f4f4;
+			color: $primary-color;
+			font-size: 1.6rem;
+			font-weight: 700;
+			line-height: 1.375;
+		}
+
+		.month {
+			display: block;
+			padding: 0 .2rem .2rem;
+			border-radius: 0 0 .2rem .2rem;
+			background-color: $primary-color;
+			color: #fff;
+			font-size: 1.2rem;
+			line-height: 1.33;
+			box-shadow: 0 -1px 0 0 rgba(0, 0, 0, .07) inset;
+		}
+	}
+}
+
+// 4. Elements
+.post-title {
+	margin-bottom: 1rem;
+	color: $headings-text;
+	font-size: 2.2rem;
+	font-weight: 400;
+	line-height: 1.35;
+}
+
+.post-content {
+	@include clearfix;
+}
+
+.post-meta {
+	> span {
+		display: inline-block;
+		margin-right: 1.5rem;
+	}
+
+	i {
+		margin-right: .5rem;
+
+		&:before {
+			margin: 0;
+		}
+	}
+}
+
+// 5. Post Type
+
+// 5.1) Post date in media
+.post-date-in-media {
+	.post-media {
+		overflow: hidden;
+
+		img {
+			transition: transform .2s;
+		}
+	}
+
+	.post-media:hover {
+		img {
+			transform: scale(1.1, 1.1);
+		}
+	}
+
+	.post-body {
+		margin-left: 0;
+		padding-bottom: 2.1rem;
+		border: 0;
+	}
+
+	.post-title {
+		margin-bottom: 1.6rem;
+		font-size: 1.8rem;
+		font-family: $font-family;
+		font-weight: 700;
+	}
+
+	p {
+		font-size: 1.3rem;
+		line-height: 1.846;
+	}
+
+	.post-comment {
+		color: #999;
+		font-size: 1rem;
+		text-transform: uppercase;
+	}
+}
+
+// 6. Single Post
+.single  {
+	.post-meta {
+		margin-bottom: 2.4rem;
+	}
+
+	.post-title {
+		font-size: 2.4rem;
+	}
+
+	h3 {
+		font-size: 2.2rem;
+		font-weight: 400;
+
+		i {
+			margin-right: .2rem;
+		}
+	}
+
+	.post-content {
+		margin-bottom: 4rem;
+	}
+}
+
+.post-share {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	margin-bottom: 2.6rem;
+	padding: 2.8rem 0;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+
+	h3 {
+		margin-right: 1.5rem;
+	}
+}
+
+.post-author {
+	@include clearfix;
+	margin-bottom: 3rem;
+	padding-bottom: 2.7rem;
+	border-bottom: 1px solid #ddd;
+
+	h3 {
+		margin-bottom: 2rem;
+	}
+
+	figure {
+		max-width: 80px;
+		margin-right: 2rem;
+		margin-bottom: 0;
+		float: left;
+	}
+
+	h4 {
+		margin: 1rem;
+		font-weight: 600;
+	}
+
+	.author-content {
+		font-size: 1.3rem;
+		line-height: 1.8;
+
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.comment-respond {
+	h3 {
+		margin-bottom: 1.2rem;
+
+		& + p {
+			margin-bottom: 2.6rem;
+		}
+	}
+
+	form {
+		margin-bottom: 0;
+	}
+}
+
+// Related Posts
+.related-posts {
+	margin-bottom: 4rem;
+
+	h4 {
+		margin-bottom: 2rem;
+		font-size: 2rem;
+		text-transform: uppercase;
+	}
+
+	.post {
+		margin-bottom: 0;
+		padding-bottom: 0;
+		border-bottom: 0;
+
+		p {
+			margin-bottom: 1rem;
+		}
+	}
+
+	.post-body {
+		padding-bottom: 0;
+		border-bottom: 0;
+	}
+
+	.post-media {
+		margin-bottom: 2rem;
+	}
+
+	.post-title {
+		margin-bottom: 1rem;
+		font-size: 2rem;
+	}
+}
+
+// Sidebar
+.sidebar  {
+	position: relative;
+	font-size: $sidebar-font-size;
+
+	.widget {
+		margin-bottom: 3rem;
+	}
+
+	.sidebar-wrapper {
+		.widget {
+			&:last-child {
+				margin-bottom: 0;
+				padding-bottom: 3rem;
+			}
+		}
+	}
+}
+
+.widget-title {
+	margin: .5rem 0 1.3rem;
+	color: #000;
+	font-size: 1.8rem;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.widget form {
+	margin-bottom: 0;
+}
+
+.list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		display: block;
+		position: relative;
+		margin: 0;
+		padding: 0;
+
+		&.active {
+			font-weight: 600;
+		}
+
+		a {
+			display: block;
+			position: relative;
+			padding: .8rem 0 .8rem 2rem;
+			border-bottom: 1px solid #ededde;
+			color: #000;
+			font-size: $sidebar-font-size;
+
+
+			&:before {
+				display: inline-block;
+				position: absolute;
+				width: 0;
+				height: 0;
+				margin: .6rem 0 0 -1rem;
+				border-top: 4px solid transparent;
+				border-bottom: 4px solid transparent;
+				border-left: 4px solid #333;
+				content: '';
+			}
+
+			&:hover,
+			&:focus {
+				background-color: #eee;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.widget-search {
+	form {
+		position: relative;
+		margin: 0;
+	}
+
+	.form-control {
+		width: 100%;
+		max-width: none;
+		height: 5rem;
+		padding-top: 1.5rem;
+		padding-right: 5.5rem;
+		padding-bottom: 1.5rem;
+	}
+
+	.search-submit {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		width: 44px;
+		height: 44px;
+		margin-top: -22px;
+		border: 0;
+		outline: none;
+		background-color: transparent;
+		color: $primary-color;
+		font-size: 1.3rem;
+		text-align: center;
+		box-shadow: none;
+		cursor: pointer;
+	}
+}
+
+.tagcloud {
+	@include clearfix;
+
+	a {
+		display: block;
+		margin: 0 .7rem .7rem 0;
+		padding: 1.1rem 1.4rem;
+		float: left;
+		background-color: #e1e1e1;
+		color: #7e7d79;
+		font-size: $sidebar-font-size;
+		font-weight: 400;
+		line-height: 11px;
+
+		&:hover,
+		&:focus {
+			background-color: $primary-color;
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+}
+
+.simple-post-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		@include clearfix;
+		margin: 0 0 1rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.post-media {
+		width: 6.5rem;
+		margin:  0 1.2rem 0 0;
+		float: left;
+		border-radius: $border-radius;
+		line-height: 0;
+
+		img {
+			display: block;
+			width: 100%;
+			max-width: none;
+			height: auto;
+		}
+	}
+
+	.post-meta {
+		color: #888;
+		font-size: 1.3rem;
+	}
+}
+
+@include mq(sm) {
+	.post-share {
+		flex-direction: row;
+		align-items: center;
+
+		h3 {
+			margin-bottom: 0;
+		}
+	}
+
+	.related-posts {
+		padding-top: 1rem;
+	}
+}
+
+@include mq(md) {
+	.single  {
+		.post-meta {
+			margin-bottom: 3.2rem;
+		}
+
+		.post-title {
+			font-size: 2.6rem;
+		}
+	}
+
+	.post-body {
+		margin-left: 60px;
+
+		.post-date {
+			margin-left: -60px;
+		}
+	}
+
+	.related-posts {
+		padding-top: 2.5rem;
+	}
+}
+
+@include mq(md, max) {
+	.comment-respond {
+		.form-footer {
+			margin-bottom: 3rem;
+		}
+	}
+}
+
+@include mq(md, max) {
+	.comment-respond {
+		.form-footer {
+			margin-bottom: 2rem;
+		}
+	}
+}

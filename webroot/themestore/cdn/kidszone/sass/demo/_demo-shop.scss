@@ -1,0 +1,58 @@
+.shop-banner.banner.banner-5 {
+    font-size: 1.6rem;
+    height: 30rem;
+    min-height: 1px;
+
+    h3 {
+        font-size: 2.375em;
+        line-height: 1.2;
+    }
+
+    h4 {
+        padding: .2em .4em;
+        font-size: 1.2em;
+        line-height: 1.8;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .coupon-sale-text {
+        b {
+            font-size: 1.75em;
+            line-height: 1;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        i {
+            font-size: .7em;
+            left: -2.1em;
+        }
+
+        sub {
+            font-size: 124%;
+            font-weight: 600;
+        }
+    }
+
+    .btn-lg {
+        font-size: 0.84375em;
+        padding: 1.35em 4.75em;
+    }
+}
+
+.breadcrumb-nav {
+    border-bottom: none;
+}
+
+@include mq( lg, max ) {
+    .shop-banner.banner.banner-5 {
+        font-size: 2vw;
+    }
+}
+
+@include mq( sm, max ) {
+    .shop-banner.banner.banner-5 {
+        font-size: 1.3rem;
+    }
+} 

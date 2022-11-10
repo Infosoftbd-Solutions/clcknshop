@@ -1,0 +1,136 @@
+
+.owl-theme {
+	// Styling Next and Prev buttons
+	.owl-nav {
+		margin: 0;
+		text-align: center;
+		-webkit-tap-highlight-color: transparent;
+		color: $nav-color;
+		font-size: $nav-font-size;
+
+		[class*='owl-'] {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			color: $nav-color;
+			margin: $nav-margin;
+			font-size: $nav-font-size;
+			padding: $nav-padding;
+			background: $nav-background;
+			display: inline-block;
+			cursor: pointer;
+			border-radius: 3px;
+
+			i:before {
+				margin: 0;
+				width: auto;
+			}
+
+			&:hover {
+				background: $nav-background-hover;
+				color:$nav-color-hover;
+				text-decoration: none;
+			}
+		}
+
+		.owl-prev {
+			left: 0;
+		}
+
+		.owl-next {
+			right: 0;
+		}
+
+		.disabled {
+			opacity: $nav-disabled-opacity;
+			cursor: default;
+		}
+	}
+
+	// Styling dots
+	.owl-nav.disabled + .owl-dots {
+		margin-top: 2.5rem;
+	}
+
+	.owl-dots {
+		line-height: 1;
+		text-align: center;
+		-webkit-tap-highlight-color: transparent;
+
+		.owl-dot {
+			display: inline-block;
+			zoom: 1;
+			*display: inline;
+
+			span {
+				position: relative;
+				width: $dot-width;
+				height: $dot-height;
+				margin: $dot-margin;
+				display: block;
+				-webkit-backface-visibility: visible;
+				transition: .3s;
+				color: $dot-border;
+				border: 2px solid;
+				border-radius: $dot-rounded;
+
+				&:before {
+					content: '';
+					display: block;
+					width: .8rem;
+					height: .8rem;
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					opacity: 0;
+					visibility: hidden;
+					transform: translate(-50%,-50%);
+					transition: .3s;
+					border: 4px solid;
+					border-radius: 50%;
+				}
+			}
+
+			&.active {
+				span {
+					&:before {
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
+
+	&.owl-theme-light {
+		.owl-dots {
+
+			.owl-dot {
+				span {
+					border-color: $dot-border-light;
+					background: $dot-background-light;
+
+					&:before {
+						border-color: $dot-border-light;
+					}
+				}
+
+				&.active,
+				&:hover {
+					span {
+						border-color: $dot-border-light-active;
+						background: $dot-background-light-active;
+					}
+				}
+
+				&.active {
+					span {
+						&:before {
+							border-color: $dot-border-light-active;
+						}
+					}
+				}
+			}
+		}
+	}
+}

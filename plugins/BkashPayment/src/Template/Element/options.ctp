@@ -1,0 +1,1 @@
+<?php  echo $this->TablerForm->input('merchant_number',['label'=>'Bkash Merchant number','value'=>(isset($options['merchant_number'])?$options['merchant_number']:'')]) ?>

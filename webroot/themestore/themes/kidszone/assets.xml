@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<root>
+    <images>
+        <image>
+            <title>Slider Image</title>
+            <key>slider-image</key>
+            <width>1920</width>
+            <height>960</height>
+            <file>uploads/slider01v3bf417f92-1-14-07-2021-1626260998443.png</file>
+        </image>
+
+        <image>
+            <title>Homepage Banner Image 1</title>
+            <key>homepage-banner-1</key>
+            <width>560</width>
+            <height>315</height>
+            <file>uploads/banner-7jpg-14-07-2021-1626261589407.jpg</file>
+        </image>
+
+        <image>
+            <title>Homepage Banner Image 2</title>
+            <key>homepage-banner-2</key>
+            <width>560</width>
+            <height>315</height>
+            <file>uploads/banner-8jpg-14-07-2021-1626261592674.jpg</file>
+        </image>
+
+
+        <image>
+            <title>Homepage Banner Image 3</title>
+            <key>homepage-banner-3</key>
+            <width>560</width>
+            <height>315</height>
+            <file>uploads/banner-12jpg-14-07-2021-1626261612307.jpg</file>
+        </image>
+
+        <image>
+            <title>Homepage Banner Image 4</title>
+            <key>homepage-banner-4</key>
+            <width>830</width>
+            <height>421</height>
+            <file>uploads/banner-4-1jpg-14-07-2021-1626261977919.jpg</file>
+        </image>
+        <image>
+            <title>Homepage Banner Image 5</title>
+            <key>homepage-banner-5</key>
+            <width>635</width>
+            <height>402</height>
+            <file>uploads/banner-11jpg-14-07-2021-1626262002957.jpg</file>
+        </image>
+
+        <image>
+            <title>Homepage Banner Image 6</title>
+            <key>homepage-banner-6</key>
+            <width>444</width>
+            <height>739</height>
+            <file>uploads/banner-16jpg-14-07-2021-1626262006956.jpg</file>
+        </image>
+
+        <image>
+            <title>Homepage Banner Image 7</title>
+            <key>homepage-banner-7</key>
+            <width>1460</width>
+            <height>421</height>
+            <file>uploads/banner-23jpg-14-07-2021-1626262011071.jpg</file>
+        </image>
+        
+    </images>
+
+    <menus>
+
+        <menu>
+            <title>Navbar Menu</title>
+            <key>navbar-menu</key>
+            <menujson>[{"text":"man","href":"/collection/man","icon":"","target":"_self","title":"","children":[{"text":"clothing","href":"collection/clothing","icon":"","target":"_self","title":"","children":[{"text":"Woman","href":"collection/woman","icon":"","target":"_self","title":""}]},{"text":"Footwear","href":"collection/footwear","icon":"","target":"_self","title":""},{"text":"Accessories","href":"collection/accessories","icon":"","target":"_self","title":""}]},{"text":"Boys","href":"collection/boys","icon":"","target":"_self","title":""},{"text":"Girls","href":"collection/gilrs","icon":"","target":"_self","title":""}]</menujson>
+        </menu>
+
+      
+        <menu>
+            <title>Footer Menu</title>
+            <key>footer-menu</key>
+            <menujson>[{"text":"My Account","href":"/login","icon":"","target":"_self","title":""},{"text":"Order-history","href":"/customer","icon":"","target":"_self","title":""},{"text":"FAQ","href":"/page/faq","icon":"","target":"_self","title":""},{"text":"Specials","href":"/page/Specials","icon":"","target":"_self","title":""},{"text":"Help Center","href":"/page/help-center","icon":"","target":"_self","title":""},{"text":"CUSTOMER SERVICE","href":"#","icon":"","target":"_self","title":""}]</menujson>
+        </menu>
+    </menus>
+</root>

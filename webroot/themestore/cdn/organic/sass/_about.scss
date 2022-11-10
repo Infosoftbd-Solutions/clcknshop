@@ -1,0 +1,94 @@
+.about-one {
+  border-bottom: 1px solid #f4f4f4;
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @include large-tablet {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  &__content {
+    margin-top: 50px;
+
+    @include large-tablet {
+      margin-top: 0;
+    }
+
+    @include laptop {
+      padding-left: 70px;
+    }
+
+    .block-title {
+      margin-bottom: 20px;
+
+      @include laptop {
+        margin-bottom: 40px;
+      }
+    }
+
+    >P {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.888;
+      color: $thm-color;
+      margin-bottom: 20px;
+
+      @include large-tablet {
+        margin-bottom: 30px;
+      }
+
+      @include laptop {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__box {
+    margin-top: 20px;
+
+    @include large-tablet {
+      margin-top: 10px;
+    }
+
+    h3 {
+      display: flex;
+      align-items: center;
+      color: $thm-black;
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0;
+
+      >i {
+        color: $thm-base;
+        font-size: 14px;
+        margin-right: 10px;
+      }
+    }
+
+    p {
+      margin: 0;
+      color: $thm-color;
+      font-size: 16px;
+      line-height: 1;
+      margin-top: 15px;
+
+      @include large-tablet {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+[class*=about-one__shape-] {
+  position: absolute;
+  display: none;
+  z-index: 10;
+
+  @include large-tablet {
+    display: block;
+    bottom: 0;
+    left: 120px;
+  }
+}

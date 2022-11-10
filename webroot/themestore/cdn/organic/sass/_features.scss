@@ -1,0 +1,163 @@
+.feature-box {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @include laptop {
+    padding-top: 0;
+    padding-bottom: 120px;
+  }
+
+  .thm-tiny__slider:not(.tns-slider) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0px;
+  }
+
+  .tns-item+.tns-item {
+    @include laptop {
+      border-left: 2px solid #f4f4f4;
+    }
+  }
+
+  .inner-container {
+    background-color: #fff;
+    position: relative;
+    z-index: 20;
+
+    @include laptop {
+      box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.08);
+    }
+
+    @include laptop {
+      margin-top: -60px;
+      position: relative;
+      z-index: 10;
+    }
+  }
+
+  &__single {
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    padding-top: 51.5px;
+    padding-bottom: 51.5px;
+    border: 2px solid #f4f4f4;
+    background-color: #fff;
+
+    @include laptop {
+      padding-left: 60px;
+      padding-right: 50px;
+      border: none;
+    }
+  }
+
+
+  &__icon {
+    color: $thm-base;
+    font-size: 40px;
+
+    @include tablet {
+      position: absolute;
+      top: 50%;
+      left: 30px;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      content: '';
+      width: 40px;
+      height: 35px;
+      background-color: #f4f4f4;
+      position: absolute;
+      bottom: -10px;
+      right: -10px;
+      z-index: -1;
+
+      @include laptop {
+        width: 60px;
+        height: 52px;
+      }
+    }
+
+    @include laptop {
+      left: 60px;
+      font-size: 60px;
+    }
+  }
+
+  &__content {
+    padding-left: 0px;
+
+    @include tablet {
+      padding-left: 60px;
+    }
+
+    @include laptop {
+      padding-left: 90px;
+    }
+
+    h3 {
+      margin: 0;
+      color: $thm-black;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1;
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1;
+      color: $thm-color;
+    }
+  }
+}
+
+
+.feature-two {
+  padding-top: 80px;
+
+  @include laptop {
+    padding-top: 120px;
+  }
+
+  &__box {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    min-height: 307px;
+
+    h3 {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      right: 30px;
+      bottom: 30px;
+      background-color: rgba($thm-black-rgb, .9);
+      color: #fff;
+      font-family: $special-font;
+      font-size: 22px;
+      text-align: center;
+      margin: 0;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include laptop {
+        top: 90px;
+        bottom: 90px;
+        left: 70px;
+        right: 70px;
+        font-size: 30px;
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+  }
+}

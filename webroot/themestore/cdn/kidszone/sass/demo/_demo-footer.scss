@@ -1,0 +1,86 @@
+footer {
+    p {
+        line-height: 1.54;
+        margin-bottom: 1.3rem;
+    }
+
+    .form-control {
+        max-width: 33rem;
+        height: 4.4rem;
+        padding: 2.1rem 2rem 1.9rem 1.6rem;
+        background: #292c30;
+        border-radius: 2.2rem;
+        border: 0;
+
+        &::placeholder {
+            font-family: "Open Sans", sans-serif;
+            font-size: 1.3rem;
+            color: #999;
+        }
+
+        &:focus {
+            background: #292c30;
+        }
+    }
+    
+    .contact-info li {
+        margin-bottom: 7px;
+    }
+
+    .contact-info-label {
+        margin-bottom: 2px;
+    }
+
+    .tagcloud {
+        padding-right: 22%;
+
+        a {
+            padding: 0 .6em;
+            line-height: 2.4rem;
+        }
+    }
+    .widget-newsletter {
+        padding-right: 1rem;
+    }
+
+    .btn {
+        height: 4.4rem;
+        margin-left: -1px;
+        padding: 0 2.3rem;
+        background: #fff;
+        border-radius: 2.2rem;
+        letter-spacing: .01em;
+        font-size: 13px;
+
+        &:hover, &:focus {
+            opacity: .85;
+        }
+    }
+
+    .social-icons {
+        margin-top: 3.3rem;
+        padding-left: 2px;
+    }
+
+    .social-icon + .social-icon {
+        margin-left: 4px;
+    }
+
+    .links li {
+        line-height: 1.8;
+    }
+
+    .widget-title {
+        &.tag-widget-title {
+            margin-bottom: 1.5rem;
+        }
+
+        &.newsletter-title {
+            margin-bottom: 1.3rem;
+        }
+    }
+}
+
+.social-icons .social-icon:hover {
+    opacity: 1;
+}

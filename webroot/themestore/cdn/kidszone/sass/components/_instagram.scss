@@ -1,0 +1,98 @@
+// Instagram
+
+// # Contents
+// 1. Container
+// 3. List
+// 2. Content
+
+// 1. Container
+
+.instagram-feed {
+	position: relative;
+}
+
+// 2. Content
+
+.instagram-feed-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 286px;
+	padding: 3.6rem 4.4rem;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+	background-color: #0e0e0e;
+	color: #fff;
+	text-align: center;
+	
+	i {
+		display: inline-block;
+		margin-bottom: .8rem;
+		font-size: 2.4rem;
+	}
+	
+	h3 {
+		margin-bottom: .6rem;
+		color: inherit;
+		font-size: 3rem;
+		text-transform: uppercase;
+	}
+	
+	h4 {
+		margin-bottom: 2.5rem;
+		color: #f4f4f4;
+		font-size: 1.4rem;
+		font-weight: 400;
+		letter-spacing: .05em;
+	}
+	
+	.btn {
+		padding: 1em 2.14em;
+		color: #fff;
+		border: 2px solid #fff;
+			font-size: 1.3rem;
+			letter-spacing: .05em;
+	}
+}
+
+// 3. List
+
+.instagram-feed-list {
+	a {
+		display: block;
+		position: relative;
+	
+		&:after {
+		display: -ms-flexbox;
+		display: flex;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		-ms-flex-align: center;
+		align-items: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		transition: all .3s ease;
+		background-color: rgba(0, 0, 0, .46);
+		color: #f1f1f1;
+		font-family: 'porto';
+		font-size: 3.2rem;
+		content: '\f16d';
+		opacity: 0;
+		visibility: hidden;
+		}
+	
+		&:hover {
+		&:after {
+			opacity: 1;
+			visibility: visible;
+		}
+		}
+	}
+
+	img {
+		width: 100%;
+	}
+}

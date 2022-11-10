@@ -1,0 +1,87 @@
+// 1. Header Base
+.header {
+	border-bottom: 1px solid #f4f4f4;
+}
+
+.header-top {
+	border-bottom: 1px solid #e7e7e7;
+	padding:  7.5px 0;
+	font-size: 1.1rem;
+	font-weight: 600;
+	letter-spacing: .025em;
+	line-height: 24px;
+
+	a {
+		color: inherit;
+	}
+}
+
+.header-middle {
+	padding: 2.7rem 0;
+}
+
+.header-bottom {
+	.container:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 10px;
+		right: 10px;
+		border-top: 1px solid #f4f4f4;
+		flex: 0 0 100%;
+		-ms-flex: 0 0 100%;
+	}
+}
+
+// 2. Header Elements
+
+// 2.1) Header Dropdown
+.header-dropdown {
+	.dropdown-toggle:after {
+		font-size: 17px;
+	}
+
+	.badge-circle {
+		left: 21px;
+	}
+}
+
+// 2.7) Main Nav
+.main-nav .menu {
+	> li {
+		> a {
+			border-top: 3px solid transparent;
+		}
+
+		&.active > a,
+		> a:hover {
+			border-top-color: $primary-color;
+		}
+
+		&.float-right a {
+			border-top: 0;
+		}
+	}
+
+	.tip-top {
+		padding: 2px;
+		border-radius: 0;
+		left: 85%;
+		margin-top: 3px;
+	}
+}
+
+// 3. Responsive
+@media (min-width: 992px) and (max-width: 1199px) {
+	.dropdown-expanded li:not(:first-child) {
+		margin-left: 1.3rem;
+	}
+}
+
+@include mq(sm, max) {
+	.header-icon,
+	.cart-dropdown {
+		padding: 0;
+	}
+}

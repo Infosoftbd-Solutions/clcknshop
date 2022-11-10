@@ -1,0 +1,143 @@
+/*-------- 10. Brand logo style ---------*/
+
+.brand-logo-wrap {
+	display: flex;
+    flex-wrap: wrap;
+	justify-content: space-between;
+    @media #{$md-layout} {
+        justify-content: inherit;
+    }
+    @media #{$xs-layout} {
+        justify-content: inherit;
+    }
+    &.brand-logo-mrg {
+        margin: 0 -40px;
+        @media #{$xl-layout} {
+            margin: 0 0px;
+        }
+        @media #{$lg-layout} {
+            margin: 0 0px;
+        }
+        @media #{$md-layout} {
+            margin: 0 0px;
+        }
+        @media #{$xs-layout} {
+            margin: 0 0px;
+        }
+    }
+    .single-brand-logo {
+        flex: 0 0 20%;
+        max-width: 20%;
+        @media #{$md-layout} {
+            flex: 0 0 33.333%;
+            max-width: 33.333%;
+        }
+        @media #{$xs-layout} {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        @media #{$sm-layout} {
+            flex: 0 0 33.333%;
+            max-width: 33.333%;
+        }
+        img {
+            width: 100%;
+            opacity: .45;
+            transform: scale(1);
+            transition: all .5s ease 0s;
+        }
+        &:hover {
+            img {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.brand-logo-wrap-2 {
+	display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+	justify-content: space-between;
+    .single-brand-logo-2 {
+        flex: 0 0 16.63%;
+        max-width: 16.63%;
+        text-align: center;
+        @media #{$md-layout} {
+            flex: 0 0 33.333%;
+            max-width: 33.333%;
+        }
+        @media #{$xs-layout} {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        @media #{$sm-layout} {
+            flex: 0 0 33.333%;
+            max-width: 33.333%;
+        }
+        &:first-child {
+            text-align: left;
+            @media #{$md-layout} {
+                text-align: center;
+            }
+            @media #{$xs-layout} {
+                text-align: center;
+            }
+        }
+        &:last-child {
+            text-align: right;
+            @media #{$md-layout} {
+                text-align: center;
+            }
+            @media #{$xs-layout} {
+                text-align: center;
+            }
+        }
+        img {
+            max-width: 100%;
+            opacity: .45;
+            transform: scale(1);
+            transition: all .5s ease 0s;
+        }
+        &:hover {
+            img {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+@media #{$md-layout} {
+    .brand-logo-area {
+        &.pt-100 {
+            padding-top: 50px;
+        }
+        &.pb-100 {
+            padding-bottom: 45px;
+        }
+        &.pb-80 {
+            padding-bottom: 40px;
+        }
+    }
+}
+@media #{$xs-layout} {
+    .brand-logo-area {
+        &.pt-100 {
+            padding-top: 40px;
+        }
+        &.pb-95 {
+            padding-bottom: 25px;
+        }
+        &.pb-100 {
+            padding-bottom: 35px;
+        }
+        &.pb-80 {
+            padding-bottom: 30px;
+        }
+    }
+}
+
+
+

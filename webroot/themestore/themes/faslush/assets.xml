@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<root>
+    <images>
+        <image>
+            <title>Slider Image 1</title>
+            <key>slider-1</key>
+            <width>1920</width>
+            <height>780</height>
+            <file>uploads/slide4jpg-02-05-2021-1619932347427.jpg</file>
+        </image>
+        <image>
+            <title>Slider Image 2</title>
+            <key>slider-2</key>
+            <width>1920</width>
+            <height>780</height>
+            <file>uploads/slide5jpg-20-04-2021-1618910803299.jpg</file>
+        </image>
+
+        <image>
+            <title>Slider Image 3</title>
+            <key>slider-3</key>
+            <width>1920</width>
+            <height>780</height>
+            <file>uploads/slide6jpg-20-04-2021-1618910806499.jpg</file>
+        </image>
+
+
+        <image>
+            <title>Home Page Flash Deal 1</title>
+            <key>home-page-flash-deal-1</key>
+            <width>570</width>
+            <height>380</height>
+            <file>uploads/coushonjpg-22-04-2021-1619083982778.jpg</file>
+        </image>
+        <image>
+            <title>Home Page Flash Deal 2</title>
+            <key>home-page-flash-deal-2</key>
+            <width>570</width>
+            <height>380</height>
+            <file>uploads/bedsheetjpg-22-04-2021-1619083986814.jpg</file>
+        </image>
+        <image>
+            <title>Home Page Flash Deal 3</title>
+            <key>home-page-flash-deal-3</key>
+            <width>570</width>
+            <height>380</height>
+            <file>uploads/mosqutojpg-22-04-2021-1619083992624.jpg</file>
+        </image>
+
+    </images>
+
+    <menus>
+        <menu>
+            <title>Home Textile</title>
+            <key>home-textile</key>
+            <menujson>[{"text":"Bedsheet","href":"collection/bedsheet","icon":"","target":"_self","title":"Bedsheet"},{"text":"Cushion Cover 20x20","href":"collection/cushion-cover-20x20","icon":"","target":"_self","title":"Cushion Cover 20x20"},{"text":"Cushion Cover 18x18","href":"collection/cushion-cover-18x18","icon":"","target":"_self","title":"Cushion Cover 18x18"},{"text":"Cushion Cover 16x16","href":"collection/cushion-cover-16x16","icon":"","target":"_self","title":"Cushion Cover 16x16"},{"text":"Comforter","href":"collection/comforter","icon":"","target":"_self","title":"Comforter"},{"text":"Casual Shirt","href":"collection/casual-shirt","icon":"","target":"_self","title":"Casual Shirt"},{"text":"Hoodies &amp; Sweatshirts","href":"collection/hoodies-sweatshirts","icon":"","target":"_self","title":"Hoodies &amp; Sweatshirts"},{"text":"Muscle Tee","href":"collection/muscle-tee","icon":"","target":"_self","title":"Muscle Tee"}]</menujson>
+        </menu>
+
+        <menu>
+            <title>Handbags</title>
+            <key>handbags</key>
+            <menujson>[{"text":"Backpacks","icon":"","href":"collection/backpacks","target":"_self","title":"Backpacks"},{"text":"Shoulder Bags","icon":"","href":"collection/shoulder-bags","target":"_self","title":"Shoulder Bags"},{"text":"Wallets","icon":"","href":"wallets","target":"_self","title":"Wallets"},{"text":"Dresses &amp; Skirts","icon":"","href":"collection/dresses-skirts","target":"_self","title":"Dresses &amp; Skirts"},{"text":"Wristlets","icon":"","href":"collection/wristlets","target":"_self","title":"Wristlets"},{"text":"Suits &amp; Blazers","icon":"","href":"collection/suits-blazers","target":"_self","title":"Suits &amp; Blazers"},{"text":"Jeans Pants &amp; Leggings","icon":"","href":"collection/jeans-pants-leggings","target":"_self","title":"Jeans Pants &amp; Leggings"}]</menujson>
+        </menu>
+
+        <menu>
+            <title>Footwear</title>
+            <key>footwear</key>
+            <menujson>[{"text":"Boot &amp; Sandles","icon":"","href":"collection/boot-sandles","target":"_self","title":""},{"text":"Sports Shoes","icon":"","href":"collection/sports-shoes","target":"_self","title":""},{"text":"Pumps &amp; Heels","icon":"","href":"collection/pumps-heels","target":"_self","title":""},{"text":"Loafers &amp; Slipons","icon":"","href":"Collection/oafers-slipons","target":"_self","title":""},{"text":"Sportwear","icon":"","href":"collection/sportwear","target":"_self","title":""}]</menujson>
+        </menu>
+        <menu>
+            <title>Adult</title>
+            <key>adult</key>
+            <menujson>[{"text":"Man","icon":"","href":"collection/man","target":"_self","title":""},{"text":"Woman","icon":"","href":"collection/woman","target":"_self","title":""}]</menujson>
+        </menu>
+        <menu>
+            <title>Kids</title>
+            <key>kids</key>
+            <menujson>[{"text":"T-shirt","icon":"","href":"Collection/kids-t-shirt","target":"_self","title":""}]</menujson>
+        </menu>
+        <menu>
+            <title>Footer Menu</title>
+            <key>footer-menu</key>
+            <menujson>[{"text":"About Company","href":"page/about-us","icon":"","target":"_self","title":""},{"text":"Investors","href":"page/investors","icon":"","target":"_self","title":""},{"text":"Gift Cards","href":"page/gift-cards","icon":"","target":"_self","title":""},{"text":"FAQ","href":"page/faq","icon":"","target":"_self","title":""},{"text":"Shipping &amp; Returns","href":"page/shipping-returns","icon":"","target":"_self","title":""},{"text":"Privacy Policy","href":"page/privacy-policy","icon":"","target":"_self","title":""},{"text":"Team","href":"page/team","icon":"","target":"_self","title":""},{"text":"Blog","href":"page/blog","icon":"","target":"_self","title":""},{"text":"Loyalty Program","href":"page/loyalty-program","icon":"","target":"_self","title":""},{"text":"Contact Us","href":"page/contact-us","icon":"","target":"_self","title":""},{"text":"Terms &amp; Conditions","href":"page/terms-conditons","icon":"","target":"_self","title":""},{"text":"Acceptable Use Terms Of Use","href":"page/acceptable-use-terms-of-use","icon":"","target":"_self","title":""}]</menujson>
+        </menu>
+
+    </menus>
+</root>

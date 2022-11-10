@@ -1,0 +1,202 @@
+// Variables
+
+// # Contents
+// 1. Theme Skin
+// 2. Theme Settings
+// 3. Theme Variables
+// 4. Plugin Variables
+
+// 1. Theme Skin
+$primary-color: #222529;
+$secondary-color: #f4a085;
+
+// 2. Theme Settings
+$dot-border: #222529;
+$dot-border-active: #222529;
+$dot-width: 14px;
+$dot-height: 14px;
+$dot-border: #e7e7e7;	
+$nav-color: #333;
+$nav-color-hover: #333;
+
+// 3. Theme Variables
+$border-color: #e7e7e7;
+$font-family: 'Poppins', sans-serif;
+
+@include set(
+	(
+		body: (
+			background: #fff
+		),
+		
+		layout: (
+			container: (
+				max-width-desktop: 1416px
+			)
+		),
+
+		header: (
+			z-index: 1000,
+			width: 100%,
+			margin: 0 6px,
+
+			top-notice: (
+				padding-top: 9px,
+				padding-bottom: 11px
+			),
+
+			top: (
+				padding-top: 1.3rem,
+				font-family: "'Open Sans', sans-serif",
+				font-size: 11px,
+				font-weight: 600,
+				letter-spacing: .025em,
+				color: $primary-color
+			),
+
+			middle: (
+				padding-top: 2.8rem
+			),
+
+			dropdown: (
+				_space: 1.9rem,
+
+				item: (
+					_space: 2.4rem
+				)
+			),
+
+			logo: (
+				max-width: 11.1rem
+			),
+
+			icon: (
+				_size: 2.4rem,
+				_space: 2.2rem
+			),
+
+			search: (
+				height: 34px,
+
+				border: (
+					_width: 5px
+				),
+
+				select: (
+					min-width: 14rem
+				)
+			)
+		),
+
+		menu: (
+			main: (
+				top: (
+					_space: 3.7rem,
+
+					padding: 10px 0,
+					font-size: 13px,
+					letter-spacing: -.01em,
+					color: #333,
+				)
+			),
+		),
+
+		product: (
+			product-title: (
+				margin-bottom: 6px,
+				letter-spacing: -.01em
+			),
+
+			ratings-container: (
+				margin-right: -1px,
+				margin-bottom: 1.3rem
+			),
+
+			price: (
+				margin-bottom: 1.4rem,
+				font-family: "'Open Sans', sans-serif",
+				color: #444
+			),
+
+			old-price: (
+				margin-right: 4px,
+				font-family: "'Open Sans', sans-serif",
+				font-size: 1.44rem,
+				letter-spacing: 0	
+			),
+
+			price-box: (
+				margin-bottom: 1.4rem
+			),
+
+			btn-quickview: (
+				transition: .25s
+			),
+
+			btn-wishlist: (
+				transition: .25s
+			),
+
+			product-label: (
+				font-family: "'Open Sans', sans-serif",
+				font-size: 1.2rem,
+				font-weight: 400,
+				padding: 5px 1.15rem
+			),
+
+			label-group: (
+				top: 1rem,
+				left: 9px
+			)
+		),
+
+		footer: (
+			_link-color: #a8a8a8,
+			_link-active-color: #fff,
+
+			padding-top: 6.6rem,
+			font-family: "'Open Sans', sans-serif",
+
+			widget: (
+				title: (
+					font-size: 1.5rem,
+					color: #fff,
+					font-weight: 700
+				),
+
+				link: (
+					_space: 1px
+				)
+			),
+
+			social-icon: (
+				width: 4rem,
+				height: 4rem,
+				background: transparent,
+				color: #fff,
+				line-height: 3.8rem,
+				font-size: 1.6rem,
+				border: 1px solid #313438
+			),
+
+			middle: (
+				padding-bottom: 10px,
+				color: #a8a8a8,
+			),
+
+			bottom: (
+				padding: 15px 0,
+				border-top: 1px solid #313438,
+				font-size: .9em
+			)
+		),
+
+		owl-carousel: (
+			nav: (
+				image-center: 38%
+			)
+		)
+	)
+);
+
+// 4. Plugin Variables

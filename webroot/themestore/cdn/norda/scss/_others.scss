@@ -1,0 +1,105 @@
+/*-------- 15. Others style ---------*/
+
+.download-app-content {
+    margin-left: 100px;
+    padding: 60px 0 65px;
+    @media #{$lg-layout} {
+        margin-left: 70px;
+    }
+    @media #{$md-layout} {
+        margin-left: 50px;
+    }
+    @media #{$xs-layout} {
+        margin-left: 15px;
+    }
+    h2 {
+        font-size: 30px;
+        line-height: 36px;
+        letter-spacing: -.25px;
+        margin: 0;
+        @media #{$xs-layout} {
+            font-size: 20px;
+            line-height: 25px;
+        }
+        @media #{$sm-layout} {
+            font-size: 23px;
+        }
+    }
+    p {
+        font-size: 16px;
+        margin: 15px 0 36px;
+        @media #{$xs-layout} {
+            margin: 12px 0 20px;
+        }
+    }
+    .app-img {
+        display: flex;
+        a {
+            display: block;
+            img {
+                max-width: 100%;
+                margin-right: 20px;
+                @media #{$xs-layout} {
+                    width: 110px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+.testimonial-border-1 {
+    border: 1px solid #d9d9d9;
+}
+.testimonial-padding-1 {
+    padding: 35px 30px 30px;
+    @media #{$lg-layout} {
+        padding: 35px 20px 30px;
+    }
+}
+.single-testimonial {
+    img {
+        max-width: 100%;
+    }
+    p {
+        color: #555555;
+        width: 100%;
+        margin: 17px 0 23px;
+    }
+    .client-info {
+        display: flex;
+        margin: 0 0 23px;
+        h5 {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1;
+            margin: 0 6px 0 0;
+        }
+        span {
+            color: #777;
+            font-size: 13px;
+            display: inline-block;
+            line-height: 1;
+        }
+    }
+}
+
+.tag-wrap {
+    a {
+        display: inline-block;
+        color: #555555;
+        line-height: 1;
+        background-color: #f5f5f5;
+        padding: 8px 13px 10px;
+        margin: 0 1px 7px;
+        border-radius: 3px;
+        border: 1px solid transparent;
+        &:hover {
+            background-color: transparent;
+            border: 1px solid $theme-color-green-2;
+            color: $theme-color-green-2;
+        }
+    }
+}
+
+

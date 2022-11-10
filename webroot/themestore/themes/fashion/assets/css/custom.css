@@ -1,0 +1,28 @@
+.cart-table-container .product-image img{
+    max-width: 5rem;
+}
+
+.cart-table-container h2{
+    font-size: 17px;
+    font-weight: 400;font-weight: bold;
+}
+
+.contact .form-group .form-control{
+    height: 0px !important;
+    border-radius: 5px;
+    font-size: 16px !important;
+}
+
+.contact .form-footer button{
+    border-radius: 5px;
+    padding: 12px 30px !important;
+}
+
+.collection .toolbox .breadcrumb li {
+    font-size: 18px;
+}
+
+.header .logo{
+    width:90px !important;
+}
+

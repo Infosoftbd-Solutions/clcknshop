@@ -1,0 +1,245 @@
+.nt {
+  color: #2f6f9f;
+}
+.na {
+  color: #4f9fcf;
+}
+.s {
+  color: #d44950;
+}
+/*CSS*/
+.nc {
+  color: #0a8;
+}
+.nl {
+  color: #99f;
+}
+
+
+
+
+
+
+
+/* elements-menu */
+.elements-menu {
+  display: inline-block;
+}
+.elements-menu > li {
+  float: left;
+  margin: auto 5px;
+}
+.elements-menu > li:first-child {
+  margin-left: 0;
+}
+.elements-menu > li > a {
+  background: #f6f6f6 none repeat scroll 0 0;
+  display: block;
+  font-size: 16px;
+  padding: 10px 30px;
+}
+.elements-menu > li.active > a {
+  background: #C8A165 none repeat scroll 0 0;
+  color: #fff;
+}
+.elements-section-title h2 {
+  border: 1px solid #f6f6f6;
+  display: inline-block;
+  font-size: 24px;
+  line-height: 24px;
+  margin: 0;
+  padding: 5px 20px;
+}
+hr.tall {
+  background-image: linear-gradient(to right, transparent, #dbdbdb, transparent);
+  border: 0 none;
+  height: 1px;
+  margin: 22px 0;
+}
+
+
+/* accordion-1 */
+.elements-accordions .panel {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+.elements-accordions .accordion-1 .panel {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+.accordion-title {}
+.elements-accordions .accordion-title a {
+  background: #f6f6f6 none repeat scroll 0 0;
+  border: 1px solid #f6f6f6;
+  display: block;
+  font-size: 16px;
+  padding: 10px 60px 10px 20px;
+  position: relative;
+}
+.elements-accordions .accordion-title a.collapsed {
+  background: #f6f6f6 none repeat scroll 0 0;
+  color: #666;    
+}
+.elements-accordions .accordion-title a::before {
+  color: #ccc;
+  content: "\f2f8";
+  font-family: material-design-iconic-font;
+  font-size: 25px;
+  position: absolute;
+  right: 30px;
+  text-align: center;
+}
+.elements-accordions .accordion-title a.collapsed:before {
+  content: "\f2f2";  
+  color: #ccc; 
+}
+.elements-accordions .accor-content {
+  padding: 15px 20px;
+  border: 1px solid #F6F6F6;
+  border-top: 0;
+}
+/* accordion-3 */
+.accordion-3 .accordion-title a {
+  background: #C8A165 none repeat scroll 0 0;
+  color: #fff;
+}
+.accordion-3 .accordion-title a.collapsed {
+  background: #C8A165 none repeat scroll 0 0;
+  color: #fff;
+}
+/* accordion-4 */
+.accordion-4 .accordion-title a {
+  background: #C87065 none repeat scroll 0 0;
+  color: #fff;
+}
+.accordion-4 .accordion-title a.collapsed {
+  background: #C87065 none repeat scroll 0 0;
+  color: #fff;
+}
+/* accordion-5 */
+.accordion-5 .accordion-title a {
+  background: #fff none repeat scroll 0 0;
+  color: #444;
+}
+.accordion-5 .accordion-title a.collapsed {
+  background: #fff none repeat scroll 0 0;
+  color: #444;
+}
+/* accordion-6 */
+.accordion-6 .accordion-title a {
+  background: #444 none repeat scroll 0 0;
+  color: #fff;
+}
+.accordion-6 .accordion-title a.collapsed {
+  background: #444 none repeat scroll 0 0;
+  color: #fff;
+}
+/* accordion-7 */
+.accordion-7 .accordion-title a {
+  background: #2BAAB1 none repeat scroll 0 0;
+  color: #fff;
+}
+.accordion-7 .accordion-title a.collapsed {
+  background: #2BAAB1 none repeat scroll 0 0;
+  color: #fff;
+}
+/* accordion-8 */
+.accordion-8 .accordion-title a {
+  background: #0088CC none repeat scroll 0 0;
+  color: #fff;
+}
+.accordion-8 .accordion-title a.collapsed {
+  background: #0088CC none repeat scroll 0 0;
+  color: #fff;
+}
+
+
+/* elements-tab-1 */
+.elements-tab .tab-content {
+  padding: 15px;
+}
+.elements-tab-1  .tab-content, .elements-tab-2  .tab-content {
+  border: 1px solid #ddd;
+  border-top: 0;
+}
+.elements-tab .nav-tabs > li {
+  display: inline-block;
+  float: none;
+}
+.elements-tab .nav-tabs li a {
+  border-radius: 5px 5px 0 0;
+  font-size: 16px;
+  margin-right: 1px;
+}
+.elements-tab .nav-tabs li.active a {
+  color: #C8A165;
+}
+
+/* elements-tab-3 */
+.elements-tab-menu {
+    display: inline-block;
+}
+.elements-tab-menu li {
+  display: block;
+  float: left;
+  margin: 0 2px;
+}
+.elements-tab-menu li a {
+  background: #ddd none repeat scroll 0 0;
+  display: block;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+.elements-tab-menu li.active a {
+  background: #C8A165 none repeat scroll 0 0;
+  color: #fff;
+}
+/*elements-tab-7*/
+.elements-tab-7 .elements-tab-menu li {
+  margin: 0 20px 0 0;
+}
+.elements-tab-7 .elements-tab-menu li a {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  padding: 5px 0px;
+}
+.elements-tab-7 .elements-tab-menu li.active a {
+  color: #C8A165;
+}
+
+.element-line-btm li.active {
+  position: relative;
+}
+.element-line-btm li.active::before {
+  background: #d3b484 none repeat scroll 0 0;
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  width: 40px;
+}
+.elements-tab-7 .element-line-btm li.active::before {
+  left: 0;
+}
+
+/*elements-tab-8*/
+.elements-tab-8 .elements-tab-menu li {
+  margin: 0 20px 0 0;
+}
+.elements-tab-8 .elements-tab-menu li a {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  padding: 5px 0px;
+}
+.elements-tab-8 .elements-tab-menu li.active a {
+  color: #C8A165;
+}
+.elements-tab-8 .element-line-btm li.active::before {
+  right: 0;
+  left: auto;
+}
+/*element-footer*/
+.footer-area.elements-footer {
+  padding: 80px 0 75px;
+}
