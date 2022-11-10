@@ -24,8 +24,8 @@
 
 
 		Registration link For new Store creation: <a target="_blank" href='https://clckn.shop/registration'>https://clckn.shop/registration</a>
+	
 	</pre>
-
 
 
 <br>
