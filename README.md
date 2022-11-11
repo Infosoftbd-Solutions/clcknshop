@@ -28,6 +28,7 @@
 	
 
 </pre>
+<h3>Check <a href="https://github.com/masum0009/clcknshop/wiki">wiki</a> for installation procedure. For any support knock at support@infosoftbd.com </h3>
 
 <br>
 The system is highly secured and protected against <b>SQL injection</b>, <b>XSS</b>, <b>CSRF</b>, and other attacks.
