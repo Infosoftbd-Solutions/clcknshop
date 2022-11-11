@@ -25,6 +25,7 @@
 </pre>
 <pre>
 		Registration link For new Store creation: <a target="_blank" href='https://clckn.shop/registration'>https://clckn.shop/registration</a>
+		Documentation and user manual: <a target="_blank" href='https://clckn.shop/docs/'>https://clckn.shop/docs</a>
 	
 
 </pre>
