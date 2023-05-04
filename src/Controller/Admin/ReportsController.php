@@ -59,9 +59,12 @@ class ReportsController extends AppController
               'date(payment_date) <=' => $this->strtodate($range[1]),
             ];
 
+            /*
             $orderPayments = $this->OrderPayments->find('all',[
                 'contain' => ['PayMethods']
             ])->where($payment_condition);
+
+            */
 
             $sales = array();
             $payments = array();
@@ -96,6 +99,15 @@ class ReportsController extends AppController
 
 
 //        payment
+            $orderPayments = array ();
+
+            if($ordersl->count()){
+                $orderPayments = $this->OrderPayments->find('all',[
+                    'contain' => ['PayMethods']
+                ])->where(['OrderPayments.orders_id IN' => $ordersl->toArray()]);
+            }
+
+
             $payment_collection = new Collection($orderPayments);
             $PaymentMethods = TableRegistry::getTableLocator()->get('PaymentMethods');
             $methods = $PaymentMethods->find('all')->toArray();
@@ -216,7 +228,8 @@ class ReportsController extends AppController
                     'total_discount' => 'SUM(discount)',
                     'total_shipping_fee' => 'SUM(shipping_fee)',
                     'total_taxes' => 'SUM(taxes)',
-                    'order_total_sum'=>'SUM(order_total)'
+                    'order_total_sum'=>'SUM(order_total)',
+                    'total_paid' => 'SUM(total_paid)',
                 ])
                 ->where(['draft' => 0, $order_condition])->group('customers_id')->toArray();
 
@@ -374,11 +387,21 @@ class ReportsController extends AppController
             $this->export_csv($data, 'product-reports');
         }
 
+
+        $report = [
+            'total_payment' => 0,
+            'total_refund' => 0
+        ];
+
+
+        foreach($payments as $payment){
+            if($payment->amount > 0) $report['total_payment'] += floatval($payment->amount);
+            else $report['total_refund'] += floatval(abs($payment->amount));
+        }
+
         
 
-        // pr($payments);
-
-        // $this->set('payments', $payments);
+        $this->set('report', $report);
         $this->set('payments', $this->paginate($payments));
         $this->render('payment_order');
     }

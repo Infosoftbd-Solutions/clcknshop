@@ -1,0 +1,37 @@
+// Tabs
+.nav-tabs {
+	margin: 0;
+	border: 0;
+	border-bottom: 2px solid #e7e7e7;
+
+	.nav-item {
+		margin-bottom: -2px;
+
+		.nav-link {
+			padding: 1.2rem 0;
+			border: 0;
+			border-bottom: 2px solid transparent;
+			color: #282d3b;
+			font-weight: 700;
+			font-size: 1.4rem;
+			line-height: 1;
+			font-family: $second-font-family;
+			letter-spacing: .01rem;
+			text-transform: uppercase;
+
+			&:hover {
+				color: $primary-color;
+			}
+		}
+
+		&:not(:last-child) {
+			margin-right: 3.4rem;
+		}
+
+		&.show .nav-link,
+		.nav-link.active {
+			border-bottom-color: $primary-color;
+			color: $primary-color;
+		}
+	}
+}

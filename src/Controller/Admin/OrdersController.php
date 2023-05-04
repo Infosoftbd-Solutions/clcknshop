@@ -338,10 +338,15 @@ class OrdersController extends AppController
      */
     public function view($id = null, $isOrderId = false)
     {
+        $PaymentMethods = TableRegistry::getTableLocator()->get('PaymentMethods');
+        $methods = $PaymentMethods->find('list',[
+            'keyField' => 'id',
+            'valueField' => 'name'
+        ])->where(['status' => 1])->toArray();
 
         if($isOrderId){
             $order = $this->Orders->find('all')->where(['order_id' => $id])->contain(
-                        ['Customers','OrderProducts', 'PaymentProcessor', 'ShippingMethods',
+                        ['Customers','OrderProducts', 'OrderPayments', 'PaymentProcessor', 'ShippingMethods',
                             'OrderLogs' => [
                                 'sort' => ['OrderLogs.id' => 'DESC']
                             ]
@@ -350,7 +355,7 @@ class OrdersController extends AppController
         }
         else{
             $order = $this->Orders->get($id, [
-                'contain' => ['Customers','OrderProducts', 'PaymentProcessor', 'ShippingMethods',
+                'contain' => ['Customers','OrderProducts', 'OrderPayments', 'PaymentProcessor', 'ShippingMethods',
                     'OrderLogs' => [
                         'sort' => ['OrderLogs.id' => 'DESC']
                     ]
@@ -360,7 +365,7 @@ class OrdersController extends AppController
         }
 
 
-    //    pr($order);
+       // pr($order);
         /*
         $data = [
             'store' => json_decode(Configure::read('App.store')),
@@ -372,7 +377,7 @@ class OrdersController extends AppController
 
         $shippingMethods = $this->Orders->ShippingMethods->find('all', ['limit' => 200]);
 
-        $this->set(compact('order', 'shippingMethods'));
+        $this->set(compact('order', 'shippingMethods', 'methods'));
     }
 
 
@@ -523,6 +528,7 @@ class OrdersController extends AppController
                 if (!empty($mail)) $this->Flash->error($mail);
 
 */
+             $this->order_email($order); 
 
 
 
@@ -688,6 +694,8 @@ class OrdersController extends AppController
 
                 $this->Flash->success(__('The order has been saved.'));
 
+                
+                $this->order_email($order);
                 if($order->draft == 1) return $this->redirect(['action'=>'drafts']);
 
                 return $this->redirect(['action' => 'view',$id]);
@@ -726,23 +734,43 @@ class OrdersController extends AppController
         $this -> render('add');
     }
 
+    function order_email($order){
+
+        $invoice_cache = CACHE . DS . 'invoices';
+        @mkdir($invoice_cache, 0777,true);
+        $invoice_file = $invoice_cache . DS . 'invoice_' . $order->order_id . '.pdf';
+        file_put_contents($invoice_file, file_get_contents(Router::url(['controller' => 'Orders', 'action' => 'invoice', $order->order_id, $order->order_password,'_ext' => 'pdf','download'=>false],true)));
+
+        $store = json_decode(Configure::read('App.store'));
+        $ret = $this->Mail->send($store->email, "admin Order  notfication Order#{$order->order_id}", ['order' => $order, 'store' => $store,'attachments'=>[$invoice_file]], "admin_order_placed");
+    }
+
 
 
 
 
     public function invoice($order_id = null, $order_password = null, $downloadorprint = null){
         //pr(Configure::read('CakePdf')); die();
+
+        $PaymentMethods = TableRegistry::getTableLocator()->get('PaymentMethods');
+        $methods = $PaymentMethods->find('list',[
+            'keyField' => 'id',
+            'valueField' => 'name'
+        ])->where(['status' => 1])->toArray();
+
+
+
         if($order_password){
-            $order = $this->Orders->find('all')->where(['order_id' => $order_id, 'order_password' => $order_password])->contain(['OrderProducts'])->first();
+            $order = $this->Orders->find('all')->where(['order_id' => $order_id, 'order_password' => $order_password])->contain(['OrderProducts', 'OrderPayments', 'PaymentProcessor'])->first();
             if(!$order) return $this->redirect('/admin/orders');
 
             $customer = json_decode($order->shipping_address);
             //$this->layout = "ajax";
-            $this->set(compact('order', 'customer'));
+            $this->set(compact('order', 'customer', 'methods'));
             
 
             if ($downloadorprint == 1){
-                $queryString = Router::url(['controller' => 'Orders', 'action' => 'invoice', $order_id, $order_password,'_ext' => 'pdf',]);
+                $queryString = Router::url(['controller' => 'Orders', 'action' => 'invoice', $order_id, $order_password,'_ext' => 'pdf','download'=>true]);
                 $this->redirect($queryString);
               
             }
@@ -753,17 +781,19 @@ class OrdersController extends AppController
                     'pdfConfig' => [
                       //  'orientation' => 'portrait',
                         'filename' => Inflector::humanize($this->request->params['action']) . '-' . $order_id . '.pdf',
-                        'download'=>true
+                        'download'=>isset($this->request->params['download'])?$this->request->params['download']:true
                     ]
                     ]);  
-             }else{
+             }
+             else{
 
                 $this->render('pdf/' . Inflector::underscore($this->request->params['action']),'pdf/default');
              }
            
         }else if($this->request->getSession()->read('user_logged_in') == '1'){
-            $order = $this->Orders->find('all')->where(['order_id' => $order_id ])->first();
-            $this->set(compact('order'));
+            $order = $this->Orders->find('all')->where(['order_id' => $order_id ])->contain(['OrderProducts', 'OrderPayments', 'PaymentProcessor'])->first();
+            
+            $this->set(compact('order', 'methods'));
         }else
           $this->redirect('/admin/orders');
 
@@ -1140,15 +1170,16 @@ class OrdersController extends AppController
     }
 
     public function sendMail($order_id = null){
-       /*  $store = json_decode(Configure::read('App.store'));
+         $store = json_decode(Configure::read('App.store'));
         $order = $this->Orders->get($order_id, [
             'contain' => ['Customers','OrderProducts', 'PaymentProcessor']
         ]);
-
+         pr($store);
         if($order){
-            $this->Mail->send("atik@infosoftbd.com", __("Order Placed For Testing Purpose"), ['order' => $order, 'store' => $store], "order_placed");
-        } */
-        $ret = $this->Mail->send("masum0009@gmail.com", __("Order Placed For Testing Purpose"), ['test'=>'test'], "test");
+           $ret = $this->Mail->send($store->email, "admin Order  notfication Order#{$order->order_id}", ['order' => $order, 'store' => $store], "admin_order_placed");
+        } 
+       // $ret = $this->Mail->send("masum0009@gmail.com", __("Order Placed For Testing Purpose"), ['test'=>'test'], "test");
+       
         die($ret);
     }
 

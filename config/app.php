@@ -314,7 +314,7 @@ return [
      *   breathing room to complete logging or error handling.
      */
     'Error' => [
-        'errorLevel' => E_ALL & ~E_USER_DEPRECATED,
+        'errorLevel' => E_ALL & ~E_NOTICE & ~E_USER_DEPRECATED,
         'exceptionRenderer' => ExceptionRenderer::class,      
         'skipLog' => [],
         'log' => true,

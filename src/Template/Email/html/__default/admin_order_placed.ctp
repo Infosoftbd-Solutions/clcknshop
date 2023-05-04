@@ -76,7 +76,7 @@
                                             <td class="purchase_item">
                                                 <span class="f-fallback" style="line-height: 12px">
                                                     <div class="img" style="display: inline-block; max-width: 20%; border: 1px solid #eeeeee; border-radius: 5px">
-                                                        <img src="<?= $this->Url->build("image?src={$product->product_image}&size=48x48",true) ?>">
+                                                        <img src="<?= $this->Url->build("image?src={$product->product_image}&size=48x48",true) ?>" width='48' height='48'>
                                                         
                                                     </div>
                                                     <div class="description"  style="display: inline-block; max-width: 80%">

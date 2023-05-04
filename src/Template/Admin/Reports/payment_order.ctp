@@ -20,7 +20,7 @@
         <div class="col-12 d-flex justify-content-between pb-5">
             <div class="title">
                 <h2 class="pl-3 page-title">
-                <?= __('Orders Product Reports') ?>
+                <?= __('Orders Payment Reports') ?>
                 </h2>
             </div>
 
@@ -101,6 +101,16 @@
                                     <td><?= $payment->payment_date ?></td>
                                 </tr>
                             <?php endforeach; ?>
+
+                                <tr>
+                                    <td></td>
+                                    <td> <b>Total Payment </b> </td>
+                                    <td> <b> <?= number_format($report['total_payment'], 2) ?> </b> </td>
+                                    <td> <b>Total Refund </b> </td>
+                                    <td> <b> <?= number_format($report['total_refund'], 2) ?> </b> </td>
+                                    <td></td>
+                                </tr>
+
                             </tbody>
                         </table>
                         <?=$this->TablerPaginator->links()?>

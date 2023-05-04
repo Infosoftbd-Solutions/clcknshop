@@ -1,0 +1,68 @@
+// Top Nav
+
+.top-menu li {
+	float: left;
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+
+	a {
+		display: block;
+		position: relative;
+		padding: 1.4rem 5px;
+		color: #fff;
+		font-size: 1.2rem;
+		font-weight: 600;
+		line-height: 1.84;
+		white-space: nowrap;
+		text-transform: uppercase;
+		transition: color .25s;
+	}
+
+	&:hover a {
+		color: $primary-color;
+	}
+
+	&.active a {
+		padding-left: 1.9rem;
+		padding-right: 1.9rem;
+		z-index: 1;
+		color: #000;
+
+		&:before {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: -2px;
+			right: -2px;
+			bottom: 0;
+			transform: skew(-25deg);
+			background: #fff;
+		}
+
+		&:after {
+			content: '\e81f';
+			margin-left: 3px;
+			font-family: 'porto';
+		}
+	}
+}
+
+@include mq(sm) {
+	.top-menu li + li {
+		margin-left: 1rem;
+	}
+}
+
+@include mq(md) {
+	.top-menu li + li {
+		margin-left: 3rem;
+	}
+}
+
+@include mq(xs, max) {
+	.top-menu li.active a {
+		padding-left: .8rem;
+		padding-right: .8rem;
+	}
+}

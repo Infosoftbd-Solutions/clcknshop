@@ -54,6 +54,8 @@
                             <td class="text-right"><b> <?= \Cake\Core\Configure::read('App.currency') ?><?= key_exists('total_sales', $sales) ? number_format($sales['total_sales'], 2) : number_format(0,2)   ?></b></td>
 
                         </tr>
+
+                        
                         </tbody>
                     </table>
 
@@ -97,6 +99,13 @@
                         <tr>
                             <td width="70%"><?= __('Total Refunds') ?></td>
                             <td width="30%" class="text-right"><?= \Cake\Core\Configure::read('App.currency') . number_format($total_refunds, 2) ?> </td>
+                        </tr>
+
+                        <tr>
+                            <td><?= __('Total Dues') ?></td>
+                            <td class="text-right">
+                            <?= \Cake\Core\Configure::read('App.currency') ?><?= key_exists('total_sales', $sales) ? number_format($sales['total_sales'] - ($total_payments - abs($total_refunds)), 2) : number_format(0,2)   ?></td>
+
                         </tr>
 
                         </tbody>

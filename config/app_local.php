@@ -27,7 +27,7 @@ return [
 
     'Error' => [
 
-      'errorLevel' => E_ALL & ~E_USER_DEPRECATED,
+      'errorLevel' => E_ALL & ~E_USER_DEPRECATED & ~E_DEPRECATED,
 
     //  'exceptionRenderer' => ExceptionRenderer::class,
 

@@ -48,24 +48,24 @@
                         <div class="input-group">
                             <div class="form-group mr-3">
                                 <label for="order_status" class="form-label"><?= __('Order Status') ?></label>
-                                <?= $this->Form->select('order_status', $this->Formats->getOrderStatuses(), ['class' => 'form-control', 'empty' =>"All"]) ?>
+                                <?= $this->Form->select('order_status', $this->Formats->getOrderStatuses(), ['class' => 'form-control', 'empty' =>"All",'value'=>$this->request->query('order_status')]) ?>
 
                             </div>
 
                             <div class="form-group mr-3">
                                 <label for="order_id" class="form-label"><?= __('Order ID') ?></label>
-                                <input type="text" placeholder="<?= __('Order ID') ?>" class="form-control" name="order_id" id="order_id">
+                                <input type="text" placeholder="<?= __('Order ID') ?>" class="form-control" name="order_id" id="order_id" value="<?=$this->request->query('order_id')?>">
                             </div>
 
                             <div class="form-group mr-3">
                                 <label for="customer_name" class="form-label"><?= __('Customer Name/Phone') ?></label>
-                                <input type="text" placeholder="<?= __('Customer name') ?>" class="form-control" name="customer" id="customer_name">
+                                <input type="text" placeholder="<?= __('Customer name') ?>" class="form-control" name="customer" id="customer_name" value="<?=$this->request->query('customer')?>">
                             </div>
 
                             <div class="form-group mr-3">
                                 <label class="form-label"><?= __('Select Date Range') ?></label>
                                 <div class="input-icon d-inline-block">
-                                    <input name="date_range" type="text" value="" class="form-control flatpickr-input calendar-range" placeholder="<?= __('Select a date') ?>" readonly="readonly">
+                                    <input name="date_range" type="text"  value="<?=$this->request->query('date_range')?>" class="form-control flatpickr-input calendar-range" placeholder="<?= __('Select a date') ?>" readonly="readonly">
                                     <span class="input-icon-addon">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                         <path stroke="none" d="M0 0h24v24H0z"></path>
@@ -105,44 +105,7 @@
 </div>
 </div>
 
-<div class="modal fade " id="PaymentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-<div class="modal-dialog modal-lg" role="document" >
-  <div class="modal-content">
-    <?php
-    echo $this->Form->create($order->OrderPayments,['url'=>['controller'=>'OrderPayments','action'=>'add'],'id'=>'payment_frm']);
-    echo $this->Form->hidden('orders_id',['id'=>'orders_id']);
-     ?>
 
-    <div class="modal-header">
-      <h5 class="modal-title"><?= __('Process payment for order') ?> # <span id="order_no_span"></span></h5>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <!-- SVG icon code -->
-      </button>
-    </div>
-    <div class="modal-body">
-      <fieldset class="form-fieldset">
-               <div class="row">
-
-              <?php
-
-              echo $this->TablerForm->control('amount',['row'=>6, 'type' => 'number', 'step' => '0.1', 'min' => 1, 'required']);
-              echo $this->TablerForm->control('payment_method',['row'=>6,'required','options'=>$methods]);
-              echo $this->TablerForm->control('payment_date',['row'=>6,'required','value'=>date('Y-m-d h:i:s')]);
-              echo $this->TablerForm->control('Comments',['type'=>'textarea','row'=>12]);
-            ?>
-             </div>
-      </fieldset>
-
-
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-white mr-auto" data-dismiss="modal"><?= __('Close')?> </button>
-          <button type="submit" class="btn btn-primary" id="customer_form_submit"><?= __('Save changes')?> </button>
-    </div>
-  <?=$this->Form->end()?>
-</div>
-</div>
-</div>
 
 
 <div class="modal fade " id="PaymentLogModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -177,43 +140,8 @@
 
 
 
-<div class="modal fade " id="RefundModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-<div class="modal-dialog modal-lg" role="document" >
-  <div class="modal-content">
-      <?php   echo $this->Form->create($order->OrderPayments,['url'=>['controller'=>'OrderPayments','action'=>'add',"refund"],'id'=>'refund_frm']);
-        echo $this->Form->hidden('orders_id',['id'=>'orders_id']);
-       ?>
-
-    <div class="modal-header">
-      <h5 class="modal-title"><?= __('Process refund for order') ?> # <span id="order_no_span"></span></h5>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <!-- SVG icon code -->
-      </button>
-    </div>
-    <div class="modal-body">
-      <fieldset class="form-fieldset">
-               <div class="row">
-              <?php
-
-              echo $this->TablerForm->control('amount',['row'=>6, 'type' => 'number', 'step' => '0.1', 'min' => 1, 'required']);
-              echo $this->TablerForm->control('payment_method',['label'=>__('Refund Method'),'row'=>6,'required','options'=>$methods]);
-              echo $this->TablerForm->control('payment_date',['row'=>6,'required', 'id' => 'refund-date', 'value'=>date('Y-m-d h:i:s')]);
-              echo $this->TablerForm->control('Comments',['type'=>'textarea','row'=>12]);
-            ?>
-             </div>
-      </fieldset>
-
-
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-white mr-auto" data-dismiss="modal"><?= __('Close') ?></button>
-          <button type="submit" class="btn btn-primary" id="customer_form_submit"><?= __('Save changes') ?></button>
-    </div>
-    <?=$this->Form->end()?>
-</div>
-</div>
-</div>
-
+<?php include_once 'payment_modal.ctp'?>
+<?php include_once 'refund_modal.ctp'?>
 <?php include_once 'status_modal.ctp'?>
 
 
@@ -286,7 +214,9 @@ require(['jquery', 'xeditable','flatpickr'], function ($, selectize) {
                 enableTime: true,
               });
 
-              $('#refund-date').flatpickr();
+              $('#refund-date').flatpickr({
+                enableTime: true,
+              });
 
 
               $('#PaymentModal').on('show.bs.modal', function (event) {

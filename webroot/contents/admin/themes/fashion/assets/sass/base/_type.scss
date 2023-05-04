@@ -1,0 +1,271 @@
+// Type
+
+// # Contents
+// 1. Typography
+// 1.1) Headings
+// 1.2) Anchor
+// 1.3) Headings
+// 2. Type Helpers
+// 2.1) Letter Spacing
+// 2.2) Color
+// 2.3) Line Height
+// 2.4) Width Helpers
+// 3. Responsive
+
+// 1. Typography
+
+// 1.1) Headings
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	margin-bottom: 1.8rem;
+	color: $headings-text;
+	font-weight: 700;
+	line-height: 1.1;
+	font-family: $second-font-family;
+}
+
+h1, .h1 {
+	font-size: 3.6rem;
+	font-weight: 400;
+	line-height: 1.223;
+}
+
+h2, .h2 {
+	font-size: 3rem;
+	line-height: 1.5;
+}
+
+h3, .h3 {
+	font-size: 2.5rem;
+	line-height: 1.28;
+}
+
+h4, .h4 {
+	font-size: 2rem;
+	line-height: 1.35;
+}
+
+h5, .h5 {
+	font-size: 1.4rem;
+	line-height: 1.429;
+}
+
+h6, .h6 {
+	font-size: 1.3rem;
+	line-height: 1.385;
+	font-weight: 600;
+}
+
+// 1.2) Anchor
+
+a {
+	transition: all .3s;
+	color: $primary-color;
+	text-decoration: none;
+}
+
+a:hover,
+a:focus {
+	color: $primary-color;
+	text-decoration: none;
+}
+
+// 1.3) Headings
+
+.heading {
+	margin-bottom: 3rem;
+	color: $primary-color-dark;
+
+	.title {
+		margin-bottom: 1.6rem;
+	}
+
+	p {
+		letter-spacing: -.015em;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.light-title {
+	margin-bottom: 2rem;
+	font-weight: 300;
+}
+
+.section-title {
+	text-transform: uppercase;
+	font-size: 1.8rem;
+}
+
+.section-sub-title {
+	font-size: 1.6rem;
+	text-transform: uppercase;
+}
+
+// 2. Type Helpers
+
+.text-transform-none {
+	text-transform: none;
+}
+
+// 2.1) Letter Spacing
+.ls-10 {
+	letter-spacing: .01em !important;
+}
+
+.ls-0 {
+	letter-spacing: 0 !important;
+}
+
+.ls-n-10 {
+	letter-spacing: -.01em !important;
+}
+
+.ls-n-15 {
+	letter-spacing: -.015em !important;
+}
+
+.ls-n-20 {
+	letter-spacing: -.02em !important;
+}
+
+.ls-n-25 {
+	letter-spacing: -.025em !important;
+}
+
+// 2.2) Color
+.bg-gray {
+	background-color: #f4f4f4;
+}
+
+.bg-dark {
+	background-color: $primary-color-dark !important;
+}
+
+.bg-dark2 {
+	background-color: $secondary-color-dark !important;
+}
+
+.bg-primary {
+	background-color: $primary-color !important;
+}
+
+.bg-secondary {
+	background-color: $secondary-color !important;
+}
+
+.text-dark {
+	color: $primary-color-dark !important;
+}
+
+.text-primary {
+	color: $primary-color !important;
+}
+
+.text-secondary {
+	color: $secondary-color !important;
+}
+
+.text-body {
+	color: $body-text !important;
+}
+
+// 2.3) Line Height
+.line-height-1 {
+	line-height: 1 !important;
+}
+
+// 2.4) Font Family
+.font1 {
+	font-family: $font-family !important;
+}
+.font2 {
+	font-family: $second-font-family !important;
+}
+
+// 2.5) Width Helpers
+
+@include mq(md, max) {
+	.w-md-100 {
+		width: 100% !important;
+	}
+
+	.w-md-50 {
+		width: 50% !important;
+	}
+}
+
+@include mq(sm, max) {
+	.w-sm-100 {
+		width: 100% !important;
+	}
+
+	.w-sm-50 {
+		width: 50% !important;
+	}
+}
+
+@include mq(xs, max) {
+	.w-xs-100 {
+		width: 100% !important;
+	}
+}
+
+@include mq(480px, max) {
+	.w-xs-100 {
+		width: 100% !important;
+	}
+}
+
+@include mq(400px, max) {
+	.w-xxs-100 {
+		width: 100% !important;
+	}
+}
+
+// 2.6) Images
+.round-images img {
+	border-radius: 50%;
+}
+
+// 3. Responsive
+
+@include mq(md) {
+	h1, .h1 {
+		font-size: 4.5rem;
+	}
+
+	h2, .h2 {
+		font-size: 2.5rem;
+	}
+
+	.heading {
+		margin-bottom: 4rem;
+	}
+}
+
+@include mq(lg) {
+	h1, .h1 {
+		font-size: 5rem;
+	}
+
+	h2, .h2 {
+		font-size: 3rem;
+	}
+
+	.heading {
+		margin-bottom: 5rem;
+	}
+
+	.w-lg-max {
+		flex: 1;
+		-ms-flex: 1;
+		max-width: 100%;
+	}	
+}

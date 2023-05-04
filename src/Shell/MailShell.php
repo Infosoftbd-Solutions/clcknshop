@@ -81,21 +81,31 @@ class MailShell extends Shell
                     TransportFactory::drop('smtp');
                     TransportFactory::setConfig('smtp', $smtp);
                     try {
-                        $this->mail->reset()
+                        $email = $this->mail->reset()
                             ->transport('smtp')
                             ->emailFormat('html')
                             ->from($sender)
                             ->to($to)
-                            ->subject($subject)
-                            ->send($message);
+                            ->subject($subject);
+                            if(isset($data['attachments'])){
+                              foreach($data['attachments'] as $attachement){
+                                $email->attachments([
+                                basename($attachement) => [
+                                    'file' => $attachement]
+                                ]);
+                              }
+                            }
+                            $email->send($message);
                            $this->out("Successfully sent email ");
                     }catch (\Exception $exception){
                         $this->out($exception->getMessage());
                     }
-
+                    if(isset($data['attachments'])){
+                        foreach($data['attachments'] as $attachement){
+                         @unlink($attachement);
+                        }
+                    } 
                 }
-
-
             }
 
           //  $this->out("Success ");

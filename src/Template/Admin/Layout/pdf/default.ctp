@@ -15,6 +15,7 @@
 				font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
 				text-align: center;
 				color: #777;
+				background-color: #fff !important;
 			}
 
 			body h1 {
@@ -111,6 +112,19 @@
                 text-align:right;
 			}
 
+			.invoice-box tr.footer {
+				border-top: 2px solid #eee;
+				
+			}
+			.invoice-box table tr.footer td:last-child {
+				text-align: center;
+			}
+
+			.invoice-box tr.footer table{
+				 margin-left: auto;
+  				margin-right: auto;
+			}
+
 			@media only screen and (max-width: 600px) {
 				.invoice-box table tr.top table td {
 					width: 100%;
@@ -125,9 +139,30 @@
 				}
 			}
 		</style>
+
+		
+	
 	</head>
 
 	<body>
 <?= $this->fetch('content') ?>
+
+
+<?php if(isset($_GET['domtoimg']) && $_GET['domtoimg'] == 1): ?>
+
+<span data="" id="download-img"></span>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+<script>
+
+    domtoimage.toJpeg(document.querySelector("body"), { quality: 0.95 })
+        .then(function (dataUrl) {
+            document.getElementById('download-img').setAttribute('data', dataUrl)
+        });
+
+</script>
+
+<?php endif ?>
+
 </body>
 </html>

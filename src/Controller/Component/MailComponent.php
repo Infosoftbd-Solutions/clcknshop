@@ -70,7 +70,7 @@ class MailComponent extends Component
           $jobs = Cache::read('jobs');
           $jobs[] = [
               'task' => 'mail',
-              'data' => [ 'to' => $to, 'subject' => $subject,'message'=>$body,'sender'=>$sender,'smtp'=>TransportFactory::getConfig('smtp')],
+              'data' => [ 'to' => $to, 'subject' => $subject,'message'=>$body,'sender'=>$sender,'smtp'=>TransportFactory::getConfig('smtp'),'attachments'=>isset($data['attachments'])?$data['attachments']:[]],
               'store_name' => STORENAME,
           ];
           Cache::write('jobs', $jobs);
@@ -79,19 +79,36 @@ class MailComponent extends Component
           //  $this->mail->domain('www.clcknshop.com');
           
             try {
-                $this->mail->reset()
+               $email =  $this->mail->reset()
                     ->transport('smtp')
                     ->template($template)
                     ->emailFormat('html')
                     ->from($sender)
                     ->to($to)
                     ->subject($subject)
-                    ->setViewVars($data)
-                    ->send();
+                    ->setViewVars($data);
+              if(isset($data['attachments'])){
+                  foreach($data['attachments'] as $attachement){
+                    $email->attachments([
+                    basename($attachement) => [
+                        'file' => $attachement]
+                    ]);
+
+                  }
+
+              }
+                         
+                    $email->send();
             }catch (\Exception $exception){
                 
                 return $exception->getMessage();
             }
+            if(isset($data['attachments'])){
+                foreach($data['attachments'] as $attachement){
+                 @unlink($attachement);
+                }
+            } 
+
             
         }
         return true;

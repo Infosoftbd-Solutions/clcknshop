@@ -59,7 +59,8 @@
                     <td style="border-top: none"><?= __('Order ID') ?></td>
                     <td style="border-top: none"><?= __('Order Date') ?></td>
                     <td style="border-top: none"><?= __('Order Status') ?></td>
-                    <td style="border-top: none"><?= __('Order total Amount') ?></td>
+                    <td style="border-top: none"><?= __('Total Amount') ?></td>
+                    <td style="border-top: none"><?= __('Total Due') ?></td>
                     </thead>
                     <?php
                     $badge = [0=>'badge-primary',1=>'badge-info', 2=>'badge-warning',3=>'badge-success', 4=>'badge-danger', 5=> 'badge-secondary'];
@@ -71,6 +72,8 @@
                             <td><?= $order->order_date ?></td>
                             <td><span class="badge <?= $badge[$order->order_status] ?>"><?= $order_statuses[$order->order_status] ?></span></td>
                             <td><?= $order->order_total ?></td>
+
+                            <td><?= $order->due ?></td>
                         </tr>
                     <?php endforeach; ?>
 

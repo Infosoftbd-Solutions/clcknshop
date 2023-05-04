@@ -1,0 +1,361 @@
+// Header
+
+// # Contents
+// 1. Header Base
+// 2. Header Elements
+// 2.1) Logo
+// 2.2) Header Contact
+// 2.3) Mobile Menu Toggler
+// 2.4) Circle Badge
+// 3. Responsive
+
+// # Variables
+@include set-default(
+	(
+		header: (
+			color: false,
+			link-color: false,
+			link-active-color: false,
+
+			top: (
+				padding-top: false,
+				padding-bottom: false,
+				color: false,
+				background: false,
+				border-bottom: false,
+				font-size: false,
+				font-weight: false,
+				letter-spacing: false,
+			),
+			middle: (
+				padding-top: false,
+				padding-bottom: false,
+				color: false,
+				background: false,
+				border-bottom: false,
+				font-size: false,
+				font-weight: false,
+				letter-spacing: false,
+			),
+			bottom: (
+				padding-top: false,
+				padding-bottom: false,
+				color: false,
+				background: false,
+				border-bottom: false,
+				font-size: false,
+				font-weight: false,
+				letter-spacing: false,
+			),
+			logo: (
+				max-width: 150px,
+				max-width-mobile: false,
+			),
+			separator: (
+				color: rgba(0,0,0,.04),
+				space: 10px
+			),
+			social-icon: (
+				font-size: 1.28rem,
+				size: 2.6rem,
+				color: false,
+				space: 2px
+			),
+			top-notice: (
+				padding: 1rem,
+				font-size: 1.3rem,
+				link-background: #151719
+			),
+			icon: (
+				size: 2.7rem,
+				space: 2.2rem,
+				space-mobile: 1.2rem,
+			)
+		)
+	)
+);
+
+// 1. Header Base
+header {
+	position: relative;
+	@include css( color, header, color );
+
+	.container,
+	.container-fluid {
+		display: flex;
+		display: -ms-flexbox;
+		align-items: center;
+		-ms-flex-align: center;
+		justify-content: space-between;
+		-ms-flex-pack: justify;
+		position: relative;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+	a:hover {
+		@include css( color, header, link-active-color );
+	}
+}
+
+@if ( get( header, link-color ) ) {
+	.header a {
+		color: get( header, link-color );
+	}
+}
+
+@else {
+	header a {
+		color: inherit;
+	}
+}
+
+.header {
+	&-top {
+		@include css(padding-top, header, top, padding-top);
+		@include css(padding-bottom, header, top, padding-bottom);
+		@include css(border-bottom, header, top, border-bottom);
+		@include css(color, header, top, color);
+		@include css(background, header, top, background);
+		@include css(font-size, header, top, font-size);
+		@include css(font-weight, header, top, font-weight);
+		@include css(letter-spacing, header, top, letter-spacing);
+	}
+
+	&-middle {
+		@include css(padding-top, header, middle, padding-top);
+		@include css(padding-bottom, header, middle, padding-bottom);
+		@include css(border-bottom, header, middle, border-bottom);
+		@include css(color, header, middle, color);
+		@include css(background, header, middle, background);
+		@include css(font-size, header, middle, font-size);
+		@include css(font-weight, header, middle, font-weight);
+		@include css(letter-spacing, header, middle, letter-spacing);
+	}
+
+	&-bottom {
+		@include css(padding-top, header, bottom, padding-top);
+		@include css(padding-bottom, header, bottom, padding-bottom);
+		@include css(border-bottom, header, bottom, border-bottom);
+		@include css(color, header, bottom, color);
+		@include css(background, header, bottom, background);
+		@include css(font-size, header, bottom, font-size);
+		@include css(font-weight, header, bottom, font-weight);
+		@include css(letter-spacing, header, bottom, letter-spacing);
+	}
+}
+
+.header-left,
+.header-center,
+.header-right {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.header-center,
+.header-right {
+	margin-left: auto;
+}
+
+.header-transparent {
+	position: absolute;
+	right: 0;
+	left: 0;
+	z-index: 1040;
+}
+
+// 2. Header Elements
+
+// 2.1) Logo
+.logo {
+	@include css(max-width, header, logo, max-width);
+}
+
+// 2.2) Header Contact
+.header-contact {
+	align-items: center;
+	text-transform: uppercase;
+
+	i {
+		margin-right: 1.1rem;
+		font-size: 2.9rem;
+	}
+
+	img {
+		margin-right: .8rem;
+	}
+
+	h6 {
+		margin: 0;
+		font-size: 1.1rem;
+		line-height: 1.3;
+		color: #777;
+	}
+
+	a {
+		display: block;
+		font-size: 1.8rem;
+		font-weight: 700;
+		white-space: nowrap;
+	}
+}
+
+// 2.3) Mobile Menu Toggler
+.mobile-menu-toggler {
+	border: 0;
+	background: transparent;
+	color: $primary-color-dark;
+	padding: 1rem .5rem;
+	margin-right: .5rem;
+	font-size: 20px;
+	line-height: 0;
+	cursor: pointer;
+}
+
+// 2.4) Circle Badge
+.badge-circle {
+	position: absolute;
+	top: 1px;
+	right: 0;
+	width: 1.6rem;
+	border-radius: 50%;
+	color: #fff;
+	background: #ff5b5b;
+	font-weight: 600;
+	font-size: 1.1rem;
+	line-height: 1.6rem;
+	font-family: $font-family;
+	text-align: center;
+}
+
+// 2.5) Social Icons
+header {
+	.social-icon {
+		border-radius: 50%;
+		@include css( color, header, social-icon, color );
+		@include css( font-size, header, social-icon, font-size );
+		@include css( width, header, social-icon, size);
+		@include css( height, header, social-icon, size);
+		@include css( line-height, header, social-icon, size);
+
+		&:not(:hover):not(:active):not(:focus) {
+			background-color: transparent;
+		}
+
+		@if get( header, social-icon, space ) {
+			& + .social-icon {
+				margin-left: get( header, social-icon, space );
+			}
+		}
+	}
+
+// 2.5) Seperator
+	.separator {
+		height: 20px;
+		@if ( get( header, separator, color ) ) {
+			border-left: 1px solid get( header, separator, color );
+		}
+		@if ( get( header, separator, space ) ) {
+			margin: 0 get( header, separator, space );
+		}
+	}
+}
+
+// 2.6) Top Notice
+.top-notice {
+	position: relative;
+	@if ( get( header, top-notice, padding ) ) {
+		padding: get( header, top-notice, padding ) 2rem;
+	}
+	@include css( font-size, header, top-notice, font-size );
+	font-family: $second-font-family;
+	line-height: 2;
+	letter-spacing: .025em;
+
+	h5 {
+		color: inherit;
+		font-size: inherit;
+		font-weight: 500;
+	}
+
+	small {
+		font-size: .8461em;
+		letter-spacing: .025em;
+		opacity: .5;
+	}
+
+	a {
+		color: inherit;
+		font-weight: 700;
+	}
+
+	.category {
+		display: inline-block;
+		padding: .3em .8em;
+		@include css( background, header, top-notice, link-background );
+		font-size: 1rem;
+	}
+
+	.mfp-close {
+		top: 50%;
+		transform: translateY(-50%) rotateZ(45deg) translateZ(0);
+		color: inherit;
+		opacity: .7;
+		z-index: 10;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+// 2.7) Header Icon
+.header-icon {
+	&:not(:last-child) {
+		@include css( margin-right, header, icon, space );
+	}
+
+	i {
+		@include css( font-size, header, icon, size );
+	}
+}
+
+// 3. Responsive
+
+@include mq(lg) {
+	.mobile-menu-toggler {
+		display: none;
+	}
+}
+
+@include mq(lg, max) {
+	.main-nav {
+		display: none;
+	}
+}
+
+@include mq(md, max) {
+	.header .separator {
+		display: none;
+	}	
+}
+
+@include mq(sm, max) {
+	.top-notice {
+		line-height: 1.5;
+	}
+
+	.logo {
+		@include css(max-width, header, logo, max-width-mobile);
+	}
+
+	.header-icon {
+		&:not(:last-child) {
+			@include css(margin-right, header, icon, space-mobile);
+		}
+	}
+}

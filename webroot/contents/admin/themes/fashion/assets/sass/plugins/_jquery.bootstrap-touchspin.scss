@@ -1,0 +1,65 @@
+/*
+ *  Bootstrap TouchSpin - v4.2.5
+ *  A mobile and touch friendly input spinner component for Bootstrap 3 & 4.
+ *  http://www.virtuosoft.eu/code/bootstrap-touchspin/
+ *
+ *  Made by István Ujj-Mészáros
+ *  Under Apache License v2.0 License
+ */
+/* This CSS file is unnecessary if you are not using vertical buttons functionality */
+
+.bootstrap-touchspin .input-group-btn-vertical {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  z-index: 11;
+}
+
+.bootstrap-touchspin.input-group {
+  max-width: 68px;
+  padding-right: 20px;
+  margin-bottom: 0;
+}
+
+.bootstrap-touchspin .form-control {
+  text-align: center;
+  margin-bottom: 0;
+  height: 4.2rem;
+  max-width: 46px;
+  padding: 1.1rem 1rem;
+
+
+  &:not(:focus) {
+    border-color: #ccc;
+  }
+}
+
+.bootstrap-touchspin .input-group-btn-vertical > .btn {
+  position: absolute;
+  right: 0;
+  height: 2rem;
+  padding: 0;
+  width: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+
+  &:before {
+    position: relative;
+    margin: 0;
+    width: auto;
+    line-height: 1;
+    width: auto;
+    top: -.1rem;
+    margin-right: -.2rem;
+  }
+}
+
+.bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-up {
+  border-radius: $border-radius;
+  top: 0;
+}
+
+.bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-down {
+  border-radius: $border-radius;
+  bottom: 0;
+}

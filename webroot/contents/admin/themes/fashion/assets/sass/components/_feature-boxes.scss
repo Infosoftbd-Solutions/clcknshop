@@ -1,0 +1,52 @@
+// Feature Box
+
+@include set-default(
+	(
+		feature-box: (
+			title: (
+				color: false,
+				font-size: 1.6rem,
+				font-weight: 700
+			)
+		)
+	)
+);
+
+.feature-box {
+	color: #7b858a;
+	font-size: 1.5rem;
+	line-height: 2;
+	margin-bottom: 4rem;
+
+	i {
+		display: inline-block;
+		margin-bottom: 2.2rem;
+		color: $primary-color;
+		font-size: 5rem;
+		line-height: 1;
+
+		&:before {
+			margin: 0;
+		}
+	}
+
+	h3 {
+		margin-bottom: 2rem;
+		@include css( color, feature-box, title, color );
+		@include css( font-size, feature-box, title, font-size );
+		@include css( font-weight, feature-box, title, font-weight );
+		text-transform: uppercase;
+		line-height: 1.1;
+		letter-spacing: 0;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.feature-box-content {
+	color: #7b858a;
+	font-size: 1.5rem;
+	line-height: 1.8;
+}

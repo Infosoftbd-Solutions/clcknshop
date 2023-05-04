@@ -99,13 +99,25 @@ class UsersController extends Controller {
 
             if($refund){
                 $data['amount'] = - $data['amount'];
-                $notes  = Configure::read('App.currency') . " ".$data['amount']." paid by ".$methods[$data['payment_method']];
+                $notes  = Configure::read('App.currency') . " ".$data['amount']." refund by ".$methods[$data['payment_method']];
                 $log_status = 6;
-            } 
+            }
+
+            
             
         
-            $this->OrderPayments->payment($data, $notes, $by, $log_status);
+            $payment = $this->OrderPayments->payment($data, $notes, $by, $log_status);
+           
+            if($payment){
+                $store = json_decode(Configure::read('App.store'));
 
+                $order = $this->OrderPayments->Orders->get($data['orders_id'], [
+                'contain' => ['Customers','OrderProducts', 'PaymentProcessor']
+                ]);
+          
+                $ret = $this->Mail->send($store->email, "admin Payment  notfication Order#{$order->order_id}", ['order' => $order,'payment'=>$payment,'notes'=>$notes, 'store' => $store], "admin_order_payment");
+            }
+            
             $this->Flash->success(__('The order payment saved seccessfully.'));
 
 
@@ -128,7 +140,7 @@ class UsersController extends Controller {
      * @param string|null $id Order Payment id.
      * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
+     
     public function edit($id = null)
     {
 
@@ -147,14 +159,14 @@ class UsersController extends Controller {
         $orders = $this->OrderPayments->Orders->find('list', ['limit' => 200]);
         $this->set(compact('orderPayment', 'orders'));
     }
-
+*/
     /**
      * Delete method
      *
      * @param string|null $id Order Payment id.
      * @return \Cake\Http\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
+     
     public function delete($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
@@ -167,4 +179,5 @@ class UsersController extends Controller {
 
         return $this->redirect(['action' => 'index']);
     }
+    */
 }

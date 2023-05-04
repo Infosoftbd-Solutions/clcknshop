@@ -1,0 +1,491 @@
+// Home
+
+// 1 Componenets
+
+// 1.1) Product
+.custom-products .product-default {
+	.product-title {
+		font-family: $second-font-family;
+	}
+
+	.product-action {
+		margin-bottom: 1.5rem;
+	}
+
+	.btn-add-cart,
+	.btn-icon-wish,
+	.btn-quickview  {
+		border: 1px solid #f4f4f4;
+		background: #f4f4f4;
+		color: #6f6e6b;
+		line-height: 34px;
+	}
+
+	.btn-add-cart {
+		padding: 0 1.2em;
+	}
+
+	.btn-icon-wish:hover,
+	.btn-quickview:hover {
+		color: #333;
+	}
+
+	&:hover {
+		box-shadow: 0 5px 25px 0 rgba(0,0,0,.08);
+
+		figure {
+			box-shadow: none;
+		}
+
+		.btn-add-cart {
+			background: #2b2b2d;
+			border-color: #2b2b2d;
+			color: #fff;
+		}
+	}
+}
+
+// 1.2) Product Category
+.product-category {
+	img,
+	figure:after {
+		border-radius: 50%;
+	}
+}
+
+.category-content {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	z-index: 1;
+	background: #fff;
+
+	h3 {
+		font-size: 1.5rem;
+		font-family: $second-font-family;
+	}
+
+	h3,
+	span {
+		color: #1d2127;
+	}
+}
+
+// 2. Home Page - Components
+
+
+// 2.1) Coupon Sale Text
+.coupon-sale-text {
+	position: relative;
+	display: inline-block;
+	padding: 5px 8px;
+	transform: rotate(-2deg);
+
+	i {
+		position: absolute;
+		left: -2.25em;
+		top: 50%;
+		transform: translateY(-50%) rotate(-90deg);
+		font-size: .65em;
+		font-style: normal;
+		opacity: .6;
+		letter-spacing: 0;
+	}
+
+	b {
+		display: inline-block;
+		padding: 5px 8px;
+		font-size: 1.6em;
+		background-color: #fff;
+	}
+
+	em {
+		font-size: 2em;
+		font-style: normal;
+	}
+}
+
+// 2.2) Buttons
+.btn-lg {
+	padding: 1.072em 2.844em;
+}
+
+.btn-light {
+	background: #fff;
+	border-color: #fff;
+}
+
+.btn-black {
+	background: #0e0f11;
+	border-color: #0e0f11;
+}
+
+// 2.3) Heading Border
+.heading-border {
+	display: flex;
+	display: -ms-flexbox;
+	align-items: center;
+	-ms-flex-align: center;
+	margin: 0 -8px;
+
+	&:before,
+	&:after {
+		content: '';
+		margin: 0 8px;
+		flex: 1;
+		-ms-flex: 1;
+		height: 0;
+		border-top: 1px solid rgba(0, 0, 0, .08);
+	}
+
+	&.section-title {
+		margin: 0 -2rem 1.8rem;
+
+		&:before,
+		&:after {
+			margin: 0 2rem;
+		}
+	}
+}
+
+// 3. Home Page
+
+section {
+	padding-top: 4.8rem;
+	padding-bottom: 4.8rem;
+}
+
+// 3.1) Home Slider
+.home-slider {
+	background: #dadada;
+
+	img {
+		min-height: 500px;
+	}
+
+	h2 {
+		font-size: 3.3125em;
+		letter-spacing: .005em;
+		font-family: 'Segoe Script','Savoye LET';
+	}
+
+	.btn {
+		font-size: .875em;
+	}
+}
+
+.home-slide1 {
+	h4 {
+		font-size: 1.1875em;
+		font-weight: 500;
+		letter-spacing: .08em;
+		opacity: .7;
+	}
+
+	h3 {
+		font-size: 5.875em;
+	}
+
+	h5 {
+		font-size: .75em;
+		vertical-align: super;
+	}
+
+	.coupon-sale-text {
+		font-size: 1.2em;
+	}
+
+	.banner-layer {
+		left: 8%;
+		right: 30%;
+	}
+
+	img {
+		object-position: 55%;
+	}
+}
+
+.home-slide2 {
+	h4 {
+		color: #999;
+		font-size: 2.125em;
+		font-weight: 500;
+	}
+
+	h2 {
+		font-size: 2.5em;
+	}
+
+	h3 {
+		font-size: 4.3125em;
+	}
+
+	.heading-border {
+		font-size: 2.125em;
+
+		&:before,
+		&:after {
+			border-top: 7px solid $primary-color-dark;
+		}
+	}
+
+	.banner-layer {
+		left: 54%;
+		right: 4%;
+	}
+
+	.btn {
+		font-size: 1em;
+		letter-spacing: .15em;
+	}
+}
+
+// 3.3) Info Boxes Slider
+.info-boxes-slider {
+	.info-box {
+		padding: 1.6rem 0;
+	}
+
+	.owl-item.active {
+		margin-right: -1px;
+		margin-left: 1px;
+	}
+
+	.active:not(:last-of-type) {
+		.info-box {
+			border-right: 1px solid #e7e7e7;
+		}
+	}
+
+	i {
+		line-height: 0;
+	}
+}
+
+// 3.4) Banner Section
+.banners-slider {
+	h3 {
+		font-size: 1.5em;
+	}
+
+	h4 {
+		font-size: .9375em;
+		font-weight: 600;
+	}
+
+	img {
+		min-height: 175px;
+		object-fit: cover;
+	}
+
+	.banner-layer {
+		left: 6.73%;
+		right: 6.73%;
+	}
+}
+
+.banner1 {
+	h4 {
+		font-size: 1.8125em;
+		font-weight: 800;
+	}
+
+	del {
+		font-weight: 700;
+	}
+
+	sup {
+		font-size: 70%;
+	}
+}
+
+.banner2 {
+	img {
+		border: 1em solid $primary-color;
+	}
+
+	h3 {
+		font-size: 1.375em;
+	}
+
+	.banner-layer {
+		left: 0;
+		right: 0;
+	}
+}
+
+.banner3 img {
+	object-position: left;
+}
+
+// 3.5) Featured Products Section
+.featured-products-section {
+	padding-bottom: 2.1rem;
+	background: #fbfbfb;
+}
+
+// 3.6) Big Sale Banner
+.banner-big-sale {
+	h2 {
+		font-size: 1.275em;
+		line-height: 1.2;
+
+		small {
+			font-size: 64%;
+			font-weight: 400;
+			opacity: .7;
+			margin-left: .8em;
+		}
+	}
+
+	b {
+		position: relative;
+		padding: .4em .6em;
+		z-index: 1;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: $primary-color-dark;
+			transform: rotate(-2deg);
+			z-index: -1;
+		}
+	}
+}
+
+.brands-section {
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+}
+
+// 3.7) Feature Boxes Container
+.feature-boxes-container {
+	background: #f6f7f9;
+
+	.feature-box {
+		h5 {
+			color: #555;
+			font-weight: 500;
+		}
+
+		p {
+			font-size: 1.3rem;
+		}
+	}
+}
+
+// 3.8) Promo Section
+.promo-section {
+	padding: 7rem 0;
+
+	.parallax-background {
+		background-color: #22252A;
+	}
+
+	h2 {
+		font-size: 2.25em;
+		line-height: 1.15;
+	}
+	
+	h4 {
+		font-size: .7em;
+		line-height: 1.4;
+	}
+
+	h5 {
+		font-size: 1em;
+		font-family: $font-family;
+	}
+}
+
+// 3.9) Blog Section
+.blog-section {
+	.post-body {
+		margin-left: 0;
+		padding-bottom: 2.1rem;
+		border: 0;
+	}
+
+	.post-title {
+		margin-bottom: 1.6rem;
+		font-size: 1.8rem;
+		font-family: $font-family;
+		font-weight: 700;
+	}
+
+	p {
+		font-size: 1.3rem;
+		line-height: 1.846;
+	}
+
+	.post-comment {
+		color: #999;
+		font-size: 1rem;
+		text-transform: uppercase;
+	}
+
+	hr {
+		border-top-color: rgba(0,0,0,0.06);
+	}
+}
+
+// 3.9) Products Widgets Container
+.product-widgets-container {
+	figure {
+		max-width: 85px;
+	}
+
+	.product-title {
+		font-size: 1.4rem;
+	}
+
+	.product-price {
+		font-size: 1.5rem;
+	}
+}
+
+// 4. Other Pages
+
+// 4.1) Category Page Banner
+
+.category-banner {
+	padding: 6.8rem 0;
+
+	.coupon-sale-text {
+		font-family: $font-family;
+	}
+
+	h3 {
+		font-size: 3.125em;
+	}
+
+	h4 {
+		font-size: 1.125em;
+		line-height: 1.7;
+	}
+
+	h5 {
+		font-size: 1em;
+	}
+
+	.btn {
+		font-size: .82em;
+		padding: 1.03em 2.81em;
+	}
+}
+
+@include mq(md, max) {
+	.category-content {
+		padding: 1rem;
+	}
+}
+
+@include mq(sm, max) {
+	.home-slide1 {
+		font-size: 2.5vw;
+	}
+}

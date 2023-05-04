@@ -1,0 +1,264 @@
+// Header Search Popup
+
+// # Contents
+
+// 1. Header Search Base
+// 		1.1) Form Control
+// 		1.2) Wrapper
+// 2. Header Search Popup
+// 		2.1) Toggle
+// 		2.2) Form Contorl
+// 		2.3) Select
+// 		2.4) Search Button
+// 3. Header Search Inline
+// 		3.1) Form Control
+// 		3.2) Search Button
+// 		3.3) For Desktop
+// 		3.4) For Mobile, Tablet
+// 4. Responsive
+
+// # Variables
+
+@include set-default(
+	(
+		header: (
+			search: (
+				height: 50px,
+				background: #f4f4f4,
+				divider: 1px solid #e7e7e7,
+
+				toggle: (
+					size: false,
+					weight: false
+				),
+
+				border: (
+					radius: 5rem,
+					width: 3px,
+					color: #ccc,
+					inline-width: 0,
+				),
+
+				select: (
+					min-width: 13rem,
+					padding-left: 1rem,
+					padding-right: 1.7rem
+				),
+
+				btn: (
+					size: 2rem,
+					min-width: 45px,
+					color: $primary-color-dark,
+				)
+			)
+		)
+	)
+);
+
+// 1. Header Search Base
+
+.header-search {
+	position: relative;
+
+// 1.1) Form Control
+	form {
+		margin: 0;
+	}
+
+	.form-control,
+	select {
+		margin: 0;
+		border: 0;
+		color: inherit;
+		font-size: 1.3rem;
+		height: 100%;
+		box-shadow: none;
+	}
+
+	.form-control,
+	.select-custom  {
+		@include css( background, header, search, background );
+	}
+
+	@include only_for_ie() {
+		.form-control {
+			flex: 1;
+		}
+	}
+	.form-control::placeholder {
+		color: #a8a8a8;
+	}
+
+// 1.2) Header Search (not Category Filter)
+	&:not(.header-search-category) {
+		.form-control {
+			@include css( border-radius, header, search, border, radius);
+		}
+
+		.btn {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background: transparent;
+			border: 0;
+			padding: 0 .8em;
+			color: #333;
+		}
+	}
+}
+
+// Pointer
+.search-toggle:after {
+	content: '';
+	position: absolute;
+	right: calc(50% - 10px);
+	bottom: -10px;
+	border: 10px solid transparent;
+	@include css( border-bottom-color, header, search, border, color );
+
+	.header-search:not(.show) & {
+		display: none;
+	}
+}
+
+// Search Toggle
+.search-toggle i:before {
+	@include css( font-size, header, search, toggle, size );
+	@include css( font-weight, header, search, toggle, weight );
+}
+
+.header-search-category {
+	.form-control {
+		$temp: get( header, search, border, radius ); 
+		@if ( $temp ) {
+			border-radius: $temp 0 0 $temp;
+		}
+	}
+
+	.btn {
+		$temp: get( header, search, border, radius ); 
+		@if ( $temp ) {
+			border-radius: 0 $temp $temp 0;
+		}
+	}
+}
+
+// 1.4) Wrapper
+.header-search-wrapper {
+	display: flex;
+	display: -ms-flexbox;
+	position: absolute;
+	right: -2.3rem;
+	z-index: 999;
+	margin-top: 10px;
+	color: #8d8d8d;
+	box-sizing: content-box;
+	@include css( height, header, search, height );
+	@include clearfix;
+	border-radius: get( header, search, border, radius );
+	border: get( header, search, border, width ) solid get( header, search, border, color );
+
+	.header-search:not(.show) & {
+		display: none;
+	}
+
+	// 1.6) Select Box
+	.select-custom {
+		margin: 0;
+		@include css( min-width, header, search, select, min-width );
+		@if get( header, search, select, min-width ) {
+			flex: 0 0 get( header, search, select, min-width );
+		}
+
+		&:after {
+			font-size: 1.4rem;
+			line-height: 0;
+			@include css( right, header, search, select, padding-right );
+		}
+	}
+
+	select {
+		width: 100%;
+		@include css( border-left, header, search, divider);
+		@include css( padding-left, header, search, select, padding-left );
+		@include css( padding-right, header, search, select, padding-right );
+		line-height: 36px;
+		color: inherit;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.btn {
+		position: relative;
+		padding: 0 0 3px 0;
+		border: 0;
+		@include css( border-left, header, search, divider );
+		@include css( min-width, header, search, btn, min-width );
+		@include css( color, header, search, btn, color );
+		@include css( font-size, header, search, btn, size );
+		@include css( background, header, search, background );
+	}
+}
+
+// 2. Header Search Popup
+
+.header-search-popup {
+	// 2.2) Form Control
+	.form-control {
+		min-width: 266px;
+		padding: 4px 22px;
+		font-size: 1.4rem;
+		line-height: 20px;
+
+		&:focus {
+			border: #e7e7e7;
+		}
+	}
+}
+
+// 3. Header Search Inline
+
+.header-search-inline {
+
+	// 3.1) Form Control
+	.form-control {
+		min-width: 21rem;
+		padding: 1rem 2rem;
+	}
+
+	// 3.3) For Desktop
+	@include mq(lg) {
+		.search-toggle,
+		.btn:after {
+			display: none;
+		}
+
+		&.header-search .header-search-wrapper {
+			display: flex;
+			display: -ms-flex;
+			position: static;
+			margin: 0;
+			@include css( border-width, header, search, border, inline-width );
+		}
+	}
+}
+
+// 4. Responsive
+
+@include mq(md, max) {
+	.header-search .form-control {
+		min-width: 17rem;
+	}
+}
+
+@include mq(sm, max) {
+	.header-search-wrapper {
+		left: 15px;
+		right: 15px;
+	}
+}

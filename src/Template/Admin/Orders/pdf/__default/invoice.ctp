@@ -125,7 +125,55 @@
                     <td >Amount Due:</td>
 					<td><?=$this->Formats->moneyFormat($order->due,false)?></td>
 				</tr>
-            </table>
+            
+			</table>	
+
+			<table>
+				<tr class="top">
+					<td colspan="2">
+						<table >
+		                    <thead style="font-weight: bold">
+		                        <tr>
+		                            <th><?= __('Method') ?></th>
+		                            <th><?= __('Amount') ?></th>
+		                            <th><?= __('Payment Date') ?></th>
+		                        </tr>
+		                    </thead>
+		                    <tbody>
+		                        <?php $total_payment = 0; foreach ($order->order_payments as $payment) :?>
+		                        <tr>
+		                            <td> <?= $methods[$payment->payment_method] ?> </td>
+		                            <td>
+		                                <?php 
+		                                    echo \Cake\Core\Configure::read('App.currency') . $payment->amount;
+
+		                                    if($payment->amount > 0) $total_payment += $payment->amount;
+		                                    else  $total_payment -= abs($payment->amount);
+
+		                                ?>
+
+
+		                            </td>
+		                            <td style="text-align: left;"> <?= $payment->payment_date ?></td>
+		                            
+		                        </tr>
+		                        <?php endforeach; ?>
+
+		                        <tr>
+		                            <td><b> Total Amount </b></td>
+		                            <td  style="text-align: left;" colspan="2"><b> <?= \Cake\Core\Configure::read('App.currency') . $total_payment ?> </b></td>
+		                        </tr>
+		                    </tbody>
+		                </table>
+					</td>
+
+					<td colspan="2" >
+	            		<?php if(isset($footer_path) && !empty($footer_path) && file_exists($footer_path)) include $footer_path; ?>
+					</td>
+				</tr>
+
+			</table>
+			
 		</div>
 	
 

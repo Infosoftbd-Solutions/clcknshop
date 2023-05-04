@@ -23,11 +23,7 @@ class MediaHelper extends Helper
         public function image($path, $options = []){
              $width = 0; $height = 0;
 
-             if(!file_exists($path) || !is_file($path)){
-              if(isset($options['path']))
-                    return $this->Url->build("/img/missing_image.png");
-               return $this->Html->image('missing_image.png',$options);
-             }
+
 
             if (count($options)){
                 if(key_exists('width',$options)){
@@ -40,6 +36,14 @@ class MediaHelper extends Helper
                 }
 
 
+            }
+
+            if(!file_exists($path) || !is_file($path)){
+                $missing_img = 'missing_image.png';
+                if($width <= 100) $missing_img = 'missing_image_48x48.png';
+              if(isset($options['path']))
+                    return $this->Url->build("/img/{$missing_img}");
+               return $this->Html->image($missing_img,$options);
             }
           //  /uploads/prodcts/1/image_name.png
             $image_path = $path;

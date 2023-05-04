@@ -1,0 +1,60 @@
+// Social Icons
+
+
+// # Contents
+// 1. Social Icon
+// 2. Live Social Icons
+
+// # Variables
+
+// 1. Social Icon
+
+.social-icon {
+	display: inline-block;
+
+	width: 3.2rem;
+	color: #fff;
+	background-color: $primary-color;
+	font-size: 1.4rem;
+	line-height: 3.2rem;
+	text-align: center;
+	text-decoration: none;
+	opacity: 1;
+
+	& + .social-icon {
+		margin-left: .6rem;
+	}
+
+	.social-icons &:hover,
+	.social-icons &:focus {
+		color: #fff;
+		text-decoration: none;
+		opacity: .85;
+	}
+
+// 2. Live Social Icons
+
+	&.social-facebook {
+		background-color: #3b5a9a
+	}
+
+	&.social-twitter {
+		background-color: #1aa9e1;
+	}
+
+	&.social-instagram {
+		background-color: #7c4a3a;
+	}
+
+	&.social-linkedin {
+		background-color: #0073b2;
+	}
+
+	&.social-gplus {
+		background-color: #dd4b39;
+	}
+
+	&.social-mail {
+		background-color: #dd4b39;
+	}
+}

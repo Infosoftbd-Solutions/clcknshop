@@ -96,7 +96,7 @@ require.config({
                     </div>
                     <div style="line-height: 24px">
                         <?php $customer = $order->customer ?>
-                        <?= $customer->first_name." ".$customer->last_name ?> <br />
+                        <a href="<?= $this->Url->build(['controller' => 'Customers', 'action' => 'view', $customer->id]) ?>"> <?= $customer->first_name." ".$customer->last_name ?> </a> <br />
                         <?= $customer->email ?> <br />
                         Tel: <?= $customer->phone ?>
                     </div>
@@ -210,6 +210,7 @@ require.config({
                             <div>
                                 <a href="<?php echo $this->Url->build(['action'=>'edit', $order->id]) ?>"
                                     class="btn btn-sm btn-outline-secondary ml-auto"><?= __('Edit Order') ?></a>
+
                             </div>
                         </div>
                     </td>
@@ -288,7 +289,7 @@ require.config({
 
 
 <div class="row row-cards row-deck mt-3">
-    <div class="col-12">
+    <div class="col-lg-6">
         <div class="card">
             <div class="card-header d-flex">
                 <h4 style="margin-bottom: 0px !important;"><?= __('Order Log') ?></h4>
@@ -326,8 +327,75 @@ require.config({
             </div>
         </div>
     </div>
-</div>
 
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header d-flex">
+                <h4 style="margin-bottom: 0px !important;"><?= __('Payment Log') ?></h4>
+
+                <div class="dropdown ml-auto">
+                    <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    Payment
+                    </button>
+                    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+                        <?php if ($order->due > 0): ?>
+                        <a href="javascript:void(0)" data-toggle="modal" data-target="#PaymentModal"
+                            data-id="<?=$order->id?>" data-order-id="<?=$order->order_id?>" data-due="<?=$order->due?>"
+                            class="dropdown-item"><i class="dropdown-icon fe fe-dollar-sign"></i> <?= __('Process Payment') ?> </a>
+                        <?php endif; ?>
+                        <?php if ($order->total_paid > 0): ?>
+                        <a href="javascript:void(0)" data-toggle="modal" data-target="#RefundModal"
+                            data-id="<?=$order->id?>" data-order-id="<?=$order->order_id?>"
+                            data-paid="<?=$order->total_paid?>" class="dropdown-item"><i
+                            class="dropdown-icon fe fe-dollar-sign"></i> <?= __('Process Refund') ?> </a>
+                        <?php endif; ?>
+                        
+                    </div>
+                </div>
+
+            </div>
+            <div class="table-responsive">
+                <table class="table table-hover table-outline table-vcenter text-nowrap card-table">
+                    <thead style="font-weight: bold">
+                        <tr>
+                            <th class="text-center"><?= __('Method') ?></th>
+                            <th><?= __('Amount') ?></th>
+                            <th class="text-center"><?= __('Payment Date') ?></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php $total_payment = 0; foreach ($order->order_payments as $payment) :?>
+                        <tr>
+                            <td class="text-center"> <?= $methods[$payment->payment_method] ?> </td>
+                            <td class="text-left">
+                                <?php 
+                                    echo \Cake\Core\Configure::read('App.currency') . $payment->amount;
+
+                                    if($payment->amount > 0) $total_payment += $payment->amount;
+                                    else  $total_payment -= abs($payment->amount);
+
+                                ?>
+
+
+                            </td>
+                            <td class="text-center"> <?= $payment->payment_date ?></td>
+                            
+                        </tr>
+                        <?php endforeach; ?>
+
+                        <tr>
+                            <td><b> Total Amount </b></td>
+                            <td colspan="2"><b> <?= \Cake\Core\Configure::read('App.currency') . $total_payment ?> </b></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<?php include_once 'payment_modal.ctp'?>
+<?php include_once 'refund_modal.ctp'?>
 <?php include_once 'status_modal.ctp'?>
 
 <style>
@@ -433,6 +501,116 @@ require.config({
 <script>
 require(['jquery'], function($, autocomplete) {
     $(document).ready(function() {
+        $('#PaymentModal').on('show.bs.modal', function (event) {
+              console.log(event.relatedTarget);
+              $('#payment_frm')[0].reset();
+              $('#payment_frm #order_no_span').html($(event.relatedTarget).attr('data-order-id'));
+              $('#payment_frm #orders_id').val($(event.relatedTarget).attr('data-id'));
+              $('#payment_frm #amount').val($(event.relatedTarget).attr('data-due'));
+
+          });
+
+          $('#RefundModal').on('show.bs.modal', function (event) {
+              console.log(event.relatedTarget);
+              $('#refund_frm')[0].reset();
+              $('#refund_frm #order_no_span').html($(event.relatedTarget).attr('data-id'));
+              $('#refund_frm #orders_id').val($(event.relatedTarget).attr('data-id'));
+              $('#refund_frm #amount').val($(event.relatedTarget).attr('data-paid'));
+
+          });
+
+          $("#payment_frm").submit(function(e) {
+
+                var frm = this;
+                var valid = ($(this).find("input.is-invalid").length === 0);
+                if (!valid) {
+                   return false;
+                }
+
+                  e.preventDefault(); // avoid to execute the actual submit of the form.
+
+                  var form = $(this);
+                  var url = form.attr('action');
+
+                  $.ajax({
+                         type: "POST",
+                         url: url,
+                         data: form.serialize(), // serializes the form's elements.
+                         success: function(data)
+                         {
+                            location.reload();
+
+                            // if(data.hasOwnProperty("error")){
+                            //     console.log(data.error);
+                            //     $.each( data.error, function( key, value ) {
+                            //       //alert( key + ": " + value );
+                            //       $(frm).find('input[name ="'  + key  +  '"]').addClass("is-invalid");
+                            //       $(frm).find('input[name ="'  + key  +  '"]').after('<div style="display: inline-block;" class="invalid-feedback has-error-email">' +  value[Object.keys(value)[0]] + '</div>');
+
+                            //     });
+
+                            // }else{
+                            //     var customer = data.data;
+                            //     setCustomer(customer,customer,{});
+                            //     $("#customerAddressModal").modal('hide');
+                            //     location.reload();   
+
+                            // }
+
+                         }
+                 });
+
+
+              });
+
+            
+
+
+
+              $("#refund_frm").submit(function(e) {
+
+                var frm = this;
+                var valid = ($(this).find("input.is-invalid").length === 0);
+                if (!valid) {
+                   return false;
+                }
+
+                  e.preventDefault(); // avoid to execute the actual submit of the form.
+
+                  var form = $(this);
+                  var url = form.attr('action');
+
+                  $.ajax({
+                         type: "POST",
+                         url: url,
+                         data: form.serialize(), // serializes the form's elements.
+                         success: function(data)
+                         {
+                            location.reload();
+
+                            // if(data.hasOwnProperty("error")){
+                            //     console.log(data.error);
+                            //     $.each( data.error, function( key, value ) {
+                            //       //alert( key + ": " + value );
+                            //       $(frm).find('input[name ="'  + key  +  '"]').addClass("is-invalid");
+                            //       $(frm).find('input[name ="'  + key  +  '"]').after('<div style="display: inline-block;" class="invalid-feedback has-error-email">' +  value[Object.keys(value)[0]] + '</div>');
+
+                            //     });
+
+                            // }else{
+                            //     var customer = data.data;
+                            //     setCustomer(customer,customer,{});
+                            //     $("#customerAddressModal").modal('hide');
+                            //     location.reload();
+
+                            // }
+
+                         }
+                 });
+
+
+              });
+              
 
     });
 });

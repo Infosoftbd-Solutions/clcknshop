@@ -127,7 +127,7 @@ class OrderPaymentsTable extends Table
                 ]); 
             }
 
-            return true;
+            return $payment;
         }
 
         return false;

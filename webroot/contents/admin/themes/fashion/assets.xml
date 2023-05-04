@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<root>
+    <images>
+        <image>
+            <title>Slider 1 Image</title>
+            <key>slider-1</key>
+            <width>1920</width>
+            <height>500</height>
+            <file>uploads/slide-1jpg-07-06-202-28-07-2021-1627492132850.jpg</file>
+        </image>
+        <image>
+            <title>Slider 2 Image</title>
+            <width>1920</width>
+            <height>500</height>
+            <key>slider-2</key>
+            <file>uploads/slide-2jpg-07-06-202-28-07-2021-1627492776337.jpg</file>
+        </image>
+        <image>
+            <title>Payment Image</title>
+            <key>payment-logo</key>
+            <width>360</width>
+            <height>30</height>
+            <file>uploads/securejpg-10-06-2021-28-07-2021-1627492318624.jpg</file>
+        </image>
+
+
+    </images>
+
+    <menus>
+
+        <menu>
+            <title>Navbar Menu</title>
+            <key>navbar-menu</key>
+            <menujson>[{"text":"Home","href":"/","icon":"","target":"_self","title":""},{"text":"Clothing","href":"/collection/clothing","icon":"","target":"_self","title":""},{"text":"Lifestyle","href":"/collection/electronics","icon":"","target":"_self","title":""},{"text":"Health &amp; Beauty","icon":"","href":"/collection/health-and-beauty","target":"_self","title":""},{"text":"Watches","icon":"","href":"/collection/watches","target":"_self","title":""},{"text":"Jewellery","icon":"","href":"/collection/jewellery","target":"_self","title":""},{"text":"Shoes","icon":"","href":"/collection/shoes","target":"_self","title":""},{"text":"Kids &amp; Girls","icon":"","href":"kids and girls","target":"_self","title":""},{"text":"Todays Offer","href":"/collection/todays-offer","icon":"","target":"_self","title":""}]</menujson>
+        </menu>
+
+
+        <menu>
+            <title>Footer Menu</title>
+            <key>footer-menu</key>
+            <menujson>[{"text":"CUSTOMER SERVICE","href":"#","icon":"","target":"_self","title":"","children":[{"text":"My Account","href":"/login","icon":"","target":"_self","title":""},{"text":"Order-history","href":"/customer","icon":"","target":"_self","title":""},{"text":"FAQ","href":"/page/faq","icon":"","target":"_self","title":""},{"text":"Specials","href":"/page/Specials","icon":"","target":"_self","title":""},{"text":"Help Center","href":"/page/help-center","icon":"","target":"_self","title":""}]},{"text":"Corporation","href":"#","icon":"","target":"_self","title":"","children":[{"text":"About Us","href":"/page/about-us","icon":"","target":"_self","title":""},{"text":"Customer Service","href":"/page/customer-service","icon":"","target":"_self","title":""},{"text":"Company","href":"/page/company","icon":"","target":"_self","title":""},{"text":"Investor Relations","href":"/page/investor-relation","icon":"","target":"_self","title":""},{"text":"Track Order","href":"/track-order","icon":"","target":"_self","title":""}]},{"text":"WHY CHOOSE US","href":"page/why-choose-us","icon":"","target":"_self","title":"","children":[{"text":"Shopping Guide","href":"/page/Shopping-guide","icon":"","target":"_self","title":""},{"text":"Blog","href":"/page/blog","icon":"","target":"_self","title":""},{"text":"Company","href":"/page/company","icon":"","target":"_self","title":""},{"text":"Terms and Conditions","href":"/page/terms-and-conditions","icon":"","target":"_self","title":""},{"text":"Contact Us","href":"/page/contact-us","icon":"","target":"_self","title":""}]}]</menujson>
+        </menu>
+    </menus>
+</root>

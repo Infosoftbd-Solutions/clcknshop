@@ -227,8 +227,8 @@ class TplparserHelper extends Helper
 
   private function func_is_allowed($func){
       
-      if(ctype_alpha($func[0]) == false)
-      $func = substr($func, 1);
+      if(isset($func[0]) && ctype_alpha($func[0]) == false)
+        $func = substr($func, 1);
       $disable_functions = ['exec','passthru','system','shell_exec','popen','proc_open','pcntl_exec','eval','assert','preg_replace','create_function','include',
       'include_once','require','require_once','phpinfo','posix_mkfifo','posix_getlogin','posix_ttyname','getenv','get_current_user',
       'proc_get_status','get_cfg_var','disk_free_space','disk_total_space','diskfreespace','getcwd','getlastmo','getmygid','getmyinode','getmypid','getmyuid'

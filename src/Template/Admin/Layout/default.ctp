@@ -55,9 +55,9 @@ use Cake\Core\Configure;
             'jqtoast': 'assets/js/jquery.toast.min'
         }
     });
+
+    
     </script>
-
-
 
 
     

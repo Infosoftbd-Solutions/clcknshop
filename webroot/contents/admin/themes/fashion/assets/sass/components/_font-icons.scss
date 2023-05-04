@@ -1,0 +1,262 @@
+// Porto Font Icons
+
+// # Content
+
+// 1. Font Face
+// 2. Font Base
+// 3. Font Icons
+
+// # Variables
+$porto-icon-font-path: "../fonts" !default;
+$porto-icon-font-family: "porto" !default;
+$porto-icon-class-prefix: "icon-" !default;
+
+// 1. Font Face
+
+@font-face {
+	font-family: '#{$porto-icon-font-family}';
+	src:	url('#{$porto-icon-font-path}/porto.eot?64334846');
+	src: 	url('#{$porto-icon-font-path}/porto.eot?64334846#iefix') format('embedded-opentype'),
+			url('#{$porto-icon-font-path}/porto.woff2?64334846') format('woff2'),
+			url('#{$porto-icon-font-path}/porto.woff?64334846') format('woff'),
+			url('#{$porto-icon-font-path}/porto.ttf?64334846') format('truetype'),
+			url('#{$porto-icon-font-path}/porto.svg?64334846#porto') format('svg');
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media (-webkit-min-device-pixel-ratio:0) {
+	@font-face {
+		font-family: 'porto';
+		font-display: swap;
+		src: url('#{$porto-icon-font-path}/porto.svg?64334846#porto') format('svg');
+	}
+}
+*/
+
+// 2. Font Base
+
+[class^="#{$porto-icon-class-prefix}"]:before, [class*=" #{$porto-icon-class-prefix}"]:before {
+	font-family: "porto";
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	text-align: center;
+
+	/* For safety - reset parent styles, that can break glyph codes*/
+	font-variant: normal;
+	text-transform: none;
+
+	/* fix buttons height, for twitter bootstrap */
+	line-height: 1;
+
+	/* you can be more comfortable with increased icons size */
+	/* font-size: 120%; */
+
+	/* Font smoothing. That was taken from TWBS */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	/* Uncomment for 3D effect */
+	/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+// 3. Font Icons
+
+.#{$porto-icon-class-prefix} {
+	&spin1:before { content: '\e800'; }
+	&spin2:before { content: '\e801'; }
+	&spin3:before { content: '\e802'; }
+	&spin4:before { content: '\e803'; }
+	&spin5:before { content: '\e804'; }
+	&spin6:before { content: '\e805'; }
+	&firefox:before { content: '\e806'; }
+	&chrome:before { content: '\e807'; }
+	&opera:before { content: '\e808'; }
+	&ie:before { content: '\e809'; }
+	&phone:before { content: '\e80a'; }
+	&down-dir:before { content: '\e80b'; }
+	&cart:before { content: '\e80c'; }
+	&up-dir:before { content: '\e80d'; }
+	&mode-grid:before { content: '\e80e'; }
+	&mode-list:before { content: '\e80f'; }
+	&compare:before { content: '\e810'; }
+	&wishlist:before { content: '\e811'; }
+	&search:before { content: '\e812'; }
+	&left-dir:before { content: '\e813'; }
+	&right-dir:before { content: '\e814'; }
+	&down-open:before { content: '\e815'; }
+	&left-open:before { content: '\e816'; }
+	&right-open:before { content: '\e817'; }
+	&up-open:before { content: '\e818'; }
+	&angle-left:before { content: '\e819'; }
+	&angle-right:before { content: '\e81a'; }
+	&angle-up:before { content: '\e81b'; }
+	&angle-down:before { content: '\e81c'; }
+	&down:before { content: '\e81d'; }
+	&left:before { content: '\e81e'; }
+	&right:before { content: '\e81f'; }
+	&up:before { content: '\e820'; }
+	&angle-double-left:before { content: '\e821'; }
+	&angle-double-right:before { content: '\e822'; }
+	&angle-double-up:before { content: '\e823'; }
+	&angle-double-down:before { content: '\e824'; }
+	&mail:before { content: '\e825'; }
+	&location:before { content: '\e826'; }
+	&skype:before { content: '\e827'; }
+	&right-open-big:before { content: '\e828'; }
+	&left-open-big:before { content: '\e829'; }
+	&down-open-big:before { content: '\e82a'; }
+	&up-open-big:before { content: '\e82b'; }
+	&cancel:before { content: '\e82c'; }
+	&user:before { content: '\e82d'; }
+	&mail-alt:before { content: '\e82e'; }
+	&fax:before { content: '\e82f'; }
+	&lock:before { content: '\e830'; }
+	&company:before { content: '\e831'; }
+	&city:before { content: '\e832'; }
+	&post:before { content: '\e833'; }
+	&country:before { content: '\e834'; }
+	&calendar:before { content: '\e835'; }
+	&doc:before { content: '\e836'; }
+	&mobile:before { content: '\e837'; }
+	&clock:before { content: '\e838'; }
+	&chat:before { content: '\e839'; }
+	&tag:before { content: '\e83a'; }
+	&folder:before { content: '\e83b'; }
+	&folder-open:before { content: '\e83c'; }
+	&forward:before { content: '\e83d'; }
+	&reply:before { content: '\e83e'; }
+	&cog:before { content: '\e83f'; }
+	&cog-alt:before { content: '\e840'; }
+	&wrench:before { content: '\e841'; }
+	&quote-left:before { content: '\e842'; }
+	&quote-right:before { content: '\e843'; }
+	&gift:before { content: '\e844'; }
+	&dollar:before { content: '\e845'; }
+	&euro:before { content: '\e846'; }
+	&pound:before { content: '\e847'; }
+	&rupee:before { content: '\e848'; }
+	&yen:before { content: '\e849'; }
+	&rouble:before { content: '\e84a'; }
+	&try:before { content: '\e84b'; }
+	&won:before { content: '\e84c'; }
+	&bitcoin:before { content: '\e84d'; }
+	&ok:before { content: '\e84e'; }
+	&chevron-left:before { content: '\e84f'; }
+	&chevron-right:before { content: '\e850'; }
+	&export:before { content: '\e851'; }
+	&star:before { content: '\e852'; }
+	&star-empty:before { content: '\e853'; }
+	&plus-squared:before { content: '\e854'; }
+	&minus-squared:before { content: '\e855'; }
+	&plus-squared-alt:before { content: '\e856'; }
+	&minus-squared-alt:before { content: '\e857'; }
+	&truck:before { content: '\e858'; }
+	&lifebuoy:before { content: '\e859'; }
+	&pencil:before { content: '\e85a'; }
+	&users:before { content: '\e85b'; }
+	&video:before { content: '\e85c'; }
+	&menu:before { content: '\e85d'; }
+	&desktop:before { content: '\e85e'; }
+	&doc-inv:before { content: '\e85f'; }
+	&circle:before { content: '\e860'; }
+	&circle-empty:before { content: '\e861'; }
+	&circle-thin:before { content: '\e862'; }
+	&mini-cart:before { content: '\e863'; }
+	&paper-plane:before { content: '\e864'; }
+	&attention-alt:before { content: '\e865'; }
+	&info:before { content: '\e866'; }
+	&compare-link:before { content: '\e867'; }
+	&cat-default:before { content: '\e868'; }
+	&cat-computer:before { content: '\e869'; }
+	&cat-couch:before { content: '\e86a'; }
+	&cat-garden:before { content: '\e86b'; }
+	&cat-gift:before { content: '\e86c'; }
+	&cat-shirt:before { content: '\e86d'; }
+	&cat-sport:before { content: '\e86e'; }
+	&cat-toys:before { content: '\e86f'; }
+	&tag-line:before { content: '\e870'; }
+	&bag:before { content: '\e871'; }
+	&search-1:before { content: '\e872'; }
+	&plus:before { content: '\e873'; }
+	&minus:before { content: '\e874'; }
+	&search-2:before { content: '\e875'; }
+	&bag-1:before { content: '\e876'; }
+	&online-support:before { content: '\e877'; }
+	&shopping-bag:before { content: '\e878'; }
+	&us-dollar:before { content: '\e879'; }
+	&shipped:before { content: '\e87a'; }
+	&list:before { content: '\e87b'; }
+	&money:before { content: '\e87c'; }
+	&shipping:before { content: '\e87d'; }
+	&support:before { content: '\e87e'; }
+	&bag-2:before { content: '\e87f'; }
+	&grid:before { content: '\e880'; }
+	&bag-3:before { content: '\e881'; }
+	&direction:before { content: '\e882'; }
+	&home:before { content: '\e883'; }
+	&magnifier:before { content: '\e884'; }
+	&magnifier-add:before { content: '\e885'; }
+	&magnifier-remove:before { content: '\e886'; }
+	&phone-1:before { content: '\e887'; }
+	&clock-1:before { content: '\e888'; }
+	&heart:before { content: '\e889'; }
+	&heart-1:before { content: '\e88a'; }
+	&earphones-alt:before { content: '\e88b'; }
+	&credit-card:before { content: '\e88c'; }
+	&action-undo:before { content: '\e88d'; }
+	&envolope:before { content: '\e88e'; }
+	&chart:before { content: '\e88f'; }
+	&category-home:before { content: '\e900'; }
+	&category-motors:before { content: '\e901'; }
+	&category-music:before { content: '\e902'; }
+	&category-gifts:before { content: '\e903'; }
+	&category-electronics:before { content: '\e904'; }
+	&category-fashion:before { content: '\e905'; }
+	&category-hot-deals:before { content: '\e906'; }
+	&tag-percent:before { content: '\e907'; }
+	&joystick:before { content: '\e908'; }
+	&category-furniture:before { content: '\e909'; }
+	&category-garden:before { content: '\e90a'; }
+	&category-lanterns-lighting:before { content: '\e90b'; }
+	&category-mechanics:before { content: '\e90c'; }
+	&category-motorcycles:before { content: '\e90d'; }
+	&category-sound-video:before { content: '\e90e'; }
+	&category-steering:before { content: '\e90f'; }
+	&category-external-accessories:before { content: '\e910'; }
+	&category-fluids:before { content: '\e911'; }
+	&category-internal-accessories:before { content: '\e912'; }
+	&category-chains:before { content: '\e913'; }
+	&category-frames:before { content: '\e914'; }
+	&category-pedals:before { content: '\e915'; }
+	&category-saddle:before { content: '\e916'; }
+	&category-tools:before { content: '\e917'; }
+	&search-3:before { content: '\e918'; }
+	&secure-payment:before { content: '\e919'; }
+	&user-2:before { content: '\e91a'; }
+	&wishlist-2:before { content: '\e91b'; }
+	&gift-2:before { content: '\e91c'; }
+	&edit:before { content: '\e91d'; }
+	&chef:before { content: '\e91e'; }
+	&smiling-girl:before { content: '\e91f'; }
+	&tshirt:before { content: '\e920'; }
+	&boy-broad-smile:before { content: '\e921'; }
+	&smiling-baby:before { content: '\e922'; }
+	&bars:before { content: '\e923'; }
+	&twitter:before { content: '\f099'; }
+	&facebook:before { content: '\f09a'; }
+	&spinner:before { content: '\f110'; }
+	&instagram:before { content: '\f16d'; }
+	&check-empty:before { content: '\f87a'; }
+	&check:before { content: '\f87b'; }
+	&shopping-cart:before { content: '\e8ba'; }
+	&phone-2:before { content: '\e8bb'; }
+}
