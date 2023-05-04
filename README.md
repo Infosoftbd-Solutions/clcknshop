@@ -1,10 +1,10 @@
 <p align="center">
-    <a href="https://clckn.shop/"><img src="https://clckn.shop/contents/admin/uploads/logos/clcknshoplogopng-19-10-2022-1666175726631.png" alt="Clcknshop - Multitenancy Based Ecommerce Platform (SAAS)"></a>
+    <a href="https://clckn.shop/"><img src="https://clckn.shop/contents/admin/uploads/logos/clcknshoplogopng-19-10-2022-1666175726631.png" alt="Clcknshop - Multitenancy/Multi-tenant Based Ecommerce Platform (SAAS)"></a>
 </p>
 
-<h3> Clcknshop - Multitenancy Based Ecommerce Platform (SAAS) </h3>
+<h3> Clcknshop - Multitenancy/Multi-tenant Based Ecommerce Platform (SAAS) </h3>
 <p>
-	Clcknshop is a multitenancy SAAS based E-Commerce platform similar to Shopify , BigCommerce. Customers can create a Ecommerce site within 5 minutes by just registration. It has a powerful admin panel for managing products, collections, coupons, orders, themes, and much more. This Software has been developed for the people who wants to create an online store which can sell everything. Clcknshop is extremely optimized for giving customers the best purchasing experience.
+	Clcknshop is a Multitenancy/Multi-tenant SAAS based E-Commerce platform similar to Shopify , BigCommerce. Customers can create a Ecommerce site within 5 minutes by just registration. It has a powerful admin panel for managing products, collections, coupons, orders, themes, and much more. This Software has been developed for the people who wants to create an online store which can sell everything. Clcknshop is extremely optimized for giving customers the best purchasing experience.
 </p>
 <h3>Demo Url and login</h3>
 <pre>
@@ -25,9 +25,11 @@
 </pre>
 <pre>
 		Registration link For new Store creation: <a target="_blank" href='https://clckn.shop/registration'>https://clckn.shop/registration</a>
+		Documentation and user manual: <a target="_blank" href='https://clckn.shop/docs/'>https://clckn.shop/docs</a>
 	
 
 </pre>
+<h3>Check <a href="https://github.com/masum0009/clcknshop/wiki">wiki</a> for installation procedure. For any support knock at support@infosoftbd.com </h3>
 
 <br>
 The system is highly secured and protected against <b>SQL injection</b>, <b>XSS</b>, <b>CSRF</b>, and other attacks.
