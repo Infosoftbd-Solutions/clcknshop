@@ -92,7 +92,7 @@ The system is highly secured and protected against <b>SQL injection</b>, <b>XSS<
 
 <h3>Support</h3>
 <p>
-	We are always happy to hear from you. Please feel free to contact us for any kind of customization, support, query and suggestion. We will respond as soon as possible.
+	Don't hesitate to contact us for support if you plan to create a multi instance installation or want any kind of help with your systems.
 </p>
 <pre>
 	Support Desk Email: support@infosoftbd.com
