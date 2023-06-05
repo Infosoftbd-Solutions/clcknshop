@@ -97,5 +97,11 @@ The system is highly secured and protected against <b>SQL injection</b>, <b>XSS<
 <pre>
 	Support Desk Email: support@infosoftbd.com
 </pre>
+
+### Premium Support Desk
+If you wish to have our expert team install and customize the product or service according to your specific needs, please provide us with detailed information about your requirements. It is important to note that there will be an applicable charge for these services. 
+
+Email: support@infosoftbd.com
+
 <p>Thank you,</p>
 <p> Infosoftbd </p>
