@@ -8,24 +8,24 @@
 </p>
 <h3>Demo Url and login</h3>
 <pre>
-		Main Site Url: <a target="_blank" href='https://clcknshop.store/'>https://clcknshop.store/</a>
-		Admin url    : <a target="_blank" href='https://clcknshop.store/admin'>https://clcknshop.store/admin</a>
+		Main Site Url: <a target="_blank" href='http://clcknshop.site/'>http://clcknshop.site/</a>
+		Admin url    : <a target="_blank" href='https://clcknshop.site/admin'>http://clcknshop.site/admin</a>
 		email        : admin@clckn.shop
 		password     : 123456
 </pre>
 <pre>
-		Demo Shop 1 : <a target="_blank" href="https://kidszone.clcknshop.store">https://kidszone.clcknshop.store</a>
-		Admin url   : <a target="_blank" href="https://kidszone.clcknshop.store/admin">https://kidszone.clcknshop.store/admin</a>
+		Demo Shop 1 : <a target="_blank" href="http://demo.clcknshop.site">http://demo.clcknshop.site</a>
+		Admin url   : <a target="_blank" href="http://demo.clcknshop.site/admin">http://demo.clcknshop.site/admin</a>
 		email       : demo@clckn.shop
-		password    : 123456
-		Customer Url: <a target="_blank" href="https://kidszone.clcknshop.store/customer">https://kidszone.clcknshop.store/customer</a>
+		password    : demopass
+		Customer Url: <a target="_blank" href="http://demo.clcknshop.site/customer">http://demo.clcknshop.site/customer</a>
 		email       : customer@clckn.shop
 		password    : 123456
 
 </pre>
 <pre>
-		Registration link For new Store creation: <a target="_blank" href='https://clcknshop.store/registration'>https://clcknshop.store/registration</a>
-		Documentation and user manual: <a target="_blank" href='https://clcknshop.store/docs/'>https://clcknshop.store/docs</a>
+		Registration link For new Store creation: <a target="_blank" href='http://clcknshop.site/registration'>http://clcknshop.site/registration</a>
+		Documentation and user manual: <a target="_blank" href='http://clcknshop.site/docs/'>http://clcknshop.site/docs</a>
 	
 
 </pre>
